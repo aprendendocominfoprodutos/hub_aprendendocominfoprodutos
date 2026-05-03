@@ -285,6 +285,122 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ============ 6.5 DEPOIMENTOS ============ */}
+      <section className="py-16 md:py-24 border-t border-border">
+        <div className="container">
+          <h2 className="headline-primary text-center mb-12 text-foreground">
+            O Que Nossos Leitores Dizem
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+            {/* Depoimento 1 */}
+            <div className="card-premium text-center">
+              <img
+                src="/manus-storage/testimonial_1_2b4eed09.png"
+                alt="Marina Silva"
+                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-primary"
+              />
+              <h3 className="font-bold text-foreground mb-1" style={{ fontFamily: "'Cinzel', serif" }}>
+                Marina Silva
+              </h3>
+              <p className="text-xs text-muted-foreground mb-3">Professora de História</p>
+              <div className="flex justify-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-primary">★</span>
+                ))}
+              </div>
+              <p className="text-sm text-foreground leading-relaxed">
+                "Finalmente entendi os padrões por trás dos mitos. Transformou minha forma de ensinar!"
+              </p>
+            </div>
+
+            {/* Depoimento 2 */}
+            <div className="card-premium text-center">
+              <img
+                src="/manus-storage/testimonial_2_86d72c9c.png"
+                alt="Carlos Mendes"
+                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-primary"
+              />
+              <h3 className="font-bold text-foreground mb-1" style={{ fontFamily: "'Cinzel', serif" }}>
+                Carlos Mendes
+              </h3>
+              <p className="text-xs text-muted-foreground mb-3">Psicólogo</p>
+              <div className="flex justify-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-primary">★</span>
+                ))}
+              </div>
+              <p className="text-sm text-foreground leading-relaxed">
+                "Os arquétipos mitológicos explicam tanto sobre comportamento humano. Indispensável!"
+              </p>
+            </div>
+
+            {/* Depoimento 3 */}
+            <div className="card-premium text-center">
+              <img
+                src="/manus-storage/testimonial_3_9564556d.png"
+                alt="Juliana Costa"
+                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-primary"
+              />
+              <h3 className="font-bold text-foreground mb-1" style={{ fontFamily: "'Cinzel', serif" }}>
+                Juliana Costa
+              </h3>
+              <p className="text-xs text-muted-foreground mb-3">Escritora</p>
+              <div className="flex justify-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-primary">★</span>
+                ))}
+              </div>
+              <p className="text-sm text-foreground leading-relaxed">
+                "Referência perfeita para pesquisa. O visual torna tudo muito mais acessível."
+              </p>
+            </div>
+
+            {/* Depoimento 4 */}
+            <div className="card-premium text-center">
+              <img
+                src="/manus-storage/testimonial_4_aff0f950.png"
+                alt="Roberto Alves"
+                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-primary"
+              />
+              <h3 className="font-bold text-foreground mb-1" style={{ fontFamily: "'Cinzel', serif" }}>
+                Roberto Alves
+              </h3>
+              <p className="text-xs text-muted-foreground mb-3">Empresário</p>
+              <div className="flex justify-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-primary">★</span>
+                ))}
+              </div>
+              <p className="text-sm text-foreground leading-relaxed">
+                "Aplicável ao mundo dos negócios. Poder, estratégia e destino nunca fizeram tanto sentido."
+              </p>
+            </div>
+
+            {/* Depoimento 5 */}
+            <div className="card-premium text-center">
+              <img
+                src="/manus-storage/testimonial_5_6f8beeb9.png"
+                alt="Fernanda Rocha"
+                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-2 border-primary"
+              />
+              <h3 className="font-bold text-foreground mb-1" style={{ fontFamily: "'Cinzel', serif" }}>
+                Fernanda Rocha
+              </h3>
+              <p className="text-xs text-muted-foreground mb-3">Coach de Vida</p>
+              <div className="flex justify-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <span key={i} className="text-primary">★</span>
+                ))}
+              </div>
+              <p className="text-sm text-foreground leading-relaxed">
+                "Ferramenta poderosa para autoconhecimento. Meus clientes amaram!"
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ============ 7. BENEFÍCIOS ============ */}
       <section className="py-16 md:py-24 border-t border-border">
         <div className="container">
