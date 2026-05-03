@@ -1,15 +1,15 @@
 import { useState, useEffect } from 'react';
 
 /**
- * Landing Page Premium - Fitness & Saúde
+ * Landing Page Premium - Fitness & Saúde (Receitas com Tirzepatida)
  * 
- * Design: Wellness Moderno
- * - Cores: Verde vibrante + Azul claro + Branco
- * - Fundo: Degradê wellness
- * - Botões: Gradient verde com sombra
- * - Foco: Conversão direta, sem distrações
- * 
- * Estrutura: Landing page do Ebook de Receitas com Tirzepatida
+ * Design: Wellness Moderno - Light Mode
+ * - Fundo: Branco/Cinza claro
+ * - Cores: Verde escuro (#2d5a4a) + Verde claro (#7cb342)
+ * - Tipografia: Serif elegante (títulos) + Sans-serif (corpo)
+ * - Imagens: Fotos reais de pratos
+ * - Vibe: Limpo, profissional, saudável
+ * - Totalmente diferente da Mitologia
  */
 export default function FitnessLanding() {
   const [timeLeft, setTimeLeft] = useState({ hours: 24, minutes: 0, seconds: 0 });
@@ -38,40 +38,66 @@ export default function FitnessLanding() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+    <div className="min-h-screen bg-white text-gray-900 overflow-x-hidden">
       
+      {/* ============ HEADER ============ */}
+      <header className="sticky top-0 z-50 bg-white border-b border-gray-200 px-4 py-4">
+        <div className="container max-w-6xl flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-semibold text-green-700">🌿 30 Receitas Mounjaro</span>
+          </div>
+          <button className="px-6 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-colors font-semibold">
+            Comprar Agora
+          </button>
+        </div>
+      </header>
+
       {/* ============ HERO SECTION ============ */}
-      <section className="relative w-full min-h-screen flex items-center justify-center px-4 py-16">
+      <section className="relative w-full py-16 md:py-24 px-4">
         <div className="container max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
             {/* Texto Hero */}
-            <div className="order-2 md:order-1">
-              <h1 className="headline-primary mb-4 text-foreground">
-                30 Receitas Leves Para Quem Usa Mounjaro
+            <div>
+              <div className="text-sm font-semibold text-green-600 mb-2">🌱 Especial para Mounjaro</div>
+              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" style={{ fontFamily: "'Georgia', serif" }}>
+                Alimentação Leve, Resultados Reais
               </h1>
-              <p className="subtitle text-accent mb-6">
-                Cardápios Simples, Refeições Práticas e Cuidados Alimentares Durante o Uso da Tirzepatida
+              <p className="text-lg text-gray-600 mb-6 leading-relaxed">
+                30 receitas práticas e saborosas desenvolvidas especialmente para quem usa Mounjaro/Tirzepatida. Otimize seu tratamento com uma alimentação que funciona.
               </p>
-              <p className="body-text text-muted-foreground mb-8">
-                Guia completo com 30 receitas, cardápio de 7 dias, lista de compras e dicas para manter a nutrição em dia.
-              </p>
-              <button className="btn-cta mb-4">
-                QUERO ACESSAR AGORA
-              </button>
-              <p className="text-sm text-muted-foreground">
-                ✓ Acesso imediato após pagamento
-              </p>
+              
+              <div className="flex gap-4 mb-8">
+                <button className="px-8 py-3 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-colors font-semibold">
+                  Comprar E-book
+                </button>
+                <button className="px-8 py-3 bg-white text-green-700 border-2 border-green-700 rounded-lg hover:bg-green-50 transition-colors font-semibold">
+                  Ver Prévia Grátis
+                </button>
+              </div>
+
+              <div className="flex flex-col gap-2 text-sm text-gray-700">
+                <div className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span>
+                  <span>61 páginas com design premium</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span>
+                  <span>Cardápios prontos para a semana</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-green-600">✓</span>
+                  <span>Suporte nutricional especializado</span>
+                </div>
+              </div>
             </div>
 
-            {/* Mockup Ebook */}
-            <div className="order-1 md:order-2 flex justify-center">
-              <div className="relative w-full max-w-sm">
-                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-transparent rounded-lg blur-2xl"></div>
+            {/* Imagem Hero */}
+            <div className="flex justify-center">
+              <div className="w-full max-w-md rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="/manus-storage/ebook_receitas_mockup_bdeeb5c9.png"
-                  alt="Ebook Receitas com Tirzepatida"
-                  className="relative w-full h-auto rounded-lg shadow-2xl"
-                  style={{ boxShadow: '0 0 40px rgba(201,162,74,0.3)' }}
+                  src="/manus-storage/hero_receitas_0ab2296f.png"
+                  alt="Prato saudável com frango e legumes"
+                  className="w-full h-auto"
                 />
               </div>
             </div>
@@ -79,165 +105,188 @@ export default function FitnessLanding() {
         </div>
       </section>
 
-      {/* ============ PROMESSA ============ */}
-      <section className="py-16 md:py-24 bg-card/50 border-t border-border">
-        <div className="container max-w-4xl text-center">
-          <h2 className="headline-primary mb-8 text-accent">
-            Coma bem. Mantenha a nutrição. Sinta-se melhor.
+      {/* ============ POR QUE DIFERENTE ============ */}
+      <section className="py-16 md:py-24 bg-gray-50 px-4">
+        <div className="container max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12" style={{ fontFamily: "'Georgia', serif" }}>
+            Por que este e-book é diferente?
           </h2>
-          <p className="body-text text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Quando você usa Mounjaro/tirzepatida, a alimentação muda. Este guia oferece 30 receitas práticas, 
-            leves e nutritivas para facilitar seu dia a dia, mantendo a qualidade de vida e o bem-estar.
+          
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">
+            Desenvolvido especificamente para usuários de Mounjaro que buscam otimizar seus resultados com uma alimentação prática e deliciosa.
           </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { icon: '🍽️', title: 'Receitas Leves', desc: 'Todas as 30 receitas foram criadas pensando em digestão fácil e refeições que não pesam no estômago, perfeitas para quem usa Mounjaro.' },
+              { icon: '📋', title: 'Guia Completo', desc: 'Mais que receitas: cardápios prontos, listas de compras, tabelas de substituições e dicas práticas para manter a consistência.' },
+              { icon: '✨', title: 'Design Premium', desc: 'Apresentação profissional e elegante, com design sofisticado que transmite qualidade e credibilidade.' },
+            ].map((item, i) => (
+              <div key={i} className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
+                <div className="text-4xl mb-4">{item.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3" style={{ fontFamily: "'Georgia', serif" }}>
+                  {item.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ VEJA ALGUMAS RECEITAS ============ */}
+      <section className="py-16 md:py-24 px-4">
+        <div className="container max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-4" style={{ fontFamily: "'Georgia', serif" }}>
+            Veja algumas receitas
+          </h2>
+          <p className="text-center text-gray-600 mb-12 text-lg">
+            Exemplos das receitas incluídas no e-book, desenvolvidas para ser práticas, saudáveis e deliciosas.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              { img: '/manus-storage/receita_omelete_66b60397.png', title: 'Omelete Leve de Espinafre', desc: 'Rápida, prática e perfeita para café da manhã', time: '10 min', servings: '1 porção' },
+              { img: '/manus-storage/receita_buddha_bowl_abdb3814.png', title: 'Buddha Bowl Colorido', desc: 'Nutritiva e visualmente atraente para almoço', time: '20 min', servings: '1 porção' },
+              { img: '/manus-storage/receita_sopa_0fa7ade4.png', title: 'Sopa Leve de Legumes', desc: 'Reconfortante e fácil de digerir para dias difíceis', time: '25 min', servings: '2 porções' },
+            ].map((recipe, i) => (
+              <div key={i} className="bg-white rounded-lg overflow-hidden shadow-sm border border-gray-200 hover:shadow-md transition-shadow">
+                <img src={recipe.img} alt={recipe.title} className="w-full h-64 object-cover" />
+                <div className="p-6">
+                  <h3 className="text-lg font-bold text-gray-900 mb-2" style={{ fontFamily: "'Georgia', serif" }}>
+                    {recipe.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm mb-4">{recipe.desc}</p>
+                  <div className="flex gap-4 text-sm text-gray-600">
+                    <span>⏱️ {recipe.time}</span>
+                    <span>🍽️ {recipe.servings}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ============ O QUE VOCÊ RECEBE ============ */}
-      <section className="py-16 md:py-24 border-t border-border">
+      <section className="py-16 md:py-24 bg-gray-50 px-4">
         <div className="container max-w-6xl">
-          <h2 className="headline-primary text-center mb-12 text-foreground">
-            O Que Você Vai Receber
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12" style={{ fontFamily: "'Georgia', serif" }}>
+            O que você recebe
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: '🍽️', title: '30 Receitas Leves', desc: 'Café da manhã, almoço, jantar e lanches' },
-              { icon: '📋', title: 'Cardápio de 7 Dias', desc: 'Planejamento pronto para usar' },
-              { icon: '🛒', title: 'Lista de Compras', desc: 'Organizada por categoria' },
-              { icon: '🔄', title: 'Tabela de Substituições', desc: 'Flexibilidade nas receitas' },
-              { icon: '🍴', title: 'Guia de Montagem Rápida', desc: 'Refeições em minutos' },
-              { icon: '🏪', title: 'Dicas para Restaurantes', desc: 'Como comer fora com segurança' },
+              { icon: '✓', title: '30 Receitas Completas', desc: 'Café da manhã, almoço, jantar, lanches e receitas para dias de baixa fome' },
+              { icon: '✓', title: 'Cardápio de 7 Dias', desc: 'Planejamento pronto para usar, com opções variadas e balanceadas' },
+              { icon: '✓', title: 'Lista de Compras', desc: 'Organizada e fácil de usar para suas compras do mês' },
+              { icon: '✓', title: 'Tabelas de Substituições', desc: 'Adapte as receitas conforme sua preferência e tolerância' },
+              { icon: '✓', title: 'Dicas Práticas', desc: 'Como adaptar em restaurantes, gerenciar efeitos colaterais e manter consistência' },
+              { icon: '✓', title: 'Design Premium', desc: '61 páginas com layout elegante e profissional' },
             ].map((item, i) => (
-              <div key={i} className="card-premium text-center">
-                <div className="text-4xl mb-3">{item.icon}</div>
-                <h3 className="font-bold text-foreground mb-2" style={{ fontFamily: "'Cinzel', serif" }}>
-                  {item.title}
-                </h3>
-                <p className="text-xs text-muted-foreground">{item.desc}</p>
+              <div key={i} className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
+                <div className="flex items-start gap-4">
+                  <div className="text-2xl text-green-600 font-bold">{item.icon}</div>
+                  <div>
+                    <h3 className="font-bold text-gray-900 mb-2" style={{ fontFamily: "'Georgia', serif" }}>
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm">{item.desc}</p>
+                  </div>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ============ CONTEÚDO DETALHADO ============ */}
-      <section className="py-16 md:py-24 bg-card/50 border-t border-border">
-        <div className="container max-w-4xl">
-          <h2 className="headline-primary text-center mb-12 text-foreground">
-            Conteúdo Completo
+      {/* ============ PREÇO & CTA FINAL ============ */}
+      <section className="py-16 md:py-24 px-4">
+        <div className="container max-w-2xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8" style={{ fontFamily: "'Georgia', serif" }}>
+            Pronto para otimizar seu tratamento?
           </h2>
+          <p className="text-lg text-gray-600 mb-12">
+            Comece hoje com as 30 receitas que vão transformar sua alimentação e seus resultados com Mounjaro.
+          </p>
 
-          <div className="space-y-6">
-            {[
-              { title: 'Seção 1: Guia Rápido de Alimentação', items: ['Os 4 pilares do prato', 'Como montar refeições leves', 'Alimentos que funcionam bem', 'Alimentos que podem pesar'] },
-              { title: 'Seção 2: 30 Receitas Práticas', items: ['6 receitas de café da manhã', '8 receitas de almoço', '6 receitas de jantar leve', '4 receitas de lanches', '4 receitas para dias de baixa fome'] },
-              { title: 'Seção 3: Ferramentas & Dicas', items: ['Cardápio de 7 dias completo', 'Lista de compras organizada', 'Tabela de substituições inteligentes', 'Checklist diário e semanal', 'Erros comuns e como evitar'] },
-            ].map((section, i) => (
-              <div key={i} className="card-premium">
-                <h3 className="text-lg font-bold text-foreground mb-4" style={{ fontFamily: "'Cinzel', serif" }}>
-                  {section.title}
-                </h3>
-                <ul className="space-y-2">
-                  {section.items.map((item, j) => (
-                    <li key={j} className="flex items-center gap-3 text-foreground">
-                      <span className="text-primary font-bold">✓</span>
-                      <span className="text-sm">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ============ PREÇO & CTA ============ */}
-      <section className="py-16 md:py-24 border-t border-border">
-        <div className="container max-w-3xl text-center">
-          <h2 className="headline-primary mb-8 text-foreground">
-            Invista em Sua Saúde
-          </h2>
-
-          <div className="card-premium border-2 border-primary mb-8">
-            <div className="text-5xl font-bold text-primary mb-2">R$ 29,90</div>
-            <p className="text-muted-foreground mb-6">Acesso completo ao ebook + todos os recursos</p>
-            <button className="btn-cta w-full text-lg px-10 py-5 mb-6">
-              COMPRAR AGORA
+          <div className="bg-white border-2 border-green-700 rounded-lg p-8 mb-8">
+            <div className="text-5xl font-bold text-green-700 mb-2">R$ 29,90</div>
+            <p className="text-gray-600 mb-6">Acesso imediato após a compra • Garantia de satisfação • Suporte dedicado</p>
+            <button className="w-full px-8 py-4 bg-green-700 text-white rounded-lg hover:bg-green-800 transition-colors font-bold text-lg">
+              Comprar E-book Agora
             </button>
-            <p className="text-xs text-muted-foreground">
-              Garantia de 7 dias - Devolução 100% sem perguntas
-            </p>
           </div>
 
           {/* Countdown */}
           <div className="mb-8">
-            <p className="text-sm text-muted-foreground mb-4">Oferta especial expira em:</p>
-            <div className="flex justify-center gap-4 mb-8">
+            <p className="text-sm text-gray-600 mb-4">Oferta especial expira em:</p>
+            <div className="flex justify-center gap-4">
               {[
                 { value: timeLeft.hours, label: 'Horas' },
                 { value: timeLeft.minutes, label: 'Minutos' },
                 { value: timeLeft.seconds, label: 'Segundos' },
               ].map((item, i) => (
-                <div key={i} className="bg-card border-2 border-primary rounded-lg p-4 min-w-20">
-                  <div className="text-2xl md:text-3xl font-bold text-primary">
+                <div key={i} className="bg-gray-100 border-2 border-green-700 rounded-lg p-4 min-w-20">
+                  <div className="text-2xl md:text-3xl font-bold text-green-700">
                     {String(item.value).padStart(2, '0')}
                   </div>
-                  <div className="text-xs text-muted-foreground">{item.label}</div>
+                  <div className="text-xs text-gray-600">{item.label}</div>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Benefícios Finais */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="text-center">
               <div className="text-3xl mb-2">📱</div>
-              <p className="text-sm text-muted-foreground">Acesso imediato em PDF</p>
+              <p className="text-sm text-gray-600">Acesso imediato em PDF</p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">♾️</div>
-              <p className="text-sm text-muted-foreground">Acesso vitalício</p>
+              <p className="text-sm text-gray-600">Acesso vitalício</p>
             </div>
             <div className="text-center">
               <div className="text-3xl mb-2">🔒</div>
-              <p className="text-sm text-muted-foreground">Compra segura e protegida</p>
+              <p className="text-sm text-gray-600">Compra segura e protegida</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* ============ FOOTER ============ */}
-      <footer className="bg-card border-t border-border py-12 mt-12">
-        <div className="container">
+      <footer className="bg-gray-100 border-t border-gray-200 py-12 px-4">
+        <div className="container max-w-6xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             <div>
-              <h4 className="text-lg font-bold text-foreground mb-4" style={{ fontFamily: "'Cinzel', serif" }}>
+              <h4 className="text-lg font-bold text-gray-900 mb-4" style={{ fontFamily: "'Georgia', serif" }}>
                 Receitas com Tirzepatida
               </h4>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-gray-600">
                 Guia prático para manter a nutrição em dia durante o uso de Mounjaro.
               </p>
             </div>
             <div>
-              <h4 className="text-lg font-bold text-foreground mb-4" style={{ fontFamily: "'Cinzel', serif" }}>
+              <h4 className="text-lg font-bold text-gray-900 mb-4" style={{ fontFamily: "'Georgia', serif" }}>
                 Links Rápidos
               </h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Sobre</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Contato</a></li>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="#" className="hover:text-green-700 transition-colors">Sobre o E-book</a></li>
+                <li><a href="#" className="hover:text-green-700 transition-colors">Contato</a></li>
               </ul>
             </div>
             <div>
-              <h4 className="text-lg font-bold text-foreground mb-4" style={{ fontFamily: "'Cinzel', serif" }}>
+              <h4 className="text-lg font-bold text-gray-900 mb-4" style={{ fontFamily: "'Georgia', serif" }}>
                 Legal
               </h4>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><a href="#" className="hover:text-primary transition-colors">Termos</a></li>
-                <li><a href="#" className="hover:text-primary transition-colors">Privacidade</a></li>
+              <ul className="space-y-2 text-sm text-gray-600">
+                <li><a href="#" className="hover:text-green-700 transition-colors">Termos de Uso</a></li>
+                <li><a href="#" className="hover:text-green-700 transition-colors">Privacidade</a></li>
               </ul>
             </div>
           </div>
-          <div className="border-t border-border pt-8 text-center text-sm text-muted-foreground">
+          <div className="border-t border-gray-300 pt-8 text-center text-sm text-gray-600">
             <p>© 2026 Receitas com Tirzepatida. Todos os direitos reservados.</p>
           </div>
         </div>

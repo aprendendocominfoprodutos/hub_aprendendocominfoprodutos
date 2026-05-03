@@ -25,15 +25,15 @@ import MentalLanding from "./pages/MentalLanding";
 function Router() {
   return (
     <Switch>
-      {/* Mitologia - Rotas */}
+      {/* Mitologia - Rotas (Dark Theme) */}
       <Route path="/mythcuriotvbrasil" component={MythologyLanding} />
       <Route path="/mythcuriotvbrasil/*" component={MythologyLanding} />
       
-      {/* Fitness/Saúde - Rotas */}
+      {/* Fitness/Saúde - Rotas (Light Theme) */}
       <Route path="/fitnessesaude" component={FitnessLanding} />
       <Route path="/fitnessesaude/*" component={FitnessLanding} />
       
-      {/* Mental/Financeiro - Rotas */}
+      {/* Mental/Financeiro - Rotas (Dark Theme) */}
       <Route path="/mentalefinanceiro" component={MentalLanding} />
       <Route path="/mentalefinanceiro/*" component={MentalLanding} />
       
