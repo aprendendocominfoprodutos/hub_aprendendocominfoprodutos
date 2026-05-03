@@ -4,6 +4,7 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import Hub from "./pages/Hub";
 import MythologyLanding from "./pages/MythologyLanding";
 import FitnessLanding from "./pages/FitnessLanding";
 import MentalLanding from "./pages/MentalLanding";
@@ -25,10 +26,6 @@ import MentalLanding from "./pages/MentalLanding";
 function Router() {
   return (
     <Switch>
-      {/* Mitologia - Rotas (Dark Theme) */}
-      <Route path="/mythcuriotvbrasil" component={MythologyLanding} />
-      <Route path="/mythcuriotvbrasil/*" component={MythologyLanding} />
-      
       {/* Fitness/Saúde - Rotas (Light Theme) */}
       <Route path="/fitnessesaude" component={FitnessLanding} />
       <Route path="/fitnessesaude/*" component={FitnessLanding} />
@@ -37,8 +34,12 @@ function Router() {
       <Route path="/mentalefinanceiro" component={MentalLanding} />
       <Route path="/mentalefinanceiro/*" component={MentalLanding} />
       
-      {/* Página inicial (redirecionamento) */}
-      <Route path="/" component={MythologyLanding} />
+      {/* Mitologia - Rotas (Dark Theme) - Deve vir por último para não sobrescrever outras rotas */}
+      <Route path="/mythcuriotvbrasil" component={MythologyLanding} />
+      <Route path="/mythcuriotvbrasil/*" component={MythologyLanding} />
+      
+      {/* Página inicial - Hub/Marketplace Premium */}
+      <Route path="/" component={Hub} />
       
       {/* 404 */}
       <Route path="/404" component={NotFound} />
@@ -48,11 +49,17 @@ function Router() {
 }
 
 /**
- * Tema: Dark Premium (Multi-Nicho)
+ * Tema: Dark Premium (Multi-Nicho) + Hub/Marketplace
  * - Background: Preto profundo (#050506)
  * - Foreground: Branco marfim (#f8f5ec)
  * - Primary: Dourado envelhecido (#c9a24a)
  * - Tema escuro é a identidade visual padrão
+ * 
+ * Rotas:
+ * / → Hub/Marketplace Premium (vitrine dos 3 produtos)
+ * /mythcuriotvbrasil → Landing page de Mitologia
+ * /fitnessesaude → Landing page de Fitness
+ * /mentalefinanceiro → Landing page de Mental/Financeiro
  */
 function App() {
   return (
