@@ -14,6 +14,7 @@ import MentalLanding from "./pages/MentalLanding";
  * Router Multi-Nicho
  * 
  * Estrutura de rotas:
+ * / → Hub/Marketplace Premium (vitrine dos 3 produtos)
  * /mythcuriotvbrasil → Landing page de Mitologia
  * /mythcuriotvbrasil/* → Subrotas de Mitologia (produtos específicos)
  * 
@@ -34,7 +35,7 @@ function Router() {
       <Route path="/mentalefinanceiro" component={MentalLanding} />
       <Route path="/mentalefinanceiro/*" component={MentalLanding} />
       
-      {/* Mitologia - Rotas (Dark Theme) - Deve vir por último para não sobrescrever outras rotas */}
+      {/* Mitologia - Rotas (Dark Theme) */}
       <Route path="/mythcuriotvbrasil" component={MythologyLanding} />
       <Route path="/mythcuriotvbrasil/*" component={MythologyLanding} />
       
