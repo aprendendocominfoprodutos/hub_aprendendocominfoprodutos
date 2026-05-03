@@ -5,7 +5,7 @@ import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import Hub from "./pages/Hub";
-import MythologyLanding from "./pages/MythologyLanding";
+// import MythologyLanding from "./pages/MythologyLanding"; // Temporariamente desabilitado
 import FitnessLanding from "./pages/FitnessLanding";
 import MentalLanding from "./pages/MentalLanding";
 
@@ -35,9 +35,9 @@ function Router() {
       <Route path="/mentalefinanceiro" component={MentalLanding} />
       <Route path="/mentalefinanceiro/*" component={MentalLanding} />
       
-      {/* Mitologia - Rotas (Dark Theme) */}
-      <Route path="/mythcuriotvbrasil" component={MythologyLanding} />
-      <Route path="/mythcuriotvbrasil/*" component={MythologyLanding} />
+      {/* Mitologia - Rotas (Dark Theme) - Temporariamente desabilitado */}
+      {/* <Route path="/mythcuriotvbrasil" component={MythologyLanding} />
+      <Route path="/mythcuriotvbrasil/*" component={MythologyLanding} /> */}
       
       {/* Página inicial - Hub/Marketplace Premium */}
       <Route path="/" component={Hub} />
