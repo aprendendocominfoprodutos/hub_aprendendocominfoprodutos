@@ -18,18 +18,17 @@ function Router() {
   );
 }
 
-// NOTE: About Theme
-// - First choose a default theme according to your design style (dark or light bg), than change color palette in index.css
-//   to keep consistent foreground/background color across components
-// - If you want to make theme switchable, pass `switchable` ThemeProvider and use `useTheme` hook
-
+/**
+ * Tema: Dark Premium (Mitologia Grega)
+ * - Background: Preto profundo (#0a0a0a)
+ * - Foreground: Branco marfim (#f5f5f5)
+ * - Primary: Dourado (#d4af37)
+ * - Não é switchable - tema escuro é a identidade visual
+ */
 function App() {
   return (
     <ErrorBoundary>
-      <ThemeProvider
-        defaultTheme="light"
-        // switchable
-      >
+      <ThemeProvider defaultTheme="dark">
         <TooltipProvider>
           <Toaster />
           <Router />
