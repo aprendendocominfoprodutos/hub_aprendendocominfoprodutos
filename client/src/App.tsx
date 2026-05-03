@@ -4,26 +4,55 @@ import NotFound from "@/pages/NotFound";
 import { Route, Switch } from "wouter";
 import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import Home from "./pages/Home";
+import MythologyLanding from "./pages/MythologyLanding";
+import FitnessLanding from "./pages/FitnessLanding";
+import MentalLanding from "./pages/MentalLanding";
 
 
+/**
+ * Router Multi-Nicho
+ * 
+ * Estrutura de rotas:
+ * /mythcuriotvbrasil → Landing page de Mitologia
+ * /mythcuriotvbrasil/* → Subrotas de Mitologia (produtos específicos)
+ * 
+ * /fitnessesaude → Landing page de Fitness/Saúde
+ * /fitnessesaude/* → Subrotas de Fitness (produtos específicos)
+ * 
+ * /mentalefinanceiro → Landing page de Mental/Financeiro
+ * /mentalefinanceiro/* → Subrotas de Mental (produtos específicos)
+ */
 function Router() {
   return (
     <Switch>
-      <Route path={"/"} component={Home} />
-      <Route path={"/404"} component={NotFound} />
-      {/* Final fallback route */}
+      {/* Mitologia - Rotas */}
+      <Route path="/mythcuriotvbrasil" component={MythologyLanding} />
+      <Route path="/mythcuriotvbrasil/*" component={MythologyLanding} />
+      
+      {/* Fitness/Saúde - Rotas */}
+      <Route path="/fitnessesaude" component={FitnessLanding} />
+      <Route path="/fitnessesaude/*" component={FitnessLanding} />
+      
+      {/* Mental/Financeiro - Rotas */}
+      <Route path="/mentalefinanceiro" component={MentalLanding} />
+      <Route path="/mentalefinanceiro/*" component={MentalLanding} />
+      
+      {/* Página inicial (redirecionamento) */}
+      <Route path="/" component={MythologyLanding} />
+      
+      {/* 404 */}
+      <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
   );
 }
 
 /**
- * Tema: Dark Premium (Mitologia Grega)
- * - Background: Preto profundo (#0a0a0a)
- * - Foreground: Branco marfim (#f5f5f5)
- * - Primary: Dourado (#d4af37)
- * - Não é switchable - tema escuro é a identidade visual
+ * Tema: Dark Premium (Multi-Nicho)
+ * - Background: Preto profundo (#050506)
+ * - Foreground: Branco marfim (#f8f5ec)
+ * - Primary: Dourado envelhecido (#c9a24a)
+ * - Tema escuro é a identidade visual padrão
  */
 function App() {
   return (
