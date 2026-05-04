@@ -13,19 +13,13 @@ const fitnessHealthCategories = [
     description: 'Nutrição, bem-estar, prevenção e imunidade',
     image: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&h=600&fit=crop',
   },
-  {
-    id: 'alimentacao',
-    title: 'Alimentação',
-    description: 'Receitas, armazenamento, culinária e dietas',
-    image: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=800&h=600&fit=crop',
-  },
 ];
 
 export default function FitnessHealthSecondary() {
   return (
     <SecondaryHub
       title="Fitness & Saúde"
-      description="Explore nossos produtos de fitness, saúde e alimentação"
+      description="Explore nossos produtos de fitness e saúde"
       categories={fitnessHealthCategories}
       backLink="/"
       baseLink="/fitness-saude"

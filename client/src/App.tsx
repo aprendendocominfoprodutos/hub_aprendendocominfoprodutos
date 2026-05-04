@@ -102,7 +102,6 @@ function Router() {
       {/* Nível 3: Hub Terciário */}
       <Route path="/fitness-saude/fitness" component={FitnessTertiary} />
       <Route path="/fitness-saude/saude" component={HealthTertiary} />
-      <Route path="/fitness-saude/alimentacao" component={FoodTertiary} />
 
       {/* MENTAL & FINANCE - 4 Níveis */}
       {/* Nível 2: Hub Secundário */}
