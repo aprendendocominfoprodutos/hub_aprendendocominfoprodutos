@@ -1,151 +1,49 @@
-import Carousel from '@/components/Carousel';
-import { ArrowRight, Sparkles, BookOpen, Zap } from 'lucide-react';
-import { useLocation } from 'wouter';
+import { ArrowRight, Sparkles } from 'lucide-react';
+import { Link } from 'wouter';
 
 /**
- * Hub Principal - Netflix Style Layout
+ * Hub Principal - Thumbnail Navigation
  * 
- * Design: Dark Premium com Carousel Horizontal
+ * Design: Dark Premium com 3 Thumbnails
  * Paleta: Azul Profundo (#07101f) + Âmbar (#c9a24a)
  * Tipografia: Poppins (títulos) + Inter (corpo)
  * 
  * Estrutura:
  * 1. Hero Section
- * 2. 3 Carousels (Mitologia, Fitness, Mental/Financeiro)
+ * 2. 3 Thumbnails (Mitologia, Fitness, Mental/Financeiro)
  * 3. Features
  * 4. CTA Final
  * 5. Footer
  */
 
+const niches = [
+  {
+    id: 'mitologia',
+    title: 'Mitologia',
+    subtitle: 'Deuses, Heróis e Lendas',
+    image: 'https://images.unsplash.com/photo-1578926078328-123456789012?w=600&h=400&fit=crop',
+    link: '/mitologia',
+    color: 'from-amber-600 to-amber-900',
+  },
+  {
+    id: 'fitness',
+    title: 'Fitness & Saúde',
+    subtitle: 'Receitas, Treino e Nutrição',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop',
+    link: '/fitness',
+    color: 'from-green-600 to-green-900',
+  },
+  {
+    id: 'mental-financeiro',
+    title: 'Mental & Financeiro',
+    subtitle: 'Saúde Mental e Educação Financeira',
+    image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&h=400&fit=crop',
+    link: '/mental-financeiro',
+    color: 'from-blue-600 to-blue-900',
+  },
+];
+
 export default function Hub() {
-  const [, setLocation] = useLocation();
-
-  // Dados dos produtos de Mitologia
-  const mythologyProducts = [
-    {
-      id: 'greek',
-      title: 'Mitologia Grega',
-      subtitle: 'Deuses e Heróis',
-      image: 'https://images.unsplash.com/photo-1578926078328-123456789012?w=400&h=500&fit=crop',
-      price: 'R$ 49,90',
-      link: '/mitologia/grega',
-    },
-    {
-      id: 'nordic',
-      title: 'Mitologia Nórdica',
-      subtitle: 'Valhala e Ragnarok',
-      image: 'https://images.unsplash.com/photo-1578926078328-123456789013?w=400&h=500&fit=crop',
-      price: 'R$ 39,90',
-      link: '/mitologia/nordica',
-    },
-    {
-      id: 'egyptian',
-      title: 'Mitologia Egípcia',
-      subtitle: 'Deuses do Nilo',
-      image: 'https://images.unsplash.com/photo-1578926078328-123456789014?w=400&h=500&fit=crop',
-      price: 'R$ 44,90',
-      link: '/mitologia/egipcia',
-    },
-    {
-      id: 'aztec',
-      title: 'Mitologia Asteca',
-      subtitle: 'Cosmologia Asteca',
-      image: 'https://images.unsplash.com/photo-1578926078328-123456789015?w=400&h=500&fit=crop',
-      price: 'R$ 34,90',
-      link: '/mitologia/asteca',
-    },
-  ];
-
-  // Dados dos produtos de Fitness
-  const fitnessProducts = [
-    {
-      id: 'recipes',
-      title: 'Receitas Saudáveis',
-      subtitle: '30 Receitas Premium',
-      image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=500&fit=crop',
-      price: 'R$ 29,90',
-      link: '/fitness/receitas',
-    },
-    {
-      id: 'training',
-      title: 'Plano de Treino',
-      subtitle: '12 Semanas',
-      image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&h=500&fit=crop',
-      price: 'R$ 39,90',
-      link: '/fitness/treino',
-    },
-    {
-      id: 'nutrition',
-      title: 'Nutrição Avançada',
-      subtitle: 'Guia Completo',
-      image: 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=500&fit=crop',
-      price: 'R$ 44,90',
-      link: '/fitness/nutricao',
-    },
-    {
-      id: 'supplements',
-      title: 'Suplementação',
-      subtitle: 'Guia Prático',
-      image: 'https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=400&h=500&fit=crop',
-      price: 'R$ 34,90',
-      link: '/fitness/suplementacao',
-    },
-  ];
-
-  // Dados dos produtos de Mental/Financeiro
-  const mentalFinanceProducts = [
-    {
-      id: 'emotional',
-      title: 'Inteligência Emocional',
-      subtitle: 'Desenvolvimento Pessoal',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
-      price: 'R$ 44,90',
-      link: '/mental-financeiro/emocional',
-    },
-    {
-      id: 'financial',
-      title: 'Educação Financeira',
-      subtitle: 'Gestão de Finanças',
-      image: 'https://images.unsplash.com/photo-1579621970563-ebec33a8d008?w=400&h=500&fit=crop',
-      price: 'R$ 49,90',
-      link: '/mental-financeiro/financeira',
-    },
-    {
-      id: 'meditation',
-      title: 'Meditação & Mindfulness',
-      subtitle: 'Paz Interior',
-      image: 'https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=400&h=500&fit=crop',
-      price: 'R$ 39,90',
-      link: '/mental-financeiro/meditacao',
-    },
-    {
-      id: 'investments',
-      title: 'Investimentos Inteligentes',
-      subtitle: 'Construa seu Patrimônio',
-      image: 'https://images.unsplash.com/photo-1579621970563-ebec33a8d008?w=400&h=500&fit=crop',
-      price: 'R$ 54,90',
-      link: '/mental-financeiro/investimentos',
-    },
-  ];
-
-  const features = [
-    {
-      icon: BookOpen,
-      title: 'Conteúdo Premium',
-      description: 'Curado e desenvolvido por especialistas em cada área'
-    },
-    {
-      icon: Zap,
-      title: 'Acesso Instantâneo',
-      description: 'Comece imediatamente após a compra'
-    },
-    {
-      icon: Sparkles,
-      title: 'Transformação',
-      description: 'Conhecimento que realmente muda vidas'
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Background Decorativo */}
@@ -202,20 +100,42 @@ export default function Hub() {
           </div>
         </section>
 
-        {/* Carousels */}
-        <section className="py-12 px-4 max-w-7xl mx-auto">
-          <Carousel 
-            title="📚 Mitologia" 
-            items={mythologyProducts}
-          />
-          <Carousel 
-            title="💪 Fitness & Saúde" 
-            items={fitnessProducts}
-          />
-          <Carousel 
-            title="💰 Mental & Financeiro" 
-            items={mentalFinanceProducts}
-          />
+        {/* Thumbnails Section */}
+        <section className="py-16 px-4 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {niches.map((niche) => (
+              <Link key={niche.id} href={niche.link}>
+                <a className="group cursor-pointer">
+                  {/* Thumbnail Card */}
+                  <div className="relative h-80 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+                    {/* Imagem */}
+                    <img
+                      src={niche.image}
+                      alt={niche.title}
+                      className="w-full h-full object-cover"
+                    />
+
+                    {/* Overlay Gradiente */}
+                    <div className={`absolute inset-0 bg-gradient-to-t ${niche.color} opacity-40 group-hover:opacity-60 transition-opacity duration-300`} />
+
+                    {/* Conteúdo */}
+                    <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                      <h3 className="text-3xl font-bold mb-2" style={{ fontFamily: 'Poppins' }}>
+                        {niche.title}
+                      </h3>
+                      <p className="text-lg text-gray-100 mb-4">
+                        {niche.subtitle}
+                      </p>
+                      <button className="self-start bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors flex items-center gap-2">
+                        Explorar
+                        <ArrowRight size={18} />
+                      </button>
+                    </div>
+                  </div>
+                </a>
+              </Link>
+            ))}
+          </div>
         </section>
 
         {/* Features Section */}
@@ -226,24 +146,47 @@ export default function Hub() {
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {features.map((feature, index) => {
-                const Icon = feature.icon;
-                return (
-                  <div key={index} className="text-center">
-                    <div className="flex justify-center mb-4">
-                      <div className="p-3 bg-amber-500/10 rounded-lg">
-                        <Icon size={32} className="text-amber-500" />
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: 'Poppins' }}>
-                      {feature.title}
-                    </h3>
-                    <p className="text-slate-400">
-                      {feature.description}
-                    </p>
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-amber-500/10 rounded-lg">
+                    <Sparkles size={32} className="text-amber-500" />
                   </div>
-                );
-              })}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: 'Poppins' }}>
+                  Conteúdo Premium
+                </h3>
+                <p className="text-slate-400">
+                  Curado e desenvolvido por especialistas em cada área
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-amber-500/10 rounded-lg">
+                    <Sparkles size={32} className="text-amber-500" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: 'Poppins' }}>
+                  Acesso Instantâneo
+                </h3>
+                <p className="text-slate-400">
+                  Comece imediatamente após a compra
+                </p>
+              </div>
+
+              <div className="text-center">
+                <div className="flex justify-center mb-4">
+                  <div className="p-3 bg-amber-500/10 rounded-lg">
+                    <Sparkles size={32} className="text-amber-500" />
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-2" style={{ fontFamily: 'Poppins' }}>
+                  Transformação
+                </h3>
+                <p className="text-slate-400">
+                  Conhecimento que realmente muda vidas
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -255,10 +198,10 @@ export default function Hub() {
               Pronto Para Transformar Sua Vida?
             </h2>
             <p className="text-xl text-slate-400 mb-8">
-              Escolha um de nossos produtos e comece sua jornada hoje mesmo
+              Escolha um de nossos nichos e comece sua jornada hoje mesmo
             </p>
             <button className="px-12 py-4 bg-amber-500 hover:bg-amber-600 text-white font-bold text-lg rounded-lg transition-colors">
-              Explorar Todos os Produtos
+              Explorar Todos os Nichos
             </button>
           </div>
         </section>
