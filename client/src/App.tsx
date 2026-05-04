@@ -10,8 +10,13 @@ import Hub from "./pages/Hub";
 
 // Niches Hubs - Secondary Level
 import MythologySecondary from "./pages/niches/MythologySecondary";
-import FitnessHub from "./pages/niches/FitnessHub";
+import FitnessHealthSecondary from "./pages/niches/FitnessHealthSecondary";
 import MentalFinanceHub from "./pages/niches/MentalFinanceHub";
+
+// Fitness & Health - Tertiary Level
+import FitnessTertiary from "./pages/niches/FitnessTertiary";
+import HealthTertiary from "./pages/niches/HealthTertiary";
+import FoodTertiary from "./pages/niches/FoodTertiary";
 
 // Mythology - Tertiary Level
 import MythologyGreekTertiary from "./pages/niches/MythologyGreekTertiary";
@@ -86,12 +91,14 @@ function Router() {
       <Route path="/mitologia/grega/batalhas" component={MythologyGreekBattles} />
       <Route path="/mitologia/grega/geral" component={MythologyGreekGeneral} />
 
-      {/* FITNESS - Nível 2 e 3 */}
-      <Route path="/fitness" component={FitnessHub} />
-      <Route path="/fitness/receitas" component={HealthyRecipes} />
-      <Route path="/fitness/treino" component={TrainingPlan} />
-      <Route path="/fitness/nutricao" component={Nutrition} />
-      <Route path="/fitness/suplementacao" component={Supplementation} />
+      {/* FITNESS & HEALTH - 4 Níveis */}
+      {/* Nível 2: Hub Secundário */}
+      <Route path="/fitness-saude" component={FitnessHealthSecondary} />
+      
+      {/* Nível 3: Hub Terciário */}
+      <Route path="/fitness-saude/fitness" component={FitnessTertiary} />
+      <Route path="/fitness-saude/saude" component={HealthTertiary} />
+      <Route path="/fitness-saude/alimentacao" component={FoodTertiary} />
 
       {/* MENTAL/FINANCEIRO - Nível 2 e 3 */}
       <Route path="/mental-financeiro" component={MentalFinanceHub} />
@@ -102,7 +109,7 @@ function Router() {
 
       {/* Legacy Routes - Redirect to new structure */}
       <Route path="/mythcuriotvbrasil" component={MythologySecondary} />
-      <Route path="/fitnessesaude" component={FitnessHub} />
+      <Route path="/fitnessesaude" component={FitnessHealthSecondary} />
       <Route path="/mentalefinanceiro" component={MentalFinanceHub} />
 
       {/* 404 */}
