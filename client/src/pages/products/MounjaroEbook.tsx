@@ -215,16 +215,11 @@ export default function MounjaroEbook() {
 
             {/* Right - Mockup 3D */}
             <div className="flex justify-center">
-              <div className="bg-gradient-to-b from-green-800 to-green-900 rounded-2xl shadow-2xl p-8 border-4 border-amber-400 max-w-sm perspective">
-                <div className="bg-green-900 rounded-lg h-80 flex flex-col items-center justify-center mb-4 border-2 border-amber-300">
-                  <p className="text-amber-300 text-sm font-bold mb-2">RECEITAS LEVES</p>
-                  <h2 className="text-4xl font-black text-white text-center mb-4">30</h2>
-                  <p className="text-white font-bold text-center mb-4 px-4">PARA QUEM USA MOUNJARO</p>
-                  <p className="text-amber-200 text-xs text-center px-4 mb-4">Cardápios simples, refeições práticas e cuidados alimentares</p>
-                  <p className="text-amber-300 text-sm font-semibold">por Alisson</p>
-                </div>
-                <p className="text-center text-white font-semibold">E-book Digital Premium</p>
-              </div>
+              <img 
+                src="/manus-storage/1000442303_1979f751.png" 
+                alt="Mockup 3D - 30 Receitas Leves para Quem Usa Mounjaro" 
+                className="w-full max-w-sm rounded-xl shadow-2xl"
+              />
             </div>
           </div>
         </div>
