@@ -95,58 +95,64 @@ export default function AutoCarousel({ items, autoRotateInterval = 5000 }: AutoC
       onMouseEnter={pauseAutoRotate}
       onMouseLeave={resumeAutoRotate}
     >
-      <div className="relative w-full h-full">
-        <img
-          src={currentItem.image}
-          alt={currentItem.title}
-          className="w-full h-full object-cover transition-opacity duration-500"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
-
-        <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ fontFamily: 'Poppins' }}>
-            {currentItem.title}
-          </h2>
-          <p className="text-lg text-gray-200 mb-4">
-            {currentItem.subtitle}
-          </p>
-          <div className="flex items-center justify-between">
-            <span className="text-amber-400 font-bold text-2xl">{currentItem.price}</span>
-            <Link href={currentItem.link}>
-              <a className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                Explorar
-              </a>
-            </Link>
-          </div>
-        </div>
-
-        <div className="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full text-sm font-bold">
-          {currentItem.price}
-        </div>
-
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
-          {items.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                pauseAutoRotate();
-                setCurrentIndex(index);
-                setTimeout(resumeAutoRotate, 5000);
-              }}
-              className={`w-2 h-2 rounded-full transition-all ${
-                index === currentIndex
-                  ? 'bg-amber-500 w-8'
-                  : 'bg-white/50 hover:bg-white/75'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
+      <Link href={currentItem.link}>
+        <a className="block w-full h-full">
+          <div className="relative w-full h-full cursor-pointer">
+            <img
+              src={currentItem.image}
+              alt={currentItem.title}
+              className="w-full h-full object-cover transition-opacity duration-500"
             />
-          ))}
-        </div>
-      </div>
+
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-70" />
+
+            <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-8 text-white">
+              <h2 className="text-3xl md:text-4xl font-bold mb-2" style={{ fontFamily: 'Poppins' }}>
+                {currentItem.title}
+              </h2>
+              <p className="text-lg text-gray-200 mb-4">
+                {currentItem.subtitle}
+              </p>
+              <div className="flex items-center justify-between">
+                <span className="text-amber-400 font-bold text-2xl">{currentItem.price}</span>
+                <span className="bg-amber-500 hover:bg-amber-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
+                  Explorar
+                </span>
+              </div>
+            </div>
+
+            <div className="absolute top-4 right-4 bg-amber-500 text-white px-4 py-2 rounded-full text-sm font-bold">
+              {currentItem.price}
+            </div>
+
+            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+              {items.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    pauseAutoRotate();
+                    setCurrentIndex(index);
+                    setTimeout(resumeAutoRotate, 5000);
+                  }}
+                  className={`w-2 h-2 rounded-full transition-all ${
+                    index === currentIndex
+                      ? 'bg-amber-500 w-8'
+                      : 'bg-white/50 hover:bg-white/75'
+                  }`}
+                  aria-label={`Go to slide ${index + 1}`}
+                />
+              ))}
+            </div>
+          </div>
+        </a>
+      </Link>
 
       <button
-        onClick={goToPrevious}
+        onClick={(e) => {
+          e.preventDefault();
+          goToPrevious();
+        }}
         className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-amber-500 hover:bg-amber-600 text-white rounded-full transition-colors shadow-lg"
         aria-label="Previous slide"
       >
@@ -154,7 +160,10 @@ export default function AutoCarousel({ items, autoRotateInterval = 5000 }: AutoC
       </button>
 
       <button
-        onClick={goToNext}
+        onClick={(e) => {
+          e.preventDefault();
+          goToNext();
+        }}
         className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 p-2 bg-amber-500 hover:bg-amber-600 text-white rounded-full transition-colors shadow-lg"
         aria-label="Next slide"
       >
