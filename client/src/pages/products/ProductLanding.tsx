@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'wouter';
 import { ArrowLeft, Check } from 'lucide-react';
 
@@ -30,6 +31,10 @@ export default function ProductLanding({
   accentColor,
   textColor,
 }: ProductLandingProps) {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
       {/* Header */}

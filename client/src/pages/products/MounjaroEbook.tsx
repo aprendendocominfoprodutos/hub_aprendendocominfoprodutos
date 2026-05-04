@@ -1,7 +1,11 @@
-import { ArrowLeft, Check, AlertCircle } from 'lucide-react';
+import { useEffect } from 'react';
+import { ArrowLeft, AlertCircle, Check } from 'lucide-react';
 import { Link } from 'wouter';
 
 export default function MounjaroEbook() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
       {/* Header */}
