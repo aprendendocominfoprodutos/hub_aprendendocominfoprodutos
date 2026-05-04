@@ -37,7 +37,8 @@ import NordicMythology from "./pages/products/NordicMythology";
 import EgyptianMythology from "./pages/products/EgyptianMythology";
 import AztecMythology from "./pages/products/AztecMythology";
 
-// Recipes Carousel
+// Recipes Hub
+import RecipesHub from "./pages/niches/RecipesHub";
 import RecipesCarousel from "./pages/niches/RecipesCarousel";
 
 // Fitness Products
@@ -105,7 +106,8 @@ function Router() {
       <Route path="/fitness-saude/fitness" component={FitnessTertiary} />
       <Route path="/fitness-saude/saude" component={HealthTertiary} />
       <Route path="/fitness-saude/alimentacao" component={FoodTertiary} />
-      <Route path="/fitness-saude/alimentacao/receitas" component={RecipesCarousel} />
+      <Route path="/fitness-saude/alimentacao/receitas" component={RecipesHub} />
+      <Route path="/fitness-saude/alimentacao/receitas/mounjaro" component={RecipesCarousel} />
       
       {/* MENTAL & FINANCE - 4 Níveis */}
       {/* Nível 2: Hub Secundário */}
