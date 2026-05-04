@@ -11,12 +11,16 @@ import Hub from "./pages/Hub";
 // Niches Hubs - Secondary Level
 import MythologySecondary from "./pages/niches/MythologySecondary";
 import FitnessHealthSecondary from "./pages/niches/FitnessHealthSecondary";
-import MentalFinanceHub from "./pages/niches/MentalFinanceHub";
+import MentalFinanceSecondary from "./pages/niches/MentalFinanceSecondary";
 
 // Fitness & Health - Tertiary Level
 import FitnessTertiary from "./pages/niches/FitnessTertiary";
 import HealthTertiary from "./pages/niches/HealthTertiary";
 import FoodTertiary from "./pages/niches/FoodTertiary";
+
+// Mental & Finance - Tertiary Level
+import MentalTertiary from "./pages/niches/MentalTertiary";
+import FinanceTertiary from "./pages/niches/FinanceTertiary";
 
 // Mythology - Tertiary Level
 import MythologyGreekTertiary from "./pages/niches/MythologyGreekTertiary";
@@ -100,17 +104,18 @@ function Router() {
       <Route path="/fitness-saude/saude" component={HealthTertiary} />
       <Route path="/fitness-saude/alimentacao" component={FoodTertiary} />
 
-      {/* MENTAL/FINANCEIRO - Nível 2 e 3 */}
-      <Route path="/mental-financeiro" component={MentalFinanceHub} />
-      <Route path="/mental-financeiro/emocional" component={EmotionalIntelligence} />
-      <Route path="/mental-financeiro/financeira" component={FinancialEducation} />
-      <Route path="/mental-financeiro/meditacao" component={Meditation} />
-      <Route path="/mental-financeiro/investimentos" component={Investments} />
+      {/* MENTAL & FINANCE - 4 Níveis */}
+      {/* Nível 2: Hub Secundário */}
+      <Route path="/mental-financeiro" component={MentalFinanceSecondary} />
+      
+      {/* Nível 3: Hub Terciário */}
+      <Route path="/mental-financeiro/mental" component={MentalTertiary} />
+      <Route path="/mental-financeiro/financeiro" component={FinanceTertiary} />
 
       {/* Legacy Routes - Redirect to new structure */}
       <Route path="/mythcuriotvbrasil" component={MythologySecondary} />
       <Route path="/fitnessesaude" component={FitnessHealthSecondary} />
-      <Route path="/mentalefinanceiro" component={MentalFinanceHub} />
+      <Route path="/mentalefinanceiro" component={MentalFinanceSecondary} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />
