@@ -41,6 +41,9 @@ import AztecMythology from "./pages/products/AztecMythology";
 import RecipesHub from "./pages/niches/RecipesHub";
 import RecipesCarousel from "./pages/niches/RecipesCarousel";
 
+// Mounjaro Ebook
+import MounjaroEbook from "./pages/products/MounjaroEbook";
+
 // Fitness Products
 import HealthyRecipes from "./pages/products/HealthyRecipes";
 import TrainingPlan from "./pages/products/TrainingPlan";
@@ -107,6 +110,7 @@ function Router() {
       <Route path="/fitness-saude/saude" component={HealthTertiary} />
       <Route path="/fitness-saude/alimentacao" component={FoodTertiary} />
       <Route path="/fitness-saude/alimentacao/receitas" component={RecipesHub} />
+      <Route path="/fitness-saude/alimentacao/receitas/mounjaro" component={MounjaroEbook} />
       
       {/* MENTAL & FINANCE - 4 Níveis */}
       {/* Nível 2: Hub Secundário */}

@@ -19,7 +19,7 @@ const mounjaro: CarouselItem[] = [
     subtitle: 'Mounjaro - 30 Receitas Leves',
     image: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200&h=600&fit=crop',
     price: 'R$ 47,00',
-    link: '#',
+    link: '/fitness-saude/alimentacao/receitas/mounjaro',
   },
   {
     id: '2',
