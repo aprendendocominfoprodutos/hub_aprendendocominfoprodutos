@@ -216,9 +216,9 @@ export default function MounjaroEbook() {
             {/* Right - Mockup 3D */}
             <div className="flex justify-center">
               <img 
-                src="/manus-storage/1000442303_1979f751.png" 
+                src="/manus-storage/1000442303-removebg-preview_77ec1a9d.png" 
                 alt="Mockup 3D - 30 Receitas Leves para Quem Usa Mounjaro" 
-                className="w-full max-w-sm rounded-xl shadow-2xl"
+                className="w-full max-w-md"
               />
             </div>
           </div>
