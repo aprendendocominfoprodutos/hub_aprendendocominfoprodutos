@@ -111,6 +111,9 @@ function Router() {
       <Route path="/mitologia/grega/herois" component={MythologyGreekHeroes} />
       <Route path="/mitologia/grega/batalhas" component={MythologyGreekBattles} />
       <Route path="/mitologia/grega/geral" component={MythologyGreekGeneral} />
+      
+      {/* Kit Completo - Landing Page */}
+      <Route path="/mitologia/grega/kit-completo" component={GreekMythology} />
 
       {/* FITNESS & HEALTH - 4 Níveis */}
       {/* Nível 2: Hub Secundário */}

@@ -5,7 +5,7 @@ const greekGeneral = [
   { id: 2, name: 'Cosmologia', price: 'R$ 19,90' },
   { id: 3, name: 'Mitos Clássicos', price: 'R$ 19,90' },
   { id: 4, name: 'Legado Grego', price: 'R$ 19,90' },
-  { id: 5, name: 'Mitologia Grega - Kit Completo', price: 'R$ 49,90', link: '/mitologia/grega' },
+  { id: 5, name: 'Mitologia Grega - Kit Completo', price: 'R$ 49,90', link: '/mitologia/grega/kit-completo' },
 ];
 
 export default function MythologyGreekGeneral() {
