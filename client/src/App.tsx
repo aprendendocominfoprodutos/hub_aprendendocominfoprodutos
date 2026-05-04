@@ -8,10 +8,19 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 // Hub Principal
 import Hub from "./pages/Hub";
 
-// Niches Hubs
-import MythologyHub from "./pages/niches/MythologyHub";
+// Niches Hubs - Secondary Level
+import MythologySecondary from "./pages/niches/MythologySecondary";
 import FitnessHub from "./pages/niches/FitnessHub";
 import MentalFinanceHub from "./pages/niches/MentalFinanceHub";
+
+// Mythology - Tertiary Level
+import MythologyGreekTertiary from "./pages/niches/MythologyGreekTertiary";
+
+// Mythology - Quaternary Level (Greek)
+import MythologyGreekGods from "./pages/niches/MythologyGreekGods";
+import MythologyGreekHeroes from "./pages/niches/MythologyGreekHeroes";
+import MythologyGreekBattles from "./pages/niches/MythologyGreekBattles";
+import MythologyGreekGeneral from "./pages/niches/MythologyGreekGeneral";
 
 // Mythology Products
 import GreekMythology from "./pages/products/GreekMythology";
@@ -64,12 +73,18 @@ function Router() {
       {/* Hub Principal */}
       <Route path="/" component={Hub} />
 
-      {/* MITOLOGIA - Nível 2 e 3 */}
-      <Route path="/mitologia" component={MythologyHub} />
-      <Route path="/mitologia/grega" component={GreekMythology} />
-      <Route path="/mitologia/nordica" component={NordicMythology} />
-      <Route path="/mitologia/egipcia" component={EgyptianMythology} />
-      <Route path="/mitologia/asteca" component={AztecMythology} />
+      {/* MITOLOGIA - 4 Níveis */}
+      {/* Nível 2: Hub Secundário */}
+      <Route path="/mitologia" component={MythologySecondary} />
+      
+      {/* Nível 3: Hub Terciário */}
+      <Route path="/mitologia/grega" component={MythologyGreekTertiary} />
+      
+      {/* Nível 4: Quaternário com AutoCarousel */}
+      <Route path="/mitologia/grega/deuses" component={MythologyGreekGods} />
+      <Route path="/mitologia/grega/herois" component={MythologyGreekHeroes} />
+      <Route path="/mitologia/grega/batalhas" component={MythologyGreekBattles} />
+      <Route path="/mitologia/grega/geral" component={MythologyGreekGeneral} />
 
       {/* FITNESS - Nível 2 e 3 */}
       <Route path="/fitness" component={FitnessHub} />
@@ -86,7 +101,7 @@ function Router() {
       <Route path="/mental-financeiro/investimentos" component={Investments} />
 
       {/* Legacy Routes - Redirect to new structure */}
-      <Route path="/mythcuriotvbrasil" component={MythologyHub} />
+      <Route path="/mythcuriotvbrasil" component={MythologySecondary} />
       <Route path="/fitnessesaude" component={FitnessHub} />
       <Route path="/mentalefinanceiro" component={MentalFinanceHub} />
 
