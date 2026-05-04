@@ -19,7 +19,7 @@ const mounjaro: CarouselItem[] = [
     subtitle: 'Mounjaro - 30 Receitas Leves',
     image: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200&h=600&fit=crop',
     price: 'R$ 47,00',
-    link: '/fitness-saude/alimentacao/receitas/mounjaro',
+    link: '#',
   },
   {
     id: '2',
@@ -27,7 +27,7 @@ const mounjaro: CarouselItem[] = [
     subtitle: 'Com Mounjaro - Nutrição Otimizada',
     image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&h=600&fit=crop',
     price: 'R$ 37,00',
-    link: '/fitness-saude/alimentacao/receitas/mounjaro',
+    link: '#',
   },
   {
     id: '3',
@@ -35,7 +35,7 @@ const mounjaro: CarouselItem[] = [
     subtitle: 'Planejamento Alimentar com Mounjaro',
     image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&h=600&fit=crop',
     price: 'R$ 27,00',
-    link: '/fitness-saude/alimentacao/receitas/mounjaro',
+    link: '#',
   },
   {
     id: '4',
@@ -43,8 +43,8 @@ const mounjaro: CarouselItem[] = [
     subtitle: 'Conserve suas Refeições Preparadas',
     image: 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=1200&h=600&fit=crop',
     price: 'R$ 17,00',
-    link: '/fitness-saude/alimentacao/receitas/mounjaro',
-  },
+    link: '#',
+  }
 ];
 
 // Carousel 2: Receitas Cetogênicas
