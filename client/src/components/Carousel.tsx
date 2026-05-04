@@ -27,18 +27,16 @@ export default function Carousel({ title, items, itemsPerView = 4 }: CarouselPro
   const scroll = (direction: 'left' | 'right') => {
     if (!containerRef.current) return;
 
-    const scrollAmount = 320; // Card width + gap
+    const scrollAmount = 336; // Card width (320px) + gap (16px)
+    const currentScroll = containerRef.current.scrollLeft;
     const newPosition = direction === 'left' 
-      ? scrollPosition - scrollAmount 
-      : scrollPosition + scrollAmount;
+      ? currentScroll - scrollAmount 
+      : currentScroll + scrollAmount;
 
     containerRef.current.scrollTo({
       left: newPosition,
       behavior: 'smooth',
     });
-
-    setScrollPosition(newPosition);
-    checkScroll();
   };
 
   const checkScroll = () => {
@@ -94,12 +92,12 @@ export default function Carousel({ title, items, itemsPerView = 4 }: CarouselPro
       {/* Carousel Container */}
       <div
         ref={containerRef}
-        className="overflow-x-auto scroll-smooth px-4 flex gap-4"
-        style={{ scrollBehavior: 'smooth' }}
+        className="overflow-x-auto scroll-smooth flex gap-4 px-4"
+        style={{ scrollBehavior: 'smooth', scrollSnapType: 'x mandatory' }}
       >
         {items.map((item) => (
           <Link key={item.id} href={item.link}>
-            <a className="flex-shrink-0 w-80 group cursor-pointer">
+            <a className="flex-shrink-0 w-80 group cursor-pointer" style={{ scrollSnapAlign: 'start' }}>
               {/* Card */}
               <div className="relative h-96 rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                 {/* Imagem */}
