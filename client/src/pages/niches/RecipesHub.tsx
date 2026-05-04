@@ -1,157 +1,218 @@
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight, ArrowLeft } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { Link } from 'wouter';
+import AutoCarousel from '@/components/AutoCarousel';
 
-interface RecipeCategory {
-  id: string;
-  name: string;
-  description: string;
-}
-
-interface RecipeItem {
+interface CarouselItem {
   id: string;
   title: string;
-  link?: string;
+  subtitle: string;
+  image: string;
+  price: string;
+  link: string;
 }
 
-const mounjaro: RecipeItem[] = [
-  { id: '1', title: 'Café da Manhã', link: '/fitness-saude/alimentacao/receitas/mounjaro' },
-  { id: '2', title: 'Almoço', link: '/fitness-saude/alimentacao/receitas/mounjaro' },
-  { id: '3', title: 'Jantar', link: '/fitness-saude/alimentacao/receitas/mounjaro' },
-  { id: '4', title: 'Lanches', link: '/fitness-saude/alimentacao/receitas/mounjaro' },
+// Carousel 1: Receitas para Quem Toma Tirzepatida (Mounjaro)
+const mounjaro: CarouselItem[] = [
+  {
+    id: '1',
+    title: 'Receitas para Quem Toma Tirzepatida',
+    subtitle: 'Mounjaro - 30 Receitas Leves',
+    image: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200&h=600&fit=crop',
+    price: 'R$ 47,00',
+    link: '/fitness-saude/alimentacao/receitas/mounjaro',
+  },
+  {
+    id: '2',
+    title: 'Guia Completo de Alimentação',
+    subtitle: 'Com Mounjaro - Nutrição Otimizada',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&h=600&fit=crop',
+    price: 'R$ 37,00',
+    link: '/fitness-saude/alimentacao/receitas/mounjaro',
+  },
+  {
+    id: '3',
+    title: 'Cardápios Semanais',
+    subtitle: 'Planejamento Alimentar com Mounjaro',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&h=600&fit=crop',
+    price: 'R$ 27,00',
+    link: '/fitness-saude/alimentacao/receitas/mounjaro',
+  },
+  {
+    id: '4',
+    title: 'Dicas de Armazenamento',
+    subtitle: 'Conserve suas Refeições Preparadas',
+    image: 'https://images.unsplash.com/photo-1584568694244-14fbdf83bd30?w=1200&h=600&fit=crop',
+    price: 'R$ 17,00',
+    link: '/fitness-saude/alimentacao/receitas/mounjaro',
+  },
 ];
 
-const keto: RecipeItem[] = [
-  { id: '1', title: 'Café da Manhã' },
-  { id: '2', title: 'Almoço' },
-  { id: '3', title: 'Jantar' },
-  { id: '4', title: 'Lanches' },
+// Carousel 2: Receitas Cetogênicas
+const keto: CarouselItem[] = [
+  {
+    id: '1',
+    title: 'Receitas Cetogênicas',
+    subtitle: 'Dieta Keto - Em Breve',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
+  {
+    id: '2',
+    title: 'Café da Manhã Keto',
+    subtitle: 'Receitas Baixas em Carboidratos',
+    image: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
+  {
+    id: '3',
+    title: 'Almoços e Jantares',
+    subtitle: 'Pratos Principais Keto',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
+  {
+    id: '4',
+    title: 'Sobremesas Keto',
+    subtitle: 'Doces sem Culpa',
+    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
 ];
 
-const vegana: RecipeItem[] = [
-  { id: '1', title: 'Café da Manhã' },
-  { id: '2', title: 'Almoço' },
-  { id: '3', title: 'Jantar' },
-  { id: '4', title: 'Lanches' },
+// Carousel 3: Receitas Veganas
+const vegana: CarouselItem[] = [
+  {
+    id: '1',
+    title: 'Receitas Veganas',
+    subtitle: 'Alimentação 100% Vegetais - Em Breve',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
+  {
+    id: '2',
+    title: 'Proteínas Vegetais',
+    subtitle: 'Alternativas Nutritivas',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
+  {
+    id: '3',
+    title: 'Refeições Completas',
+    subtitle: 'Pratos Balanceados e Saudáveis',
+    image: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
+  {
+    id: '4',
+    title: 'Sobremesas Veganas',
+    subtitle: 'Delícias Sem Produtos de Origem Animal',
+    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
 ];
 
-const lowCarb: RecipeItem[] = [
-  { id: '1', title: 'Café da Manhã' },
-  { id: '2', title: 'Almoço' },
-  { id: '3', title: 'Jantar' },
-  { id: '4', title: 'Lanches' },
+// Carousel 4: Receitas Low Carb
+const lowCarb: CarouselItem[] = [
+  {
+    id: '1',
+    title: 'Receitas Low Carb',
+    subtitle: 'Baixo Carboidrato - Em Breve',
+    image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
+  {
+    id: '2',
+    title: 'Café da Manhã Low Carb',
+    subtitle: 'Opções Nutritivas e Leves',
+    image: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
+  {
+    id: '3',
+    title: 'Almoços Low Carb',
+    subtitle: 'Refeições Principais Equilibradas',
+    image: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
+  {
+    id: '4',
+    title: 'Lanches Low Carb',
+    subtitle: 'Opções Práticas Entre Refeições',
+    image: 'https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&h=600&fit=crop',
+    price: 'Em Breve',
+    link: '#',
+  },
 ];
-
-const recipeCategories: RecipeCategory[] = [
-  { id: 'mounjaro', name: '💊 Mounjaro', description: 'Receitas leves para quem usa Mounjaro' },
-  { id: 'keto', name: '🥑 Cetogênica', description: 'Receitas baixas em carboidratos' },
-  { id: 'vegana', name: '🌱 Vegana', description: 'Receitas 100% vegetais' },
-  { id: 'lowcarb', name: '⚡ Low Carb', description: 'Receitas com baixo teor de carboidratos' },
-];
-
-interface CarouselProps {
-  category: RecipeCategory;
-  items: RecipeItem[];
-}
-
-function RecipeCarousel({ category, items }: CarouselProps) {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const goToPrevious = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? items.length - 1 : prevIndex - 1
-    );
-  };
-
-  const goToNext = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === items.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const visibleItems = items.slice(currentIndex, currentIndex + 1);
-
-  return (
-    <div className="mb-12 bg-card rounded-lg border border-border p-8">
-      <h2 className="text-3xl font-bold mb-2 text-foreground">{category.name}</h2>
-      <p className="text-muted-foreground mb-6">{category.description}</p>
-
-      <div className="bg-background rounded-lg p-8 mb-6 min-h-64 flex items-center justify-center">
-        {visibleItems.map((item) => (
-          <div key={item.id} className="text-center w-full">
-            {item.link ? (
-              <Link href={item.link}>
-                <a className="inline-block">
-                  <div className="bg-gradient-to-br from-amber-600 to-amber-800 rounded-lg p-12 cursor-pointer hover:shadow-lg transition">
-                    <h3 className="text-2xl font-bold text-white">{item.title}</h3>
-                  </div>
-                </a>
-              </Link>
-            ) : (
-              <div className="bg-slate-700 rounded-lg p-12 opacity-60">
-                <h3 className="text-2xl font-bold text-slate-400">{item.title}</h3>
-                <p className="text-sm text-slate-500 mt-2">Em fase de criação</p>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-
-      <div className="flex items-center justify-between">
-        <button
-          onClick={goToPrevious}
-          className="flex items-center gap-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition"
-        >
-          <ChevronLeft className="w-5 h-5" />
-          Anterior
-        </button>
-
-        <div className="flex gap-2">
-          {items.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrentIndex(idx)}
-              className={`w-3 h-3 rounded-full transition ${
-                idx === currentIndex ? 'bg-amber-600' : 'bg-slate-300 dark:bg-slate-700'
-              }`}
-            />
-          ))}
-        </div>
-
-        <button
-          onClick={goToNext}
-          className="flex items-center gap-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 text-white rounded-lg transition"
-        >
-          Próxima
-          <ChevronRight className="w-5 h-5" />
-        </button>
-      </div>
-    </div>
-  );
-}
 
 export default function RecipesHub() {
   return (
-    <div className="min-h-screen bg-background">
-      <div className="container mx-auto px-4 py-12">
-        <div className="mb-12">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+      {/* Header */}
+      <header className="border-b border-slate-700/30 bg-slate-900/40 backdrop-blur-md sticky top-0 z-50">
+        <div className="container mx-auto px-4 py-6">
           <Link href="/fitness-saude/alimentacao">
-            <a className="text-amber-600 hover:text-amber-700 mb-4 inline-flex items-center gap-2">
-              <ArrowLeft className="w-4 h-4" />
+            <a className="inline-flex items-center gap-2 text-amber-500 hover:text-amber-400 mb-4">
+              <ArrowLeft size={20} />
               Voltar
             </a>
           </Link>
-          <h1 className="text-4xl font-bold text-foreground mb-4">Receitas por Tipo</h1>
-          <p className="text-lg text-muted-foreground">
-            Explore diferentes tipos de receitas. Navegue pelos carousséis para ver cada categoria.
-          </p>
+          <h1 className="text-4xl font-bold text-white" style={{ fontFamily: 'Poppins' }}>
+            Receitas por Tipo
+          </h1>
+          <p className="text-slate-400 mt-2">Explore diferentes tipos de receitas e dietas</p>
         </div>
+      </header>
 
-        <RecipeCarousel category={recipeCategories[0]} items={mounjaro} />
-        <RecipeCarousel category={recipeCategories[1]} items={keto} />
-        <RecipeCarousel category={recipeCategories[2]} items={vegana} />
-        <RecipeCarousel category={recipeCategories[3]} items={lowCarb} />
-      </div>
+      {/* Carousels */}
+      <main className="container mx-auto px-4 py-12 space-y-16">
+        {/* Carousel 1: Mounjaro */}
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins' }}>
+            💊 Receitas para Quem Toma Tirzepatida (Mounjaro)
+          </h2>
+          <AutoCarousel items={mounjaro} autoRotateInterval={5000} />
+        </section>
+
+        {/* Carousel 2: Keto */}
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins' }}>
+            🥑 Receitas Cetogênicas
+          </h2>
+          <AutoCarousel items={keto} autoRotateInterval={5000} />
+        </section>
+
+        {/* Carousel 3: Vegana */}
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins' }}>
+            🌱 Receitas Veganas
+          </h2>
+          <AutoCarousel items={vegana} autoRotateInterval={5000} />
+        </section>
+
+        {/* Carousel 4: Low Carb */}
+        <section>
+          <h2 className="text-2xl font-bold text-white mb-6" style={{ fontFamily: 'Poppins' }}>
+            ⚡ Receitas Low Carb
+          </h2>
+          <AutoCarousel items={lowCarb} autoRotateInterval={5000} />
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-700/30 py-8 px-4 text-center text-slate-400 mt-12">
+        <p>&copy; 2026 Aprendendo com Infoprodutos. Todos os direitos reservados.</p>
+      </footer>
     </div>
   );
 }
