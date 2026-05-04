@@ -115,6 +115,12 @@ function Router() {
       <Route path="/mythcuriotvbrasil" component={MythologySecondary} />
       <Route path="/fitnessesaude" component={FitnessHealthSecondary} />
       <Route path="/mentalefinanceiro" component={MentalFinanceSecondary} />
+      
+      {/* Redirect routes without hyphens */}
+      <Route path="/fitness" component={FitnessHealthSecondary} />
+      <Route path="/saude" component={HealthTertiary} />
+      <Route path="/mental" component={MentalTertiary} />
+      <Route path="/financeiro" component={FinanceTertiary} />
 
       {/* 404 */}
       <Route path="/404" component={NotFound} />
