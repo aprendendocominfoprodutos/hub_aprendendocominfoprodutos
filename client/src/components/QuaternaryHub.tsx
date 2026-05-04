@@ -6,6 +6,7 @@ interface Product {
   id: number;
   name: string;
   price: string;
+  link?: string;
 }
 
 interface QuaternaryHubProps {
@@ -22,7 +23,7 @@ export default function QuaternaryHub({ title, description, products, backLink }
     subtitle: 'Conteúdo em fase de criação',
     image: 'https://images.unsplash.com/photo-1578301978162-7aae4d755744?w=800&h=600&fit=crop',
     price: product.price,
-    link: '#',
+    link: product.link || '#',
   }));
 
   return (
