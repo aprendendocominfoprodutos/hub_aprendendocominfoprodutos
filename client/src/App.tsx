@@ -98,12 +98,10 @@ function Router() {
       {/* FITNESS & HEALTH - 4 Níveis */}
       {/* Nível 2: Hub Secundário */}
       <Route path="/fitness-saude" component={FitnessHealthSecondary} />
-      
-      {/* Nível 3: Hub Terciário */}
+         {/* Fitness & Health - Tertiary Level */}
       <Route path="/fitness-saude/fitness" component={FitnessTertiary} />
       <Route path="/fitness-saude/saude" component={HealthTertiary} />
-
-      {/* MENTAL & FINANCE - 4 Níveis */}
+      <Route path="/fitness-saude/alimentacao" component={FoodTertiary} /> {/* MENTAL & FINANCE - 4 Níveis */}
       {/* Nível 2: Hub Secundário */}
       <Route path="/mental-financeiro" component={MentalFinanceSecondary} />
       
