@@ -417,3 +417,6 @@
 [2026-05-05T13:09:56.934Z] 
 [2026-05-05T13:09:56.934Z] ➜  Local:   http://localhost:3000/
 [2026-05-05T13:09:56.935Z] ➜  Network: http://169.254.0.21:3000/
+[2026-05-05T13:11:36.833Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-05-05T15:09:17.044Z] 11:09:17 AM [vite] (client) hmr update /src/pages/niches/PlanejamentoFinanceiro.tsx, /src/index.css
+[2026-05-05T15:09:41.130Z] 11:09:41 AM [vite] (client) hmr update /src/index.css
