@@ -22,11 +22,9 @@ export default function TertiaryHub({ title, description, subNiches, backLink, b
       {/* Header */}
       <header className="border-b border-slate-700/30 bg-slate-900/40 backdrop-blur-md sticky top-0 z-50">
         <div className="container mx-auto px-4 py-6">
-          <Link href={backLink}>
-            <a className="inline-flex items-center gap-2 text-amber-500 hover:text-amber-400 mb-4">
+          <Link href={backLink} className="inline-flex items-center gap-2 text-amber-500 hover:text-amber-400 mb-4">
               <ArrowLeft size={20} />
               Voltar
-            </a>
           </Link>
           <h1 className="text-4xl font-bold text-white" style={{ fontFamily: 'Poppins' }}>
             {title}
@@ -41,8 +39,7 @@ export default function TertiaryHub({ title, description, subNiches, backLink, b
           {subNiches.map((subNiche) => {
             const href = specialRoutes?.[subNiche.id] || `${baseLink}/${subNiche.id}`;
             return (
-              <Link key={subNiche.id} href={href}>
-                <a className="group">
+              <Link key={subNiche.id} href={href} className="group">
                   <div className="relative h-64 rounded-xl overflow-hidden cursor-pointer bg-gradient-to-br from-amber-600 to-amber-800">
                     {/* Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-60 group-hover:opacity-70 transition-opacity"></div>
@@ -53,7 +50,6 @@ export default function TertiaryHub({ title, description, subNiches, backLink, b
                       <p className="text-slate-200 text-sm">Clique para explorar</p>
                     </div>
                   </div>
-                </a>
               </Link>
             );
           })}
