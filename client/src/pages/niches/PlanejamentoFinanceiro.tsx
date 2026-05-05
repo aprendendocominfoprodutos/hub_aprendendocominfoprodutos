@@ -185,7 +185,7 @@ export default function PlanejamentoFinanceiro() {
             </div>
             <div className="flex justify-center">
               <img
-                src="/manus-storage/smartphone_transparent_bg_a87ab5ae.png"
+                src="/manus-storage/smartphone_transparent_bg_787d2701.png"
                 alt="Renda Extra pelo Celular"
                 className="w-full max-w-sm rounded-xl shadow-2xl shadow-lime-500/20"
               />
