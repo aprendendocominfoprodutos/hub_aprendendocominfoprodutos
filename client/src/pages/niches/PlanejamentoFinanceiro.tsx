@@ -10,24 +10,24 @@ export default function PlanejamentoFinanceiro() {
 
   const slides = [
     {
-      title: "Venda de Produtos",
-      description: "Revenda produtos físicos ou digitais com banco investimento e alto potencial de lucro.",
-      icon: "🛒",
+      image: "/manus-storage/smartphone_transparent_bg_787d2701.png",
+      title: "Renda Extra Pelo Celular",
     },
     {
-      title: "Prestação de Serviços",
-      description: "Ofereça serviços como edição de vídeos, design, social media e muito mais.",
-      icon: "📸",
+      image: "/manus-storage/1000444393_3b99a8de.png",
+      title: "Conteúdo do E-book",
     },
     {
-      title: "Conteúdo que Vende",
-      description: "Crie conteúdo nas redes sociais e monetize com parcerias, afiliados ou seus próprios produtos.",
-      icon: "🎬",
+      image: "/manus-storage/1000444391_315247e5.png",
+      title: "Estratégias Práticas",
     },
     {
-      title: "Marketing de Afiliados",
-      description: "Divulgue produtos de outras pessoas e ganhe comissões por cada venda realizada.",
-      icon: "📈",
+      image: "/manus-storage/1000444390_475b2269.png",
+      title: "Exemplos Reais",
+    },
+    {
+      image: "/manus-storage/1000444389_1e631ca3.png",
+      title: "Bônus Exclusivos",
     },
   ];
 
@@ -233,11 +233,12 @@ export default function PlanejamentoFinanceiro() {
           <div className="relative">
             <div className="flex justify-center">
               <img
-                src="/manus-storage/1000444393_3b99a8de.png"
-                alt="Conteúdo do E-book"
-                className="w-full max-w-2xl rounded-xl shadow-2xl shadow-lime-500/20"
+                src={slides[currentSlide].image}
+                alt={slides[currentSlide].title}
+                className="w-full max-w-2xl rounded-xl shadow-2xl shadow-lime-500/20 transition-all duration-300"
               />
             </div>
+            <p className="text-center text-lime-400 font-bold text-lg mt-4">{slides[currentSlide].title}</p>
 
             {/* Carousel Navigation */}
             <div className="flex justify-center gap-4 mt-8">
