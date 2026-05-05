@@ -45,6 +45,9 @@ import RecipesCarousel from "./pages/niches/RecipesCarousel";
 // Mounjaro Ebook
 import MounjaroEbook from "./pages/products/MounjaroEbook";
 
+// Renda Extra Ebook
+import RendaExtraEbook from "./pages/products/RendaExtraEbook";
+
 // Fitness Products
 import HealthyRecipes from "./pages/products/HealthyRecipes";
 import TrainingPlan from "./pages/products/TrainingPlan";
@@ -132,6 +135,9 @@ function Router() {
       {/* Nível 3: Hub Terciário */}
       <Route path="/mental-financeiro/mental" component={MentalTertiary} />
       <Route path="/mental-financeiro/financeiro" component={FinanceTertiary} />
+      
+      {/* Renda Extra - Landing Page */}
+      <Route path="/mental-financeiro/financeiro/planejamento" component={RendaExtraEbook} />
 
       {/* Legacy Routes - Redirect to new structure */}
       <Route path="/mythcuriotvbrasil" component={MythologySecondary} />

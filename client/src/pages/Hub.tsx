@@ -104,8 +104,7 @@ export default function Hub() {
         <section className="py-16 px-4 max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {niches.map((niche) => (
-              <Link key={niche.id} href={niche.link}>
-                <a className="group cursor-pointer">
+              <Link key={niche.id} href={niche.link} className="group cursor-pointer">
                   {/* Thumbnail Card */}
                   <div className="relative h-80 rounded-xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
                     {/* Imagem */}
@@ -132,7 +131,6 @@ export default function Hub() {
                       </button>
                     </div>
                   </div>
-                </a>
               </Link>
             ))}
           </div>
