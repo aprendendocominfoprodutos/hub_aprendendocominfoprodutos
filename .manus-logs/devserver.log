@@ -422,3 +422,5 @@
 [2026-05-05T15:09:41.130Z] 11:09:41 AM [vite] (client) hmr update /src/index.css
 [2026-05-05T16:03:01.029Z] 12:03:01 PM [vite] (client) hmr update /src/pages/niches/PlanejamentoFinanceiro.tsx, /src/index.css
 [2026-05-05T16:03:31.149Z] 12:03:31 PM [vite] (client) hmr update /src/index.css
+[2026-05-05T16:20:45.357Z] 12:20:45 PM [vite] (client) hmr update /src/pages/niches/PlanejamentoFinanceiro.tsx, /src/index.css
+[2026-05-05T16:21:16.949Z] 12:21:16 PM [vite] (client) hmr update /src/index.css
