@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Check, X } from "lucide-react";
 
 export default function PlanejamentoFinanceiro() {
@@ -230,7 +230,7 @@ export default function PlanejamentoFinanceiro() {
             Veja por dentro
           </h2>
 
-          <div className="relative">
+          <div className="relative space-y-6">
             <div className="flex justify-center">
               <img
                 src={slides[currentSlide].image}
@@ -238,35 +238,39 @@ export default function PlanejamentoFinanceiro() {
                 className="w-full max-w-2xl rounded-xl shadow-2xl shadow-lime-500/20 transition-all duration-300"
               />
             </div>
-            <p className="text-center text-lime-400 font-bold text-lg mt-4">{slides[currentSlide].title}</p>
+            <p className="text-center text-lime-400 font-bold text-lg">{slides[currentSlide].title}</p>
 
             {/* Carousel Navigation */}
-            <div className="flex justify-center gap-4 mt-8">
+            <div className="flex justify-center gap-6 items-center">
               <button
                 onClick={prevSlide}
-                className="p-3 rounded-full bg-lime-500/20 border border-lime-500/50 hover:bg-lime-500/30 transition-all"
+                className="p-3 rounded-full bg-lime-500/20 border border-lime-500/50 hover:bg-lime-500/30 transition-all hover:scale-110"
+                aria-label="Slide anterior"
               >
                 <ChevronLeft className="w-6 h-6 text-lime-400" />
               </button>
+              
+              {/* Slide Indicators */}
+              <div className="flex justify-center gap-2">
+                {slides.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentSlide(i)}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      i === currentSlide ? "bg-lime-400 w-8" : "bg-lime-500/30"
+                    }`}
+                    aria-label={`Ir para slide ${i + 1}`}
+                  />
+                ))}
+              </div>
+              
               <button
                 onClick={nextSlide}
-                className="p-3 rounded-full bg-lime-500/20 border border-lime-500/50 hover:bg-lime-500/30 transition-all"
+                className="p-3 rounded-full bg-lime-500/20 border border-lime-500/50 hover:bg-lime-500/30 transition-all hover:scale-110"
+                aria-label="Próximo slide"
               >
                 <ChevronRight className="w-6 h-6 text-lime-400" />
               </button>
-            </div>
-
-            {/* Slide Indicators */}
-            <div className="flex justify-center gap-2 mt-6">
-              {slides.map((_, i) => (
-                <button
-                  key={i}
-                  onClick={() => setCurrentSlide(i)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    i === currentSlide ? "bg-lime-400 w-8" : "bg-lime-500/30"
-                  }`}
-                />
-              ))}
             </div>
           </div>
         </div>
