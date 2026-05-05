@@ -183,11 +183,11 @@ export default function PlanejamentoFinanceiro() {
                 ))}
               </ul>
             </div>
-            <div className="flex justify-center relative z-10">
+            <div className="flex justify-center">
               <img
                 src="/manus-storage/smartphone_transparent_bg_787d2701.png"
                 alt="Renda Extra pelo Celular"
-                className="w-full max-w-sm rounded-xl shadow-2xl shadow-lime-500/20 relative z-20"
+                className="w-full max-w-sm rounded-xl shadow-2xl shadow-lime-500/20"
               />
             </div>
           </div>
@@ -230,12 +230,12 @@ export default function PlanejamentoFinanceiro() {
             Veja por dentro
           </h2>
 
-          <div className="relative z-10">
-            <div className="flex justify-center relative z-20">
+          <div className="relative">
+            <div className="flex justify-center">
               <img
                 src="/manus-storage/1000444393_3b99a8de.png"
                 alt="Conteúdo do E-book"
-                className="w-full max-w-2xl rounded-xl shadow-2xl shadow-lime-500/20 relative z-30"
+                className="w-full max-w-2xl rounded-xl shadow-2xl shadow-lime-500/20"
               />
             </div>
 
