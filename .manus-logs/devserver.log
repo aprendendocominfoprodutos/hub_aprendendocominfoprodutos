@@ -406,3 +406,14 @@
 [2026-05-05T05:58:48.167Z] 1:58:48 AM [vite] (client) hmr update /src/index.css
 [2026-05-05T06:00:39.480Z] 2:00:39 AM [vite] (client) hmr update /src/index.css, /src/components/TertiaryHub.tsx
 [2026-05-05T06:01:01.032Z] 2:01:01 AM [vite] (client) hmr update /src/index.css
+[2026-05-05T13:09:48.400Z] Dev server process group stopped
+[2026-05-05T13:09:51.424Z] Starting dev server with command: pnpm run dev
+[2026-05-05T13:09:52.816Z] 
+[2026-05-05T13:09:52.817Z] > mitologia_landing@1.0.0 dev /home/ubuntu/mitologia_landing
+[2026-05-05T13:09:52.817Z] > vite --host
+[2026-05-05T13:09:52.818Z] 
+[2026-05-05T13:09:56.932Z] 
+[2026-05-05T13:09:56.933Z] VITE v7.1.9  ready in 4051 ms
+[2026-05-05T13:09:56.934Z] 
+[2026-05-05T13:09:56.934Z] ➜  Local:   http://localhost:3000/
+[2026-05-05T13:09:56.935Z] ➜  Network: http://169.254.0.21:3000/

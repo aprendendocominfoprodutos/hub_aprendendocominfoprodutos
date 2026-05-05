@@ -79,3 +79,7 @@
 [2026-05-05T06:00:40.970Z] {"timestamp":1777960839741,"level":"DEBUG","args":["[vite]","hot updated: /src/components/TertiaryHub.tsx"],"stack":null}
 [2026-05-05T06:00:47.966Z] {"timestamp":1777960844951,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-05-05T06:00:47.966Z] {"timestamp":1777960845422,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-05T06:01:01.977Z] {"timestamp":1777960861285,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-05T06:01:23.597Z] {"timestamp":1777960881593,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-05T06:01:23.597Z] {"timestamp":1777960881617,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-05T06:01:23.597Z] {"timestamp":1777960881783,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}

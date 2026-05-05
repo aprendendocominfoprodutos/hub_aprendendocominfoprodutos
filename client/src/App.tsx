@@ -48,6 +48,9 @@ import MounjaroEbook from "./pages/products/MounjaroEbook";
 // Renda Extra Ebook
 import RendaExtraEbook from "./pages/products/RendaExtraEbook";
 
+// Planejamento Financeiro
+import PlanejamentoFinanceiro from "./pages/niches/PlanejamentoFinanceiro";
+
 // Fitness Products
 import HealthyRecipes from "./pages/products/HealthyRecipes";
 import TrainingPlan from "./pages/products/TrainingPlan";
@@ -136,8 +139,11 @@ function Router() {
       <Route path="/mental-financeiro/mental" component={MentalTertiary} />
       <Route path="/mental-financeiro/financeiro" component={FinanceTertiary} />
       
+      {/* Nível 4: Hub Quaternário - Planejamento Financeiro */}
+      <Route path="/mental-financeiro/financeiro/planejamento" component={PlanejamentoFinanceiro} />
+      
       {/* Renda Extra - Landing Page */}
-      <Route path="/mental-financeiro/financeiro/planejamento" component={RendaExtraEbook} />
+      <Route path="/mental-financeiro/financeiro/planejamento/renda-extra" component={RendaExtraEbook} />
 
       {/* Legacy Routes - Redirect to new structure */}
       <Route path="/mythcuriotvbrasil" component={MythologySecondary} />
