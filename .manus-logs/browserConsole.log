@@ -428,3 +428,28 @@
 [2026-05-06T11:06:10.669Z] {"timestamp":1778065568876,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
 [2026-05-06T11:06:16.302Z] {"timestamp":1778065573915,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-05-06T11:06:16.302Z] {"timestamp":1778065574375,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T11:06:30.669Z] {"timestamp":1778065589916,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T11:06:32.312Z] {"timestamp":1778065590146,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T11:06:40.309Z] {"timestamp":1778065597529,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T11:06:40.309Z] {"timestamp":1778065597974,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T11:06:54.856Z] {"timestamp":1778065612852,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T11:06:54.856Z] {"timestamp":1778065612864,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T11:06:54.856Z] {"timestamp":1778065612986,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-05-06T11:07:04.312Z] {"timestamp":1778065621784,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T11:07:04.312Z] {"timestamp":1778065622228,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T11:07:47.315Z] {"timestamp":1778065664780,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T11:07:47.315Z] {"timestamp":1778065665230,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T11:18:10.788Z] {"timestamp":1778066288780,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T11:18:10.788Z] {"timestamp":1778066288787,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T11:18:10.788Z] {"timestamp":1778066289006,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-05-06T11:18:11.307Z] {"timestamp":1778066288334,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T11:18:11.308Z] {"timestamp":1778066288791,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T11:18:11.310Z] {"timestamp":1778066288776,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T11:18:11.310Z] {"timestamp":1778066289245,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T11:18:20.323Z] {"timestamp":1778066297367,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T11:18:20.323Z] {"timestamp":1778066297871,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T11:18:20.324Z] {"timestamp":1778066297870,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T11:18:20.324Z] {"timestamp":1778066298331,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T11:18:21.246Z] {"timestamp":1778066299235,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T11:18:21.246Z] {"timestamp":1778066299240,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T11:18:21.246Z] {"timestamp":1778066299471,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
