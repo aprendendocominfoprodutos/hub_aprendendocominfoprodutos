@@ -110,8 +110,22 @@ export default function MitologiaGregaEbook() {
     setCurrentPreviewSlide((prev) => (prev - 1 + previewSlides.length) % previewSlides.length);
   };
 
-  const handleCheckout = () => {
-    window.open('https://pay.kiwify.com.br/zCm4daQ', '_blank');
+  const BASE_URL = 'https://pay.kiwify.com.br/zCm4daQ';
+
+  const handleCheckoutHero = () => {
+    window.open(`${BASE_URL}?utm_source=landing&utm_medium=hero&utm_campaign=mitologia`, '_blank');
+  };
+
+  const handleCheckoutOferta = () => {
+    window.open(`${BASE_URL}?utm_source=landing&utm_medium=oferta&utm_campaign=mitologia`, '_blank');
+  };
+
+  const handleCheckoutCTAFinal = () => {
+    window.open(`${BASE_URL}?utm_source=landing&utm_medium=cta_final&utm_campaign=mitologia`, '_blank');
+  };
+
+  const handleCheckoutFlutuante = () => {
+    window.open(`${BASE_URL}?utm_source=landing&utm_medium=flutuante&utm_campaign=mitologia`, '_blank');
   };
 
   return (
@@ -163,7 +177,7 @@ export default function MitologiaGregaEbook() {
               {/* CTA Button */}
               <div className="pt-4">
                 <button
-                  onClick={handleCheckout}
+                  onClick={handleCheckoutHero}
                   className="px-8 py-4 md:px-10 md:py-5 text-lg md:text-xl font-bold rounded-lg transition-all duration-300 hover:shadow-lg"
                   style={{
                     backgroundColor: '#c9a24a',
@@ -441,7 +455,7 @@ export default function MitologiaGregaEbook() {
 
             {/* CTA Button */}
             <button
-              onClick={handleCheckout}
+              onClick={handleCheckoutOferta}
               className="px-8 py-4 md:px-12 md:py-5 text-lg md:text-xl font-bold rounded-lg transition-all duration-300 hover:shadow-lg mb-8"
               style={{
                 backgroundColor: '#c9a24a',
@@ -614,7 +628,7 @@ export default function MitologiaGregaEbook() {
             </p>
 
             <button
-              onClick={handleCheckout}
+              onClick={handleCheckoutCTAFinal}
               className="px-8 py-4 md:px-12 md:py-5 text-lg md:text-xl font-bold rounded-lg transition-all duration-300 hover:shadow-lg"
               style={{
                 backgroundColor: '#c9a24a',
@@ -640,7 +654,7 @@ export default function MitologiaGregaEbook() {
         }}
       >
         <button
-          onClick={handleCheckout}
+          onClick={handleCheckoutFlutuante}
           className="w-full max-w-lg mx-auto flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-bold text-base tracking-wide"
           style={{
             backgroundColor: '#c9a24a',
