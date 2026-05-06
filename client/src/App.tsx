@@ -48,6 +48,9 @@ import MounjaroEbook from "./pages/products/MounjaroEbook";
 // Renda Extra Ebook
 import RendaExtraEbook from "./pages/products/RendaExtraEbook";
 
+// Mitologia Grega Ebook (Novo)
+import MitologiaGregaEbook from "./pages/MitologiaGregaEbook";
+
 // Planejamento Financeiro
 import PlanejamentoFinanceiro from "./pages/niches/PlanejamentoFinanceiro";
 
@@ -120,6 +123,9 @@ function Router() {
       
       {/* Kit Completo - Landing Page */}
       <Route path="/mitologia/grega/kit-completo" component={GreekMythology} />
+      
+      {/* Ebook Exclusivo - Landing Page */}
+      <Route path="/mitologia/grega/ebook" component={MitologiaGregaEbook} />
 
       {/* FITNESS & HEALTH - 4 Níveis */}
       {/* Nível 2: Hub Secundário */}
