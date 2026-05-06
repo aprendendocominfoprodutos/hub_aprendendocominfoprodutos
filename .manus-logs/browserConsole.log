@@ -363,3 +363,28 @@
 [2026-05-06T10:44:02.293Z] {"timestamp":1778064239831,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-05-06T10:44:08.294Z] {"timestamp":1778064234410,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
 [2026-05-06T10:44:08.294Z] {"timestamp":1778064234410,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T10:44:12.670Z] {"timestamp":1778064252093,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T10:44:14.298Z] {"timestamp":1778064252168,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T10:44:29.295Z] {"timestamp":1778064266785,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T10:44:29.295Z] {"timestamp":1778064267237,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T10:44:37.487Z] {"timestamp":1778064275482,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T10:44:37.487Z] {"timestamp":1778064275494,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T10:44:37.487Z] {"timestamp":1778064275648,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-05-06T10:44:38.299Z] {"timestamp":1778064275832,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T10:44:38.299Z] {"timestamp":1778064276282,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T10:45:35.306Z] {"timestamp":1778064332795,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T10:45:35.306Z] {"timestamp":1778064333261,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T10:49:50.944Z] {"timestamp":1778064590649,"level":"ERROR","args":["[vite]","Failed to reload /src/pages/MitologiaGregaEbook.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (http://localhost:3000/__manus__/debug-collector.js:391:37)\n    at Object.error (http://localhost:3000/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (http://localhost:3000/@vite/client:181:15)\n    at HMRClient.fetchUpdate (http://localhost:3000/@vite/client:212:10)\n    at async Promise.all (index 1)\n    at async HMRClient.queueUpdate (http://localhost:3000/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (http://localhost:3000/@vite/client:838:4)"}
+[2026-05-06T10:49:52.671Z] {"timestamp":1778064590722,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T10:49:52.671Z] {"timestamp":1778064590722,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T10:49:57.307Z] {"timestamp":1778064594581,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T10:49:57.307Z] {"timestamp":1778064595046,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T10:50:08.300Z] {"timestamp":1778064590746,"level":"ERROR","args":["[vite]","Failed to reload /src/pages/MitologiaGregaEbook.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above)"],"stack":"Error\n    at console.<computed> [as error] (https://3000-isgtx9y0tefde0u5i5tl5-94efdb57.us2.manus.computer/__manus__/debug-collector.js:391:37)\n    at Object.error (https://3000-isgtx9y0tefde0u5i5tl5-94efdb57.us2.manus.computer/@vite/client:809:26)\n    at HMRClient.warnFailedUpdate (https://3000-isgtx9y0tefde0u5i5tl5-94efdb57.us2.manus.computer/@vite/client:181:15)\n    at HMRClient.fetchUpdate (https://3000-isgtx9y0tefde0u5i5tl5-94efdb57.us2.manus.computer/@vite/client:212:10)\n    at async Promise.all (index 1)\n    at async HMRClient.queueUpdate (https://3000-isgtx9y0tefde0u5i5tl5-94efdb57.us2.manus.computer/@vite/client:196:5)\n    at async Promise.all (index 0)\n    at async handleMessage (https://3000-isgtx9y0tefde0u5i5tl5-94efdb57.us2.manus.computer/@vite/client:838:4)"}
+[2026-05-06T10:50:08.300Z] {"timestamp":1778064590754,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T10:50:08.300Z] {"timestamp":1778064590754,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T10:50:09.151Z] {"timestamp":1778064608546,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T10:50:09.151Z] {"timestamp":1778064608547,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T10:50:14.301Z] {"timestamp":1778064611367,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T10:50:14.301Z] {"timestamp":1778064611825,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T10:50:14.301Z] {"timestamp":1778064611529,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T10:50:14.301Z] {"timestamp":1778064612306,"level":"DEBUG","args":["[vite] connected."],"stack":null}

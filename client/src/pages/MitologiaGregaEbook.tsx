@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
 
 /**
@@ -45,6 +45,25 @@ export default function MitologiaGregaEbook() {
   };
 
   const { m, s } = formatTime(timeLeft);
+
+  // Ocultar botão flutuante quando a seção de oferta está visível
+  const ofertaRef = useRef<HTMLElement>(null);
+  const [showFloating, setShowFloating] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setShowFloating(!entry.isIntersecting),
+      { threshold: 0.2 }
+    );
+    const el = ofertaRef.current;
+    if (el) observer.observe(el);
+    // Mostrar após 3 segundos de scroll
+    const timer = setTimeout(() => setShowFloating(true), 3000);
+    return () => {
+      if (el) observer.unobserve(el);
+      clearTimeout(timer);
+    };
+  }, []);
 
   const previewSlides = [
     { id: 1, title: 'A Origem do Mundo', image: '/manus-storage/mitologia_origem_mundo_v2_eab2ad98.png' },
@@ -97,7 +116,7 @@ export default function MitologiaGregaEbook() {
   };
 
   return (
-    <div className="min-h-screen" style={{ backgroundColor: '#050506', color: '#f8f5ec' }}>
+    <div className="min-h-screen pb-24" style={{ backgroundColor: '#050506', color: '#f8f5ec' }}>
       {/* ============ 1. HERO ============ */}
       <section className="relative py-16 md:py-32 overflow-hidden" style={{ backgroundColor: '#050506' }}>
         {/* Background glow effect */}
@@ -370,7 +389,7 @@ export default function MitologiaGregaEbook() {
       </section>
 
       {/* ============ 7. OFERTA ============ */}
-      <section className="py-16 md:py-24" style={{ backgroundColor: '#050506' }}>
+      <section ref={ofertaRef} className="py-16 md:py-24" style={{ backgroundColor: '#050506' }}>
         <div className="container px-4 md:px-8">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8" style={{ color: '#f1d37a' }}>
@@ -615,14 +634,19 @@ export default function MitologiaGregaEbook() {
         className="fixed bottom-0 left-0 right-0 z-50 px-4 py-3"
         style={{
           background: 'linear-gradient(to top, rgba(5,5,6,0.98) 60%, transparent)',
+          transition: 'opacity 0.3s ease, transform 0.3s ease',
+          opacity: showFloating ? 1 : 0,
+          transform: showFloating ? 'translateY(0)' : 'translateY(100%)',
+          pointerEvents: showFloating ? 'auto' : 'none',
         }}
       >
         <button
-          className="w-full max-w-lg mx-auto flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-bold text-base tracking-wide block"
+          className="w-full max-w-lg mx-auto flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-bold text-base tracking-wide"
           style={{
             backgroundColor: '#c9a24a',
             color: '#050506',
             boxShadow: '0 0 24px rgba(201,162,74,0.5)',
+            display: 'flex',
           }}
         >
           ⚡ Quero meu ebook agora — R$ 19,90

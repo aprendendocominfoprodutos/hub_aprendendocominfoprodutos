@@ -792,3 +792,425 @@
 [2026-05-06T10:39:22.900Z] 6:39:22 AM [vite] (client) hmr update /src/index.css
 [2026-05-06T10:43:54.122Z] 6:43:54 AM [vite] (client) hmr update /src/index.css, /src/pages/MitologiaGregaEbook.tsx
 [2026-05-06T10:44:12.049Z] 6:44:12 AM [vite] (client) hmr update /src/index.css
+[2026-05-06T10:49:50.599Z] 6:49:50 AM [vite] (client) hmr update /src/index.css, /src/pages/MitologiaGregaEbook.tsx
+[2026-05-06T10:49:50.640Z] 6:49:50 AM [vite] Internal server error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Unterminated JSX contents. (668:10)
+[2026-05-06T10:49:50.641Z] 
+[2026-05-06T10:49:50.642Z] 666 |         </div>
+[2026-05-06T10:49:50.642Z] 667 |       </footer>
+[2026-05-06T10:49:50.642Z] > 668 |     </div>
+[2026-05-06T10:49:50.643Z] |           ^
+[2026-05-06T10:49:50.643Z] 669 |   );
+[2026-05-06T10:49:50.643Z] 670 | }
+[2026-05-06T10:49:50.644Z] 671 |
+[2026-05-06T10:49:50.645Z] Plugin: vite:react-babel
+[2026-05-06T10:49:50.646Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:668:10
+[2026-05-06T10:49:50.646Z] 666 |          </div>
+[2026-05-06T10:49:50.647Z] 667 |        </footer>
+[2026-05-06T10:49:50.647Z] 668 |      </div>
+[2026-05-06T10:49:50.648Z] |            ^
+[2026-05-06T10:49:50.649Z] 669 |    );
+[2026-05-06T10:49:50.649Z] 670 |  }
+[2026-05-06T10:49:50.650Z] at constructor (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:367:19)
+[2026-05-06T10:49:50.650Z] at TypeScriptParserMixin.raise (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6630:19)
+[2026-05-06T10:49:50.651Z] at TypeScriptParserMixin.jsxReadToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4481:20)
+[2026-05-06T10:49:50.652Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4807:12)
+[2026-05-06T10:49:50.653Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10009:11)
+[2026-05-06T10:49:50.653Z] at TypeScriptParserMixin.nextToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5813:10)
+[2026-05-06T10:49:50.654Z] at TypeScriptParserMixin.next (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5723:10)
+[2026-05-06T10:49:50.654Z] at TypeScriptParserMixin.eat (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5727:12)
+[2026-05-06T10:49:50.654Z] at TypeScriptParserMixin.expect (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6929:15)
+[2026-05-06T10:49:50.655Z] at TypeScriptParserMixin.jsxParseClosingElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4713:10)
+[2026-05-06T10:49:50.655Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4728:37)
+[2026-05-06T10:49:50.655Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4731:32)
+[2026-05-06T10:49:50.656Z] at TypeScriptParserMixin.jsxParseElement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4782:17)
+[2026-05-06T10:49:50.656Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4792:19)
+[2026-05-06T10:49:50.657Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:50.657Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:50.657Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:50.658Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:50.658Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:50.658Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:50.659Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:50.659Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:50.659Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:39
+[2026-05-06T10:49:50.660Z] at TypeScriptParserMixin.tryParse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6938:20)
+[2026-05-06T10:49:50.660Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:18)
+[2026-05-06T10:49:50.660Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:39
+[2026-05-06T10:49:50.661Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12436:12)
+[2026-05-06T10:49:50.661Z] at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:17)
+[2026-05-06T10:49:50.661Z] at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12503:17)
+[2026-05-06T10:49:50.662Z] at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11683:28)
+[2026-05-06T10:49:50.662Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11335:23)
+[2026-05-06T10:49:50.663Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4797:20)
+[2026-05-06T10:49:50.663Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:50.664Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:50.664Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:50.664Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:50.667Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:50.668Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:50.668Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:50.668Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:50.669Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9806:20)
+[2026-05-06T10:49:50.669Z] at TypeScriptParserMixin.parseExpressionBase (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10788:23)
+[2026-05-06T10:49:50.670Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:39
+[2026-05-06T10:49:50.670Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12431:16)
+[2026-05-06T10:49:50.670Z] at TypeScriptParserMixin.parseExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:17)
+[2026-05-06T10:49:50.671Z] at TypeScriptParserMixin.parseReturnStatement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13151:28)
+[2026-05-06T10:49:50.671Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12807:21)
+[2026-05-06T10:49:50.671Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9532:18)
+[2026-05-06T10:49:50.672Z] at TypeScriptParserMixin.parseStatementLike (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12776:17)
+[2026-05-06T10:49:50.672Z] at TypeScriptParserMixin.parseStatementListItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12756:17)
+[2026-05-06T10:49:50.783Z] 6:49:50 AM [vite] Internal server error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Unterminated JSX contents. (668:10)
+[2026-05-06T10:49:50.783Z] 
+[2026-05-06T10:49:50.784Z] 666 |         </div>
+[2026-05-06T10:49:50.784Z] 667 |       </footer>
+[2026-05-06T10:49:50.785Z] > 668 |     </div>
+[2026-05-06T10:49:50.785Z] |           ^
+[2026-05-06T10:49:50.785Z] 669 |   );
+[2026-05-06T10:49:50.786Z] 670 | }
+[2026-05-06T10:49:50.786Z] 671 |
+[2026-05-06T10:49:50.786Z] Plugin: vite:react-babel
+[2026-05-06T10:49:50.786Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:668:10
+[2026-05-06T10:49:50.787Z] 666 |          </div>
+[2026-05-06T10:49:50.787Z] 667 |        </footer>
+[2026-05-06T10:49:50.787Z] 668 |      </div>
+[2026-05-06T10:49:50.788Z] |            ^
+[2026-05-06T10:49:50.789Z] 669 |    );
+[2026-05-06T10:49:50.789Z] 670 |  }
+[2026-05-06T10:49:50.790Z] at constructor (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:367:19)
+[2026-05-06T10:49:50.790Z] at TypeScriptParserMixin.raise (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6630:19)
+[2026-05-06T10:49:50.791Z] at TypeScriptParserMixin.jsxReadToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4481:20)
+[2026-05-06T10:49:50.791Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4807:12)
+[2026-05-06T10:49:50.792Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10009:11)
+[2026-05-06T10:49:50.793Z] at TypeScriptParserMixin.nextToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5813:10)
+[2026-05-06T10:49:50.794Z] at TypeScriptParserMixin.next (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5723:10)
+[2026-05-06T10:49:50.795Z] at TypeScriptParserMixin.eat (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5727:12)
+[2026-05-06T10:49:50.795Z] at TypeScriptParserMixin.expect (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6929:15)
+[2026-05-06T10:49:50.797Z] at TypeScriptParserMixin.jsxParseClosingElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4713:10)
+[2026-05-06T10:49:50.799Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4728:37)
+[2026-05-06T10:49:50.799Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4731:32)
+[2026-05-06T10:49:50.800Z] at TypeScriptParserMixin.jsxParseElement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4782:17)
+[2026-05-06T10:49:50.801Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4792:19)
+[2026-05-06T10:49:50.802Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:50.802Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:50.803Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:50.803Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:50.804Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:50.804Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:50.804Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:50.805Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:50.805Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:39
+[2026-05-06T10:49:50.805Z] at TypeScriptParserMixin.tryParse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6938:20)
+[2026-05-06T10:49:50.806Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:18)
+[2026-05-06T10:49:50.806Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:39
+[2026-05-06T10:49:50.806Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12436:12)
+[2026-05-06T10:49:50.807Z] at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:17)
+[2026-05-06T10:49:50.807Z] at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12503:17)
+[2026-05-06T10:49:50.807Z] at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11683:28)
+[2026-05-06T10:49:50.808Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11335:23)
+[2026-05-06T10:49:50.808Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4797:20)
+[2026-05-06T10:49:50.809Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:50.809Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:50.810Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:50.810Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:50.811Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:50.811Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:50.812Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:50.812Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:50.812Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9806:20)
+[2026-05-06T10:49:50.813Z] at TypeScriptParserMixin.parseExpressionBase (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10788:23)
+[2026-05-06T10:49:50.813Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:39
+[2026-05-06T10:49:50.813Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12431:16)
+[2026-05-06T10:49:50.814Z] at TypeScriptParserMixin.parseExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:17)
+[2026-05-06T10:49:50.814Z] at TypeScriptParserMixin.parseReturnStatement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13151:28)
+[2026-05-06T10:49:50.815Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12807:21)
+[2026-05-06T10:49:50.815Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9532:18)
+[2026-05-06T10:49:50.815Z] at TypeScriptParserMixin.parseStatementLike (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12776:17)
+[2026-05-06T10:49:50.816Z] at TypeScriptParserMixin.parseStatementListItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12756:17)
+[2026-05-06T10:49:50.959Z] 6:49:50 AM [vite] Internal server error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Unterminated JSX contents. (668:10)
+[2026-05-06T10:49:50.960Z] 
+[2026-05-06T10:49:50.961Z] 666 |         </div>
+[2026-05-06T10:49:50.962Z] 667 |       </footer>
+[2026-05-06T10:49:50.963Z] > 668 |     </div>
+[2026-05-06T10:49:50.963Z] |           ^
+[2026-05-06T10:49:50.964Z] 669 |   );
+[2026-05-06T10:49:50.965Z] 670 | }
+[2026-05-06T10:49:50.965Z] 671 |
+[2026-05-06T10:49:50.967Z] Plugin: vite:react-babel
+[2026-05-06T10:49:50.967Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:668:10
+[2026-05-06T10:49:50.968Z] 666 |          </div>
+[2026-05-06T10:49:50.968Z] 667 |        </footer>
+[2026-05-06T10:49:50.969Z] 668 |      </div>
+[2026-05-06T10:49:50.970Z] |            ^
+[2026-05-06T10:49:50.971Z] 669 |    );
+[2026-05-06T10:49:50.972Z] 670 |  }
+[2026-05-06T10:49:50.972Z] at constructor (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:367:19)
+[2026-05-06T10:49:50.973Z] at TypeScriptParserMixin.raise (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6630:19)
+[2026-05-06T10:49:50.973Z] at TypeScriptParserMixin.jsxReadToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4481:20)
+[2026-05-06T10:49:50.974Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4807:12)
+[2026-05-06T10:49:50.975Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10009:11)
+[2026-05-06T10:49:50.975Z] at TypeScriptParserMixin.nextToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5813:10)
+[2026-05-06T10:49:50.976Z] at TypeScriptParserMixin.next (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5723:10)
+[2026-05-06T10:49:50.976Z] at TypeScriptParserMixin.eat (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5727:12)
+[2026-05-06T10:49:50.976Z] at TypeScriptParserMixin.expect (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6929:15)
+[2026-05-06T10:49:50.977Z] at TypeScriptParserMixin.jsxParseClosingElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4713:10)
+[2026-05-06T10:49:50.977Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4728:37)
+[2026-05-06T10:49:50.977Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4731:32)
+[2026-05-06T10:49:50.979Z] at TypeScriptParserMixin.jsxParseElement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4782:17)
+[2026-05-06T10:49:50.979Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4792:19)
+[2026-05-06T10:49:50.980Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:50.980Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:50.980Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:50.981Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:50.981Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:50.981Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:50.982Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:50.982Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:50.982Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:39
+[2026-05-06T10:49:50.983Z] at TypeScriptParserMixin.tryParse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6938:20)
+[2026-05-06T10:49:50.983Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:18)
+[2026-05-06T10:49:50.983Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:39
+[2026-05-06T10:49:50.984Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12436:12)
+[2026-05-06T10:49:50.984Z] at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:17)
+[2026-05-06T10:49:50.984Z] at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12503:17)
+[2026-05-06T10:49:50.985Z] at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11683:28)
+[2026-05-06T10:49:50.985Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11335:23)
+[2026-05-06T10:49:50.985Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4797:20)
+[2026-05-06T10:49:50.986Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:50.986Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:50.987Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:50.987Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:50.987Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:50.988Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:50.988Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:50.988Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:50.989Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9806:20)
+[2026-05-06T10:49:50.989Z] at TypeScriptParserMixin.parseExpressionBase (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10788:23)
+[2026-05-06T10:49:50.989Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:39
+[2026-05-06T10:49:50.989Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12431:16)
+[2026-05-06T10:49:50.990Z] at TypeScriptParserMixin.parseExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:17)
+[2026-05-06T10:49:50.990Z] at TypeScriptParserMixin.parseReturnStatement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13151:28)
+[2026-05-06T10:49:50.990Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12807:21)
+[2026-05-06T10:49:50.991Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9532:18)
+[2026-05-06T10:49:50.991Z] at TypeScriptParserMixin.parseStatementLike (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12776:17)
+[2026-05-06T10:49:50.991Z] at TypeScriptParserMixin.parseStatementListItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12756:17)
+[2026-05-06T10:49:51.123Z] 6:49:51 AM [vite] Internal server error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Unterminated JSX contents. (668:10)
+[2026-05-06T10:49:51.124Z] 
+[2026-05-06T10:49:51.125Z] 666 |         </div>
+[2026-05-06T10:49:51.126Z] 667 |       </footer>
+[2026-05-06T10:49:51.126Z] > 668 |     </div>
+[2026-05-06T10:49:51.126Z] |           ^
+[2026-05-06T10:49:51.126Z] 669 |   );
+[2026-05-06T10:49:51.127Z] 670 | }
+[2026-05-06T10:49:51.127Z] 671 |
+[2026-05-06T10:49:51.128Z] Plugin: vite:react-babel
+[2026-05-06T10:49:51.128Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:668:10
+[2026-05-06T10:49:51.129Z] 666 |          </div>
+[2026-05-06T10:49:51.129Z] 667 |        </footer>
+[2026-05-06T10:49:51.129Z] 668 |      </div>
+[2026-05-06T10:49:51.130Z] |            ^
+[2026-05-06T10:49:51.130Z] 669 |    );
+[2026-05-06T10:49:51.130Z] 670 |  }
+[2026-05-06T10:49:51.131Z] at constructor (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:367:19)
+[2026-05-06T10:49:51.132Z] at TypeScriptParserMixin.raise (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6630:19)
+[2026-05-06T10:49:51.132Z] at TypeScriptParserMixin.jsxReadToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4481:20)
+[2026-05-06T10:49:51.133Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4807:12)
+[2026-05-06T10:49:51.133Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10009:11)
+[2026-05-06T10:49:51.133Z] at TypeScriptParserMixin.nextToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5813:10)
+[2026-05-06T10:49:51.134Z] at TypeScriptParserMixin.next (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5723:10)
+[2026-05-06T10:49:51.134Z] at TypeScriptParserMixin.eat (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5727:12)
+[2026-05-06T10:49:51.135Z] at TypeScriptParserMixin.expect (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6929:15)
+[2026-05-06T10:49:51.135Z] at TypeScriptParserMixin.jsxParseClosingElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4713:10)
+[2026-05-06T10:49:51.136Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4728:37)
+[2026-05-06T10:49:51.137Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4731:32)
+[2026-05-06T10:49:51.137Z] at TypeScriptParserMixin.jsxParseElement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4782:17)
+[2026-05-06T10:49:51.137Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4792:19)
+[2026-05-06T10:49:51.138Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:51.138Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:51.138Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:51.139Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:51.139Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:51.140Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:51.140Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:51.140Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:51.141Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:39
+[2026-05-06T10:49:51.141Z] at TypeScriptParserMixin.tryParse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6938:20)
+[2026-05-06T10:49:51.141Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:18)
+[2026-05-06T10:49:51.142Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:39
+[2026-05-06T10:49:51.142Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12436:12)
+[2026-05-06T10:49:51.142Z] at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:17)
+[2026-05-06T10:49:51.143Z] at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12503:17)
+[2026-05-06T10:49:51.143Z] at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11683:28)
+[2026-05-06T10:49:51.143Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11335:23)
+[2026-05-06T10:49:51.144Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4797:20)
+[2026-05-06T10:49:51.144Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:51.144Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:51.145Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:51.145Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:51.145Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:51.146Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:51.146Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:51.146Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:51.147Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9806:20)
+[2026-05-06T10:49:51.147Z] at TypeScriptParserMixin.parseExpressionBase (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10788:23)
+[2026-05-06T10:49:51.147Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:39
+[2026-05-06T10:49:51.148Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12431:16)
+[2026-05-06T10:49:51.148Z] at TypeScriptParserMixin.parseExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:17)
+[2026-05-06T10:49:51.148Z] at TypeScriptParserMixin.parseReturnStatement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13151:28)
+[2026-05-06T10:49:51.149Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12807:21)
+[2026-05-06T10:49:51.149Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9532:18)
+[2026-05-06T10:49:51.149Z] at TypeScriptParserMixin.parseStatementLike (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12776:17)
+[2026-05-06T10:49:51.150Z] at TypeScriptParserMixin.parseStatementListItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12756:17)
+[2026-05-06T10:49:51.256Z] 6:49:51 AM [vite] (client) Pre-transform error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Unterminated JSX contents. (668:10)
+[2026-05-06T10:49:51.258Z] 
+[2026-05-06T10:49:51.258Z] 666 |         </div>
+[2026-05-06T10:49:51.259Z] 667 |       </footer>
+[2026-05-06T10:49:51.259Z] > 668 |     </div>
+[2026-05-06T10:49:51.260Z] |           ^
+[2026-05-06T10:49:51.260Z] 669 |   );
+[2026-05-06T10:49:51.261Z] 670 | }
+[2026-05-06T10:49:51.261Z] 671 |
+[2026-05-06T10:49:51.262Z] Plugin: vite:react-babel
+[2026-05-06T10:49:51.262Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:668:10
+[2026-05-06T10:49:51.263Z] 666 |          </div>
+[2026-05-06T10:49:51.263Z] 667 |        </footer>
+[2026-05-06T10:49:51.264Z] 668 |      </div>
+[2026-05-06T10:49:51.264Z] |            ^
+[2026-05-06T10:49:51.265Z] 669 |    );
+[2026-05-06T10:49:51.265Z] 670 |  }
+[2026-05-06T10:49:51.835Z] 6:49:51 AM [vite] Internal server error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Unterminated JSX contents. (668:10)
+[2026-05-06T10:49:51.836Z] 
+[2026-05-06T10:49:51.837Z] 666 |         </div>
+[2026-05-06T10:49:51.837Z] 667 |       </footer>
+[2026-05-06T10:49:51.838Z] > 668 |     </div>
+[2026-05-06T10:49:51.838Z] |           ^
+[2026-05-06T10:49:51.838Z] 669 |   );
+[2026-05-06T10:49:51.839Z] 670 | }
+[2026-05-06T10:49:51.839Z] 671 |
+[2026-05-06T10:49:51.839Z] Plugin: vite:react-babel
+[2026-05-06T10:49:51.839Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:668:10
+[2026-05-06T10:49:51.840Z] 666 |          </div>
+[2026-05-06T10:49:51.840Z] 667 |        </footer>
+[2026-05-06T10:49:51.841Z] 668 |      </div>
+[2026-05-06T10:49:51.841Z] |            ^
+[2026-05-06T10:49:51.842Z] 669 |    );
+[2026-05-06T10:49:51.842Z] 670 |  }
+[2026-05-06T10:49:51.842Z] at constructor (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:367:19)
+[2026-05-06T10:49:51.843Z] at TypeScriptParserMixin.raise (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6630:19)
+[2026-05-06T10:49:51.844Z] at TypeScriptParserMixin.jsxReadToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4481:20)
+[2026-05-06T10:49:51.844Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4807:12)
+[2026-05-06T10:49:51.845Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10009:11)
+[2026-05-06T10:49:51.845Z] at TypeScriptParserMixin.nextToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5813:10)
+[2026-05-06T10:49:51.845Z] at TypeScriptParserMixin.next (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5723:10)
+[2026-05-06T10:49:51.846Z] at TypeScriptParserMixin.eat (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5727:12)
+[2026-05-06T10:49:51.846Z] at TypeScriptParserMixin.expect (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6929:15)
+[2026-05-06T10:49:51.846Z] at TypeScriptParserMixin.jsxParseClosingElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4713:10)
+[2026-05-06T10:49:51.847Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4728:37)
+[2026-05-06T10:49:51.847Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4731:32)
+[2026-05-06T10:49:51.847Z] at TypeScriptParserMixin.jsxParseElement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4782:17)
+[2026-05-06T10:49:51.848Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4792:19)
+[2026-05-06T10:49:51.848Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:51.849Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:51.849Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:51.849Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:51.850Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:51.850Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:51.851Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:51.852Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:51.852Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:39
+[2026-05-06T10:49:51.853Z] at TypeScriptParserMixin.tryParse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6938:20)
+[2026-05-06T10:49:51.853Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:18)
+[2026-05-06T10:49:51.854Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:39
+[2026-05-06T10:49:51.854Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12436:12)
+[2026-05-06T10:49:51.855Z] at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:17)
+[2026-05-06T10:49:51.855Z] at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12503:17)
+[2026-05-06T10:49:51.856Z] at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11683:28)
+[2026-05-06T10:49:51.856Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11335:23)
+[2026-05-06T10:49:51.857Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4797:20)
+[2026-05-06T10:49:51.857Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:51.858Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:51.858Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:51.859Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:51.859Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:51.860Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:51.860Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:51.861Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:51.861Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9806:20)
+[2026-05-06T10:49:51.862Z] at TypeScriptParserMixin.parseExpressionBase (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10788:23)
+[2026-05-06T10:49:51.862Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:39
+[2026-05-06T10:49:51.862Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12431:16)
+[2026-05-06T10:49:51.863Z] at TypeScriptParserMixin.parseExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:17)
+[2026-05-06T10:49:51.863Z] at TypeScriptParserMixin.parseReturnStatement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13151:28)
+[2026-05-06T10:49:51.864Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12807:21)
+[2026-05-06T10:49:51.864Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9532:18)
+[2026-05-06T10:49:51.865Z] at TypeScriptParserMixin.parseStatementLike (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12776:17)
+[2026-05-06T10:49:51.865Z] at TypeScriptParserMixin.parseStatementListItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12756:17)
+[2026-05-06T10:49:54.812Z] 6:49:54 AM [vite] Internal server error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Unterminated JSX contents. (668:10)
+[2026-05-06T10:49:54.813Z] 
+[2026-05-06T10:49:54.814Z] 666 |         </div>
+[2026-05-06T10:49:54.814Z] 667 |       </footer>
+[2026-05-06T10:49:54.815Z] > 668 |     </div>
+[2026-05-06T10:49:54.815Z] |           ^
+[2026-05-06T10:49:54.815Z] 669 |   );
+[2026-05-06T10:49:54.816Z] 670 | }
+[2026-05-06T10:49:54.817Z] 671 |
+[2026-05-06T10:49:54.817Z] Plugin: vite:react-babel
+[2026-05-06T10:49:54.818Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:668:10
+[2026-05-06T10:49:54.818Z] 666 |          </div>
+[2026-05-06T10:49:54.819Z] 667 |        </footer>
+[2026-05-06T10:49:54.819Z] 668 |      </div>
+[2026-05-06T10:49:54.819Z] |            ^
+[2026-05-06T10:49:54.820Z] 669 |    );
+[2026-05-06T10:49:54.820Z] 670 |  }
+[2026-05-06T10:49:54.820Z] at constructor (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:367:19)
+[2026-05-06T10:49:54.821Z] at TypeScriptParserMixin.raise (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6630:19)
+[2026-05-06T10:49:54.822Z] at TypeScriptParserMixin.jsxReadToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4481:20)
+[2026-05-06T10:49:54.822Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4807:12)
+[2026-05-06T10:49:54.823Z] at TypeScriptParserMixin.getTokenFromCode (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10009:11)
+[2026-05-06T10:49:54.823Z] at TypeScriptParserMixin.nextToken (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5813:10)
+[2026-05-06T10:49:54.823Z] at TypeScriptParserMixin.next (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5723:10)
+[2026-05-06T10:49:54.824Z] at TypeScriptParserMixin.eat (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:5727:12)
+[2026-05-06T10:49:54.824Z] at TypeScriptParserMixin.expect (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6929:15)
+[2026-05-06T10:49:54.825Z] at TypeScriptParserMixin.jsxParseClosingElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4713:10)
+[2026-05-06T10:49:54.825Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4728:37)
+[2026-05-06T10:49:54.825Z] at TypeScriptParserMixin.jsxParseElementAt (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4731:32)
+[2026-05-06T10:49:54.826Z] at TypeScriptParserMixin.jsxParseElement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4782:17)
+[2026-05-06T10:49:54.826Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4792:19)
+[2026-05-06T10:49:54.826Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:54.827Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:54.827Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:54.828Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:54.829Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:54.829Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:54.830Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:54.830Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:54.830Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:39
+[2026-05-06T10:49:54.831Z] at TypeScriptParserMixin.tryParse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6938:20)
+[2026-05-06T10:49:54.831Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9795:18)
+[2026-05-06T10:49:54.832Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:39
+[2026-05-06T10:49:54.832Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12436:12)
+[2026-05-06T10:49:54.832Z] at TypeScriptParserMixin.parseMaybeAssignAllowIn (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10804:17)
+[2026-05-06T10:49:54.833Z] at TypeScriptParserMixin.parseMaybeAssignAllowInOrVoidPattern (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12503:17)
+[2026-05-06T10:49:54.833Z] at TypeScriptParserMixin.parseParenAndDistinguishExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11683:28)
+[2026-05-06T10:49:54.833Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11335:23)
+[2026-05-06T10:49:54.834Z] at TypeScriptParserMixin.parseExprAtom (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4797:20)
+[2026-05-06T10:49:54.834Z] at TypeScriptParserMixin.parseExprSubscripts (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11085:23)
+[2026-05-06T10:49:54.834Z] at TypeScriptParserMixin.parseUpdate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11070:21)
+[2026-05-06T10:49:54.835Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:11050:23)
+[2026-05-06T10:49:54.835Z] at TypeScriptParserMixin.parseMaybeUnary (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9857:18)
+[2026-05-06T10:49:54.835Z] at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10903:61)
+[2026-05-06T10:49:54.836Z] at TypeScriptParserMixin.parseExprOps (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10908:23)
+[2026-05-06T10:49:54.836Z] at TypeScriptParserMixin.parseMaybeConditional (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10885:23)
+[2026-05-06T10:49:54.836Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10835:21)
+[2026-05-06T10:49:54.837Z] at TypeScriptParserMixin.parseMaybeAssign (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9806:20)
+[2026-05-06T10:49:54.837Z] at TypeScriptParserMixin.parseExpressionBase (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10788:23)
+[2026-05-06T10:49:54.837Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:39
+[2026-05-06T10:49:54.838Z] at TypeScriptParserMixin.allowInAnd (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12431:16)
+[2026-05-06T10:49:54.838Z] at TypeScriptParserMixin.parseExpression (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10784:17)
+[2026-05-06T10:49:54.838Z] at TypeScriptParserMixin.parseReturnStatement (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13151:28)
+[2026-05-06T10:49:54.838Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12807:21)
+[2026-05-06T10:49:54.839Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9532:18)
+[2026-05-06T10:49:54.839Z] at TypeScriptParserMixin.parseStatementLike (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12776:17)
+[2026-05-06T10:49:54.839Z] at TypeScriptParserMixin.parseStatementListItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12756:17)
+[2026-05-06T10:50:08.313Z] 6:50:08 AM [vite] (client) hmr update /src/index.css, /src/pages/MitologiaGregaEbook.tsx
+[2026-05-06T10:50:30.428Z] 6:50:30 AM [vite] (client) hmr update /src/index.css
