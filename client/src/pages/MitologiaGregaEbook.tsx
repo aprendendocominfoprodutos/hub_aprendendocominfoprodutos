@@ -610,6 +610,25 @@ export default function MitologiaGregaEbook() {
         </div>
       </section>
 
+      {/* ============ BOTÃO FLUTUANTE ============ */}
+      <div
+        className="fixed bottom-0 left-0 right-0 z-50 px-4 py-3"
+        style={{
+          background: 'linear-gradient(to top, rgba(5,5,6,0.98) 60%, transparent)',
+        }}
+      >
+        <button
+          className="w-full max-w-lg mx-auto flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-bold text-base tracking-wide block"
+          style={{
+            backgroundColor: '#c9a24a',
+            color: '#050506',
+            boxShadow: '0 0 24px rgba(201,162,74,0.5)',
+          }}
+        >
+          ⚡ Quero meu ebook agora — R$ 19,90
+        </button>
+      </div>
+
       {/* ============ FOOTER ============ */}
       <footer className="py-8 md:py-12 border-t" style={{ backgroundColor: '#050506', borderColor: '#c9a24a' }}>
         <div className="container px-4 md:px-8 text-center" style={{ color: '#c8c1ad' }}>
