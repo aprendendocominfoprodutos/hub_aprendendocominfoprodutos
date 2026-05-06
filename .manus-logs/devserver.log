@@ -478,3 +478,313 @@
 [2026-05-06T10:09:19.760Z] 6:09:19 AM [vite] (client) hmr update /src/index.css
 [2026-05-06T10:22:39.607Z] 6:22:39 AM [vite] (client) hmr update /src/index.css, /src/pages/MitologiaGregaEbook.tsx
 [2026-05-06T10:22:50.891Z] 6:22:50 AM [vite] (client) hmr update /src/index.css
+[2026-05-06T10:31:12.999Z] 6:31:12 AM [vite] (client) hmr update /src/index.css, /src/pages/MitologiaGregaEbook.tsx
+[2026-05-06T10:31:13.052Z] 6:31:13 AM [vite] Internal server error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Identifier 'useState' has already been declared. (3:9)
+[2026-05-06T10:31:13.053Z] 
+[2026-05-06T10:31:13.053Z] 1 | import { useState } from 'react';
+[2026-05-06T10:31:13.054Z] 2 | import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:13.054Z] > 3 | import { useState, useEffect } from 'react';
+[2026-05-06T10:31:13.054Z] |          ^
+[2026-05-06T10:31:13.055Z] 4 |
+[2026-05-06T10:31:13.055Z] 5 | /**
+[2026-05-06T10:31:13.055Z] 6 |  * Landing Page Premium - Mitologia Grega (Ebook Exclusivo)
+[2026-05-06T10:31:13.056Z] Plugin: vite:react-babel
+[2026-05-06T10:31:13.056Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:3:9
+[2026-05-06T10:31:13.056Z] 1  |  import { useState } from 'react';
+[2026-05-06T10:31:13.057Z] 2  |  import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:13.057Z] 3  |  import { useState, useEffect } from 'react';
+[2026-05-06T10:31:13.057Z] |           ^
+[2026-05-06T10:31:13.058Z] 4  |
+[2026-05-06T10:31:13.058Z] 5  |  /**
+[2026-05-06T10:31:13.058Z] at constructor (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:367:19)
+[2026-05-06T10:31:13.059Z] at TypeScriptParserMixin.raise (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6630:19)
+[2026-05-06T10:31:13.059Z] at TypeScriptScopeHandler.declareName (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4899:21)
+[2026-05-06T10:31:13.059Z] at TypeScriptParserMixin.declareNameFromIdentifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7594:16)
+[2026-05-06T10:31:13.060Z] at TypeScriptParserMixin.checkIdentifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7590:12)
+[2026-05-06T10:31:13.060Z] at TypeScriptParserMixin.checkLVal (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7529:12)
+[2026-05-06T10:31:13.061Z] at TypeScriptParserMixin.finishImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14275:10)
+[2026-05-06T10:31:13.061Z] at TypeScriptParserMixin.parseImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14432:17)
+[2026-05-06T10:31:13.061Z] at TypeScriptParserMixin.parseImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10171:18)
+[2026-05-06T10:31:13.062Z] at TypeScriptParserMixin.parseNamedImportSpecifiers (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14411:36)
+[2026-05-06T10:31:13.062Z] at TypeScriptParserMixin.parseImportSpecifiersAndAfter (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14251:37)
+[2026-05-06T10:31:13.062Z] at TypeScriptParserMixin.parseImport (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14244:17)
+[2026-05-06T10:31:13.063Z] at TypeScriptParserMixin.parseImport (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9441:26)
+[2026-05-06T10:31:13.063Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12885:27)
+[2026-05-06T10:31:13.063Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9532:18)
+[2026-05-06T10:31:13.064Z] at TypeScriptParserMixin.parseStatementLike (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12776:17)
+[2026-05-06T10:31:13.064Z] at TypeScriptParserMixin.parseModuleItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12753:17)
+[2026-05-06T10:31:13.064Z] at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13325:36)
+[2026-05-06T10:31:13.065Z] at TypeScriptParserMixin.parseBlockBody (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13318:10)
+[2026-05-06T10:31:13.065Z] at TypeScriptParserMixin.parseProgram (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12634:10)
+[2026-05-06T10:31:13.065Z] at TypeScriptParserMixin.parseTopLevel (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12624:25)
+[2026-05-06T10:31:13.066Z] at TypeScriptParserMixin.parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14501:10)
+[2026-05-06T10:31:13.066Z] at TypeScriptParserMixin.parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10149:18)
+[2026-05-06T10:31:13.066Z] at parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14535:38)
+[2026-05-06T10:31:13.067Z] at parser (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/parser/index.js:41:34)
+[2026-05-06T10:31:13.067Z] at parser.next (<anonymous>)
+[2026-05-06T10:31:13.067Z] at normalizeFile (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+[2026-05-06T10:31:13.068Z] at normalizeFile.next (<anonymous>)
+[2026-05-06T10:31:13.068Z] at run (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transformation/index.js:22:50)
+[2026-05-06T10:31:13.068Z] at run.next (<anonymous>)
+[2026-05-06T10:31:13.069Z] at transform (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transform.js:22:33)
+[2026-05-06T10:31:13.069Z] at transform.next (<anonymous>)
+[2026-05-06T10:31:13.069Z] at step (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:261:32)
+[2026-05-06T10:31:13.069Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:273:13
+[2026-05-06T10:31:13.070Z] at async.call.result.err.err (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+[2026-05-06T10:31:13.070Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:189:28
+[2026-05-06T10:31:13.070Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+[2026-05-06T10:31:13.071Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:113:33
+[2026-05-06T10:31:13.071Z] at step (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:287:14)
+[2026-05-06T10:31:13.072Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:273:13
+[2026-05-06T10:31:13.072Z] at async.call.result.err.err (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+[2026-05-06T10:31:13.484Z] 6:31:13 AM [vite] Internal server error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Identifier 'useState' has already been declared. (3:9)
+[2026-05-06T10:31:13.485Z] 
+[2026-05-06T10:31:13.485Z] 1 | import { useState } from 'react';
+[2026-05-06T10:31:13.485Z] 2 | import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:13.486Z] > 3 | import { useState, useEffect } from 'react';
+[2026-05-06T10:31:13.486Z] |          ^
+[2026-05-06T10:31:13.487Z] 4 |
+[2026-05-06T10:31:13.487Z] 5 | /**
+[2026-05-06T10:31:13.488Z] 6 |  * Landing Page Premium - Mitologia Grega (Ebook Exclusivo)
+[2026-05-06T10:31:13.488Z] Plugin: vite:react-babel
+[2026-05-06T10:31:13.488Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:3:9
+[2026-05-06T10:31:13.489Z] 1  |  import { useState } from 'react';
+[2026-05-06T10:31:13.489Z] 2  |  import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:13.490Z] 3  |  import { useState, useEffect } from 'react';
+[2026-05-06T10:31:13.491Z] |           ^
+[2026-05-06T10:31:13.491Z] 4  |
+[2026-05-06T10:31:13.492Z] 5  |  /**
+[2026-05-06T10:31:13.492Z] at constructor (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:367:19)
+[2026-05-06T10:31:13.493Z] at TypeScriptParserMixin.raise (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6630:19)
+[2026-05-06T10:31:13.493Z] at TypeScriptScopeHandler.declareName (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4899:21)
+[2026-05-06T10:31:13.494Z] at TypeScriptParserMixin.declareNameFromIdentifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7594:16)
+[2026-05-06T10:31:13.494Z] at TypeScriptParserMixin.checkIdentifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7590:12)
+[2026-05-06T10:31:13.495Z] at TypeScriptParserMixin.checkLVal (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7529:12)
+[2026-05-06T10:31:13.495Z] at TypeScriptParserMixin.finishImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14275:10)
+[2026-05-06T10:31:13.496Z] at TypeScriptParserMixin.parseImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14432:17)
+[2026-05-06T10:31:13.496Z] at TypeScriptParserMixin.parseImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10171:18)
+[2026-05-06T10:31:13.497Z] at TypeScriptParserMixin.parseNamedImportSpecifiers (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14411:36)
+[2026-05-06T10:31:13.497Z] at TypeScriptParserMixin.parseImportSpecifiersAndAfter (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14251:37)
+[2026-05-06T10:31:13.498Z] at TypeScriptParserMixin.parseImport (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14244:17)
+[2026-05-06T10:31:13.498Z] at TypeScriptParserMixin.parseImport (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9441:26)
+[2026-05-06T10:31:13.498Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12885:27)
+[2026-05-06T10:31:13.499Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9532:18)
+[2026-05-06T10:31:13.499Z] at TypeScriptParserMixin.parseStatementLike (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12776:17)
+[2026-05-06T10:31:13.499Z] at TypeScriptParserMixin.parseModuleItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12753:17)
+[2026-05-06T10:31:13.500Z] at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13325:36)
+[2026-05-06T10:31:13.500Z] at TypeScriptParserMixin.parseBlockBody (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13318:10)
+[2026-05-06T10:31:13.501Z] at TypeScriptParserMixin.parseProgram (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12634:10)
+[2026-05-06T10:31:13.501Z] at TypeScriptParserMixin.parseTopLevel (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12624:25)
+[2026-05-06T10:31:13.502Z] at TypeScriptParserMixin.parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14501:10)
+[2026-05-06T10:31:13.502Z] at TypeScriptParserMixin.parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10149:18)
+[2026-05-06T10:31:13.502Z] at parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14535:38)
+[2026-05-06T10:31:13.503Z] at parser (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/parser/index.js:41:34)
+[2026-05-06T10:31:13.507Z] at parser.next (<anonymous>)
+[2026-05-06T10:31:13.509Z] at normalizeFile (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+[2026-05-06T10:31:13.510Z] at normalizeFile.next (<anonymous>)
+[2026-05-06T10:31:13.511Z] at run (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transformation/index.js:22:50)
+[2026-05-06T10:31:13.511Z] at run.next (<anonymous>)
+[2026-05-06T10:31:13.511Z] at transform (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transform.js:22:33)
+[2026-05-06T10:31:13.512Z] at transform.next (<anonymous>)
+[2026-05-06T10:31:13.512Z] at step (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:261:32)
+[2026-05-06T10:31:13.512Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:273:13
+[2026-05-06T10:31:13.513Z] at async.call.result.err.err (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+[2026-05-06T10:31:13.513Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:189:28
+[2026-05-06T10:31:13.514Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+[2026-05-06T10:31:13.514Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:113:33
+[2026-05-06T10:31:13.514Z] at step (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:287:14)
+[2026-05-06T10:31:13.515Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:273:13
+[2026-05-06T10:31:13.515Z] at async.call.result.err.err (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+[2026-05-06T10:31:13.776Z] 6:31:13 AM [vite] Internal server error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Identifier 'useState' has already been declared. (3:9)
+[2026-05-06T10:31:13.778Z] 
+[2026-05-06T10:31:13.778Z] 1 | import { useState } from 'react';
+[2026-05-06T10:31:13.778Z] 2 | import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:13.779Z] > 3 | import { useState, useEffect } from 'react';
+[2026-05-06T10:31:13.782Z] |          ^
+[2026-05-06T10:31:13.782Z] 4 |
+[2026-05-06T10:31:13.783Z] 5 | /**
+[2026-05-06T10:31:13.783Z] 6 |  * Landing Page Premium - Mitologia Grega (Ebook Exclusivo)
+[2026-05-06T10:31:13.783Z] Plugin: vite:react-babel
+[2026-05-06T10:31:13.784Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:3:9
+[2026-05-06T10:31:13.784Z] 1  |  import { useState } from 'react';
+[2026-05-06T10:31:13.785Z] 2  |  import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:13.785Z] 3  |  import { useState, useEffect } from 'react';
+[2026-05-06T10:31:13.786Z] |           ^
+[2026-05-06T10:31:13.786Z] 4  |
+[2026-05-06T10:31:13.786Z] 5  |  /**
+[2026-05-06T10:31:13.787Z] at constructor (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:367:19)
+[2026-05-06T10:31:13.787Z] at TypeScriptParserMixin.raise (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6630:19)
+[2026-05-06T10:31:13.789Z] at TypeScriptScopeHandler.declareName (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4899:21)
+[2026-05-06T10:31:13.790Z] at TypeScriptParserMixin.declareNameFromIdentifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7594:16)
+[2026-05-06T10:31:13.791Z] at TypeScriptParserMixin.checkIdentifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7590:12)
+[2026-05-06T10:31:13.791Z] at TypeScriptParserMixin.checkLVal (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7529:12)
+[2026-05-06T10:31:13.792Z] at TypeScriptParserMixin.finishImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14275:10)
+[2026-05-06T10:31:13.793Z] at TypeScriptParserMixin.parseImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14432:17)
+[2026-05-06T10:31:13.794Z] at TypeScriptParserMixin.parseImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10171:18)
+[2026-05-06T10:31:13.794Z] at TypeScriptParserMixin.parseNamedImportSpecifiers (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14411:36)
+[2026-05-06T10:31:13.795Z] at TypeScriptParserMixin.parseImportSpecifiersAndAfter (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14251:37)
+[2026-05-06T10:31:13.795Z] at TypeScriptParserMixin.parseImport (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14244:17)
+[2026-05-06T10:31:13.796Z] at TypeScriptParserMixin.parseImport (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9441:26)
+[2026-05-06T10:31:13.797Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12885:27)
+[2026-05-06T10:31:13.797Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9532:18)
+[2026-05-06T10:31:13.798Z] at TypeScriptParserMixin.parseStatementLike (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12776:17)
+[2026-05-06T10:31:13.799Z] at TypeScriptParserMixin.parseModuleItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12753:17)
+[2026-05-06T10:31:13.799Z] at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13325:36)
+[2026-05-06T10:31:13.800Z] at TypeScriptParserMixin.parseBlockBody (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13318:10)
+[2026-05-06T10:31:13.801Z] at TypeScriptParserMixin.parseProgram (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12634:10)
+[2026-05-06T10:31:13.802Z] at TypeScriptParserMixin.parseTopLevel (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12624:25)
+[2026-05-06T10:31:13.802Z] at TypeScriptParserMixin.parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14501:10)
+[2026-05-06T10:31:13.803Z] at TypeScriptParserMixin.parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10149:18)
+[2026-05-06T10:31:13.804Z] at parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14535:38)
+[2026-05-06T10:31:13.804Z] at parser (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/parser/index.js:41:34)
+[2026-05-06T10:31:13.805Z] at parser.next (<anonymous>)
+[2026-05-06T10:31:13.806Z] at normalizeFile (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+[2026-05-06T10:31:13.806Z] at normalizeFile.next (<anonymous>)
+[2026-05-06T10:31:13.807Z] at run (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transformation/index.js:22:50)
+[2026-05-06T10:31:13.807Z] at run.next (<anonymous>)
+[2026-05-06T10:31:13.808Z] at transform (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transform.js:22:33)
+[2026-05-06T10:31:13.808Z] at transform.next (<anonymous>)
+[2026-05-06T10:31:13.809Z] at step (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:261:32)
+[2026-05-06T10:31:13.809Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:273:13
+[2026-05-06T10:31:13.810Z] at async.call.result.err.err (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+[2026-05-06T10:31:13.810Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:189:28
+[2026-05-06T10:31:13.811Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+[2026-05-06T10:31:13.811Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:113:33
+[2026-05-06T10:31:13.812Z] at step (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:287:14)
+[2026-05-06T10:31:13.812Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:273:13
+[2026-05-06T10:31:13.812Z] at async.call.result.err.err (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+[2026-05-06T10:31:14.223Z] 6:31:14 AM [vite] Internal server error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Identifier 'useState' has already been declared. (3:9)
+[2026-05-06T10:31:14.224Z] 
+[2026-05-06T10:31:14.225Z] 1 | import { useState } from 'react';
+[2026-05-06T10:31:14.225Z] 2 | import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:14.225Z] > 3 | import { useState, useEffect } from 'react';
+[2026-05-06T10:31:14.226Z] |          ^
+[2026-05-06T10:31:14.226Z] 4 |
+[2026-05-06T10:31:14.226Z] 5 | /**
+[2026-05-06T10:31:14.227Z] 6 |  * Landing Page Premium - Mitologia Grega (Ebook Exclusivo)
+[2026-05-06T10:31:14.227Z] Plugin: vite:react-babel
+[2026-05-06T10:31:14.228Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:3:9
+[2026-05-06T10:31:14.229Z] 1  |  import { useState } from 'react';
+[2026-05-06T10:31:14.229Z] 2  |  import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:14.229Z] 3  |  import { useState, useEffect } from 'react';
+[2026-05-06T10:31:14.230Z] |           ^
+[2026-05-06T10:31:14.230Z] 4  |
+[2026-05-06T10:31:14.230Z] 5  |  /**
+[2026-05-06T10:31:14.231Z] at constructor (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:367:19)
+[2026-05-06T10:31:14.231Z] at TypeScriptParserMixin.raise (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6630:19)
+[2026-05-06T10:31:14.232Z] at TypeScriptScopeHandler.declareName (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4899:21)
+[2026-05-06T10:31:14.232Z] at TypeScriptParserMixin.declareNameFromIdentifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7594:16)
+[2026-05-06T10:31:14.232Z] at TypeScriptParserMixin.checkIdentifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7590:12)
+[2026-05-06T10:31:14.233Z] at TypeScriptParserMixin.checkLVal (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7529:12)
+[2026-05-06T10:31:14.233Z] at TypeScriptParserMixin.finishImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14275:10)
+[2026-05-06T10:31:14.233Z] at TypeScriptParserMixin.parseImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14432:17)
+[2026-05-06T10:31:14.234Z] at TypeScriptParserMixin.parseImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10171:18)
+[2026-05-06T10:31:14.235Z] at TypeScriptParserMixin.parseNamedImportSpecifiers (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14411:36)
+[2026-05-06T10:31:14.235Z] at TypeScriptParserMixin.parseImportSpecifiersAndAfter (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14251:37)
+[2026-05-06T10:31:14.235Z] at TypeScriptParserMixin.parseImport (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14244:17)
+[2026-05-06T10:31:14.236Z] at TypeScriptParserMixin.parseImport (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9441:26)
+[2026-05-06T10:31:14.236Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12885:27)
+[2026-05-06T10:31:14.236Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9532:18)
+[2026-05-06T10:31:14.237Z] at TypeScriptParserMixin.parseStatementLike (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12776:17)
+[2026-05-06T10:31:14.237Z] at TypeScriptParserMixin.parseModuleItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12753:17)
+[2026-05-06T10:31:14.237Z] at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13325:36)
+[2026-05-06T10:31:14.238Z] at TypeScriptParserMixin.parseBlockBody (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13318:10)
+[2026-05-06T10:31:14.238Z] at TypeScriptParserMixin.parseProgram (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12634:10)
+[2026-05-06T10:31:14.239Z] at TypeScriptParserMixin.parseTopLevel (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12624:25)
+[2026-05-06T10:31:14.239Z] at TypeScriptParserMixin.parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14501:10)
+[2026-05-06T10:31:14.239Z] at TypeScriptParserMixin.parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10149:18)
+[2026-05-06T10:31:14.240Z] at parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14535:38)
+[2026-05-06T10:31:14.240Z] at parser (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/parser/index.js:41:34)
+[2026-05-06T10:31:14.240Z] at parser.next (<anonymous>)
+[2026-05-06T10:31:14.241Z] at normalizeFile (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+[2026-05-06T10:31:14.241Z] at normalizeFile.next (<anonymous>)
+[2026-05-06T10:31:14.241Z] at run (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transformation/index.js:22:50)
+[2026-05-06T10:31:14.242Z] at run.next (<anonymous>)
+[2026-05-06T10:31:14.242Z] at transform (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transform.js:22:33)
+[2026-05-06T10:31:14.242Z] at transform.next (<anonymous>)
+[2026-05-06T10:31:14.243Z] at step (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:261:32)
+[2026-05-06T10:31:14.243Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:273:13
+[2026-05-06T10:31:14.244Z] at async.call.result.err.err (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+[2026-05-06T10:31:14.244Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:189:28
+[2026-05-06T10:31:14.244Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+[2026-05-06T10:31:14.245Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:113:33
+[2026-05-06T10:31:14.245Z] at step (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:287:14)
+[2026-05-06T10:31:14.245Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:273:13
+[2026-05-06T10:31:14.246Z] at async.call.result.err.err (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+[2026-05-06T10:31:14.441Z] 6:31:14 AM [vite] (client) Pre-transform error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Identifier 'useState' has already been declared. (3:9)
+[2026-05-06T10:31:14.442Z] 
+[2026-05-06T10:31:14.442Z] 1 | import { useState } from 'react';
+[2026-05-06T10:31:14.443Z] 2 | import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:14.443Z] > 3 | import { useState, useEffect } from 'react';
+[2026-05-06T10:31:14.443Z] |          ^
+[2026-05-06T10:31:14.444Z] 4 |
+[2026-05-06T10:31:14.444Z] 5 | /**
+[2026-05-06T10:31:14.444Z] 6 |  * Landing Page Premium - Mitologia Grega (Ebook Exclusivo)
+[2026-05-06T10:31:14.445Z] Plugin: vite:react-babel
+[2026-05-06T10:31:14.445Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:3:9
+[2026-05-06T10:31:14.445Z] 1  |  import { useState } from 'react';
+[2026-05-06T10:31:14.446Z] 2  |  import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:14.446Z] 3  |  import { useState, useEffect } from 'react';
+[2026-05-06T10:31:14.446Z] |           ^
+[2026-05-06T10:31:14.447Z] 4  |
+[2026-05-06T10:31:14.447Z] 5  |  /**
+[2026-05-06T10:31:17.968Z] 6:31:17 AM [vite] Internal server error: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx: Identifier 'useState' has already been declared. (3:9)
+[2026-05-06T10:31:17.969Z] 
+[2026-05-06T10:31:17.970Z] 1 | import { useState } from 'react';
+[2026-05-06T10:31:17.970Z] 2 | import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:17.971Z] > 3 | import { useState, useEffect } from 'react';
+[2026-05-06T10:31:17.971Z] |          ^
+[2026-05-06T10:31:17.971Z] 4 |
+[2026-05-06T10:31:17.972Z] 5 | /**
+[2026-05-06T10:31:17.972Z] 6 |  * Landing Page Premium - Mitologia Grega (Ebook Exclusivo)
+[2026-05-06T10:31:17.972Z] Plugin: vite:react-babel
+[2026-05-06T10:31:17.973Z] File: /home/ubuntu/mitologia_landing/client/src/pages/MitologiaGregaEbook.tsx:3:9
+[2026-05-06T10:31:17.974Z] 1  |  import { useState } from 'react';
+[2026-05-06T10:31:17.974Z] 2  |  import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
+[2026-05-06T10:31:17.974Z] 3  |  import { useState, useEffect } from 'react';
+[2026-05-06T10:31:17.975Z] |           ^
+[2026-05-06T10:31:17.976Z] 4  |
+[2026-05-06T10:31:17.976Z] 5  |  /**
+[2026-05-06T10:31:17.977Z] at constructor (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:367:19)
+[2026-05-06T10:31:17.977Z] at TypeScriptParserMixin.raise (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:6630:19)
+[2026-05-06T10:31:17.978Z] at TypeScriptScopeHandler.declareName (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:4899:21)
+[2026-05-06T10:31:17.979Z] at TypeScriptParserMixin.declareNameFromIdentifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7594:16)
+[2026-05-06T10:31:17.979Z] at TypeScriptParserMixin.checkIdentifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7590:12)
+[2026-05-06T10:31:17.980Z] at TypeScriptParserMixin.checkLVal (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:7529:12)
+[2026-05-06T10:31:17.981Z] at TypeScriptParserMixin.finishImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14275:10)
+[2026-05-06T10:31:17.981Z] at TypeScriptParserMixin.parseImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14432:17)
+[2026-05-06T10:31:17.981Z] at TypeScriptParserMixin.parseImportSpecifier (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10171:18)
+[2026-05-06T10:31:17.982Z] at TypeScriptParserMixin.parseNamedImportSpecifiers (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14411:36)
+[2026-05-06T10:31:17.982Z] at TypeScriptParserMixin.parseImportSpecifiersAndAfter (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14251:37)
+[2026-05-06T10:31:17.982Z] at TypeScriptParserMixin.parseImport (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14244:17)
+[2026-05-06T10:31:17.983Z] at TypeScriptParserMixin.parseImport (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9441:26)
+[2026-05-06T10:31:17.983Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12885:27)
+[2026-05-06T10:31:17.983Z] at TypeScriptParserMixin.parseStatementContent (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:9532:18)
+[2026-05-06T10:31:17.984Z] at TypeScriptParserMixin.parseStatementLike (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12776:17)
+[2026-05-06T10:31:17.984Z] at TypeScriptParserMixin.parseModuleItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12753:17)
+[2026-05-06T10:31:17.985Z] at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13325:36)
+[2026-05-06T10:31:17.985Z] at TypeScriptParserMixin.parseBlockBody (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:13318:10)
+[2026-05-06T10:31:17.985Z] at TypeScriptParserMixin.parseProgram (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12634:10)
+[2026-05-06T10:31:17.986Z] at TypeScriptParserMixin.parseTopLevel (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12624:25)
+[2026-05-06T10:31:17.986Z] at TypeScriptParserMixin.parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14501:10)
+[2026-05-06T10:31:17.986Z] at TypeScriptParserMixin.parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:10149:18)
+[2026-05-06T10:31:17.987Z] at parse (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:14535:38)
+[2026-05-06T10:31:17.987Z] at parser (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/parser/index.js:41:34)
+[2026-05-06T10:31:17.987Z] at parser.next (<anonymous>)
+[2026-05-06T10:31:17.988Z] at normalizeFile (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transformation/normalize-file.js:64:37)
+[2026-05-06T10:31:17.988Z] at normalizeFile.next (<anonymous>)
+[2026-05-06T10:31:17.988Z] at run (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transformation/index.js:22:50)
+[2026-05-06T10:31:17.989Z] at run.next (<anonymous>)
+[2026-05-06T10:31:17.989Z] at transform (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/transform.js:22:33)
+[2026-05-06T10:31:17.989Z] at transform.next (<anonymous>)
+[2026-05-06T10:31:17.990Z] at step (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:261:32)
+[2026-05-06T10:31:17.990Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:273:13
+[2026-05-06T10:31:17.990Z] at async.call.result.err.err (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+[2026-05-06T10:31:17.991Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:189:28
+[2026-05-06T10:31:17.991Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+core@7.28.4/node_modules/@babel/core/lib/gensync-utils/async.js:67:7
+[2026-05-06T10:31:17.991Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:113:33
+[2026-05-06T10:31:17.992Z] at step (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:287:14)
+[2026-05-06T10:31:17.992Z] at /home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:273:13
+[2026-05-06T10:31:17.992Z] at async.call.result.err.err (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
+[2026-05-06T10:31:19.984Z] 6:31:19 AM [vite] (client) hmr update /src/index.css, /src/pages/MitologiaGregaEbook.tsx
+[2026-05-06T10:31:31.468Z] 6:31:31 AM [vite] (client) hmr update /src/index.css

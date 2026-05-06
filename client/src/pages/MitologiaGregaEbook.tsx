@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight, Check, Clock } from 'lucide-react';
 
 /**
  * Landing Page Premium - Mitologia Grega (Ebook Exclusivo)
@@ -19,6 +19,32 @@ import { ChevronLeft, ChevronRight, Check } from 'lucide-react';
  */
 export default function MitologiaGregaEbook() {
   const [currentPreviewSlide, setCurrentPreviewSlide] = useState(0);
+
+  // Countdown timer — 15 minutos reiniciados a cada visita
+  const [timeLeft, setTimeLeft] = useState(() => {
+    const stored = sessionStorage.getItem('mitologia_timer');
+    return stored ? parseInt(stored) : 15 * 60;
+  });
+
+  useEffect(() => {
+    if (timeLeft <= 0) return;
+    const interval = setInterval(() => {
+      setTimeLeft(prev => {
+        const next = prev - 1;
+        sessionStorage.setItem('mitologia_timer', String(next));
+        return next;
+      });
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [timeLeft]);
+
+  const formatTime = (seconds: number) => {
+    const m = Math.floor(seconds / 60).toString().padStart(2, '0');
+    const s = (seconds % 60).toString().padStart(2, '0');
+    return { m, s };
+  };
+
+  const { m, s } = formatTime(timeLeft);
 
   const previewSlides = [
     { id: 1, title: 'A Origem do Mundo', image: '/manus-storage/mitologia_origem_mundo_v2_eab2ad98.png' },
@@ -369,9 +395,27 @@ export default function MitologiaGregaEbook() {
               MITOLOGIA GREGA — Deuses, Heróis e Significados Ocultos
             </h3>
 
-            <p className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#c9a24a' }}>
-              R$ 19,90
-            </p>
+            {/* Preço riscado + preço atual */}
+            <div className="mb-6">
+              <p className="text-lg line-through mb-1" style={{ color: '#8a7a5a' }}>
+                De R$ 39,90
+              </p>
+              <p className="text-4xl md:text-5xl font-bold" style={{ color: '#c9a24a' }}>
+                R$ 19,90
+              </p>
+              <p className="text-sm mt-1" style={{ color: '#c8c1ad' }}>Oferta por tempo limitado</p>
+            </div>
+
+            {/* Timer de contagem regressiva */}
+            <div className="flex items-center justify-center gap-3 mb-8 p-4 rounded-lg" style={{ backgroundColor: '#07101f', border: '1px solid #c9a24a33' }}>
+              <Clock size={20} style={{ color: '#c9a24a' }} />
+              <span className="text-sm font-medium" style={{ color: '#c8c1ad' }}>Oferta expira em:</span>
+              <div className="flex items-center gap-1">
+                <span className="text-2xl font-bold tabular-nums px-2 py-1 rounded" style={{ backgroundColor: '#050506', color: '#f1d37a', minWidth: '2.5rem', textAlign: 'center' }}>{m}</span>
+                <span className="text-xl font-bold" style={{ color: '#c9a24a' }}>:</span>
+                <span className="text-2xl font-bold tabular-nums px-2 py-1 rounded" style={{ backgroundColor: '#050506', color: '#f1d37a', minWidth: '2.5rem', textAlign: 'center' }}>{s}</span>
+              </div>
+            </div>
 
             <p className="mb-8" style={{ color: '#c8c1ad' }}>
               Acesso liberado automaticamente após a confirmação do pagamento.
