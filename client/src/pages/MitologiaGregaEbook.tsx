@@ -140,7 +140,7 @@ export default function MitologiaGregaEbook() {
                 }}
               >
                 <img
-                  src="https://d2xsxph8kpxj0f.cloudfront.net/310419663028474035/MMmtQoJCAFVuuyydEuPJsU/mitologia_mockup_ebook-RQYJakBunwLZShPAVQKTeU.webp"
+                  src="/manus-storage/mitologia_mockup_oficial_1164a8dc.png"
                   alt="Mockup do ebook Mitologia Grega"
                   className="w-full h-auto"
                 />
@@ -358,7 +358,7 @@ export default function MitologiaGregaEbook() {
               }}
             >
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310419663028474035/MMmtQoJCAFVuuyydEuPJsU/mitologia_capa_ebook-DK6vV6vPiJrMx3pWu272px.webp"
+                src="/manus-storage/mitologia_mockup_oficial_1164a8dc.png"
                 alt="Capa do ebook Mitologia Grega"
                 className="w-full h-auto"
               />

@@ -464,3 +464,5 @@
 [2026-05-06T09:18:15.392Z] 5:18:15 AM [vite] (client) hmr update /src/index.css
 [2026-05-06T09:28:23.783Z] 5:28:23 AM [vite] (client) hmr update /src/App.tsx, /src/index.css
 [2026-05-06T09:28:35.998Z] 5:28:35 AM [vite] (client) hmr update /src/index.css
+[2026-05-06T09:36:58.501Z] 5:36:58 AM [vite] (client) hmr update /src/index.css, /src/pages/MitologiaGregaEbook.tsx
+[2026-05-06T09:37:11.043Z] 5:37:11 AM [vite] (client) hmr update /src/index.css

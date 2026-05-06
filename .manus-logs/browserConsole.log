@@ -187,3 +187,19 @@
 [2026-05-06T09:28:32.250Z] {"timestamp":1778059710111,"level":"DEBUG","args":["[vite] connected."],"stack":null}
 [2026-05-06T09:28:34.268Z] {"timestamp":1778059711574,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
 [2026-05-06T09:28:34.268Z] {"timestamp":1778059712044,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T09:28:36.668Z] {"timestamp":1778059716034,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T09:28:38.256Z] {"timestamp":1778059715971,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T09:28:38.256Z] {"timestamp":1778059716127,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T09:29:00.829Z] {"timestamp":1778059738823,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T09:29:00.829Z] {"timestamp":1778059738848,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T09:29:00.829Z] {"timestamp":1778059738993,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-05-06T09:36:59.210Z] {"timestamp":1778060218598,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T09:36:59.210Z] {"timestamp":1778060218598,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T09:37:00.251Z] {"timestamp":1778060219243,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T09:37:00.251Z] {"timestamp":1778060219244,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T09:37:04.565Z] {"timestamp":1778060221095,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T09:37:04.565Z] {"timestamp":1778060221543,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T09:37:08.264Z] {"timestamp":1778060219246,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T09:37:08.265Z] {"timestamp":1778060219246,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T09:37:08.269Z] {"timestamp":1778060225616,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T09:37:08.269Z] {"timestamp":1778060226081,"level":"DEBUG","args":["[vite] connected."],"stack":null}
