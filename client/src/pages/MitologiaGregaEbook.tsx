@@ -370,7 +370,7 @@ export default function MitologiaGregaEbook() {
             </h3>
 
             <p className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#c9a24a' }}>
-              R$ [INSERIR PREÇO]
+              R$ 19,90
             </p>
 
             <p className="mb-8" style={{ color: '#c8c1ad' }}>
