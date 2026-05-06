@@ -788,3 +788,5 @@
 [2026-05-06T10:31:17.992Z] at async.call.result.err.err (/home/ubuntu/mitologia_landing/node_modules/.pnpm/gensync@1.0.0-beta.2/node_modules/gensync/index.js:223:11)
 [2026-05-06T10:31:19.984Z] 6:31:19 AM [vite] (client) hmr update /src/index.css, /src/pages/MitologiaGregaEbook.tsx
 [2026-05-06T10:31:31.468Z] 6:31:31 AM [vite] (client) hmr update /src/index.css
+[2026-05-06T10:38:47.335Z] 6:38:47 AM [vite] (client) hmr update /src/index.css, /src/pages/MitologiaGregaEbook.tsx
+[2026-05-06T10:39:22.900Z] 6:39:22 AM [vite] (client) hmr update /src/index.css

@@ -453,7 +453,137 @@ export default function MitologiaGregaEbook() {
         </div>
       </section>
 
-      {/* ============ 8. CTA FINAL ============ */}
+      {/* ============ 8. DEPOIMENTOS ============ */}
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#050506' }}>
+        <div className="container px-4 md:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-4" style={{ color: '#f1d37a' }}>
+            O que estão dizendo
+          </h2>
+          <p className="text-center mb-12" style={{ color: '#c8c1ad' }}>
+            Leitores que já exploraram a mitologia grega com o ebook.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {/* Depoimento 1 */}
+            <div className="p-6 rounded-xl" style={{ backgroundColor: '#07101f', border: '1px solid #c9a24a22' }}>
+              <div className="flex items-center gap-3 mb-4">
+                <img
+                  src="https://i.pravatar.cc/48?img=47"
+                  alt="Fernanda"
+                  className="w-12 h-12 rounded-full object-cover"
+                  style={{ border: '2px solid #c9a24a44' }}
+                />
+                <div>
+                  <p className="font-semibold text-sm" style={{ color: '#f8f5ec' }}>Fernanda Rocha</p>
+                  <p className="text-xs" style={{ color: '#8a7a5a' }}>São Paulo, SP</p>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-3">
+                {[1,2,3,4,5].map(i => (
+                  <span key={i} style={{ color: '#c9a24a' }}>★</span>
+                ))}
+              </div>
+              <p className="text-sm leading-relaxed" style={{ color: '#c8c1ad' }}>
+                "Sempre tive curiosidade sobre mitologia mas nunca encontrei algo tão bem organizado. O visual é lindo e o conteúdo é direto ao ponto. Valeu muito cada centavo."
+              </p>
+            </div>
+
+            {/* Depoimento 2 */}
+            <div className="p-6 rounded-xl" style={{ backgroundColor: '#07101f', border: '1px solid #c9a24a22' }}>
+              <div className="flex items-center gap-3 mb-4">
+                <img
+                  src="https://i.pravatar.cc/48?img=12"
+                  alt="Rafael"
+                  className="w-12 h-12 rounded-full object-cover"
+                  style={{ border: '2px solid #c9a24a44' }}
+                />
+                <div>
+                  <p className="font-semibold text-sm" style={{ color: '#f8f5ec' }}>Rafael Mendes</p>
+                  <p className="text-xs" style={{ color: '#8a7a5a' }}>Belo Horizonte, MG</p>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-3">
+                {[1,2,3,4,5].map(i => (
+                  <span key={i} style={{ color: '#c9a24a' }}>★</span>
+                ))}
+              </div>
+              <p className="text-sm leading-relaxed" style={{ color: '#c8c1ad' }}>
+                "Comprei sem muita expectativa e fiquei surpreso. Fui lendo de um fôlego só. A parte dos heróis e criaturas é incrível. Recomendo pra qualquer um que curte história e simbolismo."
+              </p>
+            </div>
+
+            {/* Depoimento 3 */}
+            <div className="p-6 rounded-xl" style={{ backgroundColor: '#07101f', border: '1px solid #c9a24a22' }}>
+              <div className="flex items-center gap-3 mb-4">
+                <img
+                  src="https://i.pravatar.cc/48?img=32"
+                  alt="Camila"
+                  className="w-12 h-12 rounded-full object-cover"
+                  style={{ border: '2px solid #c9a24a44' }}
+                />
+                <div>
+                  <p className="font-semibold text-sm" style={{ color: '#f8f5ec' }}>Camila Souza</p>
+                  <p className="text-xs" style={{ color: '#8a7a5a' }}>Curitiba, PR</p>
+                </div>
+              </div>
+              <div className="flex gap-1 mb-3">
+                {[1,2,3,4,5].map(i => (
+                  <span key={i} style={{ color: '#c9a24a' }}>★</span>
+                ))}
+              </div>
+              <p className="text-sm leading-relaxed" style={{ color: '#c8c1ad' }}>
+                "Uso em aula com meus alunos do ensino médio. O design facilita muito a leitura e os alunos adoraram. Já indiquei para outros professores. Material de qualidade real."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ 9. FAQ ============ */}
+      <section className="py-16 md:py-24" style={{ backgroundColor: '#07101f' }}>
+        <div className="container px-4 md:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12" style={{ color: '#f1d37a' }}>
+            Perguntas frequentes
+          </h2>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {[
+              {
+                q: 'Como acesso o ebook após a compra?',
+                a: 'Assim que o pagamento for confirmado, você recebe o link de acesso direto no e-mail cadastrado. O download é imediato.'
+              },
+              {
+                q: 'Funciona no celular?',
+                a: 'Sim! O ebook está em formato PDF otimizado para leitura em qualquer dispositivo — celular, tablet ou computador.'
+              },
+              {
+                q: 'Preciso ter conhecimento prévio de mitologia?',
+                a: 'Não. O material foi pensado para quem está começando agora. A linguagem é clara, visual e organizada por temas.'
+              },
+              {
+                q: 'Tem garantia?',
+                a: 'Sim. Se por qualquer motivo você não ficar satisfeito, basta entrar em contato em até 7 dias após a compra para reembolso completo.'
+              },
+              {
+                q: 'Posso compartilhar com outras pessoas?',
+                a: 'O ebook é de uso pessoal e não autorizado para redistribuição. Mas você pode indicar o link de compra para quem quiser ter acesso.'
+              },
+            ].map((item, i) => (
+              <details key={i} className="group rounded-xl overflow-hidden" style={{ backgroundColor: '#050506', border: '1px solid #c9a24a22' }}>
+                <summary className="flex items-center justify-between p-5 cursor-pointer list-none" style={{ color: '#f8f5ec' }}>
+                  <span className="font-medium pr-4">{item.q}</span>
+                  <span className="text-xl flex-shrink-0 transition-transform group-open:rotate-45" style={{ color: '#c9a24a' }}>+</span>
+                </summary>
+                <div className="px-5 pb-5" style={{ color: '#c8c1ad' }}>
+                  <p className="text-sm leading-relaxed">{item.a}</p>
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ============ 10. CTA FINAL ============ */}
       <section className="py-16 md:py-24" style={{ backgroundColor: '#07101f' }}>
         <div className="container px-4 md:px-8">
           <div className="max-w-3xl mx-auto text-center">
