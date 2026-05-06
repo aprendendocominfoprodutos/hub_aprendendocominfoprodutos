@@ -119,12 +119,12 @@ function Router() {
       <Route path="/mitologia/grega/deuses" component={MythologyGreekGods} />
       <Route path="/mitologia/grega/herois" component={MythologyGreekHeroes} />
       <Route path="/mitologia/grega/batalhas" component={MythologyGreekBattles} />
-      <Route path="/mitologia/grega/geral" component={MythologyGreekGeneral} />
+      <Route path="/mitologia/grega/geral" component={MitologiaGregaEbook} />
       
       {/* Kit Completo - Landing Page */}
       <Route path="/mitologia/grega/kit-completo" component={GreekMythology} />
       
-      {/* Ebook Exclusivo - Landing Page */}
+      {/* Ebook Exclusivo - Landing Page (redirecionamento) */}
       <Route path="/mitologia/grega/ebook" component={MitologiaGregaEbook} />
 
       {/* FITNESS & HEALTH - 4 Níveis */}
