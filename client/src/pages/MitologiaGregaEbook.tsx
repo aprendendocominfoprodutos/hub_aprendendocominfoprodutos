@@ -111,8 +111,7 @@ export default function MitologiaGregaEbook() {
   };
 
   const handleCheckout = () => {
-    // TODO: Integrar com Kiwifi/Hotmart
-    alert('Redirecionando para checkout...');
+    window.open('https://pay.kiwify.com.br/zCm4daQ', '_blank');
   };
 
   return (
@@ -641,6 +640,7 @@ export default function MitologiaGregaEbook() {
         }}
       >
         <button
+          onClick={handleCheckout}
           className="w-full max-w-lg mx-auto flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-bold text-base tracking-wide"
           style={{
             backgroundColor: '#c9a24a',

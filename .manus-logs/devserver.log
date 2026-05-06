@@ -1214,3 +1214,5 @@
 [2026-05-06T10:49:54.839Z] at TypeScriptParserMixin.parseStatementListItem (/home/ubuntu/mitologia_landing/node_modules/.pnpm/@babel+parser@7.28.4/node_modules/@babel/parser/lib/index.js:12756:17)
 [2026-05-06T10:50:08.313Z] 6:50:08 AM [vite] (client) hmr update /src/index.css, /src/pages/MitologiaGregaEbook.tsx
 [2026-05-06T10:50:30.428Z] 6:50:30 AM [vite] (client) hmr update /src/index.css
+[2026-05-06T10:59:29.867Z] 6:59:29 AM [vite] (client) hmr update /src/index.css, /src/pages/MitologiaGregaEbook.tsx
+[2026-05-06T10:59:51.233Z] 6:59:51 AM [vite] (client) hmr update /src/index.css
