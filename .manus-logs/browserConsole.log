@@ -265,3 +265,27 @@
 [2026-05-06T09:59:25.276Z] {"timestamp":1778061564643,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
 [2026-05-06T09:59:26.668Z] {"timestamp":1778061564689,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
 [2026-05-06T09:59:26.668Z] {"timestamp":1778061564689,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T09:59:39.266Z] {"timestamp":1778061578836,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T09:59:40.670Z] {"timestamp":1778061578679,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T09:59:47.265Z] {"timestamp":1778061584222,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T09:59:47.265Z] {"timestamp":1778061584692,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T09:59:53.261Z] {"timestamp":1778061590692,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T09:59:53.261Z] {"timestamp":1778061591134,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T10:00:03.963Z] {"timestamp":1778061601958,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T10:00:03.963Z] {"timestamp":1778061601982,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T10:00:03.963Z] {"timestamp":1778061602099,"level":"INFO","args":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"],"stack":null}
+[2026-05-06T10:00:08.271Z] {"timestamp":1778061564794,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T10:00:08.271Z] {"timestamp":1778061564795,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T10:00:08.271Z] {"timestamp":1778061578684,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T10:00:24.268Z] {"timestamp":1778061621834,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T10:00:24.268Z] {"timestamp":1778061622280,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T10:00:31.274Z] {"timestamp":1778061628695,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T10:00:31.274Z] {"timestamp":1778061629160,"level":"DEBUG","args":["[vite] connected."],"stack":null}
+[2026-05-06T10:09:04.668Z] {"timestamp":1778062143777,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T10:09:04.668Z] {"timestamp":1778062143777,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T10:09:05.281Z] {"timestamp":1778062144732,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T10:09:05.281Z] {"timestamp":1778062144734,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T10:09:08.273Z] {"timestamp":1778062144739,"level":"DEBUG","args":["[vite]","hot updated: /src/index.css"],"stack":null}
+[2026-05-06T10:09:08.273Z] {"timestamp":1778062144740,"level":"DEBUG","args":["[vite]","hot updated: /src/pages/MitologiaGregaEbook.tsx"],"stack":null}
+[2026-05-06T10:09:16.277Z] {"timestamp":1778062153515,"level":"DEBUG","args":["[Manus] Debug collector initialized (no rrweb, UI events only)"],"stack":null}
+[2026-05-06T10:09:16.277Z] {"timestamp":1778062153960,"level":"DEBUG","args":["[vite] connected."],"stack":null}

@@ -25,7 +25,7 @@ export default function MitologiaGregaEbook() {
     { id: 2, title: 'Poder e Controle', image: '/manus-storage/mitologia_poder_controle_57210550.png' },
     { id: 3, title: 'Heróis', image: '/manus-storage/mitologia_herois_c24ef4ff.png' },
     { id: 4, title: 'Criaturas', image: '/manus-storage/mitologia_criaturas_567ec641.png' },
-    { id: 5, title: 'Símbolos e Significados', image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028474035/MMmtQoJCAFVuuyydEuPJsU/mitologia_pagina_interna_4-S2MWzSweWx5eT7sXhvv9ws.webp' },
+    { id: 5, title: 'Mitos e Conceitos', image: '/manus-storage/mitologia_mitos_conceitos_4e5e571e.png' },
   ];
 
   const contentItems = [
