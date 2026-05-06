@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 /**
  * Landing Page Premium - Mitologia Grega
@@ -22,6 +23,38 @@ import { useState, useEffect } from 'react';
  */
 export default function MythologyLanding() {
   const [timeLeft, setTimeLeft] = useState({ hours: 24, minutes: 0, seconds: 0 });
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const slides = [
+    {
+      image: '/manus-storage/ChatGPTImage1demai.de2026,03_13_38_8b7c5979.png',
+      title: 'A Origem do Mundo',
+      description: 'Compreenda como tudo começou na mitologia grega, desde o Caos até os Titãs.'
+    },
+    {
+      image: '/manus-storage/MITOLOGIAGREGA-Deuses,HeróiseSignificadosOcultos(1)_dda1af0f.png',
+      title: 'Poder e Controle',
+      description: 'Os deuses que governam o mundo e moldam o destino: Zeus, Poseidon e Hades.'
+    },
+    {
+      image: '/manus-storage/ChatGPTImage1demai.de2026,03_13_38_8b7c5979.png',
+      title: 'Heróis e Criaturas',
+      description: 'Conheça os heróis lendários e as criaturas mitológicas que desafiam os deuses.'
+    },
+    {
+      image: '/manus-storage/MITOLOGIAGREGA-Deuses,HeróiseSignificadosOcultos(1)_dda1af0f.png',
+      title: 'Símbolos e Significados',
+      description: 'Desvende os significados ocultos e os padrões universais da mitologia grega.'
+    }
+  ];
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -141,60 +174,72 @@ export default function MythologyLanding() {
         </div>
       </section>
 
-      {/* ============ 4. DEMONSTRAÇÃO ============ */}
+      {/* ============ 4. DEMONSTRAÇÃO COM CARROSSEL ============ */}
       <section className="py-16 md:py-24 bg-card/50 border-t border-border">
         <div className="container">
-          <h2 className="headline-primary text-center mb-12 text-foreground">
+          <h2 className="headline-primary text-center mb-4 text-foreground">
             Veja o Conteúdo Por Dentro
           </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            Páginas internas desenvolvidas com acabamento premium, leitura clara e identidade visual cinematográfica.
+          </p>
 
-          {/* Grid de Exemplos */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {/* Página Interna 1 */}
-            <div className="card-premium">
-              <img
-                src="/manus-storage/ChatGPTImage1demai.de2026,03_13_38_8b7c5979.png"
-                alt="Página Interna - A Origem do Mundo"
-                className="w-full h-auto rounded-lg mb-4"
-              />
-              <h3 className="text-lg font-bold text-foreground mb-2" style={{ fontFamily: "'Cinzel', serif" }}>
-                A Origem do Mundo
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Compreenda como tudo começou na mitologia grega, desde o Caos até os Titãs.
-              </p>
-            </div>
-
-            {/* Página Interna 2 */}
-            <div className="card-premium">
-              <img
-                src="/manus-storage/MITOLOGIAGREGA-Deuses,HeróiseSignificadosOcultos(1)_dda1af0f.png"
-                alt="Página Interna - Poder e Controle"
-                className="w-full h-auto rounded-lg mb-4"
-              />
-              <h3 className="text-lg font-bold text-foreground mb-2" style={{ fontFamily: "'Cinzel', serif" }}>
-                Poder e Controle
-              </h3>
-              <p className="text-sm text-muted-foreground">
-                Os deuses que governam o mundo e moldam o destino: Zeus, Poseidon e Hades.
-              </p>
-            </div>
-          </div>
-
-          {/* Espaços para Mapa e Guia */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="card-premium bg-muted/30 border-dashed flex items-center justify-center min-h-64">
-              <div className="text-center">
-                <p className="text-muted-foreground text-sm">Mapa Visual dos Deuses Gregos</p>
-                <p className="text-xs text-muted-foreground mt-2">(Espaço reservado para sua imagem)</p>
+          {/* Carrossel */}
+          <div className="relative space-y-6 max-w-4xl mx-auto">
+            {/* Imagem do Slide */}
+            <div className="flex justify-center">
+              <div className="relative w-full max-w-2xl">
+                <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-transparent rounded-lg blur-2xl"></div>
+                <img
+                  src={slides[currentSlide].image}
+                  alt={slides[currentSlide].title}
+                  className="relative w-full h-auto rounded-lg shadow-2xl transition-all duration-300"
+                  style={{ boxShadow: '0 0 40px rgba(201,162,74,0.3)' }}
+                />
               </div>
             </div>
 
-            <div className="card-premium bg-muted/30 border-dashed flex items-center justify-center min-h-64">
-              <div className="text-center">
-                <p className="text-muted-foreground text-sm">Guia Rápido de Referência</p>
-                <p className="text-xs text-muted-foreground mt-2">(Espaço reservado para sua imagem)</p>
+            {/* Título e Descrição */}
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-3" style={{ fontFamily: "'Cinzel', serif" }}>
+                {slides[currentSlide].title}
+              </h3>
+              <p className="text-muted-foreground max-w-xl mx-auto">
+                {slides[currentSlide].description}
+              </p>
+            </div>
+
+            {/* Controles de Navegação */}
+            <div className="flex justify-center gap-6 items-center mt-8">
+              <button
+                onClick={prevSlide}
+                className="p-3 rounded-full bg-primary/20 border border-primary/50 hover:bg-primary/30 transition-all hover:scale-110"
+                aria-label="Slide anterior"
+              >
+                <ChevronLeft className="w-6 h-6 text-primary" />
+              </button>
+              
+              {/* Indicadores de Slides */}
+              <div className="flex justify-center gap-2">
+                {slides.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setCurrentSlide(i)}
+                    className={`w-3 h-3 rounded-full transition-all ${
+                      i === currentSlide ? "bg-primary w-8" : "bg-primary/30"
+                    }`}
+                    aria-label={`Ir para slide ${i + 1}`}
+                  />
+                ))}
               </div>
+              
+              <button
+                onClick={nextSlide}
+                className="p-3 rounded-full bg-primary/20 border border-primary/50 hover:bg-primary/30 transition-all hover:scale-110"
+                aria-label="Próximo slide"
+              >
+                <ChevronRight className="w-6 h-6 text-primary" />
+              </button>
             </div>
           </div>
         </div>

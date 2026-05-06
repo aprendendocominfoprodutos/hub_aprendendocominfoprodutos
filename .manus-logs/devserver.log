@@ -439,3 +439,22 @@
 [2026-05-05T18:54:06.480Z] 2:54:06 PM [vite] (client) hmr update /src/pages/niches/PlanejamentoFinanceiro.tsx, /src/index.css
 [2026-05-05T18:55:04.463Z] 2:55:04 PM [vite] (client) hmr update /src/pages/niches/PlanejamentoFinanceiro.tsx, /src/index.css
 [2026-05-05T18:56:04.196Z] 2:56:04 PM [vite] (client) hmr update /src/index.css
+[2026-05-06T06:18:11.525Z] 2:18:11 AM [vite] (client) hmr update /src/index.css
+[2026-05-06T06:20:48.782Z] 2:20:48 AM [vite] (client) hmr update /src/pages/products/GreekMythology.tsx, /src/index.css
+[2026-05-06T06:23:52.010Z] Dev server process group stopped
+[2026-05-06T06:23:52.013Z] ELIFECYCLE  Command failed.
+[2026-05-06T06:23:52.034Z] Dev server exited with code -15
+[2026-05-06T06:23:55.030Z] Starting dev server with command: pnpm run dev
+[2026-05-06T06:23:55.789Z] 
+[2026-05-06T06:23:55.790Z] > mitologia_landing@1.0.0 dev /home/ubuntu/mitologia_landing
+[2026-05-06T06:23:55.791Z] > vite --host
+[2026-05-06T06:23:55.791Z] 
+[2026-05-06T06:23:56.209Z] 
+[2026-05-06T06:23:56.210Z] VITE v7.1.9  ready in 375 ms
+[2026-05-06T06:23:56.210Z] 
+[2026-05-06T06:23:56.210Z] ➜  Local:   http://localhost:3000/
+[2026-05-06T06:23:56.211Z] ➜  Network: http://169.254.0.21:3000/
+[2026-05-06T06:23:57.398Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-05-06T06:24:57.509Z] 2:24:57 AM [vite] (client) hmr update /src/index.css, /src/pages/MythologyLanding.tsx
+[2026-05-06T06:25:07.943Z] 2:25:07 AM [vite] (client) hmr update /src/index.css, /src/pages/MythologyLanding.tsx
+[2026-05-06T06:27:03.797Z] 2:27:03 AM [vite] (client) hmr update /src/index.css
