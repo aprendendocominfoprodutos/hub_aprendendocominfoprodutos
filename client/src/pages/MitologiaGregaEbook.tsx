@@ -21,8 +21,8 @@ export default function MitologiaGregaEbook() {
   const [currentPreviewSlide, setCurrentPreviewSlide] = useState(0);
 
   const previewSlides = [
-    { id: 1, title: 'A Origem do Mundo', image: '/manus-storage/mitologia_origem_mundo_a450ec96.png' },
-    { id: 2, title: 'Poder e Controle', image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028474035/MMmtQoJCAFVuuyydEuPJsU/mitologia_pagina_interna_2-AMBGksS2tmGiRtAPVyM7fA.webp' },
+    { id: 1, title: 'A Origem do Mundo', image: '/manus-storage/mitologia_origem_mundo_v2_eab2ad98.png' },
+    { id: 2, title: 'Poder e Controle', image: '/manus-storage/mitologia_poder_controle_57210550.png' },
     { id: 3, title: 'Heróis e Criaturas', image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028474035/MMmtQoJCAFVuuyydEuPJsU/mitologia_pagina_interna_3-38R3dAGcvyRAXy7VngGyHt.webp' },
     { id: 4, title: 'Símbolos e Significados', image: 'https://d2xsxph8kpxj0f.cloudfront.net/310419663028474035/MMmtQoJCAFVuuyydEuPJsU/mitologia_pagina_interna_4-S2MWzSweWx5eT7sXhvv9ws.webp' },
   ];
