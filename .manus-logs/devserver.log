@@ -1252,3 +1252,19 @@
 [2026-05-06T11:18:06.668Z] 35 |      </noscript>
 [2026-05-06T11:18:15.965Z] 7:18:15 AM [vite] (client) page reload index.html
 [2026-05-06T11:18:41.029Z] 7:18:41 AM [vite] (client) hmr update /src/index.css
+[2026-05-07T00:12:35.930Z] Dev server process group stopped
+[2026-05-07T00:12:35.933Z] ELIFECYCLE  Command failed.
+[2026-05-07T00:12:35.958Z] Dev server exited with code -15
+[2026-05-07T00:12:38.778Z] Starting dev server with command: pnpm run dev
+[2026-05-07T00:12:39.443Z] 
+[2026-05-07T00:12:39.444Z] > mitologia_landing@1.0.0 dev /home/ubuntu/mitologia_landing
+[2026-05-07T00:12:39.444Z] > vite --host
+[2026-05-07T00:12:39.445Z] 
+[2026-05-07T00:12:39.787Z] 
+[2026-05-07T00:12:39.788Z] VITE v7.1.9  ready in 307 ms
+[2026-05-07T00:12:39.788Z] 
+[2026-05-07T00:12:39.788Z] ➜  Local:   http://localhost:3000/
+[2026-05-07T00:12:39.789Z] ➜  Network: http://169.254.0.21:3000/
+[2026-05-07T00:13:01.849Z] [baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+[2026-05-07T00:16:48.552Z] 8:16:48 PM [vite] (client) page reload index.html
+[2026-05-07T00:17:11.641Z] 8:17:11 PM [vite] (client) hmr update /src/index.css
