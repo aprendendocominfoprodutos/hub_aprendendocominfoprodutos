@@ -18,7 +18,7 @@ interface TertiaryHubProps {
 
 export default function TertiaryHub({ title, description, subNiches, backLink, baseLink, specialRoutes }: TertiaryHubProps) {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950/95 via-slate-900/80 to-transparent">
       {/* Header */}
       <header className="border-b border-slate-700/30 bg-slate-900/40 backdrop-blur-md sticky top-0 z-50">
         <div className="container mx-auto px-4 py-6">

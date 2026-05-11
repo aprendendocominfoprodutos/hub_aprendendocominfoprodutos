@@ -61,7 +61,7 @@ export default function PlanejamentoFinanceiro() {
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-b from-slate-950/95 via-slate-900/80 to-transparent text-white overflow-hidden">
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center justify-center px-4 py-20 overflow-hidden">
         {/* Background Image */}
@@ -75,7 +75,7 @@ export default function PlanejamentoFinanceiro() {
         />
 
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/60 to-slate-950/80" />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-950/80 via-slate-900/60 to-amber-950/50" />
 
         {/* Content */}
         <div className="relative z-10 max-w-4xl mx-auto text-center">

@@ -43,7 +43,7 @@ export default function ProductLanding({
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-800 to-slate-900">
+    <div className="min-h-screen bg-gradient-to-b from-slate-900/95 via-slate-800/80 to-transparent">
       {/* Header */}
       <div className="border-b border-slate-700 bg-slate-900/50 backdrop-blur">
         <div className="container mx-auto px-4 py-4">
