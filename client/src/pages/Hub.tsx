@@ -17,6 +17,14 @@ import { Link } from 'wouter';
  */
 
 const niches = [
+  {
+    id: 'mitologia',
+    title: 'Mitologia',
+    subtitle: 'Deuses, Heróis e Lendas',
+    image: '/assets/mythology-thumbnail.jpg',
+    link: '/mitologia/grega/kit-completo',
+    color: 'from-amber-600 to-amber-900',
+  },
 
   {
     id: 'fitness',
