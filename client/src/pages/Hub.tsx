@@ -17,14 +17,7 @@ import { Link } from 'wouter';
  */
 
 const niches = [
-  {
-    id: 'mitologia',
-    title: 'Mitologia',
-    subtitle: 'Deuses, Heróis e Lendas',
-    image: 'https://images.unsplash.com/photo-1578926078328-123456789012?w=600&h=400&fit=crop',
-    link: '/mitologia',
-    color: 'from-amber-600 to-amber-900',
-  },
+
   {
     id: 'fitness',
     title: 'Fitness & Saúde',
