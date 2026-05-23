@@ -121,8 +121,7 @@ function Router() {
       <Route path="/mitologia/grega/batalhas" component={MythologyGreekBattles} />
       <Route path="/mitologia/grega/geral" component={MitologiaGregaEbook} />
       
-      {/* Kit Completo - Landing Page */}
-      <Route path="/mitologia/grega/kit-completo" component={GreekMythology} />
+
       
       {/* Ebook Exclusivo - Landing Page (redirecionamento) */}
       <Route path="/mitologia/grega/ebook" component={MitologiaGregaEbook} />
