@@ -32,8 +32,11 @@
         ><a href="#como-funciona">Como funciona</a
         ><a href="#duvidas">Dúvidas</a>
       </nav>
-      <a class="header-link" href="#oferta"
-        >Conhecer o guia <span aria-hidden="true">↗</span></a
+      <a
+        class="header-link header-buy purchase-pulse hotmart-fb hotmart__button-checkout"
+        href="https://pay.hotmart.com/G107859159B?checkoutMode=2"
+        onclick="return false;"
+        >Comprar por R$ 17,90 <span aria-hidden="true">↗</span></a
       >
     </header>
 
@@ -55,8 +58,11 @@
             bonita, saborosa e bem pensada.
           </p>
           <div class="hero-actions">
-            <a class="button button-gold" href="#oferta"
-              >Conheça o guia <span aria-hidden="true">↗</span></a
+            <a
+              class="button button-gold purchase-pulse hotmart-fb hotmart__button-checkout"
+              href="https://pay.hotmart.com/G107859159B?checkoutMode=2"
+              onclick="return false;"
+              >Quero o guia por R$ 17,90 <span aria-hidden="true">↗</span></a
             ><a class="text-link" href="#previa"
               >Veja imagens reais do livro ↓</a
             >
@@ -225,6 +231,18 @@
           principais, além das receitas bônus; não são 120 receitas distintas.
         </p>
       </section>
+      <div class="mid-buy-cta">
+        <div>
+          <span class="mid-buy-kicker">ACESSO DIGITAL IMEDIATO</span>
+          <strong>30 receitas + cardápios + planejamento por R$ 17,90</strong>
+        </div>
+        <a
+          class="button button-gold purchase-pulse hotmart-fb hotmart__button-checkout"
+          href="https://pay.hotmart.com/G107859159B?checkoutMode=2"
+          onclick="return false;"
+          >Comprar agora <span aria-hidden="true">↗</span></a
+        >
+      </div>
 
       <section class="book-preview section" id="previa" aria-labelledby="preview-title">
         <div class="preview-copy">
@@ -343,6 +361,19 @@
         </div>
       </section>
 
+      <div class="mid-buy-cta mid-buy-dark">
+        <div>
+          <span class="mid-buy-kicker">JÁ VIU O MATERIAL POR DENTRO?</span>
+          <strong>Leve o Natal Prático & Econômico por R$ 17,90</strong>
+        </div>
+        <a
+          class="button button-gold purchase-pulse hotmart-fb hotmart__button-checkout"
+          href="https://pay.hotmart.com/G107859159B?checkoutMode=2"
+          onclick="return false;"
+          >Quero meu guia <span aria-hidden="true">↗</span></a
+        >
+      </div>
+
       <section
         class="steps section natal-steps"
         id="como-funciona"
@@ -383,6 +414,16 @@
           </article>
         </div>
       </section>
+
+      <div class="compact-buy">
+        <span>Ceia organizada, menos desperdício.</span>
+        <a
+          class="purchase-pulse hotmart-fb hotmart__button-checkout"
+          href="https://pay.hotmart.com/G107859159B?checkoutMode=2"
+          onclick="return false;"
+          >Comprar por R$ 17,90 ↗</a
+        >
+      </div>
 
       <section class="quote-block natal-quote">
         <p>“Menos complicação. Menos desperdício.<br /><em>Mais Natal.</em>”</p>
@@ -480,6 +521,19 @@
       </section>
     </main>
 
+    <aside class="scroll-buy-bar" id="scroll-buy-bar" aria-label="Comprar Natal Prático e Econômico">
+      <div class="scroll-buy-copy">
+        <small>NATAL PRÁTICO & ECONÔMICO</small>
+        <strong>R$ 17,90</strong>
+      </div>
+      <a
+        class="scroll-buy-button purchase-pulse hotmart-fb hotmart__button-checkout"
+        href="https://pay.hotmart.com/G107859159B?checkoutMode=2"
+        onclick="return false;"
+        >Comprar agora <span aria-hidden="true">↗</span></a
+      >
+    </aside>
+
     <footer class="natal-footer">
       <div class="footer-brand">✳ <span>Aprendendo com Infoprodutos</span></div>
       <p>Natal Prático & Econômico • Edição 2026</p>
@@ -549,6 +603,23 @@
       } else {
         lazy.forEach(renderPreview);
       }
+    </script>
+    <script>
+      (() => {
+        const bar = document.getElementById('scroll-buy-bar');
+        if (!bar) return;
+
+        const updateBuyBar = () => {
+          if (window.scrollY > 560) {
+            bar.classList.add('scroll-buy-visible');
+          } else {
+            bar.classList.remove('scroll-buy-visible');
+          }
+        };
+
+        updateBuyBar();
+        window.addEventListener('scroll', updateBuyBar, { passive: true });
+      })();
     </script>
   </body>
 </html>

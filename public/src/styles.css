@@ -1993,3 +1993,240 @@ footer a {
     display: none;
   }
 }
+
+
+/* CTAs de compra persistentes — Natal */
+.natal-page .natal-header {
+  position: sticky;
+  top: 0;
+  z-index: 120;
+  background: rgba(12, 43, 33, 0.96);
+  border-bottom: 1px solid rgba(218, 181, 104, 0.5);
+  box-shadow: 0 8px 28px rgba(3, 20, 15, 0.16);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.natal-page .header-buy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 11px 16px;
+  border: 1px solid #e1bd70;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #e9c87f, #c99b43);
+  color: #17382b !important;
+  font-weight: 800;
+  box-shadow: 0 8px 22px rgba(201, 155, 67, 0.28);
+  white-space: nowrap;
+}
+.natal-page .header-buy:hover,
+.natal-page .header-buy:focus-visible {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 10px 28px rgba(201, 155, 67, 0.38);
+}
+.natal-page .purchase-pulse {
+  transform-origin: center;
+  animation: natalPurchasePulse 2.15s ease-in-out infinite;
+}
+@keyframes natalPurchasePulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.035); }
+}
+.natal-page .mid-buy-cta {
+  width: min(1120px, calc(100% - 40px));
+  margin: 26px auto 54px;
+  padding: 20px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  border: 1px solid rgba(154, 41, 46, 0.22);
+  border-left: 5px solid #8c282d;
+  border-radius: 10px;
+  background: linear-gradient(100deg, #fff9ee, #f5ead8);
+  box-shadow: 0 16px 38px rgba(67, 45, 21, 0.10);
+}
+.natal-page .mid-buy-dark {
+  margin-top: 4px;
+  background: linear-gradient(105deg, #102f26, #173d30);
+  border-color: rgba(218, 181, 104, 0.34);
+  border-left-color: #d2aa5d;
+  color: #fff6e7;
+  box-shadow: 0 18px 44px rgba(3, 20, 15, 0.26);
+}
+.natal-page .mid-buy-cta > div {
+  display: grid;
+  gap: 5px;
+}
+.natal-page .mid-buy-kicker {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  color: #8c282d;
+}
+.natal-page .mid-buy-dark .mid-buy-kicker {
+  color: #e0be72;
+}
+.natal-page .mid-buy-cta strong {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(19px, 2vw, 27px);
+  line-height: 1.18;
+  color: #17382b;
+}
+.natal-page .mid-buy-dark strong {
+  color: #fff6e7;
+}
+.natal-page .mid-buy-cta .button {
+  flex: 0 0 auto;
+  min-width: 205px;
+  text-align: center;
+}
+.natal-page .compact-buy {
+  width: min(900px, calc(100% - 40px));
+  margin: 18px auto 36px;
+  padding: 13px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  border: 1px solid #d5b368;
+  border-radius: 999px;
+  background: #11372b;
+  color: #fff7e7;
+  box-shadow: 0 12px 32px rgba(5, 27, 20, 0.20);
+  font-size: 12px;
+}
+.natal-page .compact-buy a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #edcf89, #c99b43);
+  color: #17382b;
+  font-weight: 900;
+  white-space: nowrap;
+}
+.natal-page .scroll-buy-bar {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  z-index: 200;
+  width: min(720px, calc(100% - 34px));
+  padding: 10px 12px 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  border: 1px solid rgba(226, 188, 110, 0.85);
+  border-radius: 999px;
+  background: rgba(12, 43, 33, 0.97);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transform: translate(-50%, 130%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .28s ease, opacity .28s ease;
+}
+.natal-page .scroll-buy-bar.scroll-buy-visible {
+  transform: translate(-50%, 0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.natal-page .scroll-buy-copy {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  min-width: 0;
+}
+.natal-page .scroll-buy-copy small {
+  color: #d8dfd9;
+  font-size: 9px;
+  letter-spacing: .08em;
+  white-space: nowrap;
+}
+.natal-page .scroll-buy-copy strong {
+  color: #f0cb77;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  white-space: nowrap;
+}
+.natal-page .scroll-buy-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 164px;
+  padding: 11px 17px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #edcf89, #c99b43);
+  color: #17382b;
+  font-size: 12px;
+  font-weight: 900;
+  box-shadow: 0 7px 20px rgba(201, 155, 67, 0.28);
+}
+@media (max-width: 800px) {
+  .natal-page .natal-header {
+    position: sticky !important;
+    top: 0;
+  }
+  .natal-page .natal-header nav {
+    display: none;
+  }
+  .natal-page .header-buy {
+    padding: 9px 12px;
+    font-size: 10px;
+  }
+  .natal-page .mid-buy-cta {
+    width: calc(100% - 28px);
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+    margin-bottom: 38px;
+  }
+  .natal-page .mid-buy-cta .button {
+    width: 100%;
+    min-width: 0;
+  }
+  .natal-page .compact-buy {
+    width: calc(100% - 28px);
+    border-radius: 14px;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  .natal-page .compact-buy a {
+    width: 100%;
+  }
+  .natal-page .scroll-buy-bar {
+    bottom: 9px;
+    width: calc(100% - 18px);
+    padding: 8px 8px 8px 12px;
+    gap: 9px;
+  }
+  .natal-page .scroll-buy-copy {
+    display: grid;
+    gap: 0;
+  }
+  .natal-page .scroll-buy-copy small {
+    font-size: 7px;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .natal-page .scroll-buy-copy strong {
+    font-size: 17px;
+  }
+  .natal-page .scroll-buy-button {
+    min-width: 138px;
+    padding: 10px 12px;
+    font-size: 10px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .natal-page .purchase-pulse {
+    animation: none;
+  }
+}
