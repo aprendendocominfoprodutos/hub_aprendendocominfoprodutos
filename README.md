@@ -21,3 +21,6 @@ Fonte oficial do site publicado no Cloudflare.
 A landing do Natal mantém identidade visual própria.
 
 O PDF usado nos mockups é obtido automaticamente durante o deploy.
+
+
+Cloudflare conectado ao branch main.
