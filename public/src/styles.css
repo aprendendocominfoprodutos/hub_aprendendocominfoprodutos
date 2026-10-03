@@ -2230,3 +2230,460 @@ footer a {
     animation: none;
   }
 }
+
+
+/* Estrutura de conversão v2 — Natal */
+.natal-page.conversion-page .conversion-hero .hero-copy-card {
+  max-width: 670px;
+}
+.natal-page .hero-checks {
+  display: grid;
+  gap: 8px;
+  margin: 22px 0 4px;
+  color: #244637;
+  font-size: 13px;
+  font-weight: 700;
+}
+.natal-page .hero-checks span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.natal-page .micro-trust {
+  margin: 14px 0 0;
+  color: #6e725f;
+  font-size: 10px;
+  letter-spacing: .03em;
+}
+.natal-page .conversion-intro {
+  max-width: 850px;
+}
+.natal-page .conversion-intro > p:last-child {
+  max-width: 720px;
+  color: #5d665d;
+  line-height: 1.75;
+}
+.natal-page .pain-stack {
+  display: grid;
+  gap: 12px;
+  margin-top: 34px;
+}
+.natal-page .pain-stack article {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  gap: 18px;
+  padding: 21px 24px;
+  border: 1px solid #dac9aa;
+  border-radius: 8px;
+  background: rgba(255, 251, 243, .78);
+}
+.natal-page .pain-stack article > span {
+  color: #9a2a30;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 26px;
+  font-weight: 700;
+}
+.natal-page .pain-stack h3 {
+  margin: 0 0 5px;
+  color: #17382b;
+  font-size: 18px;
+}
+.natal-page .pain-stack p {
+  margin: 0;
+  color: #667068;
+  font-size: 13px;
+  line-height: 1.65;
+}
+.natal-page .conversion-statement {
+  margin: 34px 0 0;
+  padding: 26px 28px;
+  display: grid;
+  gap: 7px;
+  border-left: 5px solid #b18e50;
+  background: #12372c;
+  color: #fff5e5;
+}
+.natal-page .conversion-statement span {
+  color: #e5c57f;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+.natal-page .conversion-statement strong {
+  max-width: 840px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(23px, 3vw, 34px);
+  line-height: 1.17;
+}
+.natal-page .solution-flow {
+  background: linear-gradient(180deg, #0f3328, #123c2f);
+  color: #fff7e7;
+}
+.natal-page .solution-flow .section-heading h2,
+.natal-page .solution-flow .section-heading h2 em {
+  color: #fff7e7;
+}
+.natal-page .solution-flow .section-heading > p {
+  color: #d4e0d8;
+}
+.natal-page .solution-flow .eyebrow {
+  color: #dfc17d;
+}
+.natal-page .decision-path {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 34px;
+}
+.natal-page .decision-path article {
+  padding: 24px 20px;
+  border: 1px solid rgba(224, 192, 124, .35);
+  border-radius: 8px;
+  background: rgba(255,255,255,.035);
+}
+.natal-page .decision-number {
+  display: inline-block;
+  margin-bottom: 30px;
+  color: #e4c47f;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 30px;
+}
+.natal-page .decision-path h3 {
+  margin: 0 0 9px;
+  color: #fff7e7;
+  font-size: 18px;
+}
+.natal-page .decision-path p {
+  margin: 0;
+  color: #cbd9d0;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.natal-page .path-summary {
+  margin-top: 28px;
+  padding: 16px 18px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  border-top: 1px solid rgba(224, 192, 124, .25);
+  border-bottom: 1px solid rgba(224, 192, 124, .25);
+  color: #e9d39e;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+.natal-page .path-summary b {
+  color: #8ea89a;
+}
+.natal-page .deliverable-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 34px;
+}
+.natal-page .deliverable-grid article {
+  position: relative;
+  min-height: 180px;
+  padding: 24px 22px;
+  border: 1px solid #d7c6a6;
+  border-radius: 8px;
+  background: linear-gradient(180deg, #fffdf7, #f8f0df);
+}
+.natal-page .deliverable-index {
+  display: block;
+  margin-bottom: 27px;
+  color: #9a2a30;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .12em;
+}
+.natal-page .deliverable-grid h3 {
+  margin: 0 0 8px;
+  color: #17382b;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 21px;
+}
+.natal-page .deliverable-grid p {
+  margin: 0;
+  color: #687168;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.natal-page .conversion-preview {
+  background:
+    radial-gradient(circle at 12% 15%, rgba(201, 170, 108, .10), transparent 23%),
+    linear-gradient(180deg, #0b2b22, #12392d);
+}
+.natal-page .cost-section {
+  background: #fff9ef;
+}
+.natal-page .cost-copy {
+  max-width: 790px;
+}
+.natal-page .cost-copy h2 {
+  max-width: 760px;
+}
+.natal-page .cost-copy > p:last-child {
+  max-width: 680px;
+  color: #5f685f;
+  line-height: 1.8;
+}
+.natal-page .cost-questions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  margin-top: 34px;
+}
+.natal-page .cost-questions article {
+  padding: 25px 22px;
+  border: 1px solid #d8c6a7;
+  border-radius: 8px;
+  background: #fffdf8;
+}
+.natal-page .cost-questions span {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 28px;
+  border: 1px solid #b28e4e;
+  border-radius: 50%;
+  color: #8b2930;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+}
+.natal-page .cost-questions p {
+  margin: 0;
+  color: #263f35;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 19px;
+  line-height: 1.4;
+}
+.natal-page .cost-conclusion {
+  margin-top: 18px;
+  padding: 20px 22px;
+  display: grid;
+  gap: 5px;
+  border-radius: 8px;
+  background: #702126;
+  color: #fff8ea;
+}
+.natal-page .cost-conclusion small {
+  color: #e7cfa5;
+}
+.natal-page .cost-conclusion strong {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(22px, 3vw, 31px);
+}
+.natal-page .offer-stack {
+  background: #112f27;
+  color: #fff7e7;
+}
+.natal-page .offer-stack .section-intro h2,
+.natal-page .offer-stack .section-intro h2 em {
+  color: #fff7e7;
+}
+.natal-page .offer-stack .eyebrow {
+  color: #e3c47e;
+}
+.natal-page .stack-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 32px;
+}
+.natal-page .stack-grid article {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 17px;
+  border: 1px solid rgba(224, 193, 126, .28);
+  border-radius: 6px;
+  background: rgba(255,255,255,.035);
+}
+.natal-page .stack-grid b {
+  font-size: 12px;
+}
+.natal-page .stack-grid span {
+  color: #e3c47e;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.natal-page .conversion-offer {
+  padding-top: 86px;
+  padding-bottom: 86px;
+}
+.natal-page .offer-assurance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 22px 0;
+  color: #2e5545;
+  font-size: 11px;
+  font-weight: 800;
+}
+.natal-page .conversion-price-card .price-before {
+  margin: 13px 0 0;
+  color: #6d7168;
+  font-size: 11px;
+}
+.natal-page .fit-section {
+  background: #f4ead9;
+}
+.natal-page .fit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 30px;
+}
+.natal-page .fit-grid article {
+  padding: 28px 26px;
+  border-radius: 8px;
+}
+.natal-page .fit-yes {
+  background: #12372c;
+  color: #fff6e7;
+  border: 1px solid #b99a60;
+}
+.natal-page .fit-no {
+  background: #fffaf0;
+  color: #253e34;
+  border: 1px solid #d8c8aa;
+}
+.natal-page .fit-grid article > span {
+  display: block;
+  margin-bottom: 20px;
+  color: #e0bf78;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: .13em;
+}
+.natal-page .fit-no > span {
+  color: #8e2a30;
+}
+.natal-page .fit-grid ul {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 12px;
+  line-height: 1.55;
+  font-size: 13px;
+}
+.natal-page .conversion-faq {
+  padding-top: 85px;
+  padding-bottom: 110px;
+}
+.natal-page .final-decision {
+  padding: 90px 25px 115px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(209, 173, 98, .16), transparent 28%),
+    linear-gradient(145deg, #0a261e, #123a2d 60%, #0b281f);
+  color: #fff8e9;
+  text-align: center;
+}
+.natal-page .final-decision-inner {
+  max-width: 850px;
+  margin: 0 auto;
+}
+.natal-page .final-decision .eyebrow {
+  justify-content: center;
+  color: #dfbd72;
+}
+.natal-page .final-decision h2 {
+  margin: 15px auto 18px;
+  color: #fff8e9;
+  font-size: clamp(38px, 6vw, 66px);
+  line-height: 1.03;
+}
+.natal-page .final-decision h2 em {
+  color: #e3c47d;
+}
+.natal-page .final-decision > div > p:not(.eyebrow) {
+  max-width: 640px;
+  margin: 0 auto;
+  color: #d1ddd5;
+  line-height: 1.75;
+}
+.natal-page .final-price-line {
+  width: min(520px, 100%);
+  margin: 30px auto 18px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(225, 190, 115, .42);
+  border-bottom: 1px solid rgba(225, 190, 115, .42);
+}
+.natal-page .final-price-line span {
+  font-size: 11px;
+}
+.natal-page .final-price-line strong {
+  color: #edcb7d;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 27px;
+}
+.natal-page .final-buy {
+  min-width: min(390px, 100%);
+  justify-content: center;
+  margin: 0 auto 13px;
+}
+.natal-page .final-decision small {
+  display: block;
+  color: #9fb3a8;
+  font-size: 9px;
+}
+@media (max-width: 950px) {
+  .natal-page .decision-path,
+  .natal-page .deliverable-grid,
+  .natal-page .cost-questions,
+  .natal-page .stack-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .natal-page .pain-stack article {
+    grid-template-columns: 42px 1fr;
+    padding: 18px 16px;
+  }
+  .natal-page .pain-stack article > span {
+    font-size: 22px;
+  }
+  .natal-page .conversion-statement {
+    padding: 22px 19px;
+  }
+  .natal-page .decision-path,
+  .natal-page .deliverable-grid,
+  .natal-page .cost-questions,
+  .natal-page .stack-grid,
+  .natal-page .fit-grid {
+    grid-template-columns: 1fr;
+  }
+  .natal-page .decision-path article {
+    min-height: 0;
+  }
+  .natal-page .decision-number {
+    margin-bottom: 18px;
+  }
+  .natal-page .path-summary {
+    justify-content: flex-start;
+    font-size: 8px;
+    gap: 7px;
+  }
+  .natal-page .deliverable-grid article {
+    min-height: 0;
+  }
+  .natal-page .cost-questions p {
+    font-size: 17px;
+  }
+  .natal-page .final-decision {
+    padding: 72px 18px 100px;
+  }
+  .natal-page .final-price-line {
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+}
