@@ -648,3 +648,265 @@
     height:60px;
   }
 }
+
+
+/* Home map v3 — desktop orbital + mobile cards */
+.portal-home-map-v3{
+  background:
+    radial-gradient(circle at 50% 6%,rgba(212,175,55,.055),transparent 24%),
+    linear-gradient(180deg,#06131f 0%,#071724 52%,#050f18 100%);
+}
+.portal-home-map-v3 .ecosystem-hero{
+  max-width:1180px;
+  margin:0 auto;
+  padding:72px 28px 70px;
+}
+.portal-home-map-v3 .ecosystem-heading{
+  max-width:760px;
+  margin:0 auto 38px;
+  text-align:center;
+}
+.portal-home-map-v3 .ecosystem-heading h1{
+  margin:0 0 16px;
+  font-size:clamp(44px,5.8vw,72px);
+  line-height:1.02;
+  letter-spacing:-.035em;
+}
+.portal-home-map-v3 .ecosystem-heading h1 em{
+  color:#e2bf69;
+  font-weight:500;
+}
+.portal-home-map-v3 .ecosystem-heading p{
+  max-width:680px;
+  margin:0 auto;
+  color:#aebbbc;
+  font-size:13px;
+  line-height:1.72;
+}
+.portal-home-map-v3 .ecosystem-stage{
+  position:relative;
+  min-height:590px;
+  overflow:hidden;
+  border:1px solid rgba(212,175,55,.26);
+  border-radius:26px;
+  background:
+    radial-gradient(circle at 50% 52%,rgba(212,175,55,.085),transparent 16%),
+    radial-gradient(circle at 40% 38%,rgba(30,68,94,.12),transparent 34%),
+    linear-gradient(155deg,#0b2637 0%,#071824 72%);
+  box-shadow:0 32px 78px rgba(0,0,0,.28);
+}
+.portal-home-map-v3 .orbit-line{
+  position:absolute;
+  left:50%;
+  top:52%;
+  transform:translate(-50%,-50%);
+  border:1px solid rgba(206,168,80,.24);
+  border-radius:50%;
+  pointer-events:none;
+}
+.portal-home-map-v3 .orbit-line-one{width:290px;height:290px}
+.portal-home-map-v3 .orbit-line-two{width:440px;height:440px;opacity:.72}
+.portal-home-map-v3 .orbit-line-three{width:600px;height:600px;opacity:.38}
+.portal-home-map-v3 .ecosystem-core{
+  position:absolute;
+  left:50%;
+  top:52%;
+  z-index:4;
+  transform:translate(-50%,-50%);
+}
+.portal-home-map-v3 .ecosystem-core-ring{
+  width:188px;
+  height:188px;
+  display:grid;
+  place-items:center;
+  padding:18px;
+  border:1px solid rgba(229,192,105,.7);
+  border-radius:50%;
+  background:radial-gradient(circle at 50% 38%,#183750,#081722 72%);
+  box-shadow:
+    0 0 0 10px rgba(212,175,55,.035),
+    0 14px 42px rgba(0,0,0,.36),
+    inset 0 0 24px rgba(212,175,55,.08);
+}
+.portal-home-map-v3 .ecosystem-core-ring img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  filter:drop-shadow(0 9px 18px rgba(0,0,0,.45));
+}
+.portal-home-map-v3 .ecosystem-card{
+  position:absolute;
+  z-index:5;
+  width:270px;
+  height:160px;
+  overflow:hidden;
+  border:1px solid rgba(212,175,55,.42);
+  border-radius:18px;
+  box-shadow:0 22px 48px rgba(0,0,0,.3);
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.portal-home-map-v3 .ecosystem-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 28px 60px rgba(0,0,0,.38);
+}
+.portal-home-map-v3 .ecosystem-card .ecosystem-bg{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .45s ease;
+}
+.portal-home-map-v3 .ecosystem-card:hover .ecosystem-bg{
+  transform:scale(1.045);
+}
+.portal-home-map-v3 .ecosystem-overlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(5,14,21,.8) 0%,rgba(5,14,21,.42) 48%,rgba(5,14,21,.08) 100%),
+    linear-gradient(180deg,rgba(5,14,21,.02),rgba(5,14,21,.82) 100%);
+}
+.portal-home-map-v3 .ecosystem-icon{
+  position:absolute;
+  left:16px;
+  top:14px;
+  width:52px;
+  height:52px;
+  display:grid;
+  place-items:center;
+  padding:4px;
+  border:1px solid rgba(239,205,126,.68);
+  border-radius:50%;
+  background:rgba(4,14,22,.72);
+  backdrop-filter:blur(5px);
+}
+.portal-home-map-v3 .ecosystem-icon img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  filter:drop-shadow(0 5px 10px rgba(0,0,0,.45));
+}
+.portal-home-map-v3 .ecosystem-card-copy{
+  position:absolute;
+  left:17px;
+  right:14px;
+  bottom:14px;
+  z-index:2;
+  display:grid;
+  gap:3px;
+}
+.portal-home-map-v3 .ecosystem-card-copy strong{
+  font-family:'Playfair Display',Georgia,serif;
+  color:#efd083;
+  font-size:24px;
+  line-height:1;
+  text-shadow:0 3px 12px rgba(0,0,0,.7);
+}
+.portal-home-map-v3 .ecosystem-card-copy small{
+  color:#d1d6d3;
+  font-size:8px;
+  letter-spacing:.02em;
+  text-shadow:0 2px 8px rgba(0,0,0,.75);
+}
+.portal-home-map-v3 .ecosystem-myth{
+  left:38px;
+  top:44px;
+  border-color:rgba(211,153,53,.55);
+}
+.portal-home-map-v3 .ecosystem-fit{
+  right:38px;
+  top:58px;
+  border-color:rgba(83,179,99,.52);
+}
+.portal-home-map-v3 .ecosystem-money{
+  right:84px;
+  bottom:40px;
+  border-color:rgba(205,152,54,.48);
+}
+.portal-home-map-v3 .ecosystem-hint{
+  margin:14px 0 0;
+  text-align:center;
+  color:#788c91;
+  font-size:9px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+.portal-home-map-v3 .explore-areas{
+  padding-top:54px;
+}
+@media(max-width:900px){
+  .portal-home-map-v3 .ecosystem-stage{
+    min-height:650px;
+  }
+  .portal-home-map-v3 .ecosystem-myth{left:24px}
+  .portal-home-map-v3 .ecosystem-fit{right:24px}
+  .portal-home-map-v3 .ecosystem-money{right:46px}
+}
+@media(max-width:700px){
+  .portal-home-map-v3 .ecosystem-hero{
+    padding:48px 16px 48px;
+  }
+  .portal-home-map-v3 .ecosystem-heading{
+    margin-bottom:24px;
+    text-align:left;
+  }
+  .portal-home-map-v3 .ecosystem-heading h1{
+    font-size:clamp(36px,11vw,52px);
+  }
+  .portal-home-map-v3 .ecosystem-heading p{
+    margin:0;
+  }
+  .portal-home-map-v3 .ecosystem-stage{
+    min-height:auto;
+    padding:24px 12px 14px;
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    overflow:visible;
+    border-radius:18px;
+  }
+  .portal-home-map-v3 .orbit-line{display:none}
+  .portal-home-map-v3 .ecosystem-core{
+    position:relative;
+    left:auto;
+    top:auto;
+    transform:none;
+    order:0;
+    margin:4px auto 16px;
+  }
+  .portal-home-map-v3 .ecosystem-core-ring{
+    width:142px;
+    height:142px;
+    padding:14px;
+  }
+  .portal-home-map-v3 .ecosystem-card{
+    position:relative;
+    left:auto!important;
+    right:auto!important;
+    top:auto!important;
+    bottom:auto!important;
+    width:100%;
+    height:125px;
+    border-radius:15px;
+  }
+  .portal-home-map-v3 .ecosystem-myth{order:1}
+  .portal-home-map-v3 .ecosystem-fit{order:2}
+  .portal-home-map-v3 .ecosystem-money{order:3}
+  .portal-home-map-v3 .ecosystem-icon{
+    width:44px;
+    height:44px;
+    left:12px;
+    top:12px;
+  }
+  .portal-home-map-v3 .ecosystem-card-copy{
+    left:14px;
+    bottom:12px;
+  }
+  .portal-home-map-v3 .ecosystem-card-copy strong{
+    font-size:21px;
+  }
+  .portal-home-map-v3 .ecosystem-hint{
+    margin-top:10px;
+  }
+}
