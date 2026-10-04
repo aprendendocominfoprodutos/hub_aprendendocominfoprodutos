@@ -2687,3 +2687,20 @@ footer a {
     padding-right: 6px;
   }
 }
+
+
+/* Logo dourado oficial no cabeçalho */
+.natal-page .natal-header .brand{
+  width:clamp(220px,24vw,320px);
+  height:78px;
+  display:block;
+  flex:0 0 auto;
+  background:url('/assets/home/logo-header-dourado.webp') no-repeat left center/contain;
+}
+.natal-page .natal-header .brand > *{display:none !important;}
+@media(max-width:760px){
+  .natal-page .natal-header .brand{
+    width:clamp(170px,50vw,225px);
+    height:60px;
+  }
+}

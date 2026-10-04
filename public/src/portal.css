@@ -630,3 +630,21 @@
   .fitness-topic-card:last-child{grid-column:auto}
   .fitness-topic-image{height:360px}
 }
+
+
+/* Logo dourado oficial no cabeçalho */
+.top .brand{
+  width:clamp(220px,24vw,320px);
+  height:78px;
+  display:block;
+  flex:0 0 auto;
+  background:url('/assets/home/logo-header-dourado.webp') no-repeat left center/contain;
+}
+.top .brand > *{display:none !important;}
+.portal-home .home-top .brand{height:82px;}
+@media(max-width:760px){
+  .top .brand{
+    width:clamp(170px,50vw,225px);
+    height:60px;
+  }
+}
