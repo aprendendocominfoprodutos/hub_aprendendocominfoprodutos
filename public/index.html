@@ -11,9 +11,9 @@
 <body class="portal-home">
   <div class="shell">
     <header class="top home-top">
-      <a class="brand" href="/" aria-label="Aprendendo com Infoprodutos">
-        <span class="mark">✳</span>
-        <span>
+      <a class="brand home-brand" href="/" aria-label="Aprendendo com Infoprodutos">
+        <img class="brand-logo" src="/assets/home/logo-main.webp" alt="" width="56" height="56">
+        <span class="brand-copy">
           <small>ECOSSISTEMA DIGITAL</small>
           <strong>Aprendendo com Infoprodutos</strong>
         </span>
@@ -42,25 +42,23 @@
 
         <div class="home-map" aria-label="Os três hubs do ecossistema">
           <div class="home-map-core">
-            <span class="core-icon">✳</span>
-            <small>APRENDENDO COM</small>
-            <strong>INFOPRODUTOS</strong>
+            <img class="core-logo" src="/assets/home/logo-main.webp" alt="Aprendendo com Infoprodutos" width="132" height="132">
           </div>
 
           <a class="orbit-card orbit-myth" href="/mitologia/">
-            <span class="orbit-icon">⚱</span>
+            <span class="orbit-logo-wrap"><img class="orbit-logo" src="/assets/home/logo-mitologia.webp" alt="" width="48" height="48"></span>
             <strong>Mitologia</strong>
             <small>Histórias • símbolos • deuses</small>
           </a>
 
           <a class="orbit-card orbit-fit" href="/fitness-saude/">
-            <span class="orbit-icon">✦</span>
+            <span class="orbit-logo-wrap"><img class="orbit-logo" src="/assets/home/logo-fitness.webp" alt="" width="48" height="48"></span>
             <strong>Fitness & Saúde</strong>
             <small>Alimentação • treinos • rotina</small>
           </a>
 
           <a class="orbit-card orbit-money" href="/mental-financeiro/">
-            <span class="orbit-icon">◉</span>
+            <span class="orbit-logo-wrap"><img class="orbit-logo" src="/assets/home/logo-mental-financeiro.webp" alt="" width="48" height="48"></span>
             <strong>Mental & Financeiro</strong>
             <small>Mente • dinheiro • planejamento</small>
           </a>
@@ -81,47 +79,65 @@
 
         <div class="home-hub-grid">
           <article class="home-hub-card home-hub-myth">
-            <div class="hub-medallion">⚡</div>
-            <span class="hub-label">MITOLOGIA HUB</span>
-            <h3>Histórias, símbolos, deuses e culturas antigas.</h3>
-            <p>
-              Explore mitologia grega, nórdica, egípcia e asteca em uma estrutura própria.
-            </p>
-            <div class="hub-mini-links">
-              <a href="/mitologia/grega/">Grega</a>
-              <a href="/mitologia/nordica/">Nórdica</a>
-              <a href="/mitologia/egipcia/">Egípcia</a>
-              <a href="/mitologia/asteca/">Asteca</a>
+            <a class="hub-scene" href="/mitologia/" aria-label="Explorar Mitologia Hub">
+              <img class="hub-scene-img" src="/assets/home/hub-mitologia.webp" alt="Cenário cinematográfico de mitologia com templos e civilizações antigas" loading="lazy">
+              <span class="hub-scene-shade"></span>
+              <img class="hub-scene-logo" src="/assets/home/logo-mitologia.webp" alt="Mitologia Hub" loading="lazy">
+            </a>
+            <div class="hub-card-body">
+              <span class="hub-label">MITOLOGIA HUB</span>
+              <h3>Histórias, símbolos, deuses e culturas antigas.</h3>
+              <p>
+                Explore mitologia grega, nórdica, egípcia e asteca em uma estrutura própria.
+              </p>
+              <div class="hub-mini-links">
+                <a href="/mitologia/grega/">Grega</a>
+                <a href="/mitologia/nordica/">Nórdica</a>
+                <a href="/mitologia/egipcia/">Egípcia</a>
+                <a href="/mitologia/asteca/">Asteca</a>
+              </div>
+              <a class="hub-enter" href="/mitologia/">Explorar Mitologia <span>→</span></a>
             </div>
-            <a class="hub-enter" href="/mitologia/">Explorar Mitologia <span>→</span></a>
           </article>
 
           <article class="home-hub-card home-hub-fit">
-            <div class="hub-medallion">✚</div>
-            <span class="hub-label">FITNESS & SAÚDE HUB</span>
-            <h3>Alimentação, saúde, receitas, treinos e rotina.</h3>
-            <p>
-              Caminhos separados para Alimentação & Saúde e Fitness, com subcategorias por objetivo.
-            </p>
-            <div class="hub-mini-links">
-              <a href="/fitness-saude/alimentacao-saude/">Alimentação & Saúde</a>
-              <a href="/fitness-saude/fitness/">Fitness</a>
+            <a class="hub-scene" href="/fitness-saude/" aria-label="Explorar Fitness e Saúde Hub">
+              <img class="hub-scene-img" src="/assets/home/hub-fitness.webp" alt="Cena premium de alimentação saudável e treino" loading="lazy">
+              <span class="hub-scene-shade"></span>
+              <img class="hub-scene-logo" src="/assets/home/logo-fitness.webp" alt="Fitness & Saúde Hub" loading="lazy">
+            </a>
+            <div class="hub-card-body">
+              <span class="hub-label">FITNESS & SAÚDE HUB</span>
+              <h3>Alimentação, saúde, receitas, treinos e rotina.</h3>
+              <p>
+                Caminhos separados para Alimentação & Saúde e Fitness, com subcategorias por objetivo.
+              </p>
+              <div class="hub-mini-links">
+                <a href="/fitness-saude/alimentacao-saude/">Alimentação & Saúde</a>
+                <a href="/fitness-saude/fitness/">Fitness</a>
+              </div>
+              <a class="hub-enter" href="/fitness-saude/">Explorar Fitness & Saúde <span>→</span></a>
             </div>
-            <a class="hub-enter" href="/fitness-saude/">Explorar Fitness & Saúde <span>→</span></a>
           </article>
 
           <article class="home-hub-card home-hub-money">
-            <div class="hub-medallion">◎</div>
-            <span class="hub-label">MENTAL & FINANCEIRO HUB</span>
-            <h3>Mente, dinheiro, planejamento, crédito e renda extra.</h3>
-            <p>
-              Entre por Mental ou Financeiro e siga para as áreas específicas sem misturar os temas.
-            </p>
-            <div class="hub-mini-links">
-              <a href="/mental-financeiro/mental/">Mental</a>
-              <a href="/mental-financeiro/financeiro/">Financeiro</a>
+            <a class="hub-scene" href="/mental-financeiro/" aria-label="Explorar Mental e Financeiro Hub">
+              <img class="hub-scene-img" src="/assets/home/hub-mental-financeiro.webp" alt="Cena premium com mente, estratégia e crescimento financeiro" loading="lazy">
+              <span class="hub-scene-shade"></span>
+              <img class="hub-scene-logo" src="/assets/home/logo-mental-financeiro.webp" alt="Mental & Financeiro Hub" loading="lazy">
+            </a>
+            <div class="hub-card-body">
+              <span class="hub-label">MENTAL & FINANCEIRO HUB</span>
+              <h3>Mente, dinheiro, planejamento, crédito e renda extra.</h3>
+              <p>
+                Entre por Mental ou Financeiro e siga para as áreas específicas sem misturar os temas.
+              </p>
+              <div class="hub-mini-links">
+                <a href="/mental-financeiro/mental/">Mental</a>
+                <a href="/mental-financeiro/financeiro/">Financeiro</a>
+              </div>
+              <a class="hub-enter" href="/mental-financeiro/">Explorar Mental & Financeiro <span>→</span></a>
             </div>
-            <a class="hub-enter" href="/mental-financeiro/">Explorar Mental & Financeiro <span>→</span></a>
           </article>
         </div>
       </section>

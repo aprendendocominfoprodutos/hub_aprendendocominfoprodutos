@@ -366,3 +366,140 @@
   .portal-home .materials-panel { padding:26px 20px; }
   .portal-home .materials-types { grid-template-columns:1fr; }
 }
+
+
+/* Home imagery v1 — logos oficiais + artes dos hubs */
+.portal-home .home-brand .brand-logo{
+  width:54px;
+  height:54px;
+  object-fit:contain;
+  flex:0 0 auto;
+  filter:drop-shadow(0 5px 14px rgba(0,0,0,.35));
+}
+.portal-home .home-brand .brand-copy{display:block}
+.portal-home .home-map{
+  background:
+    radial-gradient(circle at 50% 45%,rgba(212,175,55,.13),transparent 20%),
+    linear-gradient(160deg,rgba(14,40,58,.98),rgba(5,17,29,.99));
+}
+.portal-home .home-map-core{
+  overflow:hidden;
+  padding:18px;
+}
+.portal-home .core-logo{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,.42));
+}
+.portal-home .orbit-card{
+  overflow:hidden;
+  background-size:cover;
+  background-position:center;
+}
+.portal-home .orbit-card::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  z-index:0;
+  background:linear-gradient(180deg,rgba(4,12,20,.18),rgba(4,12,20,.9) 72%);
+}
+.portal-home .orbit-card > *{
+  position:relative;
+  z-index:1;
+}
+.portal-home .orbit-myth{
+  background-image:url('/assets/home/hub-mitologia.webp');
+  background-position:55% 47%;
+}
+.portal-home .orbit-fit{
+  background-image:url('/assets/home/hub-fitness.webp');
+  background-position:47% 48%;
+}
+.portal-home .orbit-money{
+  background-image:url('/assets/home/hub-mental-financeiro.webp');
+  background-position:52% 50%;
+}
+.portal-home .orbit-logo-wrap{
+  width:44px;
+  height:44px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:rgba(4,14,22,.56);
+  border:1px solid rgba(238,204,126,.34);
+  backdrop-filter:blur(6px);
+}
+.portal-home .orbit-logo{
+  width:38px;
+  height:38px;
+  object-fit:contain;
+  filter:drop-shadow(0 4px 8px rgba(0,0,0,.35));
+}
+
+.portal-home .home-hub-card{
+  padding:0;
+  overflow:hidden;
+  min-height:520px;
+}
+.portal-home .hub-scene{
+  position:relative;
+  display:block;
+  height:225px;
+  overflow:hidden;
+  border-bottom:1px solid rgba(212,175,55,.22);
+}
+.portal-home .hub-scene-img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  transform:scale(1.01);
+  transition:transform .45s ease,filter .45s ease;
+}
+.portal-home .hub-scene:hover .hub-scene-img{
+  transform:scale(1.055);
+  filter:saturate(1.06) contrast(1.03);
+}
+.portal-home .hub-scene-shade{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(180deg,rgba(4,12,18,.05) 18%,rgba(4,12,18,.18) 52%,rgba(4,12,18,.88) 100%),
+    linear-gradient(90deg,rgba(4,12,18,.28),transparent 55%);
+}
+.portal-home .hub-scene-logo{
+  position:absolute;
+  left:18px;
+  bottom:14px;
+  z-index:2;
+  width:82px;
+  height:82px;
+  object-fit:contain;
+  filter:drop-shadow(0 8px 18px rgba(0,0,0,.55));
+}
+.portal-home .hub-card-body{
+  padding:23px 25px 24px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
+}
+.portal-home .home-hub-card h3{
+  font-size:28px;
+}
+.portal-home .home-hub-myth .hub-scene{border-bottom-color:rgba(202,144,50,.38)}
+.portal-home .home-hub-fit .hub-scene{border-bottom-color:rgba(84,174,93,.38)}
+.portal-home .home-hub-money .hub-scene{border-bottom-color:rgba(207,153,52,.34)}
+
+@media(max-width:980px){
+  .portal-home .home-hub-card{min-height:500px}
+  .portal-home .hub-scene{height:250px}
+}
+@media(max-width:700px){
+  .portal-home .home-brand .brand-logo{width:46px;height:46px}
+  .portal-home .home-brand .brand-copy strong{font-size:15px}
+  .portal-home .home-map-core{width:170px;height:170px}
+  .portal-home .orbit-card{background-position:center}
+  .portal-home .hub-scene{height:220px}
+  .portal-home .hub-scene-logo{width:72px;height:72px}
+}
