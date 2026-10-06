@@ -731,3 +731,108 @@
     background-position:84% top!important;
   }
 }
+
+
+/* Natal decor v1 — decoração clara em todos os blocos */
+.natal-v4 .n4-identify,
+.natal-v4 .n4-recipes,
+.natal-v4 .n4-how,
+.natal-v4 .n4-content,
+.natal-v4 .n4-offer,
+.natal-v4 .n4-faq,
+.natal-v4 .n4-final{
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+.natal-v4 .n4-identify > *,
+.natal-v4 .n4-recipes > *,
+.natal-v4 .n4-how > *,
+.natal-v4 .n4-content > *,
+.natal-v4 .n4-offer > *,
+.natal-v4 .n4-faq > *,
+.natal-v4 .n4-final > *{
+  position:relative;
+  z-index:2;
+}
+.natal-v4 .n4-identify::before,
+.natal-v4 .n4-recipes::before,
+.natal-v4 .n4-how::before,
+.natal-v4 .n4-content::before,
+.natal-v4 .n4-offer::before,
+.natal-v4 .n4-faq::before,
+.natal-v4 .n4-final::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background-image:
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20transform%3D%22translate(300%200)%20scale(-1%201)%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
+    radial-gradient(circle at 12% 82%,rgba(202,161,75,.12) 0 4px,transparent 5px),
+    radial-gradient(circle at 86% 22%,rgba(151,45,53,.08) 0 5px,transparent 6px);
+  background-repeat:no-repeat;
+  background-position:left -18px top -14px,right -18px top -14px,left bottom,right 18% top;
+  background-size:245px auto,245px auto,100% 100%,100% 100%;
+  opacity:.24;
+}
+.natal-v4 .n4-offer::before{
+  opacity:.14;
+  filter:brightness(1.28) saturate(.72);
+}
+.natal-v4 .n4-product-mockup{
+  background-image:
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20transform%3D%22translate(300%200)%20scale(-1%201)%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
+    radial-gradient(circle at 50% 40%,rgba(255,255,255,.76),transparent 34%),
+    linear-gradient(145deg,#d8e7d2,#bfd5b7)!important;
+  background-repeat:no-repeat;
+  background-position:left -18px top -8px,right -18px top -8px,center,center;
+  background-size:255px auto,255px auto,100% 100%,100% 100%;
+}
+.natal-v4 .n4-final-product{
+  background-image:
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20transform%3D%22translate(300%200)%20scale(-1%201)%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
+    linear-gradient(145deg,#c7dbc0,#a9c59e)!important;
+  background-repeat:no-repeat;
+  background-position:left -20px top -10px,right -20px top -10px,center;
+  background-size:220px auto,220px auto,100% 100%;
+}
+.natal-v4 .n4-pain-grid article,
+.natal-v4 .n4-food-card,
+.natal-v4 .n4-content-list article,
+.natal-v4 .n4-price-card,
+.natal-v4 .n4-faq details,
+.natal-v4 .n4-hero-offer-box{
+  position:relative;
+  overflow:hidden;
+}
+.natal-v4 .n4-pain-grid article::after,
+.natal-v4 .n4-food-card::after,
+.natal-v4 .n4-price-card::after,
+.natal-v4 .n4-faq details::after{
+  content:"✦";
+  position:absolute;
+  right:10px;
+  top:8px;
+  color:rgba(180,137,60,.20);
+  font-size:18px;
+  pointer-events:none;
+}
+@media(max-width:720px){
+  .natal-v4 .n4-identify::before,
+  .natal-v4 .n4-recipes::before,
+  .natal-v4 .n4-how::before,
+  .natal-v4 .n4-content::before,
+  .natal-v4 .n4-offer::before,
+  .natal-v4 .n4-faq::before,
+  .natal-v4 .n4-final::before{
+    background-size:165px auto,165px auto,100% 100%,100% 100%;
+    opacity:.20;
+  }
+  .natal-v4 .n4-product-mockup{
+    background-size:175px auto,175px auto,100% 100%,100% 100%;
+  }
+}
