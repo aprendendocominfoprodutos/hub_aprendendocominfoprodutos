@@ -514,3 +514,199 @@
 
 .natal-v4 .n4-how-photo,
 .natal-v4 .n4-final-photo{background-image:none!important;}
+
+
+/* Hero integrado v5 — mulher no próprio background */
+.natal-v4 .n4-hero-integrated{
+  position:relative;
+  max-width:none;
+  min-height:690px;
+  margin:0;
+  padding:0 max(24px,calc((100vw - 1180px)/2 + 24px));
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  overflow:hidden;
+  background:#163c2f;
+}
+.natal-v4 .n4-hero-bg{
+  position:absolute;
+  inset:0;
+  background:url('/assets/natal/natal-hero-mulher.webp') 35% center/cover no-repeat;
+  transform:scale(1.01);
+}
+.natal-v4 .n4-hero-darken{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg,rgba(12,34,25,.05) 0%,rgba(12,34,25,.10) 36%,rgba(12,34,25,.58) 58%,rgba(12,34,25,.88) 100%),
+    linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.16));
+}
+.natal-v4 .n4-hero-trust{
+  position:absolute;
+  top:22px;
+  right:max(24px,calc((100vw - 1180px)/2 + 24px));
+  z-index:3;
+  display:flex;
+  gap:12px;
+  padding:10px 13px;
+  border-radius:12px;
+  background:rgba(246,249,242,.94);
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:0 10px 28px rgba(0,0,0,.14);
+}
+.natal-v4 .n4-hero-trust span{
+  display:flex;
+  align-items:center;
+  gap:5px;
+  color:#294638;
+  font-size:9px;
+  white-space:nowrap;
+}
+.natal-v4 .n4-hero-panel{
+  position:relative;
+  z-index:3;
+  width:min(610px,52vw);
+  margin-top:48px;
+  padding:34px 0 34px 36px;
+  color:#fff;
+  text-align:left;
+}
+.natal-v4 .n4-hero-panel .n4-kicker{
+  color:#f4c86e;
+}
+.natal-v4 .n4-hero-integrated h1{
+  margin:12px 0 18px;
+  max-width:600px;
+  color:#fff;
+  font-size:clamp(50px,5.5vw,78px);
+  line-height:.96;
+  letter-spacing:-.035em;
+  text-shadow:0 4px 22px rgba(0,0,0,.28);
+}
+.natal-v4 .n4-hero-integrated h1 em{
+  color:#f3c96d;
+  font-weight:600;
+}
+.natal-v4 .n4-hero-panel>p{
+  max-width:560px;
+  margin:0;
+  color:#f0f3ef;
+  font-size:14px;
+  line-height:1.72;
+  text-shadow:0 2px 14px rgba(0,0,0,.24);
+}
+.natal-v4 .n4-hero-integrated .n4-hero-points{
+  margin:20px 0;
+  color:#f4f6f2;
+  font-size:11px;
+}
+.natal-v4 .n4-hero-offer-box{
+  margin-top:22px;
+  padding:15px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  border-radius:15px;
+  background:rgba(245,249,241,.95);
+  border:1px solid rgba(255,255,255,.58);
+  box-shadow:0 18px 42px rgba(0,0,0,.22);
+}
+.natal-v4 .n4-hero-offer-box>div{
+  min-width:125px;
+  color:#244235;
+}
+.natal-v4 .n4-hero-offer-box small{
+  display:block;
+  color:#7a6441;
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+.natal-v4 .n4-hero-offer-box strong{
+  display:block;
+  margin:2px 0 1px;
+  color:#8f2d34;
+  font:700 30px 'Playfair Display',Georgia,serif;
+}
+.natal-v4 .n4-hero-offer-box span{
+  display:block;
+  color:#6e786f;
+  font-size:8px;
+}
+.natal-v4 .n4-hero-offer-box .n4-main-buy{
+  flex:1;
+  min-height:48px;
+}
+.natal-v4 .n4-hero-scroll{
+  display:inline-block;
+  margin-top:15px;
+  color:#fff4da;
+  font-size:10px;
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+@media(max-width:900px){
+  .natal-v4 .n4-hero-integrated{
+    min-height:720px;
+    align-items:flex-end;
+    justify-content:center;
+    padding:0 20px 28px;
+  }
+  .natal-v4 .n4-hero-bg{
+    background-position:45% center;
+  }
+  .natal-v4 .n4-hero-darken{
+    background:
+      linear-gradient(180deg,rgba(11,29,22,.04) 0%,rgba(11,29,22,.16) 38%,rgba(11,29,22,.82) 68%,rgba(11,29,22,.94) 100%);
+  }
+  .natal-v4 .n4-hero-trust{
+    top:14px;
+    left:14px;
+    right:14px;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:8px 12px;
+  }
+  .natal-v4 .n4-hero-panel{
+    width:100%;
+    max-width:680px;
+    margin:0;
+    padding:24px 6px 0;
+  }
+}
+@media(max-width:620px){
+  .natal-v4 .n4-hero-integrated{
+    min-height:760px;
+    padding:0 14px 22px;
+  }
+  .natal-v4 .n4-hero-bg{
+    background-position:48% top;
+  }
+  .natal-v4 .n4-hero-trust{
+    gap:6px 9px;
+    padding:8px 9px;
+  }
+  .natal-v4 .n4-hero-trust span{
+    font-size:8px;
+  }
+  .natal-v4 .n4-hero-panel{
+    padding:18px 0 0;
+  }
+  .natal-v4 .n4-hero-integrated h1{
+    font-size:clamp(40px,12vw,56px);
+  }
+  .natal-v4 .n4-hero-panel>p{
+    font-size:12px;
+  }
+  .natal-v4 .n4-hero-offer-box{
+    flex-direction:column;
+    align-items:stretch;
+    text-align:center;
+  }
+  .natal-v4 .n4-hero-offer-box .n4-main-buy{
+    width:100%;
+  }
+}
