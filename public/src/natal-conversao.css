@@ -299,3 +299,218 @@
     font-size:12px;
   }
 }
+
+
+/* Ajustes finais — verde claro, mulher só no topo e mockup */
+.natal-v4{
+  --n4-cream:#edf4e9;
+  --n4-paper:#f3f7ef;
+  --n4-line:#cad9c4;
+  background:
+    linear-gradient(rgba(226,238,221,.93),rgba(226,238,221,.93)),
+    url('/assets/natal/natal-hero-mulher.webp') center top/cover fixed no-repeat;
+}
+.natal-v4 .n4-header{
+  background:rgba(231,241,226,.97);
+  border-bottom-color:#c6d7c0;
+}
+.natal-v4 .n4-identify{
+  background:rgba(232,242,228,.94);
+}
+.natal-v4 .n4-pain-grid article{
+  background:#f4f8f1;
+  border-color:#cbdac5;
+}
+.natal-v4 .n4-recipes{
+  background:linear-gradient(180deg,rgba(218,233,212,.96),rgba(231,241,226,.96));
+}
+.natal-v4 .n4-content{
+  background:rgba(234,243,230,.95);
+}
+.natal-v4 .n4-faq{
+  background:rgba(229,239,224,.86);
+  border-radius:24px;
+  margin-top:64px;
+  margin-bottom:64px;
+}
+.natal-v4 .n4-faq details{
+  background:#f4f8f1;
+  border-color:#cbdac5;
+}
+.natal-v4 .n4-how{
+  margin-top:72px;
+  margin-bottom:72px;
+  padding:38px;
+  border:1px solid #c7d7c1;
+  border-radius:26px;
+  background:rgba(231,241,226,.94);
+  box-shadow:0 24px 55px rgba(44,75,50,.10);
+}
+.natal-v4 .n4-offer{
+  background:linear-gradient(135deg,#417858,#2f6348);
+}
+.natal-v4 .n4-price-card{
+  background:#edf4e8;
+}
+.natal-v4 .n4-final{
+  background:linear-gradient(135deg,#dbe9d5,#cfe0c8);
+  border-color:#bfd2b7;
+}
+.natal-v4 .n4-topnote{
+  background:#2f6348;
+}
+.natal-v4 .n4-product-mockup{
+  position:relative;
+  min-height:610px;
+  overflow:hidden;
+  border-radius:22px;
+  background:
+    radial-gradient(circle at 50% 40%,rgba(255,255,255,.72),transparent 34%),
+    linear-gradient(145deg,#d8e7d2,#bfd5b7);
+  border:1px solid #b9ccb2;
+  box-shadow:0 24px 55px rgba(44,75,50,.14);
+  perspective:1200px;
+}
+.natal-v4 .n4-mockup-page,
+.natal-v4 .n4-mockup-book{
+  position:absolute;
+  overflow:hidden;
+  background:#f5f0e6;
+  border:1px solid rgba(121,92,52,.22);
+  box-shadow:0 22px 50px rgba(46,57,40,.22);
+}
+.natal-v4 .n4-mockup-page canvas,
+.natal-v4 .n4-mockup-book canvas{
+  display:block;
+  width:100%!important;
+  height:auto!important;
+}
+.natal-v4 .n4-mockup-back{
+  width:40%;
+  left:10%;
+  top:19%;
+  transform:rotate(-8deg);
+  border-radius:7px;
+}
+.natal-v4 .n4-mockup-side{
+  width:40%;
+  right:9%;
+  top:17%;
+  transform:rotate(8deg);
+  border-radius:7px;
+}
+.natal-v4 .n4-mockup-book{
+  z-index:3;
+  width:45%;
+  left:50%;
+  top:46%;
+  transform:translate(-50%,-50%) rotateY(-8deg);
+  border-radius:7px 12px 12px 7px;
+}
+.natal-v4 .n4-mockup-book::before{
+  content:'';
+  position:absolute;
+  left:0;top:0;bottom:0;width:7%;
+  z-index:3;
+  background:linear-gradient(90deg,rgba(0,0,0,.18),rgba(255,255,255,.08),transparent);
+  pointer-events:none;
+}
+.natal-v4 .n4-mockup-caption{
+  position:absolute;
+  left:50%;
+  bottom:24px;
+  z-index:5;
+  width:82%;
+  transform:translateX(-50%);
+  padding:15px 18px;
+  border-radius:14px;
+  text-align:center;
+  background:rgba(29,80,57,.94);
+  color:#fff;
+  border:1px solid rgba(212,175,55,.42);
+}
+.natal-v4 .n4-mockup-caption small{
+  display:block;
+  color:#efd081;
+  font-size:8px;
+  letter-spacing:.14em;
+}
+.natal-v4 .n4-mockup-caption strong{
+  display:block;
+  margin:4px 0 2px;
+  font:600 22px 'Playfair Display',Georgia,serif;
+}
+.natal-v4 .n4-mockup-caption span{
+  font-size:9px;
+  color:#d9e5db;
+}
+.natal-v4 .n4-final-product{
+  position:relative;
+  min-height:420px;
+  background:linear-gradient(145deg,#c7dbc0,#a9c59e);
+}
+.natal-v4 .n4-final-book,
+.natal-v4 .n4-final-page{
+  position:absolute;
+  overflow:hidden;
+  border-radius:7px;
+  background:#f5f0e6;
+  box-shadow:0 22px 48px rgba(39,65,42,.22);
+}
+.natal-v4 .n4-final-book{
+  z-index:2;
+  width:43%;
+  left:42%;
+  top:50%;
+  transform:translate(-50%,-50%) rotate(-4deg);
+}
+.natal-v4 .n4-final-page{
+  width:38%;
+  right:10%;
+  top:50%;
+  transform:translateY(-50%) rotate(7deg);
+}
+.natal-v4 .n4-final-book canvas,
+.natal-v4 .n4-final-page canvas{
+  display:block;
+  width:100%!important;
+  height:auto!important;
+}
+.natal-v4 .n4-food-card img{
+  border-color:#bfd1b8;
+}
+.natal-v4 .n4-food-card h3{
+  color:#70402d;
+}
+@media(max-width:960px){
+  .natal-v4 .n4-how{
+    padding:24px;
+  }
+  .natal-v4 .n4-product-mockup{
+    min-height:540px;
+  }
+}
+@media(max-width:720px){
+  .natal-v4{
+    background:
+      linear-gradient(rgba(226,238,221,.96),rgba(226,238,221,.96)),
+      url('/assets/natal/natal-hero-mulher.webp') 65% top/cover no-repeat;
+  }
+  .natal-v4 .n4-how{
+    margin:48px 16px;
+    padding:16px;
+  }
+  .natal-v4 .n4-product-mockup{
+    min-height:430px;
+  }
+  .natal-v4 .n4-mockup-caption{
+    width:90%;
+    bottom:14px;
+  }
+  .natal-v4 .n4-final-product{
+    min-height:330px;
+  }
+}
+
+.natal-v4 .n4-how-photo,
+.natal-v4 .n4-final-photo{background-image:none!important;}
