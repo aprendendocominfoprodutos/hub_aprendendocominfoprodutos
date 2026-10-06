@@ -231,3 +231,71 @@
   .natal-v4 .n4-footer{flex-direction:column;text-align:center}
 }
 @media(prefers-reduced-motion:reduce){.natal-v4 .n4-pulse{animation:none}}
+
+
+/* Fotos reais das receitas — seção em 5 cards */
+.natal-v4 .n4-recipes-photo{
+  padding-top:74px;
+  padding-bottom:72px;
+}
+.natal-v4 .n4-food-row{
+  max-width:1280px;
+  margin:34px auto 0;
+  display:grid;
+  grid-template-columns:repeat(5,minmax(0,1fr));
+  gap:14px;
+  align-items:start;
+}
+.natal-v4 .n4-food-card{
+  min-width:0;
+  text-align:center;
+}
+.natal-v4 .n4-food-card img{
+  display:block;
+  width:100%;
+  aspect-ratio:1.45/1;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid #e4d2b8;
+  box-shadow:0 10px 26px rgba(82,55,32,.10);
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+.natal-v4 .n4-food-card:hover img{
+  transform:translateY(-3px) scale(1.015);
+  box-shadow:0 16px 34px rgba(82,55,32,.16);
+}
+.natal-v4 .n4-food-card h3{
+  margin:10px 4px 0;
+  color:#7f2328;
+  font-family:'DM Sans',Arial,sans-serif;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.25;
+}
+.natal-v4 .n4-food-cta{
+  display:flex;
+  justify-content:center;
+  margin-top:28px;
+}
+.natal-v4 .n4-food-cta .n4-main-buy{
+  min-width:min(430px,100%);
+}
+@media(max-width:980px){
+  .natal-v4 .n4-food-row{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+@media(max-width:650px){
+  .natal-v4 .n4-food-row{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+  .natal-v4 .n4-food-card:last-child{
+    grid-column:1/-1;
+    width:calc(50% - 6px);
+    justify-self:center;
+  }
+  .natal-v4 .n4-food-card h3{
+    font-size:12px;
+  }
+}
