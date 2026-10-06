@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
+
+.natal-v4{
+  --n4-cream:#fbf5ea;
+  --n4-paper:#fffaf1;
+  --n4-ink:#223029;
+  --n4-green:#1f5b42;
+  --n4-green2:#153f31;
+  --n4-wine:#982f36;
+  --n4-gold:#c99b43;
+  --n4-line:#eadcc6;
+  --n4-muted:#6f786f;
+  margin:0;
+  background:#fbf7ef;
+  color:var(--n4-ink);
+  font-family:'DM Sans',Arial,sans-serif;
+}
+.natal-v4 *{box-sizing:border-box}
+.natal-v4 a{text-decoration:none;color:inherit}
+.natal-v4 h1,.natal-v4 h2,.natal-v4 h3{font-family:'Playfair Display',Georgia,serif}
+.natal-v4 .n4-topnote{
+  min-height:34px;padding:7px 20px;display:flex;justify-content:center;gap:10px;align-items:center;
+  background:#153f31;color:#f7eedc;font-size:9px;letter-spacing:.08em;text-align:center
+}
+.natal-v4 .n4-topnote strong{color:#f3cb78}
+.natal-v4 .n4-header{
+  position:sticky;top:0;z-index:120;min-height:84px;padding:12px max(24px,calc((100vw - 1180px)/2 + 24px));
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  background:rgba(255,250,241,.96);border-bottom:1px solid var(--n4-line);
+  backdrop-filter:blur(12px);box-shadow:0 8px 24px rgba(65,49,25,.06)
+}
+.natal-v4 .n4-brand{display:block;width:260px;line-height:0}
+.natal-v4 .n4-brand img{display:block;width:100%;height:auto}
+.natal-v4 .n4-header nav{display:flex;gap:22px;font-size:11px;color:#576258}
+.natal-v4 .n4-header nav a:hover{color:var(--n4-wine)}
+.natal-v4 .n4-header-buy{
+  padding:11px 17px;border-radius:999px;background:var(--n4-wine)!important;color:white!important;font-size:11px!important;
+  font-weight:800!important;box-shadow:0 9px 24px rgba(152,47,54,.2)
+}
+.natal-v4 .n4-hero{
+  max-width:1220px;margin:auto;padding:54px 24px 60px;
+  display:grid;grid-template-columns:.88fr 1.12fr;gap:46px;align-items:center
+}
+.natal-v4 .n4-hero-copy{padding-left:10px}
+.natal-v4 .n4-kicker{
+  display:inline-block;color:var(--n4-wine);font-size:9px;font-weight:800;letter-spacing:.17em;text-transform:uppercase
+}
+.natal-v4 .n4-hero h1{
+  max-width:610px;margin:14px 0 19px;font-size:clamp(48px,5.7vw,76px);line-height:.98;letter-spacing:-.035em;color:#25362e
+}
+.natal-v4 .n4-hero h1 em{color:var(--n4-wine);font-weight:600}
+.natal-v4 .n4-hero-copy>p{max-width:620px;color:#687269;line-height:1.75;font-size:15px}
+.natal-v4 .n4-hero-points{display:grid;gap:8px;margin:22px 0;color:#365243;font-size:12px;font-weight:700}
+.natal-v4 .n4-hero-actions{display:flex;align-items:center;gap:15px;flex-wrap:wrap;margin-top:24px}
+.natal-v4 .n4-main-buy{
+  display:inline-flex!important;align-items:center!important;justify-content:center!important;
+  padding:14px 20px!important;border:0!important;border-radius:9px!important;
+  background:linear-gradient(180deg,#a63840,#86272e)!important;color:#fff!important;
+  font-size:12px!important;font-weight:800!important;box-shadow:0 12px 28px rgba(134,39,46,.22)!important
+}
+.natal-v4 .n4-soft-link{font-size:11px;font-weight:700;color:var(--n4-green)}
+.natal-v4 .n4-trustline{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;color:#8a8c84;font-size:9px}
+.natal-v4 .n4-hero-visual{
+  position:relative;min-height:590px;overflow:hidden;border-radius:26px;border:1px solid #e6d4bd;
+  box-shadow:0 30px 70px rgba(68,45,25,.18)
+}
+.natal-v4 .n4-hero-visual>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.natal-v4 .n4-hero-gradient{position:absolute;inset:0;background:linear-gradient(90deg,rgba(59,35,23,.03),rgba(59,35,23,.03) 55%,rgba(59,35,23,.12))}
+.natal-v4 .n4-hero-badge{
+  position:absolute;left:22px;bottom:22px;padding:13px 15px;border-radius:13px;
+  background:rgba(255,250,241,.93);border:1px solid rgba(201,155,67,.38);box-shadow:0 14px 34px rgba(47,31,18,.18)
+}
+.natal-v4 .n4-hero-badge small{display:block;font-size:7px;font-weight:800;letter-spacing:.13em;color:#7a6544}
+.natal-v4 .n4-hero-badge strong{display:block;margin:3px 0;color:var(--n4-wine);font:700 25px 'Playfair Display',Georgia,serif}
+.natal-v4 .n4-hero-badge span{font-size:9px;color:#687269}
+.natal-v4 .n4-identify{padding:74px 24px;background:#fff}
+.natal-v4 .n4-section-head{max-width:1180px;margin:0 auto 30px}
+.natal-v4 .n4-section-head h2{max-width:760px;margin:9px 0 0;font-size:clamp(34px,4.3vw,55px);line-height:1.05;color:#24352d}
+.natal-v4 .n4-section-head h2 em{color:var(--n4-wine);font-weight:600}
+.natal-v4 .n4-center{text-align:center}
+.natal-v4 .n4-center h2,.natal-v4 .n4-center p{margin-left:auto;margin-right:auto}
+.natal-v4 .n4-center p{color:#717a71}
+.natal-v4 .n4-pain-grid{
+  max-width:1180px;margin:auto;display:grid;grid-template-columns:repeat(4,1fr);gap:12px
+}
+.natal-v4 .n4-pain-grid article{
+  padding:21px 18px;border:1px solid var(--n4-line);border-radius:14px;background:#fffaf3
+}
+.natal-v4 .n4-pain-grid b{display:block;margin-bottom:28px;color:var(--n4-wine);font:700 24px 'Playfair Display',Georgia,serif}
+.natal-v4 .n4-pain-grid h3{margin:0 0 7px;font-size:18px}
+.natal-v4 .n4-pain-grid p{margin:0;color:#717970;font-size:11px;line-height:1.65}
+.natal-v4 .n4-recipes{padding:80px 24px;background:linear-gradient(180deg,#f5eadb,#fbf7ef)}
+.natal-v4 .n4-recipe-grid{
+  max-width:1180px;margin:36px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px
+}
+.natal-v4 .n4-recipe-card{
+  overflow:hidden;border:1px solid #e0cfb6;border-radius:18px;background:#fff;box-shadow:0 16px 38px rgba(86,61,35,.08)
+}
+.natal-v4 .n4-recipe-preview{position:relative;aspect-ratio:4/5.3;overflow:hidden;background:#eee5d8}
+.natal-v4 .n4-recipe-preview canvas{width:100%!important;height:100%!important;object-fit:cover;object-position:top}
+.natal-v4 .n4-recipe-card>div:last-child{padding:17px 18px 19px}
+.natal-v4 .n4-recipe-card span{font-size:8px;font-weight:800;letter-spacing:.13em;color:var(--n4-wine)}
+.natal-v4 .n4-recipe-card h3{margin:6px 0 5px;font-size:21px}
+.natal-v4 .n4-recipe-card p{margin:0;color:#747d74;font-size:10px;line-height:1.55}
+.natal-v4 .n4-inline-cta{
+  max-width:980px;margin:34px auto 0;padding:20px 22px;display:flex;justify-content:space-between;gap:20px;align-items:center;
+  border-radius:16px;background:var(--n4-green2);color:#fff;border:1px solid rgba(201,155,67,.34)
+}
+.natal-v4 .n4-inline-cta small{display:block;color:#d9b66e;font-size:8px;font-weight:800;letter-spacing:.13em}
+.natal-v4 .n4-inline-cta strong{display:block;margin-top:4px;font:600 24px 'Playfair Display',Georgia,serif}
+.natal-v4 .n4-how{
+  max-width:1180px;margin:84px auto;padding:0 24px;display:grid;grid-template-columns:.95fr 1.05fr;gap:45px;align-items:stretch
+}
+.natal-v4 .n4-how-photo{
+  min-height:600px;border-radius:24px;background:
+    linear-gradient(180deg,rgba(25,55,40,.06),rgba(25,55,40,.2)),
+    url('/assets/natal/natal-hero-mulher.webp') center/cover no-repeat;
+  box-shadow:0 24px 55px rgba(68,45,25,.14)
+}
+.natal-v4 .n4-how-copy{padding:34px 0}
+.natal-v4 .n4-how-copy h2{margin:10px 0 26px;font-size:clamp(34px,4vw,51px);line-height:1.06}
+.natal-v4 .n4-steps{display:grid;gap:12px}
+.natal-v4 .n4-steps article{display:grid;grid-template-columns:42px 1fr;gap:13px;padding:15px 0;border-bottom:1px solid var(--n4-line)}
+.natal-v4 .n4-steps b{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:#f0dfc4;color:var(--n4-wine)}
+.natal-v4 .n4-steps h3{margin:0 0 4px;font-size:18px}
+.natal-v4 .n4-steps p{margin:0;color:#727970;font-size:11px}
+.natal-v4 .n4-content{padding:82px 24px;background:#fff}
+.natal-v4 .n4-content-layout{max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr .85fr;gap:55px;align-items:center}
+.natal-v4 .n4-content-list{display:grid;gap:3px}
+.natal-v4 .n4-content-list article{display:grid;grid-template-columns:40px 1fr;gap:12px;padding:15px 0;border-bottom:1px solid var(--n4-line)}
+.natal-v4 .n4-content-list span{color:var(--n4-wine);font:700 19px 'Playfair Display',Georgia,serif}
+.natal-v4 .n4-content-list h3{margin:0 0 4px;font-size:18px}
+.natal-v4 .n4-content-list p{margin:0;color:#747c73;font-size:11px;line-height:1.55}
+.natal-v4 .n4-book-stack{position:relative;min-height:560px}
+.natal-v4 .n4-book{
+  position:absolute;top:50%;left:50%;width:48%;overflow:hidden;border:1px solid #d9c5a7;border-radius:8px;background:#eee;
+  box-shadow:0 22px 55px rgba(64,44,24,.2)
+}
+.natal-v4 .n4-book canvas{display:block;width:100%!important;height:auto!important}
+.natal-v4 .n4-book-back{transform:translate(-88%,-48%) rotate(-7deg)}
+.natal-v4 .n4-book-mid{transform:translate(-15%,-52%) rotate(7deg)}
+.natal-v4 .n4-book-front{z-index:3;transform:translate(-50%,-50%);width:51%}
+.natal-v4 .n4-footnote{max-width:1180px;margin:26px auto 0;color:#8a8d85;font-size:9px;line-height:1.6}
+.natal-v4 .n4-offer{
+  padding:84px max(24px,calc((100vw - 1180px)/2 + 24px));display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center;
+  background:linear-gradient(135deg,#173f31,#0f2d24);color:#fff
+}
+.natal-v4 .n4-offer h2{margin:10px 0 17px;max-width:650px;font-size:clamp(36px,4.5vw,58px);line-height:1.04}
+.natal-v4 .n4-offer p{max-width:640px;color:#cfddd4;line-height:1.7}
+.natal-v4 .n4-offer ul{margin:22px 0 0;padding-left:18px;display:grid;gap:8px;color:#e8efe9;font-size:12px}
+.natal-v4 .n4-price-card{padding:31px;border-radius:20px;background:#fff8ed;color:#25362e;box-shadow:0 28px 65px rgba(0,0,0,.23)}
+.natal-v4 .n4-price-card>small{font-size:8px;font-weight:800;letter-spacing:.14em;color:#8c6a35}
+.natal-v4 .n4-price{margin:12px 0 8px;color:var(--n4-wine);font:700 82px/1 'Playfair Display',Georgia,serif}
+.natal-v4 .n4-price span{font:700 18px 'DM Sans',Arial,sans-serif;vertical-align:top;margin-right:4px}
+.natal-v4 .n4-price sup{font-size:34px;vertical-align:top}
+.natal-v4 .n4-price-card p{color:#747b73;font-size:10px}
+.natal-v4 .n4-final-buy{width:100%;margin-top:11px}
+.natal-v4 .n4-faq{max-width:1050px;margin:auto;padding:82px 24px}
+.natal-v4 .n4-faq-list{display:grid;gap:8px}
+.natal-v4 .n4-faq details{border:1px solid var(--n4-line);border-radius:12px;background:#fff;overflow:hidden}
+.natal-v4 .n4-faq summary{cursor:pointer;padding:17px 18px;display:flex;justify-content:space-between;gap:20px;font-weight:800;font-size:12px;list-style:none}
+.natal-v4 .n4-faq summary::-webkit-details-marker{display:none}
+.natal-v4 .n4-faq details p{margin:0;padding:0 18px 18px;color:#737b73;font-size:11px;line-height:1.65}
+.natal-v4 .n4-final{
+  max-width:1180px;margin:0 auto 78px;display:grid;grid-template-columns:1fr .8fr;overflow:hidden;border-radius:24px;background:#f0dfc5;
+  border:1px solid #e0caab
+}
+.natal-v4 .n4-final-copy{padding:50px}
+.natal-v4 .n4-final h2{margin:10px 0 14px;font-size:clamp(36px,4.5vw,56px);line-height:1.03}
+.natal-v4 .n4-final p{color:#677168;line-height:1.7}
+.natal-v4 .n4-final-photo{min-height:420px;background:url('/assets/natal/natal-hero-mulher.webp') 75% center/cover no-repeat}
+.natal-v4 .n4-sticky{
+  position:fixed;left:50%;bottom:16px;z-index:220;width:min(720px,calc(100% - 30px));padding:9px 10px 9px 15px;
+  display:flex;align-items:center;justify-content:space-between;gap:15px;border:1px solid rgba(201,155,67,.58);border-radius:999px;
+  background:rgba(21,63,49,.97);box-shadow:0 18px 45px rgba(0,0,0,.28);backdrop-filter:blur(10px);
+  transform:translate(-50%,135%);opacity:0;pointer-events:none;transition:.28s ease
+}
+.natal-v4 .n4-sticky.is-visible{transform:translate(-50%,0);opacity:1;pointer-events:auto}
+.natal-v4 .n4-sticky>div{display:flex;align-items:center;gap:12px}
+.natal-v4 .n4-sticky small{color:#d6e0da;font-size:8px;letter-spacing:.08em}
+.natal-v4 .n4-sticky strong{color:#f0ca78;font:700 20px 'Playfair Display',Georgia,serif}
+.natal-v4 .n4-sticky-buy{padding:10px 15px!important;border-radius:999px!important;background:#a0353c!important;color:#fff!important;font-size:10px!important;font-weight:800!important}
+.natal-v4 .n4-footer{
+  padding:30px 24px 42px;display:flex;justify-content:center;align-items:center;gap:18px;border-top:1px solid var(--n4-line);color:#8a8c84;font-size:9px
+}
+.natal-v4 .n4-footer img{width:190px;height:auto}
+.natal-v4 .page-loading{position:absolute;inset:0;display:grid;place-items:center;color:#8f8b82;font-size:9px}
+.natal-v4 .pdf-ready .page-loading{display:none}
+.natal-v4 .n4-pulse{animation:n4Pulse 2.2s ease-in-out infinite}
+@keyframes n4Pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+
+@media(max-width:960px){
+  .natal-v4 .n4-hero{grid-template-columns:1fr;gap:28px}
+  .natal-v4 .n4-hero-visual{min-height:520px}
+  .natal-v4 .n4-pain-grid{grid-template-columns:1fr 1fr}
+  .natal-v4 .n4-recipe-grid{grid-template-columns:1fr 1fr}
+  .natal-v4 .n4-how{grid-template-columns:1fr}
+  .natal-v4 .n4-how-photo{min-height:480px}
+  .natal-v4 .n4-content-layout{grid-template-columns:1fr}
+  .natal-v4 .n4-book-stack{min-height:520px}
+  .natal-v4 .n4-offer{grid-template-columns:1fr}
+  .natal-v4 .n4-final{grid-template-columns:1fr}
+  .natal-v4 .n4-final-photo{min-height:360px}
+}
+@media(max-width:720px){
+  .natal-v4 .n4-header{min-height:70px;padding:9px 14px}
+  .natal-v4 .n4-brand{width:175px}
+  .natal-v4 .n4-header nav{display:none}
+  .natal-v4 .n4-header-buy{padding:9px 11px!important;font-size:9px!important}
+  .natal-v4 .n4-hero{padding:38px 16px 44px}
+  .natal-v4 .n4-hero-copy{padding-left:0}
+  .natal-v4 .n4-hero h1{font-size:clamp(42px,12vw,58px)}
+  .natal-v4 .n4-hero-visual{min-height:430px}
+  .natal-v4 .n4-hero-visual>img{object-position:63% center}
+  .natal-v4 .n4-identify,.natal-v4 .n4-recipes,.natal-v4 .n4-content{padding-left:16px;padding-right:16px}
+  .natal-v4 .n4-pain-grid,.natal-v4 .n4-recipe-grid{grid-template-columns:1fr}
+  .natal-v4 .n4-inline-cta{flex-direction:column;align-items:stretch;text-align:center}
+  .natal-v4 .n4-inline-cta .n4-main-buy{width:100%}
+  .natal-v4 .n4-how{margin:60px auto;padding:0 16px}
+  .natal-v4 .n4-how-photo{min-height:420px;background-position:65% center}
+  .natal-v4 .n4-book-stack{min-height:430px}
+  .natal-v4 .n4-offer{padding:64px 16px}
+  .natal-v4 .n4-price{font-size:68px}
+  .natal-v4 .n4-faq{padding:66px 16px}
+  .natal-v4 .n4-final{margin:0 16px 70px}
+  .natal-v4 .n4-final-copy{padding:36px 22px}
+  .natal-v4 .n4-final-photo{min-height:320px;background-position:67% center}
+  .natal-v4 .n4-sticky{bottom:8px;width:calc(100% - 16px);padding:8px 8px 8px 12px}
+  .natal-v4 .n4-sticky small{display:none}
+  .natal-v4 .n4-sticky-buy{min-width:132px}
+  .natal-v4 .n4-footer{flex-direction:column;text-align:center}
+}
+@media(prefers-reduced-motion:reduce){.natal-v4 .n4-pulse{animation:none}}
