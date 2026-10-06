@@ -710,3 +710,24 @@
     width:100%;
   }
 }
+
+
+/* Ajuste mobile do hero — enquadramento da mulher */
+.natal-v4 .n4-hero-integrated{
+  overflow:hidden;
+}
+.natal-v4 .n4-hero-bg{
+  transform:none!important;
+}
+@media(max-width:900px){
+  .natal-v4 .n4-hero-bg{
+    background-size:cover;
+    background-position:82% center!important;
+  }
+}
+@media(max-width:620px){
+  .natal-v4 .n4-hero-bg{
+    background-size:cover;
+    background-position:84% top!important;
+  }
+}
