@@ -1124,3 +1124,171 @@
     min-height:480px!important;
   }
 }
+
+
+/* Hero overlay v2 — texto sempre dentro da imagem */
+.natal-v4 .n4-hero-integrated{
+  position:relative!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  min-height:clamp(620px,50vw,760px)!important;
+  height:auto!important;
+  padding:0 max(24px,calc((100vw - 1180px)/2 + 24px))!important;
+  overflow:hidden!important;
+  background:#153f31!important;
+}
+.natal-v4 .n4-hero-bg{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  aspect-ratio:auto!important;
+  background-image:url('/assets/natal/natal-hero-mulher.webp')!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+  background-position:center center!important;
+  background-color:#153f31!important;
+  transform:none!important;
+}
+.natal-v4 .n4-hero-darken{
+  position:absolute!important;
+  inset:0!important;
+  width:100%!important;
+  height:100%!important;
+  background:
+    linear-gradient(90deg,
+      rgba(13,35,27,.06) 0%,
+      rgba(13,35,27,.10) 34%,
+      rgba(13,35,27,.50) 57%,
+      rgba(13,35,27,.88) 100%
+    )!important;
+}
+.natal-v4 .n4-hero-panel{
+  position:relative!important;
+  z-index:4!important;
+  width:min(570px,48vw)!important;
+  max-width:570px!important;
+  min-height:0!important;
+  margin:48px 0 0 auto!important;
+  padding:32px 0 32px 34px!important;
+  background:transparent!important;
+  color:#fff!important;
+}
+.natal-v4 .n4-hero-integrated h1{
+  max-width:100%!important;
+  margin:12px 0 18px!important;
+  font-size:clamp(48px,5.2vw,76px)!important;
+  line-height:.96!important;
+  overflow-wrap:normal!important;
+  word-break:normal!important;
+}
+.natal-v4 .n4-hero-panel>p,
+.natal-v4 .n4-hero-integrated .n4-hero-points{
+  max-width:100%!important;
+}
+.natal-v4 .n4-hero-trust{
+  z-index:5!important;
+}
+
+/* Tablet: mantém tudo sobre o mesmo banner. */
+@media(max-width:900px){
+  .natal-v4 .n4-hero-integrated{
+    min-height:760px!important;
+    display:flex!important;
+    align-items:flex-end!important;
+    justify-content:center!important;
+    padding:0 18px 26px!important;
+  }
+  .natal-v4 .n4-hero-bg{
+    position:absolute!important;
+    inset:0!important;
+    background-size:cover!important;
+    background-position:72% center!important;
+  }
+  .natal-v4 .n4-hero-darken{
+    inset:0!important;
+    height:100%!important;
+    aspect-ratio:auto!important;
+    background:
+      linear-gradient(180deg,
+        rgba(10,29,21,.04) 0%,
+        rgba(10,29,21,.10) 24%,
+        rgba(10,29,21,.38) 48%,
+        rgba(10,29,21,.82) 73%,
+        rgba(10,29,21,.94) 100%
+      )!important;
+  }
+  .natal-v4 .n4-hero-panel{
+    width:100%!important;
+    max-width:680px!important;
+    margin:0 auto!important;
+    padding:24px 6px 0!important;
+    background:transparent!important;
+  }
+  .natal-v4 .n4-hero-integrated h1{
+    font-size:clamp(40px,8vw,60px)!important;
+  }
+}
+
+/* Celular: texto, benefícios e CTA continuam dentro da própria imagem. */
+@media(max-width:620px){
+  .natal-v4 .n4-hero-integrated{
+    min-height:820px!important;
+    padding:0 14px 20px!important;
+    border-radius:0!important;
+  }
+  .natal-v4 .n4-hero-bg{
+    background-size:cover!important;
+    background-position:76% center!important;
+  }
+  .natal-v4 .n4-hero-darken{
+    background:
+      linear-gradient(180deg,
+        rgba(10,29,21,.05) 0%,
+        rgba(10,29,21,.12) 26%,
+        rgba(10,29,21,.46) 49%,
+        rgba(10,29,21,.86) 72%,
+        rgba(10,29,21,.96) 100%
+      )!important;
+  }
+  .natal-v4 .n4-hero-panel{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:20px 0 0!important;
+  }
+  .natal-v4 .n4-hero-integrated h1{
+    font-size:clamp(38px,11vw,54px)!important;
+    line-height:.97!important;
+  }
+  .natal-v4 .n4-hero-panel>p{
+    font-size:12px!important;
+    line-height:1.62!important;
+  }
+  .natal-v4 .n4-hero-integrated .n4-hero-points{
+    font-size:10px!important;
+    gap:7px!important;
+  }
+  .natal-v4 .n4-hero-offer-box{
+    width:100%!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+  }
+  .natal-v4 .n4-hero-offer-box .n4-main-buy{
+    width:100%!important;
+  }
+}
+
+/* Tela muito estreita */
+@media(max-width:390px){
+  .natal-v4 .n4-hero-integrated{
+    min-height:840px!important;
+  }
+  .natal-v4 .n4-hero-bg{
+    background-position:78% center!important;
+  }
+  .natal-v4 .n4-hero-integrated h1{
+    font-size:37px!important;
+  }
+}
