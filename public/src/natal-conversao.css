@@ -2273,3 +2273,112 @@
     width:min(52vw,172px)!important;
   }
 }
+
+
+/* Conteúdo do e-book v2 — cards pequenos e curiosidade */
+.natal-v4 .n4-guide-grid{
+  max-width:1180px;
+  margin:34px auto 0;
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px 16px;
+}
+.natal-v4 .n4-guide-card{
+  min-width:0;
+  text-align:left;
+}
+.natal-v4 .n4-guide-preview{
+  position:relative;
+  width:100%;
+  aspect-ratio:1.45/1;
+  overflow:hidden;
+  border-radius:11px;
+  background:#f7f0e5;
+  border:1px solid rgba(177,145,90,.30);
+  box-shadow:0 10px 26px rgba(63,74,54,.10);
+  transition:transform .22s ease,box-shadow .22s ease;
+}
+.natal-v4 .n4-guide-card:hover .n4-guide-preview{
+  transform:translateY(-3px);
+  box-shadow:0 16px 34px rgba(63,74,54,.15);
+}
+.natal-v4 .n4-guide-preview canvas{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  max-width:none!important;
+  transform:translateY(-3%);
+  transform-origin:top center;
+}
+.natal-v4 .n4-guide-card--menus .n4-guide-preview canvas{
+  transform:translateY(-1%);
+}
+.natal-v4 .n4-guide-preview .page-loading{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  font-size:9px;
+  color:#657166;
+  background:#edf4e8;
+  z-index:0;
+}
+.natal-v4 .n4-guide-tag{
+  display:block;
+  margin:10px 4px 3px;
+  color:#9b6e28;
+  font-size:7px;
+  font-weight:900;
+  letter-spacing:.14em;
+}
+.natal-v4 .n4-guide-card h3{
+  margin:0 4px;
+  color:#71272b;
+  font-family:'DM Sans',Arial,sans-serif;
+  font-size:14px;
+  font-weight:800;
+  line-height:1.24;
+}
+.natal-v4 .n4-recipes-photo .n4-section-head p{
+  max-width:760px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.natal-v4 .n4-food-cta{
+  margin-top:30px!important;
+}
+.natal-v4 .n4-food-cta .n4-main-buy{
+  min-width:min(440px,100%)!important;
+}
+
+@media(max-width:980px){
+  .natal-v4 .n4-guide-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+}
+@media(max-width:720px){
+  .natal-v4 .n4-guide-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:15px 11px;
+    margin-top:26px;
+  }
+  .natal-v4 .n4-guide-preview{
+    border-radius:9px;
+  }
+  .natal-v4 .n4-guide-tag{
+    margin-top:8px;
+    font-size:6.5px;
+  }
+  .natal-v4 .n4-guide-card h3{
+    font-size:12px;
+    line-height:1.22;
+  }
+}
+@media(max-width:370px){
+  .natal-v4 .n4-guide-grid{
+    gap:13px 9px;
+  }
+  .natal-v4 .n4-guide-card h3{
+    font-size:11px;
+  }
+}
