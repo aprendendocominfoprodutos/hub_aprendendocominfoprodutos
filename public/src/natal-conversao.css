@@ -2787,3 +2787,103 @@
     font-size:11px!important;
   }
 }
+
+
+/* Footer v6 — usa exatamente a imagem enviada */
+.natal-v4 .n4-footer{
+  padding:0!important;
+  display:block!important;
+  overflow:hidden!important;
+  background:#08281c!important;
+  border-top:0!important;
+  box-shadow:none!important;
+}
+.natal-v4 .n4-footer-exact-banner{
+  position:relative!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  line-height:0!important;
+  background:#123d22!important;
+}
+.natal-v4 .n4-footer-exact-banner>img{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  margin:0!important;
+  padding:0!important;
+  object-fit:contain!important;
+  object-position:center!important;
+  border:0!important;
+}
+.natal-v4 .n4-footer-banner-link{
+  position:absolute!important;
+  top:0!important;
+  bottom:0!important;
+  z-index:5!important;
+  display:block!important;
+  background:transparent!important;
+}
+.natal-v4 .n4-footer-banner-link--mental{
+  left:0!important;
+  width:55%!important;
+}
+.natal-v4 .n4-footer-banner-link--parent{
+  right:0!important;
+  width:45%!important;
+}
+.natal-v4 .n4-footer-banner-link:focus-visible{
+  outline:2px solid #f0c75d!important;
+  outline-offset:-4px!important;
+}
+.natal-v4 .n4-footer-social-wrap{
+  padding:13px 16px 15px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  background:#08281c!important;
+  border-top:1px solid rgba(232,188,80,.22)!important;
+}
+.natal-v4 .n4-footer-social-wrap .n4-socials{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:10px!important;
+  margin:0!important;
+}
+.natal-v4 .n4-footer-social-wrap .n4-social-link{
+  width:34px!important;
+  height:34px!important;
+  display:grid!important;
+  place-items:center!important;
+  border-radius:50%!important;
+  border:1px solid rgba(232,188,80,.64)!important;
+  background:rgba(255,255,255,.025)!important;
+  color:#efc65e!important;
+}
+.natal-v4 .n4-footer-social-wrap .n4-social-link svg{
+  width:16px!important;
+  height:16px!important;
+}
+.natal-v4 .n4-footer-edition{
+  color:rgba(247,237,207,.67)!important;
+  font-size:9px!important;
+  letter-spacing:.04em!important;
+}
+@media(max-width:760px){
+  .natal-v4 .n4-footer-exact-banner>img{
+    width:100%!important;
+    height:auto!important;
+    object-fit:contain!important;
+  }
+  .natal-v4 .n4-footer-social-wrap{
+    padding:11px 12px 13px!important;
+  }
+  .natal-v4 .n4-footer-social-wrap .n4-social-link{
+    width:32px!important;
+    height:32px!important;
+  }
+}
