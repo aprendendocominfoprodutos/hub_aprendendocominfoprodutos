@@ -1715,3 +1715,116 @@
     text-align:center;
   }
 }
+
+
+/* Header lockup v2 — marca-mãe menor + vertical completa */
+.natal-v4 .n4-header{
+  min-height:78px!important;
+  padding-top:8px!important;
+  padding-bottom:8px!important;
+  gap:18px!important;
+}
+.natal-v4 .n4-brand-cluster{
+  display:flex!important;
+  align-items:center!important;
+  gap:12px!important;
+  min-width:0;
+}
+.natal-v4 .n4-brand-parent{
+  width:clamp(118px,11vw,155px)!important;
+  flex:0 0 auto!important;
+}
+.natal-v4 .n4-brand-divider{
+  display:block!important;
+  width:1px!important;
+  height:42px!important;
+  flex:0 0 1px!important;
+  background:linear-gradient(180deg,transparent,rgba(178,136,52,.78),transparent)!important;
+}
+.natal-v4 .n4-vertical-lockup{
+  display:grid;
+  gap:3px;
+  align-items:center;
+  justify-items:start;
+  min-width:0;
+}
+.natal-v4 .n4-vertical-label{
+  display:block;
+  padding:2px 8px;
+  border:1px solid rgba(178,136,52,.38);
+  border-radius:999px;
+  color:#49604e;
+  background:rgba(255,255,255,.42);
+  font-size:7px;
+  font-weight:800;
+  line-height:1.35;
+  letter-spacing:.12em;
+  white-space:nowrap;
+}
+.natal-v4 .n4-brand-vertical{
+  width:clamp(150px,14vw,205px)!important;
+  flex:0 0 auto!important;
+}
+.natal-v4 .n4-brand-vertical img,
+.natal-v4 .n4-brand-parent img{
+  width:100%!important;
+  height:auto!important;
+  display:block!important;
+  object-fit:contain!important;
+}
+.natal-v4 .n4-header nav{
+  margin-left:auto;
+}
+@media(max-width:1100px){
+  .natal-v4 .n4-header nav{display:none!important}
+}
+@media(max-width:760px){
+  .natal-v4 .n4-header{
+    min-height:72px!important;
+    padding:7px 10px!important;
+    gap:8px!important;
+  }
+  .natal-v4 .n4-brand-cluster{
+    gap:7px!important;
+    flex-direction:row!important;
+    align-items:center!important;
+  }
+  .natal-v4 .n4-brand-parent{
+    width:104px!important;
+  }
+  .natal-v4 .n4-brand-divider{
+    display:block!important;
+    height:36px!important;
+  }
+  .natal-v4 .n4-vertical-lockup{
+    gap:2px;
+  }
+  .natal-v4 .n4-vertical-label{
+    font-size:5.5px!important;
+    padding:1px 5px!important;
+    letter-spacing:.08em!important;
+  }
+  .natal-v4 .n4-brand-vertical{
+    width:125px!important;
+  }
+  .natal-v4 .n4-header-buy{
+    padding:8px 9px!important;
+    font-size:8px!important;
+    white-space:nowrap!important;
+  }
+}
+@media(max-width:390px){
+  .natal-v4 .n4-brand-parent{
+    width:92px!important;
+  }
+  .natal-v4 .n4-brand-vertical{
+    width:112px!important;
+  }
+  .natal-v4 .n4-vertical-label{
+    font-size:5px!important;
+  }
+  .natal-v4 .n4-header-buy{
+    padding:7px 8px!important;
+    font-size:7.5px!important;
+  }
+}
