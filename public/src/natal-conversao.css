@@ -733,106 +733,147 @@
 }
 
 
-/* Natal decor v1 — decoração clara em todos os blocos */
+/* Natal decor v2 — moldura natalina premium */
+.natal-v4{
+  background:
+    radial-gradient(circle at 14% 8%,rgba(255,244,188,.24) 0 18px,transparent 42px),
+    radial-gradient(circle at 88% 18%,rgba(255,244,188,.18) 0 12px,transparent 38px),
+    linear-gradient(180deg,#e5efe0 0%,#dce9d7 52%,#e7f0e2 100%)!important;
+}
+
 .natal-v4 .n4-identify,
 .natal-v4 .n4-recipes,
 .natal-v4 .n4-how,
 .natal-v4 .n4-content,
-.natal-v4 .n4-offer,
 .natal-v4 .n4-faq,
-.natal-v4 .n4-final{
+.natal-v4 .n4-final,
+.natal-v4 .n4-product-mockup,
+.natal-v4 .n4-final-product{
   position:relative;
   overflow:hidden;
   isolation:isolate;
 }
-.natal-v4 .n4-identify > *,
-.natal-v4 .n4-recipes > *,
-.natal-v4 .n4-how > *,
-.natal-v4 .n4-content > *,
-.natal-v4 .n4-offer > *,
-.natal-v4 .n4-faq > *,
-.natal-v4 .n4-final > *{
-  position:relative;
-  z-index:2;
-}
+
 .natal-v4 .n4-identify::before,
 .natal-v4 .n4-recipes::before,
 .natal-v4 .n4-how::before,
 .natal-v4 .n4-content::before,
-.natal-v4 .n4-offer::before,
 .natal-v4 .n4-faq::before,
-.natal-v4 .n4-final::before{
+.natal-v4 .n4-final::before,
+.natal-v4 .n4-product-mockup::after,
+.natal-v4 .n4-final-product::after{
   content:"";
   position:absolute;
   inset:0;
-  z-index:1;
+  z-index:0;
   pointer-events:none;
-  background-image:
-    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
-    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20transform%3D%22translate(300%200)%20scale(-1%201)%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
-    radial-gradient(circle at 12% 82%,rgba(202,161,75,.12) 0 4px,transparent 5px),
-    radial-gradient(circle at 86% 22%,rgba(151,45,53,.08) 0 5px,transparent 6px);
-  background-repeat:no-repeat;
-  background-position:left -18px top -14px,right -18px top -14px,left bottom,right 18% top;
-  background-size:245px auto,245px auto,100% 100%,100% 100%;
-  opacity:.24;
+  background:
+    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%20650%22%3E%0A%3Cdefs%3E%0A%20%20%3Cfilter%20id%3D%22b%22%3E%3CfeGaussianBlur%20stdDeviation%3D%229%22%2F%3E%3C%2Ffilter%3E%0A%3C%2Fdefs%3E%0A%3Cg%20opacity%3D%22.52%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2086%20C85%2062%20150%2074%20226%20127%22%20stroke%3D%22%233d7655%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M5%20103%20L65%2030%20M35%20112%20L103%2035%20M73%20119%20L140%2049%20M112%20127%20L178%2068%20M151%20139%20L218%2092%22%20stroke%3D%22%234c8562%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M12%2098%20L62%20135%20M42%2094%20L92%20144%20M80%20102%20L129%20154%20M120%20111%20L166%20164%20M161%20125%20L205%20171%22%20stroke%3D%22%23315f46%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1000%2086%20C915%2062%20850%2074%20774%20127%22%20stroke%3D%22%233d7655%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M995%20103%20L935%2030%20M965%20112%20L897%2035%20M927%20119%20L860%2049%20M888%20127%20L822%2068%20M849%20139%20L782%2092%22%20stroke%3D%22%234c8562%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M988%2098%20L938%20135%20M958%2094%20L908%20144%20M920%20102%20L871%20154%20M880%20111%20L834%20164%20M839%20125%20L795%20171%22%20stroke%3D%22%23315f46%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%20570%20C82%20590%20151%20581%20228%20527%22%20stroke%3D%22%233d7655%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M7%20552%20L68%20621%20M38%20544%20L105%20616%20M75%20537%20L143%20603%20M114%20529%20L180%20585%20M153%20516%20L219%20561%22%20stroke%3D%22%234c8562%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M12%20558%20L62%20522%20M43%20557%20L94%20507%20M81%20549%20L130%20496%20M121%20540%20L167%20486%20M161%20526%20L206%20480%22%20stroke%3D%22%23315f46%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1000%20570%20C918%20590%20849%20581%20772%20527%22%20stroke%3D%22%233d7655%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M993%20552%20L932%20621%20M962%20544%20L895%20616%20M925%20537%20L857%20603%20M886%20529%20L820%20585%20M847%20516%20L781%20561%22%20stroke%3D%22%234c8562%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M988%20558%20L938%20522%20M957%20557%20L906%20507%20M919%20549%20L870%20496%20M879%20540%20L833%20486%20M839%20526%20L794%20480%22%20stroke%3D%22%23315f46%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%0A%20%20%3Cg%20fill%3D%22%23a33d45%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2292%22%20cy%3D%2290%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22112%22%20cy%3D%22105%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%2283%22%20cy%3D%22112%22%20r%3D%229%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22908%22%20cy%3D%2290%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22888%22%20cy%3D%22105%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%22917%22%20cy%3D%22112%22%20r%3D%229%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2292%22%20cy%3D%22560%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22112%22%20cy%3D%22545%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%2283%22%20cy%3D%22538%22%20r%3D%229%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22908%22%20cy%3D%22560%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22888%22%20cy%3D%22545%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%22917%22%20cy%3D%22538%22%20r%3D%229%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%0A%20%20%3Cg%20fill%3D%22%23d7b66b%22%20stroke%3D%22%23bf9847%22%20stroke-width%3D%223%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22165%22%20cy%3D%2278%22%20r%3D%2226%22%2F%3E%3Ccircle%20cx%3D%22835%22%20cy%3D%2278%22%20r%3D%2226%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22165%22%20cy%3D%22572%22%20r%3D%2221%22%2F%3E%3Ccircle%20cx%3D%22835%22%20cy%3D%22572%22%20r%3D%2221%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20stroke%3D%22%23bf9847%22%20stroke-width%3D%224%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M165%200%20v48%22%2F%3E%3Cpath%20d%3D%22M835%200%20v48%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M165%20650%20v-52%22%2F%3E%3Cpath%20d%3D%22M835%20650%20v-52%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%0A%20%20%3Cg%20fill%3D%22%23d8b35e%22%20stroke%3D%22%23bc9440%22%20stroke-width%3D%222%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M258%2055%20l7%2016%2017%202-13%2012%204%2017-15-9-16%209%204-17-13-12%2018-2z%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M742%2055%20l7%2016%2017%202-13%2012%204%2017-15-9-16%209%204-17-13-12%2018-2z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%0A%20%20%3Cg%20filter%3D%22url(%23b)%22%20opacity%3D%22.45%22%20fill%3D%22%23fff3bd%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22285%22%20cy%3D%22105%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22350%22%20cy%3D%2270%22%20r%3D%229%22%2F%3E%3Ccircle%20cx%3D%22430%22%20cy%3D%2292%22%20r%3D%228%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22715%22%20cy%3D%22105%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22650%22%20cy%3D%2270%22%20r%3D%229%22%2F%3E%3Ccircle%20cx%3D%22570%22%20cy%3D%2292%22%20r%3D%228%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22270%22%20cy%3D%22550%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%22385%22%20cy%3D%22585%22%20r%3D%228%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22730%22%20cy%3D%22550%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%22615%22%20cy%3D%22585%22%20r%3D%228%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E") center/100% 100% no-repeat,
+    radial-gradient(circle at 16% 14%,rgba(255,246,207,.44) 0 8px,transparent 30px),
+    radial-gradient(circle at 84% 19%,rgba(255,246,207,.40) 0 7px,transparent 28px),
+    radial-gradient(circle at 13% 82%,rgba(255,246,207,.30) 0 7px,transparent 28px),
+    radial-gradient(circle at 87% 78%,rgba(255,246,207,.32) 0 6px,transparent 28px);
+  opacity:.42;
 }
-.natal-v4 .n4-offer::before{
-  opacity:.14;
-  filter:brightness(1.28) saturate(.72);
+
+.natal-v4 .n4-identify > *,
+.natal-v4 .n4-recipes > *,
+.natal-v4 .n4-how > *,
+.natal-v4 .n4-content > *,
+.natal-v4 .n4-faq > *,
+.natal-v4 .n4-final > *,
+.natal-v4 .n4-product-mockup > *,
+.natal-v4 .n4-final-product > *{
+  position:relative;
+  z-index:2;
 }
+
+.natal-v4 .n4-identify{
+  background:linear-gradient(180deg,rgba(235,244,231,.96),rgba(225,237,220,.96))!important;
+}
+.natal-v4 .n4-recipes{
+  background:linear-gradient(180deg,rgba(224,238,219,.97),rgba(234,243,230,.97))!important;
+}
+.natal-v4 .n4-content{
+  background:linear-gradient(180deg,rgba(234,243,230,.97),rgba(226,238,221,.97))!important;
+}
+.natal-v4 .n4-how,
+.natal-v4 .n4-faq{
+  background:linear-gradient(180deg,rgba(231,241,226,.97),rgba(221,235,216,.97))!important;
+  border-color:#bfd0b7!important;
+}
+.natal-v4 .n4-final{
+  background:linear-gradient(135deg,#dcead7,#cddfc6)!important;
+  border-color:#b8cdae!important;
+}
+
+/* O mockup segue a referência: moldura natalina nas bordas e centro limpo. */
 .natal-v4 .n4-product-mockup{
-  background-image:
-    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
-    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20transform%3D%22translate(300%200)%20scale(-1%201)%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
-    radial-gradient(circle at 50% 40%,rgba(255,255,255,.76),transparent 34%),
-    linear-gradient(145deg,#d8e7d2,#bfd5b7)!important;
-  background-repeat:no-repeat;
-  background-position:left -18px top -8px,right -18px top -8px,center,center;
-  background-size:255px auto,255px auto,100% 100%,100% 100%;
+  background:
+    linear-gradient(rgba(219,234,213,.72),rgba(219,234,213,.72)),
+    radial-gradient(circle at 50% 42%,rgba(255,255,255,.88),transparent 38%),
+    linear-gradient(145deg,#dcead7,#c8ddc2)!important;
+  border:1px solid #b8cdae!important;
+  box-shadow:
+    inset 0 0 0 12px rgba(244,249,241,.52),
+    inset 0 0 0 13px rgba(116,148,105,.18),
+    0 26px 62px rgba(44,75,50,.13)!important;
+}
+.natal-v4 .n4-product-mockup::after{
+  opacity:.72;
+  background-size:100% 100%,100% 100%,100% 100%,100% 100%,100% 100%;
 }
 .natal-v4 .n4-final-product{
-  background-image:
-    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
-    url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22300%22%20height%3D%22190%22%20viewBox%3D%220%200%20300%20190%22%3E%0A%3Cg%20transform%3D%22translate(300%200)%20scale(-1%201)%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M8%2024%20C58%2037%2092%2061%20130%20103%22%20stroke%3D%22%23356b4d%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M18%2042%20L54%2010%20M31%2055%20L78%2020%20M48%2068%20L98%2034%20M67%2082%20L118%2049%20M88%2097%20L137%2066%22%20stroke%3D%22%234b805f%22%20stroke-width%3D%225%22%2F%3E%0A%3Cpath%20d%3D%22M15%2030%20L48%2058%20M32%2043%20L67%2072%20M49%2058%20L87%2088%20M67%2073%20L106%20104%20M87%2091%20L123%20118%22%20stroke%3D%22%232f6045%22%20stroke-width%3D%224%22%2F%3E%0A%3Ccircle%20cx%3D%2266%22%20cy%3D%2248%22%20r%3D%229%22%20fill%3D%22%23a33d42%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2282%22%20cy%3D%2258%22%20r%3D%228%22%20fill%3D%22%23b8494d%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2272%22%20cy%3D%2268%22%20r%3D%227%22%20fill%3D%22%23932f36%22%20stroke%3D%22%237e2930%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2249%22%20cy%3D%2292%22%20r%3D%225%22%20fill%3D%22%23d6b15d%22%2F%3E%0A%3Ccircle%20cx%3D%22118%22%20cy%3D%2256%22%20r%3D%224%22%20fill%3D%22%23e7c978%22%2F%3E%0A%3Cpath%20d%3D%22M42%206%20v26%22%20stroke%3D%22%23caa24f%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2242%22%20cy%3D%2242%22%20r%3D%2213%22%20fill%3D%22%23e4c97f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M39%2028%20h6%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%223%22%2F%3E%0A%3Cpath%20d%3D%22M156%2020%20l5%2011%2012%202-9%208%202%2012-10-6-11%206%203-12-9-8%2012-2z%22%20fill%3D%22%23d8b35f%22%20stroke%3D%22%23c39b45%22%20stroke-width%3D%221%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E"),
-    linear-gradient(145deg,#c7dbc0,#a9c59e)!important;
-  background-repeat:no-repeat;
-  background-position:left -20px top -10px,right -20px top -10px,center;
-  background-size:220px auto,220px auto,100% 100%;
+  background:
+    radial-gradient(circle at 50% 44%,rgba(255,255,255,.68),transparent 38%),
+    linear-gradient(145deg,#d4e5cf,#bcd4b4)!important;
 }
+.natal-v4 .n4-final-product::after{opacity:.50}
+
+/* Cards internos ficam limpos; decoração não compete com texto ou fotos. */
 .natal-v4 .n4-pain-grid article,
 .natal-v4 .n4-food-card,
 .natal-v4 .n4-content-list article,
 .natal-v4 .n4-price-card,
 .natal-v4 .n4-faq details,
 .natal-v4 .n4-hero-offer-box{
-  position:relative;
-  overflow:hidden;
+  background-image:none!important;
 }
 .natal-v4 .n4-pain-grid article::after,
 .natal-v4 .n4-food-card::after,
 .natal-v4 .n4-price-card::after,
 .natal-v4 .n4-faq details::after{
-  content:"✦";
-  position:absolute;
-  right:10px;
-  top:8px;
-  color:rgba(180,137,60,.20);
-  font-size:18px;
-  pointer-events:none;
+  content:none!important;
 }
+
+/* A faixa verde de oferta recebe só um detalhe bem discreto. */
+.natal-v4 .n4-offer{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#3d7656,#2d6247)!important;
+}
+.natal-v4 .n4-offer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%201000%20650%22%3E%0A%3Cdefs%3E%0A%20%20%3Cfilter%20id%3D%22b%22%3E%3CfeGaussianBlur%20stdDeviation%3D%229%22%2F%3E%3C%2Ffilter%3E%0A%3C%2Fdefs%3E%0A%3Cg%20opacity%3D%22.52%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2086%20C85%2062%20150%2074%20226%20127%22%20stroke%3D%22%233d7655%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M5%20103%20L65%2030%20M35%20112%20L103%2035%20M73%20119%20L140%2049%20M112%20127%20L178%2068%20M151%20139%20L218%2092%22%20stroke%3D%22%234c8562%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M12%2098%20L62%20135%20M42%2094%20L92%20144%20M80%20102%20L129%20154%20M120%20111%20L166%20164%20M161%20125%20L205%20171%22%20stroke%3D%22%23315f46%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1000%2086%20C915%2062%20850%2074%20774%20127%22%20stroke%3D%22%233d7655%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M995%20103%20L935%2030%20M965%20112%20L897%2035%20M927%20119%20L860%2049%20M888%20127%20L822%2068%20M849%20139%20L782%2092%22%20stroke%3D%22%234c8562%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M988%2098%20L938%20135%20M958%2094%20L908%20144%20M920%20102%20L871%20154%20M880%20111%20L834%20164%20M839%20125%20L795%20171%22%20stroke%3D%22%23315f46%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%20570%20C82%20590%20151%20581%20228%20527%22%20stroke%3D%22%233d7655%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M7%20552%20L68%20621%20M38%20544%20L105%20616%20M75%20537%20L143%20603%20M114%20529%20L180%20585%20M153%20516%20L219%20561%22%20stroke%3D%22%234c8562%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M12%20558%20L62%20522%20M43%20557%20L94%20507%20M81%20549%20L130%20496%20M121%20540%20L167%20486%20M161%20526%20L206%20480%22%20stroke%3D%22%23315f46%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M1000%20570%20C918%20590%20849%20581%20772%20527%22%20stroke%3D%22%233d7655%22%20stroke-width%3D%2212%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M993%20552%20L932%20621%20M962%20544%20L895%20616%20M925%20537%20L857%20603%20M886%20529%20L820%20585%20M847%20516%20L781%20561%22%20stroke%3D%22%234c8562%22%20stroke-width%3D%228%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M988%20558%20L938%20522%20M957%20557%20L906%20507%20M919%20549%20L870%20496%20M879%20540%20L833%20486%20M839%20526%20L794%20480%22%20stroke%3D%22%23315f46%22%20stroke-width%3D%227%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%0A%20%20%3Cg%20fill%3D%22%23a33d45%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2292%22%20cy%3D%2290%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22112%22%20cy%3D%22105%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%2283%22%20cy%3D%22112%22%20r%3D%229%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22908%22%20cy%3D%2290%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22888%22%20cy%3D%22105%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%22917%22%20cy%3D%22112%22%20r%3D%229%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2292%22%20cy%3D%22560%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22112%22%20cy%3D%22545%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%2283%22%20cy%3D%22538%22%20r%3D%229%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22908%22%20cy%3D%22560%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22888%22%20cy%3D%22545%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%22917%22%20cy%3D%22538%22%20r%3D%229%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%0A%20%20%3Cg%20fill%3D%22%23d7b66b%22%20stroke%3D%22%23bf9847%22%20stroke-width%3D%223%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22165%22%20cy%3D%2278%22%20r%3D%2226%22%2F%3E%3Ccircle%20cx%3D%22835%22%20cy%3D%2278%22%20r%3D%2226%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22165%22%20cy%3D%22572%22%20r%3D%2221%22%2F%3E%3Ccircle%20cx%3D%22835%22%20cy%3D%22572%22%20r%3D%2221%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cg%20stroke%3D%22%23bf9847%22%20stroke-width%3D%224%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M165%200%20v48%22%2F%3E%3Cpath%20d%3D%22M835%200%20v48%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M165%20650%20v-52%22%2F%3E%3Cpath%20d%3D%22M835%20650%20v-52%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%0A%20%20%3Cg%20fill%3D%22%23d8b35e%22%20stroke%3D%22%23bc9440%22%20stroke-width%3D%222%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M258%2055%20l7%2016%2017%202-13%2012%204%2017-15-9-16%209%204-17-13-12%2018-2z%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M742%2055%20l7%2016%2017%202-13%2012%204%2017-15-9-16%209%204-17-13-12%2018-2z%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%0A%20%20%3Cg%20filter%3D%22url(%23b)%22%20opacity%3D%22.45%22%20fill%3D%22%23fff3bd%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22285%22%20cy%3D%22105%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22350%22%20cy%3D%2270%22%20r%3D%229%22%2F%3E%3Ccircle%20cx%3D%22430%22%20cy%3D%2292%22%20r%3D%228%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22715%22%20cy%3D%22105%22%20r%3D%2213%22%2F%3E%3Ccircle%20cx%3D%22650%22%20cy%3D%2270%22%20r%3D%229%22%2F%3E%3Ccircle%20cx%3D%22570%22%20cy%3D%2292%22%20r%3D%228%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22270%22%20cy%3D%22550%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%22385%22%20cy%3D%22585%22%20r%3D%228%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22730%22%20cy%3D%22550%22%20r%3D%2210%22%2F%3E%3Ccircle%20cx%3D%22615%22%20cy%3D%22585%22%20r%3D%228%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fg%3E%0A%3C%2Fsvg%3E") center/100% 100% no-repeat;
+  opacity:.10;
+}
+.natal-v4 .n4-offer > *{position:relative;z-index:2}
+
 @media(max-width:720px){
   .natal-v4 .n4-identify::before,
   .natal-v4 .n4-recipes::before,
   .natal-v4 .n4-how::before,
   .natal-v4 .n4-content::before,
-  .natal-v4 .n4-offer::before,
   .natal-v4 .n4-faq::before,
   .natal-v4 .n4-final::before{
-    background-size:165px auto,165px auto,100% 100%,100% 100%;
-    opacity:.20;
+    background-size:135% 100%,100% 100%,100% 100%,100% 100%,100% 100%;
+    opacity:.34;
   }
-  .natal-v4 .n4-product-mockup{
-    background-size:175px auto,175px auto,100% 100%,100% 100%;
+  .natal-v4 .n4-product-mockup::after{
+    background-size:118% 100%,100% 100%,100% 100%,100% 100%,100% 100%;
+    opacity:.62;
   }
 }
