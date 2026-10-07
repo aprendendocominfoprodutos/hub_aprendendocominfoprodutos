@@ -1989,3 +1989,189 @@
   .natal-v4 .n4-vertical-label{font-size:5.2px!important;padding:2px 5px!important}
   .natal-v4 .n4-header-buy{font-size:7px!important;padding:7px 7px!important}
 }
+
+
+/* Footer v2 — Mental & Financeiro principal + marca-mãe */
+.natal-v4 .n4-footer{
+  position:relative!important;
+  overflow:hidden!important;
+  padding:34px max(20px,calc((100vw - 1180px)/2 + 20px)) 24px!important;
+  display:block!important;
+  background:
+    radial-gradient(circle at 14% 18%,rgba(235,203,113,.10) 0 10px,transparent 34px),
+    radial-gradient(circle at 84% 22%,rgba(235,203,113,.08) 0 8px,transparent 32px),
+    linear-gradient(180deg,#123d2e 0%,#0d3024 100%)!important;
+  border-top:1px solid rgba(210,177,87,.34)!important;
+  box-shadow:inset 0 1px rgba(255,255,255,.03)!important;
+  color:#f3ead0!important;
+}
+
+.natal-v4 .n4-footer-brand-row{
+  max-width:1060px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:34px;
+}
+
+.natal-v4 .n4-footer-vertical,
+.natal-v4 .n4-footer-parent{
+  display:block;
+  line-height:0;
+  flex:0 0 auto;
+}
+
+.natal-v4 .n4-footer-vertical{
+  width:clamp(260px,31vw,430px);
+}
+
+.natal-v4 .n4-footer-parent{
+  width:clamp(180px,20vw,270px);
+}
+
+.natal-v4 .n4-footer-vertical img,
+.natal-v4 .n4-footer-parent img{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+
+.natal-v4 .n4-footer-divider{
+  width:1px;
+  height:88px;
+  flex:0 0 1px;
+  background:linear-gradient(180deg,transparent,#c99e48 18%,#e4bd68 50%,#c99e48 82%,transparent);
+  box-shadow:0 0 10px rgba(219,178,84,.38);
+}
+
+.natal-v4 .n4-footer-parent-stack{
+  display:grid;
+  justify-items:center;
+  gap:9px;
+  min-width:0;
+}
+
+.natal-v4 .n4-footer-branch-label{
+  display:inline-block;
+  padding:6px 15px;
+  border:1px solid rgba(210,177,87,.58);
+  border-radius:999px;
+  background:rgba(255,255,255,.035);
+  color:#ead28a;
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:clamp(10px,1vw,13px);
+  font-weight:600;
+  line-height:1.15;
+  white-space:nowrap;
+}
+
+.natal-v4 .n4-footer-bottom{
+  max-width:1060px;
+  margin:24px auto 0;
+  padding-top:16px;
+  border-top:1px solid rgba(210,177,87,.18);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  color:rgba(244,239,220,.72);
+  font-size:9px;
+}
+
+.natal-v4 .n4-socials{
+  display:flex;
+  gap:8px;
+  margin:0;
+}
+
+.natal-v4 .n4-social-link{
+  width:31px;
+  height:31px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  border:1px solid rgba(210,177,87,.58);
+  background:rgba(255,255,255,.035);
+  color:#e4bd68;
+  transition:transform .2s ease,background .2s ease;
+}
+
+.natal-v4 a.n4-social-link:hover{
+  transform:translateY(-2px);
+  background:rgba(210,177,87,.10);
+}
+
+.natal-v4 .n4-social-link svg{
+  width:16px;
+  height:16px;
+  display:block;
+  fill:currentColor;
+  stroke:currentColor;
+  stroke-width:1.6;
+}
+
+.natal-v4 .n4-social-link:first-child svg{
+  fill:none;
+}
+
+@media(max-width:760px){
+  .natal-v4 .n4-footer{
+    padding:28px 16px 22px!important;
+  }
+
+  .natal-v4 .n4-footer-brand-row{
+    flex-direction:column;
+    gap:17px;
+  }
+
+  .natal-v4 .n4-footer-vertical{
+    width:min(86vw,330px);
+  }
+
+  .natal-v4 .n4-footer-divider{
+    width:72%;
+    height:1px;
+    flex:0 0 1px;
+    background:linear-gradient(90deg,transparent,#c99e48 18%,#e4bd68 50%,#c99e48 82%,transparent);
+  }
+
+  .natal-v4 .n4-footer-parent-stack{
+    gap:8px;
+  }
+
+  .natal-v4 .n4-footer-parent{
+    width:min(62vw,215px);
+  }
+
+  .natal-v4 .n4-footer-branch-label{
+    font-size:11px;
+    padding:5px 12px;
+    white-space:normal;
+    text-align:center;
+  }
+
+  .natal-v4 .n4-footer-bottom{
+    margin-top:22px;
+    flex-direction:column;
+    justify-content:center;
+    text-align:center;
+    gap:11px;
+  }
+}
+
+@media(max-width:390px){
+  .natal-v4 .n4-footer-vertical{
+    width:min(88vw,300px);
+  }
+
+  .natal-v4 .n4-footer-parent{
+    width:min(64vw,195px);
+  }
+
+  .natal-v4 .n4-footer-branch-label{
+    font-size:10px;
+  }
+}
