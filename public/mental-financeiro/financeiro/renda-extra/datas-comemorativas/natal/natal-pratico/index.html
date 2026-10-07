@@ -325,10 +325,33 @@
   <script>
     (() => {
       const bar=document.getElementById('n4-sticky');
+      const footer=document.querySelector('.n4-footer');
       if(!bar) return;
-      const update=()=>bar.classList.toggle('is-visible',window.scrollY>620);
+
+      let footerVisible=false;
+
+      const update=()=>{
+        const nearFooter=footer
+          ? footer.getBoundingClientRect().top <= window.innerHeight + 24
+          : false;
+
+        bar.classList.toggle(
+          'is-visible',
+          window.scrollY > 620 && !footerVisible && !nearFooter
+        );
+      };
+
+      if(footer && 'IntersectionObserver' in window){
+        const footerObserver=new IntersectionObserver(entries=>{
+          footerVisible=entries.some(entry=>entry.isIntersecting);
+          update();
+        },{threshold:0,rootMargin:'0px 0px 90px 0px'});
+        footerObserver.observe(footer);
+      }
+
       update();
       window.addEventListener('scroll',update,{passive:true});
+      window.addEventListener('resize',update,{passive:true});
     })();
   </script>
 </body>
