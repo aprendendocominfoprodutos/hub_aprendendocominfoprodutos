@@ -1828,3 +1828,164 @@
     font-size:7.5px!important;
   }
 }
+
+
+/* Header v3 — composição igual à referência enviada */
+.natal-v4 .n4-header{
+  position:sticky!important;
+  top:0!important;
+  z-index:120!important;
+  min-height:112px!important;
+  padding:12px max(18px,calc((100vw - 1180px)/2 + 18px))!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:22px!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+  background:
+    radial-gradient(circle at 36% 32%,rgba(255,246,198,.42) 0 8px,transparent 28px),
+    radial-gradient(circle at 72% 26%,rgba(255,246,198,.34) 0 7px,transparent 26px),
+    linear-gradient(180deg,rgba(225,237,217,.98),rgba(207,224,199,.98))!important;
+  border-bottom:1px solid rgba(174,136,61,.44)!important;
+  box-shadow:0 8px 26px rgba(59,87,60,.10)!important;
+  backdrop-filter:blur(10px);
+}
+.natal-v4 .n4-header::before,
+.natal-v4 .n4-header::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  width:min(30vw,360px);
+  pointer-events:none;
+  z-index:0;
+  background-repeat:no-repeat;
+  background-size:contain;
+  opacity:.58;
+}
+.natal-v4 .n4-header::before{
+  left:0;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22150%22%20viewBox%3D%220%200%20360%20150%22%3E%0A%3Cg%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M0%2018%20C72%2025%20120%2047%20175%2095%22%20stroke%3D%22%23315f46%22%20stroke-width%3D%2210%22%2F%3E%0A%3Cpath%20d%3D%22M18%2035%20L72%204%20M42%2048%20L101%2012%20M68%2062%20L129%2025%20M96%2078%20L155%2042%20M126%2096%20L180%2063%22%20stroke%3D%22%234d8563%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M14%2031%20L58%2060%20M38%2043%20L83%2075%20M65%2057%20L110%2091%20M93%2072%20L139%20107%20M121%2089%20L164%20120%22%20stroke%3D%22%232c5b43%22%20stroke-width%3D%226%22%2F%3E%0A%3Ccircle%20cx%3D%2292%22%20cy%3D%2250%22%20r%3D%2210%22%20fill%3D%22%23a63d43%22%20stroke%3D%22%237d2c31%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%22110%22%20cy%3D%2262%22%20r%3D%228%22%20fill%3D%22%23b44a4e%22%20stroke%3D%22%237d2c31%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2298%22%20cy%3D%2274%22%20r%3D%227%22%20fill%3D%22%23922f35%22%20stroke%3D%22%237d2c31%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%22150%22%20cy%3D%2234%22%20r%3D%2220%22%20fill%3D%22%23d9b666%22%20stroke%3D%22%23bd9643%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M150%200%20v14%22%20stroke%3D%22%23bd9643%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%22214%22%20cy%3D%2236%22%20r%3D%225%22%20fill%3D%22%23f0d78a%22%2F%3E%0A%3Ccircle%20cx%3D%22242%22%20cy%3D%2260%22%20r%3D%224%22%20fill%3D%22%23f0d78a%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-position:left top;
+}
+.natal-v4 .n4-header::after{
+  right:0;
+  background-image:url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22360%22%20height%3D%22150%22%20viewBox%3D%220%200%20360%20150%22%3E%0A%3Cg%20transform%3D%22translate(360%200)%20scale(-1%201)%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%3Cpath%20d%3D%22M0%2018%20C72%2025%20120%2047%20175%2095%22%20stroke%3D%22%23315f46%22%20stroke-width%3D%2210%22%2F%3E%0A%3Cpath%20d%3D%22M18%2035%20L72%204%20M42%2048%20L101%2012%20M68%2062%20L129%2025%20M96%2078%20L155%2042%20M126%2096%20L180%2063%22%20stroke%3D%22%234d8563%22%20stroke-width%3D%227%22%2F%3E%0A%3Cpath%20d%3D%22M14%2031%20L58%2060%20M38%2043%20L83%2075%20M65%2057%20L110%2091%20M93%2072%20L139%20107%20M121%2089%20L164%20120%22%20stroke%3D%22%232c5b43%22%20stroke-width%3D%226%22%2F%3E%0A%3Ccircle%20cx%3D%2292%22%20cy%3D%2250%22%20r%3D%2210%22%20fill%3D%22%23a63d43%22%20stroke%3D%22%237d2c31%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%22110%22%20cy%3D%2262%22%20r%3D%228%22%20fill%3D%22%23b44a4e%22%20stroke%3D%22%237d2c31%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%2298%22%20cy%3D%2274%22%20r%3D%227%22%20fill%3D%22%23922f35%22%20stroke%3D%22%237d2c31%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%22150%22%20cy%3D%2234%22%20r%3D%2220%22%20fill%3D%22%23d9b666%22%20stroke%3D%22%23bd9643%22%20stroke-width%3D%222%22%2F%3E%0A%3Cpath%20d%3D%22M150%200%20v14%22%20stroke%3D%22%23bd9643%22%20stroke-width%3D%222%22%2F%3E%0A%3Ccircle%20cx%3D%22214%22%20cy%3D%2236%22%20r%3D%225%22%20fill%3D%22%23f0d78a%22%2F%3E%0A%3Ccircle%20cx%3D%22242%22%20cy%3D%2260%22%20r%3D%224%22%20fill%3D%22%23f0d78a%22%2F%3E%0A%3C%2Fg%3E%3C%2Fsvg%3E");
+  background-position:right top;
+}
+.natal-v4 .n4-header > *{
+  position:relative;
+  z-index:2;
+}
+.natal-v4 .n4-brand-cluster{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:22px!important;
+  flex:0 1 auto!important;
+  min-width:0!important;
+  margin-inline:auto!important;
+}
+.natal-v4 .n4-brand-parent{
+  width:clamp(160px,15vw,215px)!important;
+  flex:0 0 auto!important;
+}
+.natal-v4 .n4-brand-divider{
+  display:block!important;
+  width:1px!important;
+  height:58px!important;
+  flex:0 0 1px!important;
+  background:linear-gradient(180deg,transparent,#c79c43 18%,#e4bd68 50%,#c79c43 82%,transparent)!important;
+  box-shadow:0 0 8px rgba(219,178,84,.45);
+}
+.natal-v4 .n4-vertical-lockup{
+  display:grid!important;
+  gap:5px!important;
+  justify-items:center!important;
+  align-items:center!important;
+}
+.natal-v4 .n4-vertical-label{
+  display:block!important;
+  padding:4px 16px!important;
+  border:1px solid rgba(187,137,49,.72)!important;
+  border-radius:999px!important;
+  background:rgba(255,252,244,.64)!important;
+  color:#35503c!important;
+  font-family:'Playfair Display',Georgia,serif!important;
+  font-size:clamp(9px,.9vw,12px)!important;
+  font-weight:600!important;
+  line-height:1.15!important;
+  letter-spacing:0!important;
+  text-transform:none!important;
+  white-space:nowrap!important;
+  box-shadow:0 3px 10px rgba(182,138,51,.08);
+}
+.natal-v4 .n4-brand-vertical{
+  width:clamp(205px,19vw,275px)!important;
+  flex:0 0 auto!important;
+}
+.natal-v4 .n4-brand-parent img,
+.natal-v4 .n4-brand-vertical img{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+.natal-v4 .n4-header nav{
+  display:none!important;
+}
+.natal-v4 .n4-header-buy{
+  flex:0 0 auto!important;
+  margin-left:auto!important;
+  padding:10px 14px!important;
+  font-size:9px!important;
+  white-space:nowrap!important;
+}
+
+@media(max-width:760px){
+  .natal-v4 .n4-header{
+    min-height:84px!important;
+    padding:8px 9px!important;
+    gap:7px!important;
+  }
+  .natal-v4 .n4-header::before,
+  .natal-v4 .n4-header::after{
+    width:135px!important;
+    opacity:.38!important;
+  }
+  .natal-v4 .n4-brand-cluster{
+    gap:7px!important;
+    margin:0!important;
+    flex:1 1 auto!important;
+    justify-content:flex-start!important;
+  }
+  .natal-v4 .n4-brand-parent{
+    width:88px!important;
+  }
+  .natal-v4 .n4-brand-divider{
+    height:40px!important;
+  }
+  .natal-v4 .n4-vertical-lockup{
+    gap:2px!important;
+    justify-items:start!important;
+  }
+  .natal-v4 .n4-vertical-label{
+    padding:2px 6px!important;
+    font-size:5.8px!important;
+  }
+  .natal-v4 .n4-brand-vertical{
+    width:118px!important;
+  }
+  .natal-v4 .n4-header-buy{
+    padding:8px 8px!important;
+    font-size:7.5px!important;
+  }
+}
+
+@media(max-width:390px){
+  .natal-v4 .n4-brand-parent{width:78px!important}
+  .natal-v4 .n4-brand-vertical{width:104px!important}
+  .natal-v4 .n4-vertical-label{font-size:5.2px!important;padding:2px 5px!important}
+  .natal-v4 .n4-header-buy{font-size:7px!important;padding:7px 7px!important}
+}
