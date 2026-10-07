@@ -1292,3 +1292,33 @@
     font-size:37px!important;
   }
 }
+
+
+/* Site background watermark v1 — ceia de Natal */
+.natal-v4{
+  background:
+    linear-gradient(rgba(226,238,221,.18),rgba(226,238,221,.18)),
+    url('/assets/natal/site-background-watermark.webp') center top / 100% auto repeat-y!important;
+}
+.natal-v4 main{background:transparent!important}
+
+/* A foto aparece como marca d'água sem atrapalhar a leitura. */
+.natal-v4 .n4-identify{background:rgba(232,242,228,.78)!important}
+.natal-v4 .n4-recipes{background:rgba(218,233,212,.78)!important}
+.natal-v4 .n4-how{background:rgba(231,241,226,.80)!important}
+.natal-v4 .n4-content{background:rgba(234,243,230,.80)!important}
+.natal-v4 .n4-faq{background:rgba(229,239,224,.82)!important}
+.natal-v4 .n4-final{background:rgba(219,233,213,.84)!important}
+.natal-v4 .n4-offer{background:linear-gradient(135deg,rgba(65,120,88,.96),rgba(47,99,72,.96))!important}
+
+/* O hero continua com a própria imagem. */
+.natal-v4 .n4-hero-integrated{background:#153f31!important}
+
+@media(max-width:720px){
+  .natal-v4{
+    background:
+      linear-gradient(rgba(226,238,221,.18),rgba(226,238,221,.18)),
+      url('/assets/natal/site-background-watermark.webp') center top / 100% auto repeat-y!important;
+    background-attachment:scroll!important;
+  }
+}
