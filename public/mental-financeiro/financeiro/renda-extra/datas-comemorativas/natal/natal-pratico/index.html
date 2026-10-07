@@ -99,8 +99,12 @@
         <p>Planejamento, cardápios, quantidades, organização e receitas pensadas para você gastar menos e aproveitar mais.</p>
       </div>
 
-      <div class="n4-guide-grid" aria-label="Prévia do conteúdo do e-book">
-        <article class="n4-guide-card">
+      <div class="n4-guide-carousel" aria-label="Prévia do conteúdo do e-book">
+        <button class="n4-carousel-arrow n4-carousel-prev" type="button" aria-label="Ver conteúdo anterior">‹</button>
+
+        <div class="n4-guide-viewport">
+          <div class="n4-guide-track" id="n4-guide-track">
+<article class="n4-guide-card">
           <div class="n4-guide-preview pdf-page-frame">
             <span class="page-loading">Carregando…</span>
             <canvas data-pdf-page="7"></canvas>
@@ -171,9 +175,16 @@
           <span class="n4-guide-tag">BÔNUS</span>
           <h3>Receitas extras na Air Fryer</h3>
         </article>
-      </div>
+          </div>
+        </div>
 
-      <div class="n4-food-cta">
+        <button class="n4-carousel-arrow n4-carousel-next" type="button" aria-label="Ver próximo conteúdo">›</button>
+
+        <div class="n4-carousel-meta">
+          <span class="n4-carousel-hint">Arraste para ver mais</span>
+          <div class="n4-carousel-dots" aria-label="Navegação do carrossel"></div>
+        </div>
+      </div><div class="n4-food-cta">
         <a class="n4-main-buy n4-pulse hotmart-fb hotmart__button-checkout" href="https://pay.hotmart.com/G107859159B?checkoutMode=2" onclick="return false;">
           Quero acessar o guia completo
         </a>
@@ -421,5 +432,120 @@
       window.addEventListener('resize',update,{passive:true});
     })();
   </script>
+
+  <script>
+    (() => {
+      const carousel=document.querySelector('.n4-guide-carousel');
+      if(!carousel) return;
+
+      const viewport=carousel.querySelector('.n4-guide-viewport');
+      const track=carousel.querySelector('.n4-guide-track');
+      const cards=[...carousel.querySelectorAll('.n4-guide-card')];
+      const prev=carousel.querySelector('.n4-carousel-prev');
+      const next=carousel.querySelector('.n4-carousel-next');
+      const dotsWrap=carousel.querySelector('.n4-carousel-dots');
+      const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      let active=0;
+      let autoplayId=null;
+      let resumeId=null;
+      let userPaused=false;
+
+      cards.forEach((card,index)=>{
+        card.setAttribute('role','group');
+        card.setAttribute('aria-label',`${index+1} de ${cards.length}`);
+        const dot=document.createElement('button');
+        dot.type='button';
+        dot.className='n4-carousel-dot';
+        dot.setAttribute('aria-label',`Ir para o item ${index+1}`);
+        dot.addEventListener('click',()=>{
+          pauseAfterInteraction();
+          goTo(index,true);
+        });
+        dotsWrap.appendChild(dot);
+      });
+
+      const dots=[...dotsWrap.querySelectorAll('.n4-carousel-dot')];
+
+      function nearestIndex(){
+        const center=viewport.scrollLeft + viewport.clientWidth/2;
+        let best=0;
+        let distance=Infinity;
+        cards.forEach((card,index)=>{
+          const cardCenter=card.offsetLeft + card.offsetWidth/2;
+          const d=Math.abs(cardCenter-center);
+          if(d<distance){distance=d;best=index;}
+        });
+        return best;
+      }
+
+      function updateUI(index){
+        active=Math.max(0,Math.min(index,cards.length-1));
+        cards.forEach((card,i)=>card.classList.toggle('is-active',i===active));
+        dots.forEach((dot,i)=>{
+          dot.classList.toggle('is-active',i===active);
+          dot.setAttribute('aria-current',i===active?'true':'false');
+        });
+      }
+
+      function goTo(index,smooth=false){
+        const target=(index+cards.length)%cards.length;
+        const card=cards[target];
+        const left=card.offsetLeft - (viewport.clientWidth-card.offsetWidth)/2;
+        viewport.scrollTo({left,behavior:smooth&&!reduceMotion?'smooth':'auto'});
+        updateUI(target);
+      }
+
+      function stopAutoplay(){
+        if(autoplayId){clearInterval(autoplayId);autoplayId=null;}
+      }
+
+      function startAutoplay(){
+        stopAutoplay();
+        if(reduceMotion || userPaused || document.hidden) return;
+        autoplayId=setInterval(()=>goTo((active+1)%cards.length,true),5000);
+      }
+
+      function pauseAfterInteraction(){
+        userPaused=true;
+        stopAutoplay();
+        if(resumeId) clearTimeout(resumeId);
+        resumeId=setTimeout(()=>{
+          userPaused=false;
+          startAutoplay();
+        },12000);
+      }
+
+      let scrollTimer=null;
+      viewport.addEventListener('scroll',()=>{
+        clearTimeout(scrollTimer);
+        scrollTimer=setTimeout(()=>updateUI(nearestIndex()),80);
+      },{passive:true});
+
+      viewport.addEventListener('pointerdown',pauseAfterInteraction,{passive:true});
+      viewport.addEventListener('touchstart',pauseAfterInteraction,{passive:true});
+      viewport.addEventListener('wheel',pauseAfterInteraction,{passive:true});
+
+      prev.addEventListener('click',()=>{pauseAfterInteraction();goTo(active-1,true);});
+      next.addEventListener('click',()=>{pauseAfterInteraction();goTo(active+1,true);});
+
+      carousel.addEventListener('mouseenter',stopAutoplay);
+      carousel.addEventListener('mouseleave',startAutoplay);
+      carousel.addEventListener('focusin',stopAutoplay);
+      carousel.addEventListener('focusout',startAutoplay);
+
+      document.addEventListener('visibilitychange',()=>{
+        if(document.hidden) stopAutoplay();
+        else startAutoplay();
+      });
+
+      window.addEventListener('resize',()=>goTo(active,false),{passive:true});
+
+      updateUI(0);
+      requestAnimationFrame(()=>goTo(0,false));
+      startAutoplay();
+    })();
+  </script>
+
 </body>
 </html>
