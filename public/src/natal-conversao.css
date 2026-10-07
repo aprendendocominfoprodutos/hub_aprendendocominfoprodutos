@@ -1322,3 +1322,233 @@
     background-attachment:scroll!important;
   }
 }
+
+
+/* Container mockups v2 — referência visual enviada */
+/* Fundo dos três mockups no mesmo estilo do exemplo: verde-claro, decoração natalina suave,
+   três páginas abertas e placa verde escura na base. */
+.natal-v4 .n4-product-mockup,
+.natal-v4 .n4-book-stack,
+.natal-v4 .n4-final-product{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate;
+  min-height:640px!important;
+  border-radius:30px!important;
+  border:1px solid rgba(91,126,82,.22)!important;
+  background:
+    linear-gradient(rgba(220,236,214,.72),rgba(220,236,214,.72)),
+    url('/assets/natal/site-background-watermark.webp') center/cover no-repeat!important;
+  box-shadow:
+    inset 0 0 0 10px rgba(239,247,235,.58),
+    inset 0 0 0 11px rgba(105,140,96,.16),
+    0 24px 58px rgba(44,75,50,.13)!important;
+  perspective:1200px!important;
+}
+.natal-v4 .n4-product-mockup::after,
+.natal-v4 .n4-book-stack::after,
+.natal-v4 .n4-final-product::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:
+    radial-gradient(circle at 18% 12%,rgba(255,248,196,.56) 0 9px,transparent 28px),
+    radial-gradient(circle at 82% 13%,rgba(255,248,196,.48) 0 8px,transparent 26px),
+    radial-gradient(circle at 12% 76%,rgba(255,248,196,.35) 0 7px,transparent 25px),
+    radial-gradient(circle at 88% 72%,rgba(255,248,196,.38) 0 7px,transparent 24px);
+  opacity:.9;
+}
+
+.natal-v4 .n4-mockup-page,
+.natal-v4 .n4-mockup-book,
+.natal-v4 .n4-book,
+.natal-v4 .n4-final-page,
+.natal-v4 .n4-final-book{
+  z-index:2!important;
+  background:#fffaf2!important;
+  border:1px solid rgba(129,92,47,.24)!important;
+  border-radius:12px!important;
+  overflow:hidden!important;
+  box-shadow:0 24px 54px rgba(47,54,39,.22)!important;
+}
+.natal-v4 .n4-mockup-page canvas,
+.natal-v4 .n4-mockup-book canvas,
+.natal-v4 .n4-book canvas,
+.natal-v4 .n4-final-page canvas,
+.natal-v4 .n4-final-book canvas{
+  display:block!important;
+  width:100%!important;
+  height:auto!important;
+}
+
+/* Mockup principal */
+.natal-v4 .n4-product-mockup .n4-mockup-back{
+  width:40%!important;
+  left:9%!important;
+  top:18%!important;
+  transform:rotate(-7deg)!important;
+}
+.natal-v4 .n4-product-mockup .n4-mockup-side{
+  width:40%!important;
+  right:8%!important;
+  top:16%!important;
+  transform:rotate(7deg)!important;
+}
+.natal-v4 .n4-product-mockup .n4-mockup-book{
+  width:46%!important;
+  left:50%!important;
+  top:44%!important;
+  transform:translate(-50%,-50%)!important;
+}
+
+/* Mockup da seção "plano de ceia" */
+.natal-v4 .n4-book-stack .n4-book{
+  position:absolute!important;
+  top:auto!important;
+  left:auto!important;
+}
+.natal-v4 .n4-book-stack .n4-book-back{
+  width:40%!important;
+  left:9%!important;
+  top:18%!important;
+  transform:rotate(-7deg)!important;
+}
+.natal-v4 .n4-book-stack .n4-book-mid{
+  width:40%!important;
+  right:8%!important;
+  top:16%!important;
+  left:auto!important;
+  transform:rotate(7deg)!important;
+}
+.natal-v4 .n4-book-stack .n4-book-front{
+  width:46%!important;
+  left:50%!important;
+  top:44%!important;
+  transform:translate(-50%,-50%)!important;
+}
+
+/* Mockup final */
+.natal-v4 .n4-final-product .n4-final-left{
+  width:40%!important;
+  left:9%!important;
+  right:auto!important;
+  top:18%!important;
+  transform:rotate(-7deg)!important;
+}
+.natal-v4 .n4-final-product .n4-final-right{
+  width:40%!important;
+  right:8%!important;
+  left:auto!important;
+  top:16%!important;
+  transform:rotate(7deg)!important;
+}
+.natal-v4 .n4-final-product .n4-final-book{
+  width:46%!important;
+  left:50%!important;
+  top:44%!important;
+  transform:translate(-50%,-50%)!important;
+}
+
+/* Placa verde escura igual à referência enviada */
+.natal-v4 .n4-mockup-caption,
+.natal-v4 .n4-stack-caption,
+.natal-v4 .n4-final-caption{
+  position:absolute!important;
+  left:50%!important;
+  bottom:5%!important;
+  z-index:5!important;
+  width:82%!important;
+  transform:translateX(-50%)!important;
+  padding:20px 22px!important;
+  border-radius:20px!important;
+  text-align:center!important;
+  background:linear-gradient(180deg,rgba(28,94,66,.97),rgba(24,82,58,.97))!important;
+  color:#fff!important;
+  border:1px solid rgba(210,177,87,.5)!important;
+  box-shadow:0 14px 30px rgba(39,67,46,.18)!important;
+}
+.natal-v4 .n4-mockup-caption small,
+.natal-v4 .n4-stack-caption small,
+.natal-v4 .n4-final-caption small{
+  display:block!important;
+  color:#e6c96f!important;
+  font-size:9px!important;
+  letter-spacing:.18em!important;
+}
+.natal-v4 .n4-mockup-caption strong,
+.natal-v4 .n4-stack-caption strong,
+.natal-v4 .n4-final-caption strong{
+  display:block!important;
+  margin:6px 0 5px!important;
+  color:#fff!important;
+  font:600 clamp(24px,3vw,38px) 'Playfair Display',Georgia,serif!important;
+  line-height:1.05!important;
+}
+.natal-v4 .n4-mockup-caption span,
+.natal-v4 .n4-stack-caption span,
+.natal-v4 .n4-final-caption span{
+  display:block!important;
+  color:#dce8df!important;
+  font-size:10px!important;
+}
+
+/* Responsivo e sem cortar páginas */
+@media(max-width:960px){
+  .natal-v4 .n4-product-mockup,
+  .natal-v4 .n4-book-stack,
+  .natal-v4 .n4-final-product{
+    min-height:clamp(540px,92vw,690px)!important;
+    max-width:680px!important;
+    width:100%!important;
+    margin-inline:auto!important;
+  }
+}
+@media(max-width:620px){
+  .natal-v4 .n4-product-mockup,
+  .natal-v4 .n4-book-stack,
+  .natal-v4 .n4-final-product{
+    min-height:560px!important;
+    border-radius:22px!important;
+    box-shadow:
+      inset 0 0 0 6px rgba(239,247,235,.58),
+      inset 0 0 0 7px rgba(105,140,96,.16),
+      0 18px 38px rgba(44,75,50,.12)!important;
+  }
+  .natal-v4 .n4-product-mockup .n4-mockup-back,
+  .natal-v4 .n4-book-stack .n4-book-back,
+  .natal-v4 .n4-final-product .n4-final-left{
+    width:36%!important;
+    left:7%!important;
+    top:17%!important;
+    transform:rotate(-5deg)!important;
+  }
+  .natal-v4 .n4-product-mockup .n4-mockup-side,
+  .natal-v4 .n4-book-stack .n4-book-mid,
+  .natal-v4 .n4-final-product .n4-final-right{
+    width:36%!important;
+    right:7%!important;
+    top:16%!important;
+    transform:rotate(5deg)!important;
+  }
+  .natal-v4 .n4-product-mockup .n4-mockup-book,
+  .natal-v4 .n4-book-stack .n4-book-front,
+  .natal-v4 .n4-final-product .n4-final-book{
+    width:45%!important;
+    top:42%!important;
+  }
+  .natal-v4 .n4-mockup-caption,
+  .natal-v4 .n4-stack-caption,
+  .natal-v4 .n4-final-caption{
+    width:88%!important;
+    bottom:4%!important;
+    padding:15px 13px!important;
+    border-radius:16px!important;
+  }
+  .natal-v4 .n4-mockup-caption strong,
+  .natal-v4 .n4-stack-caption strong,
+  .natal-v4 .n4-final-caption strong{
+    font-size:25px!important;
+  }
+}
