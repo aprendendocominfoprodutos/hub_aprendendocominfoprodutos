@@ -836,3 +836,291 @@
     background-size:175px auto,175px auto,100% 100%,100% 100%;
   }
 }
+
+
+/* Responsividade v1 — sem cortes em PC e celular */
+.natal-v4{
+  width:100%;
+  max-width:100%;
+  overflow-x:hidden;
+}
+.natal-v4 img,
+.natal-v4 canvas{
+  max-width:100%;
+}
+.natal-v4 img{
+  height:auto;
+}
+.natal-v4 main,
+.natal-v4 section,
+.natal-v4 header,
+.natal-v4 footer{
+  max-width:100%;
+}
+
+/* Cabeçalho fluido */
+.natal-v4 .n4-header{
+  width:100%;
+}
+.natal-v4 .n4-brand{
+  width:clamp(170px,22vw,260px);
+  min-width:0;
+}
+.natal-v4 .n4-header-buy{
+  flex:0 0 auto;
+  white-space:nowrap;
+}
+
+/* Hero: a imagem inteira permanece visível no desktop. */
+@media(min-width:901px){
+  .natal-v4 .n4-hero-integrated{
+    min-height:clamp(620px,48vw,760px);
+  }
+  .natal-v4 .n4-hero-bg{
+    background-size:contain!important;
+    background-repeat:no-repeat!important;
+    background-position:left center!important;
+    background-color:#163c2f;
+  }
+  .natal-v4 .n4-hero-panel{
+    width:min(600px,48vw);
+    padding-left:clamp(24px,3vw,44px);
+  }
+}
+
+/* Tablets e celulares: imagem completa no topo e conteúdo com espaço próprio.
+   Nada depende de crop para caber. */
+@media(max-width:900px){
+  .natal-v4 .n4-header{
+    gap:12px;
+    padding-left:16px;
+    padding-right:16px;
+  }
+  .natal-v4 .n4-header nav{
+    display:none;
+  }
+  .natal-v4 .n4-brand{
+    width:min(52vw,230px);
+  }
+
+  .natal-v4 .n4-hero-integrated{
+    min-height:0!important;
+    height:auto!important;
+    display:block!important;
+    padding:0!important;
+    background:#153f31!important;
+  }
+  .natal-v4 .n4-hero-bg{
+    position:relative!important;
+    inset:auto!important;
+    display:block;
+    width:100%;
+    aspect-ratio:3/2;
+    background-size:contain!important;
+    background-repeat:no-repeat!important;
+    background-position:center top!important;
+    background-color:#153f31;
+    transform:none!important;
+  }
+  .natal-v4 .n4-hero-darken{
+    top:0!important;
+    bottom:auto!important;
+    height:auto;
+    aspect-ratio:3/2;
+    background:linear-gradient(180deg,rgba(10,30,22,.02),rgba(10,30,22,.30))!important;
+  }
+  .natal-v4 .n4-hero-trust{
+    top:12px!important;
+    left:12px!important;
+    right:12px!important;
+    width:auto;
+  }
+  .natal-v4 .n4-hero-panel{
+    width:100%!important;
+    max-width:none!important;
+    margin:0!important;
+    padding:34px 20px 30px!important;
+    background:linear-gradient(180deg,#153f31,#102f25);
+  }
+  .natal-v4 .n4-hero-integrated h1{
+    font-size:clamp(40px,9vw,60px)!important;
+    max-width:760px;
+  }
+  .natal-v4 .n4-hero-offer-box{
+    width:100%;
+  }
+}
+
+/* Cards de receitas: mostrar a foto completa, sem cortar bordas do prato. */
+.natal-v4 .n4-food-card{
+  display:flex;
+  flex-direction:column;
+}
+.natal-v4 .n4-food-card img{
+  width:100%;
+  height:auto!important;
+  aspect-ratio:1.45/1;
+  object-fit:contain!important;
+  object-position:center!important;
+  background:#edf4e8;
+}
+
+/* Mockup principal: todos os elementos ficam dentro do quadro. */
+.natal-v4 .n4-product-mockup{
+  width:100%;
+  max-width:100%;
+}
+@media(min-width:961px){
+  .natal-v4 .n4-mockup-back{
+    width:34%!important;
+    left:12%!important;
+    top:20%!important;
+  }
+  .natal-v4 .n4-mockup-side{
+    width:34%!important;
+    right:12%!important;
+    top:19%!important;
+  }
+  .natal-v4 .n4-mockup-book{
+    width:40%!important;
+    top:45%!important;
+  }
+}
+@media(max-width:960px){
+  .natal-v4 .n4-how{
+    grid-template-columns:1fr!important;
+    gap:28px!important;
+  }
+  .natal-v4 .n4-product-mockup{
+    min-height:clamp(470px,78vw,620px)!important;
+  }
+  .natal-v4 .n4-mockup-back{
+    width:34%!important;
+    left:10%!important;
+    top:18%!important;
+    transform:rotate(-5deg)!important;
+  }
+  .natal-v4 .n4-mockup-side{
+    width:34%!important;
+    right:10%!important;
+    top:18%!important;
+    transform:rotate(5deg)!important;
+  }
+  .natal-v4 .n4-mockup-book{
+    width:42%!important;
+    top:44%!important;
+    transform:translate(-50%,-50%)!important;
+  }
+}
+@media(max-width:620px){
+  .natal-v4 .n4-topnote{
+    padding-left:10px;
+    padding-right:10px;
+    flex-wrap:wrap;
+    line-height:1.35;
+  }
+  .natal-v4 .n4-header{
+    min-height:66px;
+  }
+  .natal-v4 .n4-brand{
+    width:min(48vw,190px);
+  }
+  .natal-v4 .n4-header-buy{
+    padding:9px 11px!important;
+    font-size:9px!important;
+  }
+  .natal-v4 .n4-hero-trust{
+    justify-content:center!important;
+    gap:5px 8px!important;
+    padding:7px 8px!important;
+  }
+  .natal-v4 .n4-hero-trust span{
+    font-size:7.5px!important;
+  }
+  .natal-v4 .n4-hero-panel{
+    padding:28px 16px 26px!important;
+  }
+  .natal-v4 .n4-hero-offer-box{
+    flex-direction:column!important;
+    align-items:stretch!important;
+  }
+  .natal-v4 .n4-hero-offer-box .n4-main-buy{
+    width:100%!important;
+  }
+
+  .natal-v4 .n4-food-row{
+    grid-template-columns:1fr!important;
+  }
+  .natal-v4 .n4-food-card:last-child{
+    width:100%!important;
+    grid-column:auto!important;
+  }
+  .natal-v4 .n4-food-card img{
+    aspect-ratio:auto!important;
+    max-height:none!important;
+  }
+
+  .natal-v4 .n4-how{
+    margin-left:12px!important;
+    margin-right:12px!important;
+    padding:12px!important;
+  }
+  .natal-v4 .n4-product-mockup{
+    min-height:520px!important;
+  }
+  .natal-v4 .n4-mockup-back{
+    width:31%!important;
+    left:8%!important;
+    top:18%!important;
+  }
+  .natal-v4 .n4-mockup-side{
+    width:31%!important;
+    right:8%!important;
+    top:18%!important;
+  }
+  .natal-v4 .n4-mockup-book{
+    width:44%!important;
+    top:43%!important;
+  }
+  .natal-v4 .n4-mockup-caption{
+    width:calc(100% - 24px)!important;
+    bottom:12px!important;
+  }
+
+  .natal-v4 .n4-content-layout,
+  .natal-v4 .n4-offer,
+  .natal-v4 .n4-final{
+    grid-template-columns:1fr!important;
+  }
+  .natal-v4 .n4-book-stack{
+    min-height:460px!important;
+  }
+  .natal-v4 .n4-final-product{
+    min-height:360px!important;
+  }
+  .natal-v4 .n4-final-book{
+    width:39%!important;
+    left:38%!important;
+  }
+  .natal-v4 .n4-final-page{
+    width:34%!important;
+    right:12%!important;
+  }
+}
+
+/* Evita qualquer estouro horizontal em telas muito estreitas. */
+@media(max-width:390px){
+  .natal-v4 .n4-brand{
+    width:145px;
+  }
+  .natal-v4 .n4-header-buy{
+    padding:8px 9px!important;
+    font-size:8px!important;
+  }
+  .natal-v4 .n4-hero-integrated h1{
+    font-size:38px!important;
+  }
+  .natal-v4 .n4-product-mockup{
+    min-height:480px!important;
+  }
+}
