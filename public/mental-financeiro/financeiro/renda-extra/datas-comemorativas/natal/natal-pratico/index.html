@@ -503,7 +503,7 @@
       function startAutoplay(){
         stopAutoplay();
         if(reduceMotion || userPaused || document.hidden) return;
-        autoplayId=setInterval(()=>goTo((active+1)%cards.length,true),5000);
+        autoplayId=setInterval(()=>goTo((active+1)%cards.length,true),2500);
       }
 
       function pauseAfterInteraction(){
