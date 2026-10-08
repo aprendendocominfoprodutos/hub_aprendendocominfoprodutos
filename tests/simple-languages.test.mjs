@@ -11,13 +11,13 @@ const natal=catalog.produtos[0];
 const orig=natal.edicoes[0].rota;
 
 test("seletor mantém o idioma dentro do mesmo caminho do Natal Prático",async()=>{
- const expected=["ing","esp","esp-es","fr","it","pt"];
+ const expected=["ing","esp","esp-es","fr","it","pt","ar"];
  assert.deepEqual(natal.edicoes.filter(e=>e.rotaSimples).map(e=>e.rotaSimples),
   expected.map(s=>orig+s+"/"));
  const info=await buildSimpleLanguages({root,dryRun:true});
- assert.equal(info.count,12);
- assert.deepEqual(info.pages.map(p=>p.status),Array(12).fill("planejada"));
- assert.equal(info.pages.filter(e=>e.route.startsWith("/mitologia/grega/geral/")).length,6);
+ assert.equal(info.count,14);
+ assert.deepEqual(info.pages.map(p=>p.status),Array(14).fill("planejada"));
+ assert.equal(info.pages.filter(e=>e.route.startsWith("/mitologia/grega/geral/")).length,7);
 });
 test("seletor existe somente dentro do card Natal e mantém landing sem seletor",async()=>{
  const mainPath="public/mental-financeiro/financeiro/renda-extra/index.html";
@@ -30,12 +30,18 @@ test("seletor existe somente dentro do card Natal e mantém landing sem seletor"
  assert.doesNotMatch(landing,/id="natal-idioma"|seletor-idiomas.css|class="lp-language"/);
  assert.match(natalPage,/<article class="card natal-card" data-product-id="PRO-0001">/);
  assert.match(natalPage,/<div class="natal-card-language"/);
- assert.match(natalPage,/id="natal-idioma"/);
+ assert.match(natalPage,/<details class="language-menu">/);
+ assert.match(natalPage,/<summary>/);
+ assert.match(natalPage,/class="language-option"/);
+ assert.match(natalPage,/https:\/\/flagcdn\.com\/w40\/br\.png/);
+ assert.match(natalPage,/https:\/\/flagcdn\.com\/w40\/sa\.png/);
+ assert.match(natalPage,/Árabe \(Arábia Saudita\)/);
  assert.match(natalPage,/seletor-idiomas.css/);
  assert.match(natalPage,/Espanhol \(Latinoamérica\)/);
  assert.doesNotMatch(natalPage,/Español \(México\)|class="lp-language"/);
  assert.match(natalPage,/natal-pratico\/ing\//);
  assert.match(natalPage,/natal-pratico\/it\//);
+ assert.match(natalPage,/natal-pratico\/ar\//);
  assert.match(natalPage,/href="\/mental-financeiro\/financeiro\/renda-extra\/datas-comemorativas\/natal\/natal-pratico\/"/);
  assert.match(landing,/https:\/\/pay\.hotmart\.com\/G107859159B/);
  assert.match(landing,/fbq\('init'/);
@@ -63,7 +69,7 @@ test("as páginas reais de projeto futuro são geradas na própria URL da ediç�
   await writeFile(original,"original sem alterações");
   await writeFile(catpath,JSON.stringify({versao:2,dominioCanonico:catalog.dominioCanonico,produtos:[natal]}));
   const result=await buildSimpleLanguages({root:temp});
-  assert.equal(result.count,6);
+  assert.equal(result.count,7);
   for(const e of natal.edicoes.filter(x=>x.rotaSimples)){
     const file=join(temp,"public",e.rotaSimples,"index.html");
     const html=await readFile(file,"utf8");

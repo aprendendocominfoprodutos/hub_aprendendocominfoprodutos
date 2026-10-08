@@ -146,3 +146,14 @@ Produtos aplicados: PRO-0001 (Natal Prático), vitrine em /mental-financeiro/fin
 Para reduzir descoberta via buscadores, o Worker envia X-Robots-Tag: noindex, follow nas páginas HTML do mapa de categorias. Landings comerciais publicadas mantêm indexação independente. Isso NÃO torna o mapa privado: qualquer pessoa com seu endereço pode acessá-lo. Privacidade real requer autenticação separada e configuração adicional.
 
 Os backlinks das duas landings existentes para o mapa foram removidos, preservando anúncios, pixels, checkout e conteúdo comercial.
+
+
+## Bandeiras no seletor e edição em árabe
+
+Os cards finais do Natal Prático e de Mitologia Grega oferecem um menu de idiomas expansível e navegável por teclado. Cada opção usa uma imagem da bandeira do mercado correspondente (em vez de depender do suporte do Windows aos emojis); **Espanhol (Latinoamérica)** exibe um globo porque a América Latina não possui bandeira oficial única.
+
+Foi adicionada a edição `ar-SA` como **árabe padrão moderno**, com a Arábia Saudita como mercado comercial inicial (moeda SAR). O caminho curto de projeto futuro é `/ar/` ao lado das edições `ing/`, `it/`, etc. Para Natal Prático: `/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/ar/`; para Mitologia Grega: `/mitologia/grega/geral/ar/`.
+
+As páginas ainda são apenas **projetos futuros**, com aviso localizado em árabe, documento `lang="ar-SA" dir="rtl"`, sem botão de pagamento e com `noindex`. O checkout não foi configurado; outros países de língua árabe poderão ter edições próprias no futuro.
+
+Os ícones de bandeiras dos menus usam arquivos leves em `flagcdn.com`, carregados apenas quando necessário. O seletor permanece somente dentro do card final anterior à landing; as páginas comerciais não foram alteradas.

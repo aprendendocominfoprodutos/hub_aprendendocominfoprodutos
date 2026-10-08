@@ -113,6 +113,20 @@
           "checkoutUrl": null,
           "nomeLocalizado": "Guia de Planeamento de Natal",
           "rotaSimples": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/pt/"
+        },
+        {
+          "codigo": "ar-SA",
+          "mercado": "Arábia Saudita (árabe)",
+          "moeda": "SAR",
+          "status": "planejada",
+          "rota": "/ar-sa/products/christmas-guide/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null,
+          "nomeLocalizado": "دليل التخطيط لعيد الميلاد",
+          "rotaSimples": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/ar/",
+          "observacao": "Árabe padrão moderno (MSA) com referência inicial à Arábia Saudita. Produção e checkout para este mercado ainda pendentes; países árabes adicionais poderão ter edições próprias."
         }
       ],
       "vitrineFinal": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/",
@@ -242,6 +256,20 @@
           "checkoutUrl": null,
           "nomeLocalizado": "Guia de Mitologia Grega",
           "rotaSimples": "/mitologia/grega/geral/pt/"
+        },
+        {
+          "codigo": "ar-SA",
+          "mercado": "Arábia Saudita (árabe)",
+          "moeda": "SAR",
+          "status": "planejada",
+          "rota": "/ar-sa/products/greek-mythology/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null,
+          "nomeLocalizado": "دليل الأساطير اليونانية",
+          "rotaSimples": "/mitologia/grega/geral/ar/",
+          "observacao": "Árabe padrão moderno (MSA) com referência inicial à Arábia Saudita. Produção e checkout para este mercado ainda pendentes; países árabes adicionais poderão ter edições próprias."
         }
       ],
       "vitrineFinal": "/mitologia/grega/",

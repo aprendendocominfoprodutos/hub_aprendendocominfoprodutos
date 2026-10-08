@@ -23,16 +23,20 @@ export async function validateFinalContainers({root=ROOT}={}) {
     const end=parent.indexOf("</article>",parent.indexOf(marker));
     verify(before>=0&&end>before,"seletor fora do próprio card: "+p.id);
     const card=parent.slice(before,end+10);
-    verify(card.includes("<select")&&card.includes("</select>")&&card.includes("onchange="),
-      "seletor funcional ausente dentro do card: "+p.id);
+    verify(card.includes('<details class="language-menu">') &&
+      card.includes("<summary>") && card.includes("</details>") &&
+      card.includes('class="language-menu-options"'),
+      "menu de idiomas acessível ausente dentro do card: "+p.id);
+    verify((card.match(/https:\/\/flagcdn\.com\/w40\/[a-z]{2}\.png/g)||[]).length >= 7,
+      "bandeiras gráficas ausentes no card: "+p.id);
     verify(card.includes('href="'+origin.rota+'"'),
       "falta acesso direto à landing brasileira: "+p.id);
     const allowed=p.edicoes.map(e=>e.rotaSimples||e.rota);
-    const optionValues=[...card.matchAll(/<option\b[^>]*value="([^"]*)"/g)].map(m=>m[1]).filter(Boolean);
+    const optionValues=[...card.matchAll(/<a class="language-option" href="([^"]*)"/g)].map(m=>m[1]);
     verify(unique(optionValues),"opção de idioma duplicada: "+p.id);
     for(const route of allowed)verify(optionValues.includes(route),
       "idioma não cadastrado no card "+p.id+": "+route);
-    verify(!landing.includes('class="natal-card-language"') && !landing.includes('class="lp-language"') &&
+    verify(!landing.includes('class="natal-card-language"') && !landing.includes('class="lp-language"') && !landing.includes('class="language-menu"') &&
       !/id="(?:natal|mitologia-grega)-idioma"/.test(landing),
       "landing possui seletor administrativo: "+p.id);
     parents.push({id:p.id,parent:p.vitrineFinal,landing:origin.rota,languageOptions:optionValues.length});

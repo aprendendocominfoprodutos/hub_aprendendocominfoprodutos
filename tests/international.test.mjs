@@ -48,19 +48,30 @@ test("planejadas geram aviso de projeto futuro, não checkout, sem indexação",
   assert.doesNotMatch(html,/hotmart|pay\.hotmart|comprar agora/i);
 });
 
-test("dry-run: 12 páginas de projeto futuro e 2 atalhos brasileiros", async () => {
+test("dry-run: 14 páginas de projeto futuro e 2 atalhos brasileiros", async () => {
   const info=await prepareInternational({root:ROOT,dryRun:true});
   assert.equal(info.products,3);
   assert.equal(info.published,2);
-  assert.equal(info.planned,12);
+  assert.equal(info.planned,14);
   assert.deepEqual(info.generated,[]);
-  assert.equal(info.placeholders.length,12);
+  assert.equal(info.placeholders.length,14);
   assert.deepEqual(info.aliases,["/pt-br/produtos/natal-pratico/","/pt-br/produtos/mitologia-grega/"]);
   for(const p of catalog.produtos){
     for(const e of p.edicoes.filter(e=>e.status==="planejada")){
       await assert.rejects(access(join(ROOT,"public",e.rota,"index.html")),{code:"ENOENT"});
     }
   }
+});
+
+test("edição árabe apresenta conteúdo RTL e mantém checkout indisponível",()=>{
+  const product=catalog.produtos[0];
+  const arabic=product.edicoes.find(e=>e.codigo==="ar-SA");
+  assert.equal(arabic.rotaSimples,oldBrazilUrl+"ar/");
+  const html=futurePage(product,arabic,catalog);
+  assert.match(html,/lang="ar-SA" dir="rtl"/);
+  assert.match(html,/مشروع مستقبلي/);
+  assert.match(html,/noindex,nofollow,noarchive/);
+  assert.doesNotMatch(html,/pay\.hotmart/);
 });
 
 test("recusa publicar edição sem produto adaptado e checkout validado",async()=>{
