@@ -49,7 +49,7 @@ O site institucional e a taxonomia permanecem em português. Somente os infoprod
 - **Manifesto público:** `/catalogo-edicoes.json` — apenas edições comerciais realmente publicadas.
 - **Projeto futuro:** rotas ainda sem infoproduto possuem páginas informativas localizadas, marcadas como `noindex` e sem checkout. Quando a edição estiver pronta, a mesma URL recebe a landing page final.
 - **Brasil:** `/pt-br/produtos/natal-pratico/` encaminha à landing brasileira atual, sem alterar o endereço de anúncios.
-- **Rotas reservadas:** `/produtos/{produto}/{idioma-pais}/` (não são páginas públicas enquanto estiverem como `planejada`).
+- **Rotas internacionais:** `/{idioma-pais}/{categoria-traduzida}/{slug-localizado}/`. Ex.: `/en-us/products/christmas-guide/` e `/es-mx/productos/guia-navidad/`.
 - **Testes:** `npm run test:international`.
 - **Procedimento completo:** [docs/internacionalizacao.md](docs/internacionalizacao.md).
 
