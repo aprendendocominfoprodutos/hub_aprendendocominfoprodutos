@@ -7,7 +7,7 @@ test("todo produto existente tem seletor no card final imediatamente anterior à
   const result=await validateFinalContainers();
   assert.equal(result.validated,2);
   assert.deepEqual(result.products.map(p=>p.id),["PRO-0001","PRO-0003"]);
-  assert.deepEqual(result.products.map(p=>p.languageOptions),[7,7]);
+  assert.deepEqual(result.products.map(p=>p.languageOptions),[8,8]);
   assert.deepEqual(result.products.map(p=>p.parent),[
     "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/",
     "/mitologia/grega/"
