@@ -16,12 +16,12 @@ test("todo produto existente tem seletor no card final imediatamente anterior à
 
 test("categorias internas não são indexáveis; landing brasileira fica fora da restrição",()=>{
   const response=()=>new Response("<html>body</html>",{status:200,headers:{"Content-Type":"text/html; charset=utf-8"}});
-  for(const path of ["/","/cultura-entretenimento/","/mitologia/grega/","/mental-financeiro/financeiro/renda-extra/"]){
+  for(const path of ["/","/cultura-entretenimento/","/mitologia/grega/","/mitologia/grega/geral/","/mental-financeiro/financeiro/renda-extra/"]){
     const r=applyInternalRobots(response(),path);
     assert.equal(r.headers.get("X-Robots-Tag"),"noindex, follow");
   }
   for(const path of [
-    "/mitologia/grega/geral/",
+    "/mitologia/grega/geral/pt-br/",
     "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/"
   ]){
     const r=applyInternalRobots(response(),path);

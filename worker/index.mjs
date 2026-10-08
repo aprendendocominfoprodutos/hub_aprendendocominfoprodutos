@@ -52,6 +52,12 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const matched = localizedRequestPath(url.hostname, url.pathname);
+    // A landing brasileira de Mitologia mudou para /pt-br/; links antigos continuam funcionando.
+    if (matched.route === "main" &&
+        (url.pathname === "/mitologia/grega/geral/" || url.pathname === "/mitologia/grega/geral")) {
+      url.pathname = "/mitologia/grega/geral/pt-br/";
+      return Response.redirect(url.toString(), 308);
+    }
     if (matched.route === "not-found") {
       return new Response("Not found", {
         status: 404, headers: { "content-type": "text/plain; charset=utf-8" }

@@ -32,12 +32,12 @@ test("raiz do subdomínio serve a vitrine própria e protege os outros países",
 test("worker mantém o portal brasileiro e encaminha apenas a rota regional", async()=>{
   const calls=[];
   const env={ASSETS:{fetch:async request=>{calls.push(new URL(request.url));return new Response("ok",{status:200});}}};
-  await regionalWorker.fetch(new Request("https://www."+domain+"/mitologia/grega/geral/"),env);
+  await regionalWorker.fetch(new Request("https://www."+domain+"/mitologia/grega/geral/pt-br/"),env);
   await regionalWorker.fetch(new Request("https://en-us."+domain+"/products/greek-mythology/"),env);
   await regionalWorker.fetch(new Request("https://en-us."+domain+"/"),env);
   await regionalWorker.fetch(new Request("https://en-us."+domain+"/assets/home/logo-main.webp"),env);
   assert.deepEqual(calls.map(u=>u.pathname),
-    ["/mitologia/grega/geral/","/en-us/products/greek-mythology/","/en-us/","/assets/home/logo-main.webp"]);
+    ["/mitologia/grega/geral/pt-br/","/en-us/products/greek-mythology/","/en-us/","/assets/home/logo-main.webp"]);
   const invalid=await regionalWorker.fetch(new Request("https://fr-fr."+domain+"/financeiro/"),env);
   assert.equal(invalid.status,404);
   assert.equal(calls.length,4);
@@ -75,4 +75,17 @@ test("URL antiga no subdomínio e normalização de barra",async()=>{
   const redirect=await regionalWorker.fetch(new Request("https://en-us."+domain+"/products"),mock);
   assert.equal(redirect.status,308);
   assert.equal(redirect.headers.get("location"),"https://en-us."+domain+"/products/");
+});
+
+test("URL antiga de Mitologia redireciona 308 para /pt-br/ e preserva consultas",async()=>{
+  const fake={ASSETS:{fetch:async()=>new Response("não deve buscar assets")}};
+  for(const path of ["/mitologia/grega/geral/","/mitologia/grega/geral"]){
+    const url="https://www."+domain+path+"?utm_source=meta";
+    const res=await regionalWorker.fetch(new Request(url),fake);
+    assert.equal(res.status,308);
+    assert.equal(res.headers.get("location"),
+      "https://www."+domain+"/mitologia/grega/geral/pt-br/?utm_source=meta");
+  }
+  const natal=await regionalWorker.fetch(new Request("https://www."+domain+"/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/"),fake);
+  assert.equal(natal.status,200);
 });

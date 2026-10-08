@@ -170,7 +170,7 @@
           "mercado": "Brasil",
           "moeda": "BRL",
           "status": "publicada",
-          "rota": "/mitologia/grega/geral/",
+          "rota": "/mitologia/grega/geral/pt-br/",
           "origemExistente": true,
           "htmlLocalizado": null,
           "produtoAdaptado": true,
@@ -273,7 +273,11 @@
         }
       ],
       "vitrineFinal": "/mitologia/grega/",
-      "operacao": "catalogo-interno"
+      "operacao": "catalogo-interno",
+      "raizIdiomas": "/mitologia/grega/geral/",
+      "redirecionamentosLegados": [
+        "/mitologia/grega/geral/"
+      ]
     }
   ]
 }

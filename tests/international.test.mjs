@@ -15,7 +15,8 @@ test("IDs estáveis, versão 2 e landing pages brasileiras preservadas", async (
   assert.deepEqual(await validateCatalog(catalog,ROOT), []);
   assert.equal(catalog.produtos[0].edicoes[0].rota, oldBrazilUrl);
   assert.equal(catalog.produtos[0].edicoes[0].rotaPublica, "/pt-br/produtos/natal-pratico/");
-  assert.equal(catalog.produtos[2].edicoes[0].rota, "/mitologia/grega/geral/");
+  assert.equal(catalog.produtos[2].edicoes[0].rota, "/mitologia/grega/geral/pt-br/");
+  assert.equal(catalog.produtos[2].raizIdiomas, "/mitologia/grega/geral/");
 });
 
 test("rotas internacionais padronizadas com slug traduzido e país", () => {
@@ -153,4 +154,17 @@ test("não sobrescreve arquivos manuais nas rotas destinadas a placeholders",asy
     await assert.rejects(prepareInternational({root:tmp}),/recusado sobrescrever/);
     assert.equal(await readFile(target,"utf8"),"Manual special campaign page");
   }finally{await rm(tmp,{recursive:true,force:true});}
+});
+
+test("landing movida conserva caminhos absolutos para imagens, CSS e metadados",async()=>{
+  const newer=await readFile(join(ROOT,"public/mitologia/grega/geral/pt-br/index.html"),"utf8");
+  const original=await readFile(join(ROOT,"public/mitologia/grega/geral/index.html"),"utf8");
+  assert.match(newer,/rel="canonical" href="https:\/\/www\.aprendendocominfoprodutos\.com\.br\/mitologia\/grega\/geral\/pt-br\/"/);
+  assert.match(newer,/href="\/mitologia\/grega\/geral\/styles\.css"/);
+  assert.match(newer,/src="\/mitologia\/grega\/geral\/assets\/capa\.webp"/);
+  assert.doesNotMatch(newer,/(?:src|href)="(?:assets\/|styles\.css)/);
+  assert.match(original,/rel="canonical" href="https:\/\/www\.aprendendocominfoprodutos\.com\.br\/mitologia\/grega\/geral\/pt-br\/"/);
+  assert.match(original,/location\.replace/);
+  const cat=catalog.produtos.find(p=>p.id==="PRO-0003");
+  assert.deepEqual(cat.edicoes.filter(e=>e.codigo==="pt-BR").map(e=>e.rota),["/mitologia/grega/geral/pt-br/"]);
 });
