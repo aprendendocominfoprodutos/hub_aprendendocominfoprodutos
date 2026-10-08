@@ -65,7 +65,7 @@ A página **real, existente, do Brasil permanece em:**
 | Itália | /it-it/prodotti/mitologia-greca/ | Progetto futuro |
 | Portugal | /pt-pt/produtos/mitologia-grega/ | Projeto futuro |
 
-A landing brasileira original permanece em /mitologia/grega/geral/.
+A landing brasileira da Mitologia Grega foi padronizada em **/mitologia/grega/geral/pt-br/**. A URL antiga **/mitologia/grega/geral/** permanece como redirecionamento HTTP 308 para evitar quebra de links.
 
 ## Páginas de "Projeto futuro"
 
@@ -141,7 +141,7 @@ As edições internacionais devem ter rotaSimples dentro da rota de sua landing 
 
 O comando npm run verify:final-containers bloqueia o deploy se algum produto existente não tiver a vitrine final com idiomas e link à landing brasileira. npm run test:internal-catalog verifica separação de indexação.
 
-Produtos aplicados: PRO-0001 (Natal Prático), vitrine em /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/, landing em /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/. PRO-0003 (Mitologia Grega), vitrine em /mitologia/grega/, landing em /mitologia/grega/geral/. PRO-0002 (Renda Extra de Fim de Ano) permanece apenas uma ideia.
+Produtos aplicados: PRO-0001 (Natal Prático), vitrine em /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/, landing em /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/. PRO-0003 (Mitologia Grega), vitrine em /mitologia/grega/, landing brasileira em **/mitologia/grega/geral/pt-br/**. As outras edições estão no mesmo nível (ex.: /mitologia/grega/geral/ing/). PRO-0002 (Renda Extra de Fim de Ano) permanece apenas uma ideia.
 
 Para reduzir descoberta via buscadores, o Worker envia X-Robots-Tag: noindex, follow nas páginas HTML do mapa de categorias. Landings comerciais publicadas mantêm indexação independente. Isso NÃO torna o mapa privado: qualquer pessoa com seu endereço pode acessá-lo. Privacidade real requer autenticação separada e configuração adicional.
 
@@ -162,3 +162,12 @@ Os ícones de bandeiras dos menus usam arquivos leves em `flagcdn.com`, carregad
 ## Seletor compacto com siglas (outubro de 2026)
 
 Nos cards finais do Natal Prático e de Mitologia Grega, o menu mantém as bandeiras e apresenta somente os códigos visíveis: **PT-BR, EN-US, ES-LATAM, ES-ES, FR, IT, PT-PT e AR**. O nome completo permanece em atributos acessíveis para leitores de tela e ao passar o mouse. Não há mais o link **Explorar edição brasileira** embaixo dos seletores; a opção **PT-BR** dentro do próprio menu abre a landing brasileira publicada. Os demais idiomas continuam como projetos futuros até haver produto adaptado e checkout aprovado. Não colocar o seletor dentro das landing pages.
+
+
+## Padronização brasileira dos produtos (08/10/2026)
+
+**Natal Prático é exceção:** sua landing brasileira permanece em `/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/`, sem redirecionamento, mudança de checkout ou alteração de conversão.
+
+Para os demais infoprodutos com edição brasileira pronta, o formato é `/{caminho-do-produto}/pt-br/` no mesmo nível de `/ing/`, `/esp/`, `/it/`, etc. A primeira aplicação é **Mitologia Grega**: `/mitologia/grega/geral/pt-br/`.
+
+A página anterior `/mitologia/grega/geral/` responde com **HTTP 308** para a edição `/pt-br/` (incluindo parâmetros de campanha). Os arquivos originais de estilo e imagens continuam centralizados em `/mitologia/grega/geral/styles.css` e `/mitologia/grega/geral/assets/`; a nova landing aponta a eles por caminhos absolutos. O seletor PT-BR e o catálogo mestre usam o novo destino. As edições futuras continuam em seus próprios caminhos, sem mudanças.
