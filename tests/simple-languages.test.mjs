@@ -18,23 +18,35 @@ test("seletor mantém o idioma dentro do mesmo caminho do Natal Prático",async(
  assert.equal(info.count,6);
  assert.deepEqual(info.pages.map(p=>p.status),Array(6).fill("planejada"));
 });
-test("seletor existe em Renda Extra, Natal e landing original, mantendo o checkout",async()=>{
- const paths=[
-  "public/mental-financeiro/financeiro/renda-extra/index.html",
-  "public/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/index.html",
-  "public/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/index.html"
- ];
- for(const path of paths){
-   const html=await readFile(join(root,path),"utf8");
-   assert.match(html,/id="natal-idioma"/);
-   assert.match(html,/seletor-idiomas.css/);
-   assert.match(html,/natal-pratico\/ing\//);
-   assert.match(html,/natal-pratico\/it\//);
- }
- const landing=await readFile(join(root,paths[2]),"utf8");
+test("seletor existe somente dentro do card Natal e mantém landing sem seletor",async()=>{
+ const mainPath="public/mental-financeiro/financeiro/renda-extra/index.html";
+ const natalPath="public/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/index.html";
+ const salesPath="public/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/index.html";
+ const main=await readFile(join(root,mainPath),"utf8");
+ const natalPage=await readFile(join(root,natalPath),"utf8");
+ const landing=await readFile(join(root,salesPath),"utf8");
+ assert.doesNotMatch(main,/id="natal-idioma"|seletor-idiomas.css|class="lp-language"/);
+ assert.doesNotMatch(landing,/id="natal-idioma"|seletor-idiomas.css|class="lp-language"/);
+ assert.match(natalPage,/<article class="card natal-card">/);
+ assert.match(natalPage,/<div class="natal-card-language"/);
+ assert.match(natalPage,/id="natal-idioma"/);
+ assert.match(natalPage,/seletor-idiomas.css/);
+ assert.match(natalPage,/Espanhol \(Latinoamérica\)/);
+ assert.doesNotMatch(natalPage,/Español \(México\)|class="lp-language"/);
+ assert.match(natalPage,/natal-pratico\/ing\//);
+ assert.match(natalPage,/natal-pratico\/it\//);
+ assert.match(natalPage,/href="\/mental-financeiro\/financeiro\/renda-extra\/datas-comemorativas\/natal\/natal-pratico\/"/);
  assert.match(landing,/https:\/\/pay\.hotmart\.com\/G107859159B/);
  assert.match(landing,/fbq\('init'/);
  assert.match(landing,/hotmart__button-checkout/);
+});
+test("espanhol latino-americano tem descrição regional sem referências exclusivas ao México",async()=>{
+ const catEdition=natal.edicoes.find(e=>e.rotaSimples===orig+"esp/");
+ assert.match(catEdition.mercado,/América Latina/);
+ const {futurePage}=await import("../scripts/build-international.mjs");
+ const html=futurePage(natal,catEdition,catalog);
+ assert.match(html,/Latinoamérica/);
+ assert.doesNotMatch(html,/para México/);
 });
 test("URL da edição futura passa a ser o endereço curto quando lançada",()=>{
  assert.equal(commercialURL(catalog,{...natal.edicoes[1],status:"publicada"}),
