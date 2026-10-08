@@ -2,9 +2,11 @@
   "name": "aprendendo-com-infoprodutos-site",
   "private": true,
   "scripts": {
-    "deploy": "npm run test:international && npm run build:international && node scripts/fetch-pdf.mjs && wrangler deploy",
+    "deploy": "npm run test:international && npm run test:subdomains && npm run build:international && npm run build:subdomains && node scripts/fetch-pdf.mjs && wrangler deploy",
     "test:international": "node --test tests/international.test.mjs",
-    "build:international": "node scripts/build-international.mjs"
+    "build:international": "node scripts/build-international.mjs",
+    "test:subdomains": "node --test tests/subdomains.test.mjs",
+    "build:subdomains": "node scripts/build-subdomain-homes.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.45.0"

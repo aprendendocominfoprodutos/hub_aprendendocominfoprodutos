@@ -1,5 +1,31 @@
 # Landing pages internacionais — padrão definitivo de URLs
 
+## Subdomínios oficiais por país
+
+A operação internacional usa **subdomínios separados**, mas mantém **um só repositório GitHub**, o Worker Cloudflare `damp-base-4abd` e as rotas originais do Brasil. A navegação institucional continua em português.
+
+| Mercado | Subdomínio | Exemplo do Natal Prático |
+| --- | --- | --- |
+| Brasil | pt-br.aprendendocominfoprodutos.com.br | https://pt-br.aprendendocominfoprodutos.com.br/produtos/natal-pratico/ |
+| Estados Unidos | en-us.aprendendocominfoprodutos.com.br | https://en-us.aprendendocominfoprodutos.com.br/products/christmas-guide/ |
+| México | es-mx.aprendendocominfoprodutos.com.br | https://es-mx.aprendendocominfoprodutos.com.br/productos/guia-navidad/ |
+| Espanha | es-es.aprendendocominfoprodutos.com.br | https://es-es.aprendendocominfoprodutos.com.br/productos/guia-navidad/ |
+| França | fr-fr.aprendendocominfoprodutos.com.br | https://fr-fr.aprendendocominfoprodutos.com.br/produits/guide-noel/ |
+| Itália | it-it.aprendendocominfoprodutos.com.br | https://it-it.aprendendocominfoprodutos.com.br/prodotti/guida-natale/ |
+| Portugal | pt-pt.aprendendocominfoprodutos.com.br | https://pt-pt.aprendendocominfoprodutos.com.br/produtos/natal-pratico/ |
+
+- **Raiz de cada subdomínio:** vitrine regional dos infoprodutos existentes e planejados, no idioma do país, com `noindex` enquanto o mercado ainda não tiver conteúdo indexável.
+- **URLs comerciais:** o Worker intercepta a solicitação no subdomínio e resolve o arquivo localizado em `public/{idioma-pais}/...`, sem criar cópias da landing.
+- **Projeto futuro:** até a edição estar finalizada, cada endereço regional apresenta um aviso sem checkout e sem indexação.
+- **Edições prontas:** somente edições efetivamente publicadas recebem links canônicos e `hreflang` apontando ao subdomínio de destino.
+- **Brasil:** links do subdomínio `pt-br` encaminham ao **domínio principal www**, à landing brasileira original. Não alteramos o Pixel, a oferta ou a URL antiga da campanha.
+- **Domínio principal:** `www.aprendendocominfoprodutos.com.br` mantém todas as páginas e navegação existentes.
+
+Arquivos: `worker/index.mjs` roteia por hostname; `scripts/build-subdomain-homes.mjs` gera as vitrines regionais; `catalogo/edicoes-internacionais.json` centraliza as rotas por edição.
+
+**Cloudflare:** os sete domínios devem ser anexados como *Workers Custom Domains* ao Worker `damp-base-4abd`; a Cloudflare administra DNS e certificados TLS. Eles não são um novo projeto Pages e não exigem DNS CNAME manual. Não criar registros que conflitem com custom domains existentes.
+
+
 ## Regra geral
 
 A plataforma continua em português e organizada por hubs. **Apenas as páginas comerciais dos infoprodutos** usam rotas por país/idioma, com nomes localizados.

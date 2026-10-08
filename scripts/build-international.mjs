@@ -66,6 +66,16 @@ async function saveGenerated(target, html, dryRun) {
 }
 
 /** Só edições vendáveis podem entrar no manifesto público e no seletor de idiomas. */
+/** Endereço canônico de venda: edição local no subdomínio; Brasil na URL original. */
+export function commercialURL(catalog, edition) {
+  if (edition.codigo === "pt-BR") return catalog.dominioCanonico + edition.rota;
+  const label = edition.codigo.toLowerCase();
+  const prefix = "/" + label + "/";
+  ensure(edition.rota.startsWith(prefix), "rota incompatível com subdomínio: " + edition.rota);
+  const host = catalog.dominioCanonico.replace("https://www.", "https://" + label + ".");
+  return host + edition.rota.slice(label.length + 1);
+}
+
 export function publishedManifest(catalog) {
   return {
     versao: catalog.versao,
@@ -76,7 +86,7 @@ export function publishedManifest(catalog) {
         edicoes: p.edicoes.filter(e => e.status === "publicada")
           .map(e => ({
             codigo: e.codigo, mercado: e.mercado, moeda: e.moeda,
-            url: catalog.dominioCanonico + e.rota,
+            url: commercialURL(catalog, e),
             rotaPadronizada: catalog.dominioCanonico + (e.rotaPublica || e.rota)
           }))
       }))
@@ -90,14 +100,14 @@ function aliasPage(product, edition, catalog) {
   return '<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">' +
     '<meta name="viewport" content="width=device-width,initial-scale=1">' +
     '<meta name="robots" content="noindex,follow">' +
-    '<meta http-equiv="refresh" content="0;url=' + escapeHtml(edition.rota) + '">' +
+    '<meta http-equiv="refresh" content="0;url=' + escapeHtml(url) + '">' +
     '<link rel="canonical" href="' + escapeHtml(url) + '">' +
     '<title>' + escapeHtml(product.nome) + ' | Edição brasileira</title>' +
     '</head><body style="font:16px system-ui,sans-serif;background:#07131f;color:#f3ebdd;padding:12vh 8%;text-align:center">' +
     '<h1>' + escapeHtml(product.nome) + '</h1>' +
     '<p>Você está sendo direcionado à edição brasileira já publicada.</p>' +
-    '<a style="color:#e2bf69" href="' + escapeHtml(edition.rota) + '">Abrir edição brasileira</a>' +
-    '<script>location.replace(' + JSON.stringify(edition.rota).replace(/</g,"\\u003c") + ')</script>' +
+    '<a style="color:#e2bf69" href="' + escapeHtml(url) + '">Abrir edição brasileira</a>' +
+    '<script>location.replace(' + JSON.stringify(url).replace(/</g,"\\u003c") + ')</script>' +
     '</body></html>';
 }
 
@@ -137,21 +147,21 @@ export function futurePage(product, edition, catalog) {
     '<h1>' + escapeHtml(copy.heading) + '</h1>' +
     '<h2>' + escapeHtml(title) + '</h2>' +
     '<p>' + escapeHtml(copy.description) + '</p>' +
-    '<a class="button" href="/">' + escapeHtml(copy.back) + ' →</a>' +
+    '<a class="button" href="' + escapeHtml(catalog.dominioCanonico) + '">' + escapeHtml(copy.back) + ' →</a>' +
     '</section></main><footer>Aprendendo com Infoprodutos · ' + escapeHtml(copy.status) + '</footer></body></html>';
 }
 function publishedMetadata(product, edition, catalog) {
   const all = product.edicoes.filter(e => e.status === "publicada");
-  return ['<link rel="canonical" href="' + catalog.dominioCanonico + edition.rota + '">']
+  return ['<link rel="canonical" href="' + commercialURL(catalog, edition) + '">']
     .concat(all.map(e => '<link rel="alternate" hreflang="' + e.codigo +
-      '" href="' + catalog.dominioCanonico + e.rota + '">')).join("\n");
+      '" href="' + commercialURL(catalog, e) + '">')).join("\n");
 }
 function languageSelector(product, edition, catalog) {
   const all = product.edicoes.filter(e => e.status === "publicada");
   if (all.length < 2) return "";
   return '<nav aria-label="Idiomas disponíveis" style="max-width:1080px;margin:30px auto;padding:16px;text-align:center">' +
     all.map(e => '<a style="display:inline-block;padding:10px" lang="' + e.codigo +
-      '" hreflang="' + e.codigo + '" href="' + catalog.dominioCanonico + e.rota + '"' +
+      '" hreflang="' + e.codigo + '" href="' + commercialURL(catalog, e) + '"' +
       (e.codigo === edition.codigo ? ' aria-current="page"' : "") + '>' + e.codigo + '</a>').join("") +
     '</nav>';
 }

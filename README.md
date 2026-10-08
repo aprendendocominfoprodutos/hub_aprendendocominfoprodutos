@@ -54,3 +54,13 @@ O site institucional e a taxonomia permanecem em português. Somente os infoprod
 - **Procedimento completo:** [docs/internacionalizacao.md](docs/internacionalizacao.md).
 
 Nenhuma tradução comercial ou novo checkout foi publicado; Natal Prático e Mitologia Grega mantêm suas landing pages originais. As rotas futuras possuem páginas informativas de "Projeto futuro" no domínio.
+
+## Subdomínios regionais (Cloudflare Workers)
+
+As edições de Natal Prático e Mitologia Grega estão preparadas nos subdomínios `pt-br`, `en-us`, `es-mx`, `es-es`, `fr-fr`, `it-it` e `pt-pt` do domínio principal, usando o mesmo Worker e repositório. A rota no domínio principal `www` continua válida e independente.
+
+O arquivo `worker/index.mjs` direciona solicitações de cada hostname aos assets da sua região. `scripts/build-subdomain-homes.mjs` gera vitrines por mercado. Páginas planejadas continuam noindex e sem checkout.
+
+**Exemplo:** `https://en-us.aprendendocominfoprodutos.com.br/products/christmas-guide/` usa o mesmo conteúdo já preparado em `public/en-us/products/christmas-guide/` no deploy. Para publicar a landing final, edite a edição correspondente no catálogo e inclua seu HTML localizado. A landing brasileira antiga permanece intacta.
+
+Manual e todas as URLs em [docs/internacionalizacao.md](docs/internacionalizacao.md).
