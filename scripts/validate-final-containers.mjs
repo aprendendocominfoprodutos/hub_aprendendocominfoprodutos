@@ -29,11 +29,17 @@ export async function validateFinalContainers({root=ROOT}={}) {
       "menu de idiomas acessível ausente dentro do card: "+p.id);
     verify((card.match(/https:\/\/flagcdn\.com\/w40\/[a-z]{2}\.png/g)||[]).length >= 7,
       "bandeiras gráficas ausentes no card: "+p.id);
-    verify(card.includes('href="'+origin.rota+'"'),
-      "falta acesso direto à landing brasileira: "+p.id);
+    verify(!card.includes('class="natal-card-action"') && !card.includes("Explorar edição brasileira"),
+      "botão brasileiro redundante detectado fora do seletor: "+p.id);
     const allowed=p.edicoes.map(e=>e.rotaSimples||e.rota);
     const optionValues=[...card.matchAll(/<a class="language-option" href="([^"]*)"/g)].map(m=>m[1]);
     verify(unique(optionValues),"opção de idioma duplicada: "+p.id);
+    verify(optionValues.includes(origin.rota),"edição brasileira não está no seletor: "+p.id);
+    const codeSpans=[...card.matchAll(/<span class="language-code" aria-label="([^"]+)" title="([^"]+)">([^<]+)<\/span>/g)];
+    verify(codeSpans.length===optionValues.length,
+      "todas as opções devem mostrar siglas e preservar nomes acessíveis: "+p.id);
+    verify(codeSpans.every(([,name,title,abbr])=>name===title && /^[A-Z]{2}(?:-[A-Z]{2,5})?$/.test(abbr)),
+      "formato de siglas/nome acessível inválido: "+p.id);
     for(const route of allowed)verify(optionValues.includes(route),
       "idioma não cadastrado no card "+p.id+": "+route);
     verify(!landing.includes('class="natal-card-language"') && !landing.includes('class="lp-language"') && !landing.includes('class="language-menu"') &&

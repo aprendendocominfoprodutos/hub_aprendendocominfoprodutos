@@ -157,3 +157,8 @@ Foi adicionada a edição `ar-SA` como **árabe padrão moderno**, com a Arábia
 As páginas ainda são apenas **projetos futuros**, com aviso localizado em árabe, documento `lang="ar-SA" dir="rtl"`, sem botão de pagamento e com `noindex`. O checkout não foi configurado; outros países de língua árabe poderão ter edições próprias no futuro.
 
 Os ícones de bandeiras dos menus usam arquivos leves em `flagcdn.com`, carregados apenas quando necessário. O seletor permanece somente dentro do card final anterior à landing; as páginas comerciais não foram alteradas.
+
+
+## Seletor compacto com siglas (outubro de 2026)
+
+Nos cards finais do Natal Prático e de Mitologia Grega, o menu mantém as bandeiras e apresenta somente os códigos visíveis: **PT-BR, EN-US, ES-LATAM, ES-ES, FR, IT, PT-PT e AR**. O nome completo permanece em atributos acessíveis para leitores de tela e ao passar o mouse. Não há mais o link **Explorar edição brasileira** embaixo dos seletores; a opção **PT-BR** dentro do próprio menu abre a landing brasileira publicada. Os demais idiomas continuam como projetos futuros até haver produto adaptado e checkout aprovado. Não colocar o seletor dentro das landing pages.

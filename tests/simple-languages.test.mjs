@@ -36,7 +36,16 @@ test("seletor existe somente dentro do card Natal e mantém landing sem seletor"
  assert.match(natalPage,/https:\/\/flagcdn\.com\/w40\/br\.png/);
  assert.match(natalPage,/https:\/\/flagcdn\.com\/w40\/sa\.png/);
  assert.match(natalPage,/Árabe \(Arábia Saudita\)/);
+ for(const code of ["PT-BR","EN-US","ES-LATAM","ES-ES","FR","IT","PT-PT","AR"]){
+   assert.match(natalPage,new RegExp('class="language-code"[^>]*>'+code+'</span>'));
+ }
+ assert.doesNotMatch(natalPage,/class="natal-card-action"|Explorar edição brasileira →/);
+ assert.match(natalPage,/class="language-code" aria-label="Português \(Brasil\)"/);
  assert.match(natalPage,/seletor-idiomas.css/);
+ const greekPage=await readFile(join(root,"public/mitologia/grega/index.html"),"utf8");
+ assert.doesNotMatch(greekPage,/class="natal-card-action"|Explorar edição brasileira →/);
+ assert.match(greekPage,/class="language-code" aria-label="Português \(Brasil\)" title="Português \(Brasil\)">PT-BR</);
+ assert.match(greekPage,/class="language-code" aria-label="Árabe \(Arábia Saudita\)" title="Árabe \(Arábia Saudita\)">AR</);
  assert.match(natalPage,/Espanhol \(Latinoamérica\)/);
  assert.doesNotMatch(natalPage,/Español \(México\)|class="lp-language"/);
  assert.match(natalPage,/natal-pratico\/ing\//);
