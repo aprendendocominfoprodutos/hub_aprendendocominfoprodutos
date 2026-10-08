@@ -1,0 +1,55 @@
+/**
+ * Hospedagem por país sem replicar o conteúdo ou modificar o portal brasileiro.
+ * Os arquivos físicos continuam em public/<idioma-pais>/... e são servidos
+ * nos subdomínios com caminhos legíveis no idioma comercial.
+ */
+const DOMAIN = "aprendendocominfoprodutos.com.br";
+const LOCALES = Object.freeze({
+  "en-us": "products",
+  "es-mx": "productos",
+  "es-es": "productos",
+  "fr-fr": "produits",
+  "it-it": "prodotti",
+  "pt-pt": "produtos",
+  "pt-br": "produtos"
+});
+const RESOURCE_PREFIXES = ["/assets/", "/src/", "/favicon"];
+
+export function localizedRequestPath(hostname, pathname) {
+  const host = hostname.toLowerCase();
+  const suffix = "." + DOMAIN;
+  if (!host.endsWith(suffix)) return { route: "main", path: pathname };
+  const locale = host.slice(0, -suffix.length);
+  if (!Object.hasOwn(LOCALES, locale)) return { route: "main", path: pathname };
+  // Não permitir que um mercado acesse conteúdo de outro pelo mesmo subdomínio.
+  const validSection = "/" + LOCALES[locale];
+  if (pathname === "/") return { route: "locale", path: "/" + locale + "/" };
+  if (pathname === validSection) return { route: "redirect", path: validSection + "/" };
+  if (pathname.startsWith(validSection + "/")) return { route: "locale", path: "/" + locale + pathname };
+  // Atalho de compatibilidade para os URLs antigos /en-us/products/... no próprio subdomínio.
+  if (pathname.startsWith("/" + locale + validSection + "/")) return { route: "locale", path: pathname };
+  if (RESOURCE_PREFIXES.some(prefix => pathname.startsWith(prefix))) return { route: "asset", path: pathname };
+  return { route: "not-found", path: pathname };
+}
+
+export default {
+  async fetch(request, env) {
+    const url = new URL(request.url);
+    const matched = localizedRequestPath(url.hostname, url.pathname);
+    if (matched.route === "not-found") {
+      return new Response("Not found", {
+        status: 404, headers: { "content-type": "text/plain; charset=utf-8" }
+      });
+    }
+    if (matched.route === "redirect") {
+      url.pathname = matched.path;
+      return Response.redirect(url.toString(), 308);
+    }
+    if (matched.route === "locale") {
+      url.pathname = matched.path;
+      return env.ASSETS.fetch(new Request(url.toString(), request));
+    }
+    // www e Workers.dev mantêm o mesmo comportamento do site antigo.
+    return env.ASSETS.fetch(request);
+  }
+};
