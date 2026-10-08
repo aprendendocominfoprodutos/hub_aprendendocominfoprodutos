@@ -68,3 +68,8 @@ Manual e todas as URLs em [docs/internacionalizacao.md](docs/internacionalizacao
 ### Seletor de idioma no último nível do catálogo
 
 O seletor do Natal Prático aparece apenas **dentro do card de produto** em `/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/`. A landing de vendas não contém seletor; a rota curta `/natal-pratico/esp/` aparece como **Espanhol (Latinoamérica)**. As páginas internacionais permanecem como projetos futuros até haver e-book e oferta aprovados.
+
+
+## Catálogo interno × landing comercial
+
+O catálogo é para administração; clientes chegam direto às landing pages. Cada infoproduto tem vitrineFinal no cadastro e seletor de idiomas **apenas dentro do card da categoria final**. A validação npm run verify:final-containers é obrigatória. Páginas internas recebem noindex, mas não são protegidas por login. Regra detalhada em docs/internacionalizacao.md.
