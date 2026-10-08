@@ -100,7 +100,7 @@ Renda Extra de Fim de Ano permanece produto em ideia (PRO-0002) e não recebeu p
 
 ## Seletor leve dentro do subnicho Renda Extra
 
-Renda Extra mantém apenas Datas Comemorativas (Sazonais) e Produtos Digitais. O seletor compacto aparece em Renda Extra, Natal e na landing brasileira Natal Prático. Todas as rotas abaixo usam o mesmo domínio principal.
+Renda Extra mantém apenas Datas Comemorativas (Sazonais) e Produtos Digitais. O seletor compacto aparece **exclusivamente dentro do card E-book Natal Prático da página Natal**, que é o último nível do catálogo antes da landing. Não há seletor separado na página geral de Renda Extra nem na landing de vendas. Todas as rotas abaixo usam o mesmo domínio principal.
 
 | Edição | Rota |
 
@@ -123,3 +123,9 @@ Renda Extra mantém apenas Datas Comemorativas (Sazonais) e Produtos Digitais. O
 O script scripts/build-simple-languages.mjs gera páginas de projeto futuro (noindex, sem preço e sem checkout), que podem ser substituídas por landings finalizadas sem trocar o endereço. Mantemos HTML, Pixel e checkout brasileiros intactos.
 
 Os subdomínios internacionais anteriores continuam configurados por compatibilidade, mas não são mostrados no novo seletor de idioma. Somente uma solicitação explícita de desativação removerá esses domínios.
+
+## Ajuste de interface (08/10/2026)
+
+Na página `/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/`, o card do Natal Prático contém o seletor de idioma e o link para a edição brasileira. O idioma `esp/` é exibido ao visitante como **Espanhol (Latinoamérica)**, não como exclusivo do México. O identificador técnico histórico `es-MX` permanece por compatibilidade com rotas antigas; a moeda e o checkout do mercado latino-americano devem ser definidos no lançamento.
+
+A landing original do Natal Prático não apresenta seletor, e o checkout da Hotmart e o Meta Pixel permanecem intocados.

@@ -18,7 +18,7 @@ const SECTIONS = {
 };
 const DICTIONARY = {
   "en-US": { status: "Future project", heading: "Coming soon", description: "This international edition is planned, but is not available yet.", back: "Explore the main website", country: "United States" },
-  "es-MX": { status: "Proyecto futuro", heading: "Próximamente", description: "Esta edición para México está planificada, pero todavía no está disponible.", back: "Explorar el sitio principal", country: "México" },
+  "es-MX": { status: "Proyecto futuro", heading: "Próximamente", description: "Esta edición en español para Latinoamérica está planificada, pero todavía no está disponible.", back: "Explorar el sitio principal", country: "Latinoamérica" },
   "es-ES": { status: "Proyecto futuro", heading: "Próximamente", description: "Esta edición para España está prevista, pero todavía no está disponible.", back: "Explorar el sitio principal", country: "España" },
   "fr-FR": { status: "Projet à venir", heading: "Bientôt disponible", description: "Cette édition pour la France est prévue, mais elle n'est pas encore disponible.", back: "Explorer le site principal", country: "France" },
   "it-IT": { status: "Progetto futuro", heading: "Prossimamente", description: "Questa edizione per l'Italia è in programma, ma non è ancora disponibile.", back: "Esplora il sito principale", country: "Italia" },

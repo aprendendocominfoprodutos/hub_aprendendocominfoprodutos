@@ -64,3 +64,7 @@ O arquivo `worker/index.mjs` direciona solicitações de cada hostname aos asset
 **Exemplo:** `https://en-us.aprendendocominfoprodutos.com.br/products/christmas-guide/` usa o mesmo conteúdo já preparado em `public/en-us/products/christmas-guide/` no deploy. Para publicar a landing final, edite a edição correspondente no catálogo e inclua seu HTML localizado. A landing brasileira antiga permanece intacta.
 
 Manual e todas as URLs em [docs/internacionalizacao.md](docs/internacionalizacao.md).
+
+### Seletor de idioma no último nível do catálogo
+
+O seletor do Natal Prático aparece apenas **dentro do card de produto** em `/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/`. A landing de vendas não contém seletor; a rota curta `/natal-pratico/esp/` aparece como **Espanhol (Latinoamérica)**. As páginas internacionais permanecem como projetos futuros até haver e-book e oferta aprovados.
