@@ -129,3 +129,20 @@ Os subdomínios internacionais anteriores continuam configurados por compatibili
 Na página `/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/`, o card do Natal Prático contém o seletor de idioma e o link para a edição brasileira. O idioma `esp/` é exibido ao visitante como **Espanhol (Latinoamérica)**, não como exclusivo do México. O identificador técnico histórico `es-MX` permanece por compatibilidade com rotas antigas; a moeda e o checkout do mercado latino-americano devem ser definidos no lançamento.
 
 A landing original do Natal Prático não apresenta seletor, e o checkout da Hotmart e o Meta Pixel permanecem intocados.
+
+
+## Regra global permanente: catálogo interno e landing pública
+
+O ecossistema (hubs, subnichos, categorias e caminhos /01/02/...) é um mapa gerencial do proprietário, não uma jornada de navegação do comprador. O cliente acessa diretamente a landing page do infoproduto pelo anúncio ou link de divulgação.
+
+Todo produto existente deve ter: ID no catálogo de edições; campo vitrineFinal apontando à categoria imediatamente anterior à landing; um card nessa categoria com data-product-id correspondente e seletor de idiomas dentro do próprio card; um link direto para a landing brasileira. Não colocar o seletor na landing nem em categorias anteriores.
+
+As edições internacionais devem ter rotaSimples dentro da rota de sua landing original (ex.: /mitologia/grega/geral/ing/). Enquanto estiverem planejadas, essas rotas exibem aviso 'projeto futuro', sem botão de compra, sem checkout e com noindex. Ao lançar a edição, a mesma URL passa a servir sua landing localizada mediante conteúdo e checkout verificados.
+
+O comando npm run verify:final-containers bloqueia o deploy se algum produto existente não tiver a vitrine final com idiomas e link à landing brasileira. npm run test:internal-catalog verifica separação de indexação.
+
+Produtos aplicados: PRO-0001 (Natal Prático), vitrine em /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/, landing em /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/. PRO-0003 (Mitologia Grega), vitrine em /mitologia/grega/, landing em /mitologia/grega/geral/. PRO-0002 (Renda Extra de Fim de Ano) permanece apenas uma ideia.
+
+Para reduzir descoberta via buscadores, o Worker envia X-Robots-Tag: noindex, follow nas páginas HTML do mapa de categorias. Landings comerciais publicadas mantêm indexação independente. Isso NÃO torna o mapa privado: qualquer pessoa com seu endereço pode acessá-lo. Privacidade real requer autenticação separada e configuração adicional.
+
+Os backlinks das duas landings existentes para o mapa foram removidos, preservando anúncios, pixels, checkout e conteúdo comercial.

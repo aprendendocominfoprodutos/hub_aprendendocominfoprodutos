@@ -1,7 +1,7 @@
 {
   "versao": 2,
   "dominioCanonico": "https://www.aprendendocominfoprodutos.com.br",
-  "politica": "Os hubs e subnichos permanecem no site principal em português. Natal Prático tem seletor de idioma em Renda Extra com URLs curtas no mesmo domínio (/natal-pratico/ing/, /it/ etc.). Edições futuras exibem aviso noindex até o produto ficar pronto; URLs brasileiras/checkout originais preservados.",
+  "politica": "Ecossistema é mapa interno de gestão: hubs e categorias não são páginas comerciais. Clientes chegam diretamente às landing pages. Todo produto existente tem seletor de idiomas somente dentro de seu card na vitrine final imediatamente anterior à landing. Rotas por idioma do próprio produto mostram projeto futuro até lançamento. Não usar seletor dentro de landing nem em categorias anteriores.",
   "produtos": [
     {
       "id": "PRO-0001",
@@ -114,7 +114,9 @@
           "nomeLocalizado": "Guia de Planeamento de Natal",
           "rotaSimples": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/pt/"
         }
-      ]
+      ],
+      "vitrineFinal": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/",
+      "operacao": "catalogo-interno"
     },
     {
       "id": "PRO-0002",
@@ -131,7 +133,9 @@
       ],
       "temasRelacionados": [],
       "edicoes": [],
-      "observacao": "Apenas ideia de produto; nenhuma landing page ou edição publicada."
+      "observacao": "Apenas ideia de produto; nenhuma landing page ou edição publicada.",
+      "operacao": "ideia",
+      "vitrineFinal": null
     },
     {
       "id": "PRO-0003",
@@ -171,7 +175,8 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Greek Mythology Guide"
+          "nomeLocalizado": "Greek Mythology Guide",
+          "rotaSimples": "/mitologia/grega/geral/ing/"
         },
         {
           "codigo": "es-MX",
@@ -183,7 +188,8 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Guía de Mitología Griega"
+          "nomeLocalizado": "Guía de Mitología Griega",
+          "rotaSimples": "/mitologia/grega/geral/esp/"
         },
         {
           "codigo": "es-ES",
@@ -195,7 +201,8 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Guía de Mitología Griega"
+          "nomeLocalizado": "Guía de Mitología Griega",
+          "rotaSimples": "/mitologia/grega/geral/esp-es/"
         },
         {
           "codigo": "fr-FR",
@@ -207,7 +214,8 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Guide de la mythologie grecque"
+          "nomeLocalizado": "Guide de la mythologie grecque",
+          "rotaSimples": "/mitologia/grega/geral/fr/"
         },
         {
           "codigo": "it-IT",
@@ -219,7 +227,8 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Guida alla mitologia greca"
+          "nomeLocalizado": "Guida alla mitologia greca",
+          "rotaSimples": "/mitologia/grega/geral/it/"
         },
         {
           "codigo": "pt-PT",
@@ -231,9 +240,12 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Guia de Mitologia Grega"
+          "nomeLocalizado": "Guia de Mitologia Grega",
+          "rotaSimples": "/mitologia/grega/geral/pt/"
         }
-      ]
+      ],
+      "vitrineFinal": "/mitologia/grega/",
+      "operacao": "catalogo-interno"
     }
   ]
 }

@@ -1,3 +1,19 @@
+import catalogo from "../catalogo/edicoes-internacionais.json" with { type: "json" };
+
+/** Apenas as landings publicadas devem competir nas buscas. */
+const LANDINGS_PUBLICADAS = new Set(catalogo.produtos.flatMap(p =>
+  p.edicoes.filter(e => e.status === "publicada")
+    .map(e => e.rotaSimples || e.rota)
+));
+
+export function applyInternalRobots(response, pathname) {
+  if (LANDINGS_PUBLICADAS.has(pathname)) return response;
+  if (!response.ok || !/text\/html/i.test(response.headers.get("content-type") || "")) return response;
+  const headers = new Headers(response.headers);
+  headers.set("X-Robots-Tag", "noindex, follow");
+  return new Response(response.body, {status: response.status, statusText: response.statusText, headers});
+}
+
 /**
  * Hospedagem por país sem replicar o conteúdo ou modificar o portal brasileiro.
  * Os arquivos físicos continuam em public/<idioma-pais>/... e são servidos
@@ -50,6 +66,7 @@ export default {
       return env.ASSETS.fetch(new Request(url.toString(), request));
     }
     // www e Workers.dev mantêm o mesmo comportamento do site antigo.
-    return env.ASSETS.fetch(request);
+    const asset = await env.ASSETS.fetch(request);
+    return applyInternalRobots(asset, url.pathname);
   }
 };
