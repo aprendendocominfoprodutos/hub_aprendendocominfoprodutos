@@ -78,3 +78,8 @@ O catálogo é para administração; clientes chegam direto às landing pages. C
 ### Menu com bandeiras e árabe
 
 Os cards finais dos produtos cadastrados exibem opções com bandeiras gráficas e uma edição planejada de árabe padrão (`ar-SA`, `/ar/`). O espanhol latino-americano usa globo por representar mais de um país. A página de projeto futuro em árabe usa direção RTL. Mais detalhes em [docs/internacionalizacao.md](docs/internacionalizacao.md).
+
+
+### Landing brasileira por idioma (exceto Natal Prático)
+
+A Mitologia Grega agora usa `/mitologia/grega/geral/pt-br/` como URL brasileira canônica, ao lado de `/mitologia/grega/geral/ing/` e dos demais idiomas. A antiga `/mitologia/grega/geral/` redireciona (308) à nova. O Natal Prático continua no endereço brasileiro atual, sem alteração. Mais detalhes em `docs/internacionalizacao.md`.
