@@ -39,3 +39,16 @@ Ele permanece em **Mental & Financeiro → Financeiro → Renda Extra → Datas 
 Worker `damp-base-4abd` vinculado ao GitHub via Workers Builds, branch `main`; comando `npm run deploy` (que busca os materiais PDF necessários antes do deploy).
 
 Antes de publicar alterações estruturais, validar links internos, responsividade e checkout das landing pages existentes.
+
+
+## Infoprodutos em outros idiomas
+
+O site institucional e a taxonomia permanecem em português. Somente os infoprodutos e suas landing pages têm edições por mercado, controladas em `catalogo/edicoes-internacionais.json`.
+
+- **Gerador:** `scripts/build-international.mjs` (executado pelo deploy).
+- **Manifesto público:** `/catalogo-edicoes.json` — apenas edições realmente publicadas.
+- **Rotas reservadas:** `/produtos/{produto}/{idioma-pais}/` (não são páginas públicas enquanto estiverem como `planejada`).
+- **Testes:** `npm run test:international`.
+- **Procedimento completo:** [docs/internacionalizacao.md](docs/internacionalizacao.md).
+
+Nenhuma tradução ou nova landing foi publicada nesta etapa; Natal Prático e Mitologia Grega mantêm seus endereços originais.
