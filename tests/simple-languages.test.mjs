@@ -15,8 +15,9 @@ test("seletor mantém o idioma dentro do mesmo caminho do Natal Prático",async(
  assert.deepEqual(natal.edicoes.filter(e=>e.rotaSimples).map(e=>e.rotaSimples),
   expected.map(s=>orig+s+"/"));
  const info=await buildSimpleLanguages({root,dryRun:true});
- assert.equal(info.count,6);
- assert.deepEqual(info.pages.map(p=>p.status),Array(6).fill("planejada"));
+ assert.equal(info.count,12);
+ assert.deepEqual(info.pages.map(p=>p.status),Array(12).fill("planejada"));
+ assert.equal(info.pages.filter(e=>e.route.startsWith("/mitologia/grega/geral/")).length,6);
 });
 test("seletor existe somente dentro do card Natal e mantém landing sem seletor",async()=>{
  const mainPath="public/mental-financeiro/financeiro/renda-extra/index.html";
