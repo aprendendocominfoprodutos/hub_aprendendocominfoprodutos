@@ -103,6 +103,23 @@
     },
     {
       "id": "PRO-0002",
+      "slug": "renda-extra-fim-de-ano",
+      "nome": "Renda Extra de Fim de Ano",
+      "tipo": "a definir",
+      "status": "ideia",
+      "hubPrincipal": "Mental & Financeiro",
+      "classificacaoPrincipal": [
+        "Financeiro",
+        "Renda Extra",
+        "Oportunidades Sazonais",
+        "Fim de Ano"
+      ],
+      "temasRelacionados": [],
+      "edicoes": [],
+      "observacao": "Apenas ideia de produto; nenhuma landing page ou edição publicada."
+    },
+    {
+      "id": "PRO-0003",
       "slug": "mitologia-grega",
       "nome": "Mitologia Grega — Deuses, Heróis e Significados Ocultos",
       "tipo": "ebook",
@@ -194,23 +211,6 @@
           "checkoutUrl": null
         }
       ]
-    },
-    {
-      "id": "PRO-0003",
-      "slug": "renda-extra-fim-de-ano",
-      "nome": "Renda Extra de Fim de Ano",
-      "tipo": "a definir",
-      "status": "ideia",
-      "hubPrincipal": "Mental & Financeiro",
-      "classificacaoPrincipal": [
-        "Financeiro",
-        "Renda Extra",
-        "Oportunidades Sazonais",
-        "Fim de Ano"
-      ],
-      "temasRelacionados": [],
-      "edicoes": [],
-      "observacao": "Apenas ideia de produto; nenhuma landing page ou edição publicada."
     }
   ]
 }
