@@ -50,7 +50,7 @@
         },
         {
           "codigo": "es-MX",
-          "mercado": "México",
+          "mercado": "América Latina (espanhol)",
           "moeda": "MXN",
           "status": "planejada",
           "rota": "/es-mx/productos/guia-navidad/",
@@ -59,7 +59,8 @@
           "checkoutVerificado": false,
           "checkoutUrl": null,
           "nomeLocalizado": "Guía para planear la Navidad",
-          "rotaSimples": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/esp/"
+          "rotaSimples": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/esp/",
+          "observacao": "Edição regional de espanhol latino-americano. Código es-MX e a rota /esp/ preservados por compatibilidade; idioma, moeda e checkout deverão ser revisados antes do lançamento."
         },
         {
           "codigo": "es-ES",
