@@ -1,26 +1,41 @@
-# Aprendendo com Infoprodutos
+# Aprendendo com Infoprodutos — Portal oficial
 
-Fonte oficial do site publicado no Cloudflare.
+Código-fonte do site servido pelo Cloudflare Worker `damp-base-4abd`, com deploy automático a partir da branch `main`.
 
-## Estrutura principal
+## Taxonomia e rotas
 
-- `/mitologia/`
-  - `/mitologia/grega/geral/`
-  - `/mitologia/grega/deuses/`
-  - `/mitologia/grega/herois/`
-  - `/mitologia/grega/batalhas/`
-  - `/mitologia/nordica/`
-  - `/mitologia/egipcia/`
-  - `/mitologia/asteca/`
-- `/fitness-saude/alimentacao-saude/`
-- `/fitness-saude/fitness/`
-- `/mental-financeiro/mental/`
-- `/mental-financeiro/financeiro/`
-  - `/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/`
+A classificação interna continua **em português**. Os idiomas/países são definidos **por infoproduto e landing page**, sem duplicar a árvore de hubs.
 
-A landing do Natal mantém identidade visual própria.
+- **Cultura & Entretenimento** `/cultura-entretenimento/`
+  1. **Mitologia** `/mitologia/`: Grega, Nórdica, Egípcia e Asteca — URLs históricas preservadas.
+  2. **Geografia & Bandeiras** `/cultura-entretenimento/geografia-bandeiras/`: Geografia e Bandeiras, cada um com sua rota.
+  3. **História & Curiosidades**: núcleo reservado; sem página de produto vazia.
+- **Fitness & Saúde** `/fitness-saude/`
+  1. **Alimentação & Saúde**: links existentes de Alimentação e Saúde.
+  2. **Fitness & Treinos**: links existentes de Fitness e Treino.
+  3. **Beleza & Autocuidado**: núcleo reservado.
+- **Mental & Financeiro** `/mental-financeiro/`
+  1. **Mental**
+  2. **Financeiro**
+  3. **Carreira & Produtividade**: núcleo reservado.
 
-O PDF usado nos mockups é obtido automaticamente durante o deploy.
+### Produto existente
 
+**Natal Prático**: `/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/`.
 
-Cloudflare conectado ao branch main.
+Ele permanece em **Mental & Financeiro → Financeiro → Renda Extra → Datas Comemorativas/Sazonais → Natal**, com associação temática complementar a Planejamento e Economia Doméstica. Não cadastrá-lo como produto do Fitness & Saúde. **Não mover, recriar ou modificar checkout, Pixel, CSS de conversão ou URL de venda sem decisão expressa.**
+
+**Renda Extra de Fim de Ano** é apenas ideia para novo infoproduto, sem landing page publicada.
+
+## Implementação
+
+- Páginas principais utilizam `/src/portal.css` e `/src/arquitetura.css`.
+- A reorganização preserva todas as URLs antigas: o novo hub de Cultura aponta para a rota original de Mitologia.
+- As categorias futuras são identificadas como planejadas, sem CTA de compra nem produtos fictícios.
+- A landing page de Natal Prático continua independente das páginas de catálogo.
+
+## Deploy
+
+Worker `damp-base-4abd` vinculado ao GitHub via Workers Builds, branch `main`; comando `npm run deploy` (que busca os materiais PDF necessários antes do deploy).
+
+Antes de publicar alterações estruturais, validar links internos, responsividade e checkout das landing pages existentes.
