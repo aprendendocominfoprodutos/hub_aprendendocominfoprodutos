@@ -1,0 +1,74 @@
+
+/* Arquitetura v4 — aplica-se apenas às páginas reorganizadas. Mantém o design legado e landing pages intactos. */
+body.eco-site{background:radial-gradient(ellipse 50% 30% at 70% 0%,rgba(202,160,69,.10),transparent),linear-gradient(180deg,#071621 0%,#081a27 54%,#050d17 100%);color:#f6f0e6}
+.eco-site .eco-header{position:sticky;top:0;z-index:80;max-width:none;width:100%;padding:12px max(20px,calc((100vw - 1180px)/2 + 24px));background:rgba(5,17,26,.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(217,175,90,.22)}
+.eco-site .eco-header .brand{height:66px;width:clamp(190px,25vw,305px);flex:0 0 auto}
+.eco-site .eco-header .nav{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:18px;font-size:12px}
+.eco-site .eco-header .nav a{display:inline-flex;align-items:center;min-height:36px;color:#d9dedb}
+.eco-site .eco-header .nav a:hover,.eco-site .eco-header .nav a[aria-current=page]{color:#edc778}
+.eco-site .eco-wrap{max-width:1180px;margin:0 auto;padding-left:28px;padding-right:28px}
+.eco-site .eco-lead{padding-top:76px;padding-bottom:50px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(275px,.65fr);gap:54px;align-items:center}
+.eco-site .eco-kicker{font:700 11px/1.4 'DM Sans',sans-serif;color:#deb96b;text-transform:uppercase;letter-spacing:.18em;margin:0 0 16px}
+.eco-site .eco-lead h1{font-size:clamp(40px,5.6vw,72px);line-height:1.05;letter-spacing:-.035em;margin:0 0 23px}
+.eco-site .eco-lead h1 em{color:#e8c77e;font-weight:500}
+.eco-site .eco-lead p,.eco-site .eco-hubintro p{color:#bdc8c6;line-height:1.8;font-size:15px;max-width:650px}
+.eco-site .eco-intro-panel{border:1px solid rgba(218,175,86,.3);padding:30px;border-radius:20px;background:linear-gradient(150deg,#102b3b,#0b1d2a);box-shadow:0 22px 50px rgba(0,0,0,.18)}
+.eco-site .eco-intro-panel strong{display:block;font:600 24px/1.2 'Playfair Display',serif;color:#f0d490;margin-bottom:18px}
+.eco-site .eco-intro-panel .eco-stat{padding:12px 0;border-top:1px solid rgba(218,175,86,.15);font-size:13px;color:#d7ddd7;display:flex;justify-content:space-between;gap:12px}
+.eco-site .eco-intro-panel .eco-stat b{color:#e4bb68}
+.eco-site .eco-section{padding-top:34px;padding-bottom:65px}
+.eco-site .eco-sectionhead{max-width:720px;margin-bottom:26px}
+.eco-site .eco-sectionhead h2{font-size:clamp(29px,4vw,43px);margin:0 0 12px}
+.eco-site .eco-sectionhead p{color:#aebfbc;font-size:14px;line-height:1.7}
+.eco-site .eco-hubgrid,.eco-site .eco-cardgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.eco-site .eco-hubcard{min-width:0;background:#0c2330;border-radius:19px;overflow:hidden;border:1px solid rgba(217,175,90,.22);display:flex;flex-direction:column;box-shadow:0 18px 50px rgba(0,0,0,.14)}
+.eco-site .eco-hubcard.eco-green{border-color:rgba(137,189,127,.3)}
+.eco-site .eco-hubcard.eco-blue{border-color:rgba(100,158,178,.32)}
+.eco-site .eco-hubscene{height:185px;position:relative;overflow:hidden}
+.eco-site .eco-hubscene img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.eco-site .eco-hubcard:hover .eco-hubscene img{transform:scale(1.04)}
+.eco-site .eco-hubscene:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(4,12,18,.83) 100%)}
+.eco-site .eco-hubcontent{padding:25px;display:flex;flex-direction:column;flex:1}
+.eco-site .eco-hubcontent .eco-index,.eco-site .eco-tiny{font-size:10px;text-transform:uppercase;letter-spacing:.14em;color:#d8b36a;font-weight:700}
+.eco-site .eco-hubcontent h3{font-size:29px;line-height:1.13;margin:10px 0 8px;color:#f2e3bf}
+.eco-site .eco-hubcontent p{font-size:12px;line-height:1.7;color:#b6c4be;margin:0 0 20px}
+.eco-site .eco-nuclei{display:grid;gap:9px;margin-top:auto}
+.eco-site .eco-nucleus{min-height:55px;padding:12px 14px;border:1px solid rgba(228,200,137,.17);border-radius:10px;background:rgba(255,255,255,.028);display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:12px;font-weight:600;line-height:1.4}
+.eco-site a.eco-nucleus:hover{border-color:rgba(229,190,106,.6);background:rgba(235,190,110,.06)}
+.eco-site .eco-nucleus.eco-planned{opacity:.7;color:#c0c9c7;cursor:default}
+.eco-site .eco-nucleus small{font-size:9px;color:#d2b370;white-space:nowrap;font-weight:500}
+.eco-site .eco-openhub{display:block;margin-top:22px;padding-top:17px;border-top:1px solid rgba(223,185,102,.2);font-size:12px;font-weight:700;color:#f0c678}
+.eco-site .eco-openhub:hover{text-decoration:underline}
+.eco-site .eco-product{display:grid;grid-template-columns:1fr auto;align-items:center;gap:30px;border-radius:20px;background:linear-gradient(110deg,#10343b,#0d252f 60%,#193d35);padding:33px;border:1px solid rgba(202,179,111,.3)}
+.eco-site .eco-product h2{font-size:clamp(26px,3vw,38px);margin:8px 0}
+.eco-site .eco-product p{font-size:13px;line-height:1.75;color:#c3d0c8;max-width:650px;margin:0}
+.eco-site .eco-button{display:inline-flex;justify-content:center;align-items:center;text-align:center;min-height:44px;padding:13px 19px;border-radius:99px;background:#dec078;color:#14212a;font-size:12px;font-weight:800;white-space:nowrap;transition:filter .2s}
+.eco-site .eco-button:hover{filter:brightness(1.12)}
+.eco-site .eco-footer{max-width:none;border-top:1px solid rgba(217,175,90,.2);padding:30px max(28px,calc((100vw - 1180px)/2 + 28px));display:flex;align-items:center;justify-content:space-between;gap:20px;color:#9baeb0}
+.eco-site .eco-footer a{color:#dcc07b}
+.eco-site .eco-breadcrumb{padding-top:28px;font-size:11px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;color:#aebfc0}
+.eco-site .eco-breadcrumb a:hover{color:#ecd48b}
+.eco-site .eco-hubintro{padding-top:47px;padding-bottom:24px}
+.eco-site .eco-hubintro h1{font-size:clamp(40px,5.3vw,66px);line-height:1.04;margin:10px 0 20px}
+.eco-site .eco-cardgrid{padding-top:18px;padding-bottom:44px}
+.eco-site .eco-topic{border:1px solid rgba(215,173,92,.28);border-radius:17px;background:linear-gradient(150deg,rgba(19,49,63,.92),rgba(8,27,37,.94));padding:26px;min-height:270px;display:flex;flex-direction:column}
+.eco-site .eco-topic.eco-topic-green{border-color:rgba(119,178,121,.35);background:linear-gradient(155deg,#123a33,#0b2428)}
+.eco-site .eco-topic.eco-topic-blue{border-color:rgba(101,162,181,.36);background:linear-gradient(155deg,#123542,#0b222d)}
+.eco-site .eco-topic h2{font-size:29px;line-height:1.15;margin:12px 0}
+.eco-site .eco-topic p{font-size:13px;color:#bfcccb;line-height:1.7;margin:0 0 22px}
+.eco-site .eco-topic .eco-subnav{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.eco-site .eco-subnav a{display:inline-block;border:1px solid rgba(228,194,130,.3);color:#ead6ab;border-radius:99px;padding:9px 12px;font-size:11px}
+.eco-site .eco-subnav a:hover{background:rgba(217,175,90,.12)}
+.eco-site .eco-topic.eco-placeholder{opacity:.72;background:rgba(13,31,43,.65);border-style:dashed}
+.eco-site .eco-topic.eco-placeholder p{margin-bottom:10px}
+.eco-site .eco-feature{margin-top:12px;margin-bottom:65px;padding:28px 30px;border-radius:17px;background:linear-gradient(100deg,rgba(17,51,56,.85),rgba(16,35,47,.96));border:1px solid rgba(218,172,81,.25);display:flex;justify-content:space-between;align-items:center;gap:20px}
+.eco-site .eco-feature h2{font-size:28px;margin:8px 0}
+.eco-site .eco-feature p{font-size:13px;color:#bcccca;line-height:1.7;max-width:670px}
+.eco-site .eco-feature .eco-button{flex:0 0 auto}
+.eco-site .eco-bullets{display:grid;grid-template-columns:1fr 1fr;gap:13px;padding-bottom:50px}
+.eco-site .eco-bullet{border:1px solid rgba(213,175,93,.23);background:rgba(255,255,255,.025);border-radius:14px;padding:25px}
+.eco-site .eco-bullet h3{font-size:25px;color:#eed69d;margin:0 0 10px}
+.eco-site .eco-bullet p{font-size:13px;color:#bac8c7;line-height:1.75;margin:0}
+.eco-site .eco-note{font-size:12px;color:#98aba9;line-height:1.6;margin:0 0 28px}
+@media(max-width:950px){.eco-site .eco-hubgrid,.eco-site .eco-cardgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.eco-site .eco-lead{grid-template-columns:1fr}.eco-site .eco-header{gap:10px}.eco-site .eco-header .nav{gap:10px}}
+@media(max-width:700px){.eco-site .eco-wrap{padding-left:18px;padding-right:18px}.eco-site .eco-header{padding:8px 14px 14px;flex-direction:column;align-items:flex-start;gap:2px}.eco-site .eco-header .brand{height:54px;width:215px}.eco-site .eco-header .nav{display:flex;width:100%;justify-content:flex-start;flex-wrap:nowrap;gap:16px;overflow-x:auto;padding-bottom:4px;white-space:nowrap;scrollbar-width:thin}.eco-site .eco-header .nav a{display:inline-flex!important;font-size:11px;min-height:32px}.eco-site .eco-lead{padding-top:45px;padding-bottom:26px;gap:22px}.eco-site .eco-intro-panel{padding:22px}.eco-site .eco-section{padding-top:20px;padding-bottom:48px}.eco-site .eco-hubgrid,.eco-site .eco-cardgrid{grid-template-columns:1fr;gap:14px}.eco-site .eco-hubscene{height:165px}.eco-site .eco-hubcontent{padding:21px}.eco-site .eco-product,.eco-site .eco-feature{grid-template-columns:1fr;display:grid;gap:20px;padding:24px}.eco-site .eco-button{white-space:normal}.eco-site .eco-bullets{grid-template-columns:1fr}.eco-site .eco-breadcrumb{padding-top:21px}.eco-site .eco-hubintro{padding-top:28px}.eco-site .eco-footer{padding:25px 18px;flex-direction:column;align-items:flex-start}}
