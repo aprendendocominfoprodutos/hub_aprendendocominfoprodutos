@@ -1,0 +1,216 @@
+{
+  "versao": 1,
+  "dominioCanonico": "https://www.aprendendocominfoprodutos.com.br",
+  "politica": "Organização dos hubs em português; idiomas apenas nas edições comerciais de infoprodutos e suas landing pages.",
+  "produtos": [
+    {
+      "id": "PRO-0001",
+      "slug": "natal-pratico",
+      "nome": "Natal Prático & Econômico",
+      "tipo": "ebook",
+      "status": "existente",
+      "hubPrincipal": "Mental & Financeiro",
+      "classificacaoPrincipal": [
+        "Financeiro",
+        "Renda Extra",
+        "Oportunidades Sazonais",
+        "Natal"
+      ],
+      "temasRelacionados": [
+        "Planejamento financeiro",
+        "Economia doméstica"
+      ],
+      "edicoes": [
+        {
+          "codigo": "pt-BR",
+          "mercado": "Brasil",
+          "moeda": "BRL",
+          "status": "publicada",
+          "rota": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/",
+          "origemExistente": true,
+          "htmlLocalizado": null,
+          "produtoAdaptado": true,
+          "checkoutVerificado": true,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "en-US",
+          "mercado": "Estados Unidos",
+          "moeda": "USD",
+          "status": "planejada",
+          "rota": "/produtos/natal-pratico/en-us/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "es-MX",
+          "mercado": "México",
+          "moeda": "MXN",
+          "status": "planejada",
+          "rota": "/produtos/natal-pratico/es-mx/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "es-ES",
+          "mercado": "Espanha",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/produtos/natal-pratico/es-es/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "fr-FR",
+          "mercado": "França",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/produtos/natal-pratico/fr-fr/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "it-IT",
+          "mercado": "Itália",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/produtos/natal-pratico/it-it/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "pt-PT",
+          "mercado": "Portugal",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/produtos/natal-pratico/pt-pt/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        }
+      ]
+    },
+    {
+      "id": "PRO-0002",
+      "slug": "renda-extra-fim-de-ano",
+      "nome": "Renda Extra de Fim de Ano",
+      "tipo": "a definir",
+      "status": "ideia",
+      "hubPrincipal": "Mental & Financeiro",
+      "classificacaoPrincipal": [
+        "Financeiro",
+        "Renda Extra",
+        "Oportunidades Sazonais",
+        "Fim de Ano"
+      ],
+      "temasRelacionados": [],
+      "edicoes": [],
+      "observacao": "Apenas ideia de produto; nenhuma landing page ou edição publicada."
+    },
+    {
+      "id": "PRO-0003",
+      "slug": "mitologia-grega",
+      "nome": "Mitologia Grega — Deuses, Heróis e Significados Ocultos",
+      "tipo": "ebook",
+      "status": "existente",
+      "hubPrincipal": "Cultura & Entretenimento",
+      "classificacaoPrincipal": [
+        "Mitologia",
+        "Mitologia Grega",
+        "Geral"
+      ],
+      "temasRelacionados": [],
+      "edicoes": [
+        {
+          "codigo": "pt-BR",
+          "mercado": "Brasil",
+          "moeda": "BRL",
+          "status": "publicada",
+          "rota": "/mitologia/grega/geral/",
+          "origemExistente": true,
+          "htmlLocalizado": null,
+          "produtoAdaptado": true,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "en-US",
+          "mercado": "Estados Unidos",
+          "moeda": "USD",
+          "status": "planejada",
+          "rota": "/produtos/mitologia-grega/en-us/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "es-MX",
+          "mercado": "México",
+          "moeda": "MXN",
+          "status": "planejada",
+          "rota": "/produtos/mitologia-grega/es-mx/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "es-ES",
+          "mercado": "Espanha",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/produtos/mitologia-grega/es-es/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "fr-FR",
+          "mercado": "França",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/produtos/mitologia-grega/fr-fr/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "it-IT",
+          "mercado": "Itália",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/produtos/mitologia-grega/it-it/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        },
+        {
+          "codigo": "pt-PT",
+          "mercado": "Portugal",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/produtos/mitologia-grega/pt-pt/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null
+        }
+      ]
+    }
+  ]
+}

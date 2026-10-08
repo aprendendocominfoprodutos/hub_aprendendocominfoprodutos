@@ -2,7 +2,9 @@
   "name": "aprendendo-com-infoprodutos-site",
   "private": true,
   "scripts": {
-    "deploy": "node scripts/fetch-pdf.mjs && wrangler deploy"
+    "deploy": "npm run test:international && npm run build:international && node scripts/fetch-pdf.mjs && wrangler deploy",
+    "test:international": "node --test tests/international.test.mjs",
+    "build:international": "node scripts/build-international.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.45.0"
