@@ -73,3 +73,8 @@ O seletor do Natal Prático aparece apenas **dentro do card de produto** em `/me
 ## Catálogo interno × landing comercial
 
 O catálogo é para administração; clientes chegam direto às landing pages. Cada infoproduto tem vitrineFinal no cadastro e seletor de idiomas **apenas dentro do card da categoria final**. A validação npm run verify:final-containers é obrigatória. Páginas internas recebem noindex, mas não são protegidas por login. Regra detalhada em docs/internacionalizacao.md.
+
+
+### Menu com bandeiras e árabe
+
+Os cards finais dos produtos cadastrados exibem opções com bandeiras gráficas e uma edição planejada de árabe padrão (`ar-SA`, `/ar/`). O espanhol latino-americano usa globo por representar mais de um país. A página de projeto futuro em árabe usa direção RTL. Mais detalhes em [docs/internacionalizacao.md](docs/internacionalizacao.md).
