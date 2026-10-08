@@ -14,7 +14,8 @@ const SECTIONS = {
   "es-ES": "productos",
   "fr-FR": "produits",
   "it-IT": "prodotti",
-  "pt-PT": "produtos"
+  "pt-PT": "produtos",
+  "ar-SA": "products"
 };
 const DICTIONARY = {
   "en-US": { status: "Future project", heading: "Coming soon", description: "This international edition is planned, but is not available yet.", back: "Explore the main website", country: "United States" },
@@ -23,6 +24,7 @@ const DICTIONARY = {
   "fr-FR": { status: "Projet à venir", heading: "Bientôt disponible", description: "Cette édition pour la France est prévue, mais elle n'est pas encore disponible.", back: "Explorer le site principal", country: "France" },
   "it-IT": { status: "Progetto futuro", heading: "Prossimamente", description: "Questa edizione per l'Italia è in programma, ma non è ancora disponibile.", back: "Esplora il sito principale", country: "Italia" },
   "pt-PT": { status: "Projeto futuro", heading: "Em preparação", description: "Esta edição para Portugal está planeada, mas ainda não está disponível.", back: "Explorar o site principal", country: "Portugal" },
+  "ar-SA": { status: "مشروع مستقبلي", heading: "قريبًا", description: "هذه النسخة باللغة العربية مخطط لها، لكنها ليست متاحة بعد.", back: "العودة إلى الموقع الرئيسي", country: "المملكة العربية السعودية" },
   "pt-BR": { status: "Edição brasileira", heading: "Aceder à edição publicada", description: "A edição brasileira continua disponível no endereço original.", back: "Acessar a página brasileira", country: "Brasil" }
 };
 
@@ -118,7 +120,7 @@ export function futurePage(product, edition, catalog) {
   ensure(copy, "idioma de placeholder indisponível: " + edition.codigo);
   const title = edition.nomeLocalizado || product.nome;
   const fullTitle = title + " | " + copy.status;
-  return '<!doctype html><html lang="' + escapeHtml(edition.codigo) + '"><head>' +
+  return '<!doctype html><html lang="' + escapeHtml(edition.codigo) + '"' + (edition.codigo === "ar-SA" ? ' dir="rtl"' : "") + '><head>' +
     '<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">' +
     '<meta name="robots" content="noindex,nofollow,noarchive">' +
     '<meta name="theme-color" content="#071521">' +
