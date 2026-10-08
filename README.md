@@ -46,9 +46,11 @@ Antes de publicar alterações estruturais, validar links internos, responsivida
 O site institucional e a taxonomia permanecem em português. Somente os infoprodutos e suas landing pages têm edições por mercado, controladas em `catalogo/edicoes-internacionais.json`.
 
 - **Gerador:** `scripts/build-international.mjs` (executado pelo deploy).
-- **Manifesto público:** `/catalogo-edicoes.json` — apenas edições realmente publicadas.
+- **Manifesto público:** `/catalogo-edicoes.json` — apenas edições comerciais realmente publicadas.
+- **Projeto futuro:** rotas ainda sem infoproduto possuem páginas informativas localizadas, marcadas como `noindex` e sem checkout. Quando a edição estiver pronta, a mesma URL recebe a landing page final.
+- **Brasil:** `/pt-br/produtos/natal-pratico/` encaminha à landing brasileira atual, sem alterar o endereço de anúncios.
 - **Rotas reservadas:** `/produtos/{produto}/{idioma-pais}/` (não são páginas públicas enquanto estiverem como `planejada`).
 - **Testes:** `npm run test:international`.
 - **Procedimento completo:** [docs/internacionalizacao.md](docs/internacionalizacao.md).
 
-Nenhuma tradução ou nova landing foi publicada nesta etapa; Natal Prático e Mitologia Grega mantêm seus endereços originais.
+Nenhuma tradução comercial ou novo checkout foi publicado; Natal Prático e Mitologia Grega mantêm suas landing pages originais. As rotas futuras possuem páginas informativas de "Projeto futuro" no domínio.
