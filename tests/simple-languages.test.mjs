@@ -28,7 +28,7 @@ test("seletor existe somente dentro do card Natal e mantém landing sem seletor"
  const landing=await readFile(join(root,salesPath),"utf8");
  assert.doesNotMatch(main,/id="natal-idioma"|seletor-idiomas.css|class="lp-language"/);
  assert.doesNotMatch(landing,/id="natal-idioma"|seletor-idiomas.css|class="lp-language"/);
- assert.match(natalPage,/<article class="card natal-card">/);
+ assert.match(natalPage,/<article class="card natal-card" data-product-id="PRO-0001">/);
  assert.match(natalPage,/<div class="natal-card-language"/);
  assert.match(natalPage,/id="natal-idioma"/);
  assert.match(natalPage,/seletor-idiomas.css/);
