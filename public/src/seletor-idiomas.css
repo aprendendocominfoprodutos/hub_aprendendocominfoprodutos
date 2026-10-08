@@ -1,5 +1,8 @@
 /* Menu de idiomas dos cards finais; não aparece dentro das landing pages. */
-.natal-card{display:flex;flex-direction:column;gap:0;min-width:0}
+.natal-card{display:flex;flex-direction:column;gap:0;min-width:0;position:relative;overflow:visible}
+.natal-card:has(.language-menu[open]){z-index:50}
+/* Quando o menu abre, apenas a lista flutua; a altura do card e do grid não muda. */
+
 .natal-card .route{font-size:9px;letter-spacing:.10em}
 .natal-card h3{margin-top:13px}
 .natal-card>p{margin-bottom:17px}
@@ -12,10 +15,10 @@
 .language-menu summary:focus-visible,.language-option:focus-visible{outline:2px solid #f1d382;outline-offset:2px}
 .language-menu-chevron{font-size:15px;transition:transform .15s ease}
 .language-menu[open] .language-menu-chevron{transform:rotate(180deg)}
-.language-menu-options{display:grid;gap:1px;max-height:296px;overflow-y:auto;padding:5px;margin-top:7px;border:1px solid rgba(212,175,55,.38);border-radius:9px;background:#081d2a;box-shadow:0 8px 24px rgba(0,0,0,.27);overscroll-behavior:contain}
+.language-menu-options{position:absolute;top:calc(100% + 7px);left:0;right:0;z-index:100;display:grid;gap:1px;max-height:min(296px,48vh);overflow-y:auto;padding:5px;margin:0;border:1px solid rgba(212,175,55,.38);border-radius:9px;background:#081d2a;box-shadow:0 12px 32px rgba(0,0,0,.4);overscroll-behavior:contain}
 .language-option{display:flex;align-items:center;gap:11px;min-height:42px;padding:8px 9px;border-radius:6px;color:#f3ebdd;font-size:11px;text-decoration:none;line-height:1.4}
 .language-option:hover{background:rgba(212,175,55,.14);color:#f8dea1}
 .language-option img{width:28px;height:19px;flex:none;display:block;object-fit:cover;border-radius:2px;border:1px solid rgba(255,255,255,.15)}
 .language-globe{width:28px;height:19px;flex:none;font-size:19px;line-height:19px;text-align:center}
 .language-code{display:inline-block;color:#f3ebdd;font-weight:700;letter-spacing:.045em;font-variant-numeric:tabular-nums}
-@media(max-width:650px){.language-menu-options{max-height:268px}.language-option{min-height:44px}}
+@media(max-width:650px){.language-menu-options{max-height:min(268px,48vh)}.language-option{min-height:44px}}
