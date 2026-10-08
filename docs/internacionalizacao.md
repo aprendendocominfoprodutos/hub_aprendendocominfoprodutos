@@ -1,66 +1,73 @@
-# Internacionalização dos infoprodutos — instrução operacional
+# Landing pages internacionais — padrão definitivo de URLs
 
-## Regra de arquitetura
+## Regra geral
 
-- Os **3 hubs, 9 núcleos e a navegação do portal** continuam em português.
-- Um infoproduto tem **um ID permanente**, e cada mercado/idioma é uma **edição comercial** do mesmo produto.
-- O arquivo de controle está em `catalogo/edicoes-internacionais.json`; esta pasta fica **fora de `public/`**.
-- A edição brasileira original preserva **URL, HTML, CSS, pixels de anúncio e checkout existentes**.
-- **Rotas planejadas NÃO são publicadas**. Só passam a existir quando o conteúdo comercial estiver pronto e a publicação for expressamente aprovada.
-- O arquivo público `/catalogo-edicoes.json` contém **somente edições publicadas**, para permitir um futuro seletor de idioma sem exibir opções inexistentes.
-- `Renda Extra de Fim de Ano` é produto em ideia, não foi convertido em página de venda.
+A plataforma continua em português e organizada por hubs. **Apenas as páginas comerciais dos infoprodutos** usam rotas por país/idioma, com nomes localizados.
 
-## Produtos registrados
+- Formato: /idioma-pais/categoria-localizada/nome-localizado/
+- Domínio: https://www.aprendendocominfoprodutos.com.br
+- O código-fonte cadastra os endereços em catalogo/edicoes-internacionais.json
+- O gerador scripts/build-international.mjs materializa as páginas durante o deploy Cloudflare.
+- O catálogo público catalogo-edicoes.json contém apenas edições comerciais realmente publicadas. Não inclua páginas futuras em seletor de idioma/SEO.
 
-| ID | Produto | Status | Primeira edição |
-| --- | --- | --- | --- |
-| PRO-0001 | Natal Prático & Econômico | Existente | /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/ |
-| PRO-0002 | Renda Extra de Fim de Ano | Ideia | Nenhuma |
-| PRO-0003 | Mitologia Grega — Deuses, Heróis e Significados Ocultos | Existente | /mitologia/grega/geral/ |
+## Natal Prático — páginas e destinos
 
-**Natal Prático pertence a Mental & Financeiro > Financeiro > Renda Extra > Oportunidades Sazonais > Natal**, com associação temática a Planejamento/Economia Doméstica. Não inclui Fitness & Saúde.
+| Mercado | URL | Publicação |
+| --- | --- | --- |
+| Brasil | /pt-br/produtos/natal-pratico/ | Atalho que leva à landing brasileira existente |
+| EUA | /en-us/products/christmas-guide/ | Página informativa Future project |
+| México | /es-mx/productos/guia-navidad/ | Página informativa Proyecto futuro |
+| Espanha | /es-es/productos/guia-navidad/ | Página informativa Proyecto futuro |
+| França | /fr-fr/produits/guide-noel/ | Página informativa Projet à venir |
+| Itália | /it-it/prodotti/guida-natale/ | Página informativa Progetto futuro |
+| Portugal | /pt-pt/produtos/natal-pratico/ | Página informativa Projeto futuro |
 
-## Edições reservadas
+A página **real, existente, do Brasil permanece em:**
+/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/
 
-Para os produtos existentes, reservamos `en-US`, `es-MX`, `es-ES`, `fr-FR`, `it-IT` e `pt-PT`. São **opções de cadastro**, não páginas publicadas ou traduções concluídas.
+**Produto classificado apenas em Mental & Financeiro → Financeiro → Renda Extra → Oportunidades Sazonais → Natal**, com associação a Planejamento Financeiro e Economia Doméstica. Não criar duplicação em Fitness & Saúde.
 
-Exemplo de rota:
+## Mitologia Grega — mesmo padrão
 
-- `/produtos/natal-pratico/en-us/`
-- `/produtos/mitologia-grega/es-mx/`
+| Mercado | URL | Publicação |
+| --- | --- | --- |
+| Brasil | /pt-br/produtos/mitologia-grega/ | Atalho à landing existente |
+| EUA | /en-us/products/greek-mythology/ | Future project |
+| México | /es-mx/productos/mitologia-griega/ | Proyecto futuro |
+| Espanha | /es-es/productos/mitologia-griega/ | Proyecto futuro |
+| França | /fr-fr/produits/mythologie-grecque/ | Projet à venir |
+| Itália | /it-it/prodotti/mitologia-greca/ | Progetto futuro |
+| Portugal | /pt-pt/produtos/mitologia-grega/ | Projeto futuro |
 
-A URL brasileira original permanece fora desse novo padrão: **não a migre**.
+A landing brasileira original permanece em /mitologia/grega/geral/.
 
-## Como publicar uma edição internacional no futuro
+## Páginas de "Projeto futuro"
 
-1. Concluir e revisar o **arquivo do infoproduto traduzido/adaptado** para o país.
-2. Criar a landing page completa, revisada e funcional, **fora da pasta pública**, por exemplo:
-   `edicoes/natal-pratico/en-US/index.html`.
-   O documento precisa ter `<html lang="en-US">`, título e conteúdo comerciais localizados; usar caminhos absolutos para assets (por exemplo `/assets/...`) ou imagens externas aprovadas.
-3. Criar/verificar na plataforma de pagamentos a **oferta do país**, com moeda, preço, entrega, termos e checkout corretos. Nunca colocar credenciais ou chaves privadas no JSON.
-4. Atualizar a entrada correspondente em `catalogo/edicoes-internacionais.json`:
-   - `status`: `"publicada"`
-   - `produtoAdaptado`: `true`
-   - `checkoutVerificado`: `true`
-   - `checkoutUrl`: a URL HTTPS real e verificada
-   - `htmlLocalizado`: `"edicoes/natal-pratico/en-US/index.html"`
-5. Rodar `npm run test:international` e `npm run build:international`.
-6. O gerador cria a página em `public/produtos/natal-pratico/en-us/index.html`, adicionando `canonical`, `hreflang` e links de idioma **somente entre edições publicadas**.
-7. Antes do lançamento, revisar manualmente responsividade, textos, imagens, política comercial, carrinho, pixel e a navegação real. Quando já houver duas versões, adicionar a associação `hreflang` correspondente também à **landing brasileira original** sem modificar a integração do checkout.
+As rotas futuras **estão acessíveis no domínio** e mostram um aviso visível, traduzido para o idioma do país. Não são landing pages de venda; não mostram preço ou checkout. Usam meta robots "noindex,nofollow,noarchive" e **não são anunciadas como edições publicadas** no manifesto, no hreflang ou no seletor de idiomas.
 
-## Deploy Cloudflare
+Quando um infoproduto estiver localizado e sua oferta aprovada, **a mesma URL de "Projeto futuro" passará a ser a landing real**, sem necessidade de trocar o link, criar rota alternativa nem fazer novos redirecionamentos.
 
-O Worker `damp-base-4abd` continua conectado ao GitHub (`main`). O comando de deploy executa nesta ordem:
+## Publicar uma landing em outro idioma
 
-```bash
-npm run test:international
-npm run build:international
-node scripts/fetch-pdf.mjs
-wrangler deploy
-```
+1. Entregar o e-book completo traduzido/revisado e a landing localizada.
+2. Inserir a landing no repositório em **edicoes/{slug-interno}/{idioma-pais}/index.html**. Ex.: edicoes/natal-pratico/en-US/index.html. É um arquivo-fonte editável, separado de public/.
+3. Confirmar checkout, moeda, preço, entrega e adequação legal/comercial daquele mercado.
+4. Editar **catalogo/edicoes-internacionais.json** no objeto da edição:
+   - status: "publicada"
+   - produtoAdaptado: true
+   - checkoutVerificado: true
+   - checkoutUrl: URL HTTPS da oferta real
+   - htmlLocalizado: "edicoes/natal-pratico/en-US/index.html"
+5. Rodar **npm run test:international** e **npm run build:international**. O build substitui a página "Projeto futuro" pelo HTML final na mesma URL.
+6. Testar visualmente e validar links/imagens, política comercial, checkout e dados de venda antes de anunciar.
+7. Ao adicionar outro idioma comercial real, revisar também a reciprocidade de hreflang na landing original brasileira. Ela não é alterada automaticamente para proteger Pixel/checkout atuais.
 
-**Segurança:** a validação bloqueia idiomas inválidos, rotas duplicadas, HTML ausente, produtos não adaptados, checkout não verificado e tentativas de sobrescrever páginas estáticas. Uma edição marcada como `planejada` nunca gera landing page nem aparece no manifesto público.
+**Proteção:** o build recusa sobrescrever HTML escrito manualmente numa rota de destino; só atualiza arquivos previamente gerados por ele. URLs brasileiras originais e pixels não são editados.
 
-## Limites desta entrega
+## Manutenção e Cloudflare
 
-O cadastro/gerador não traduz arquivos nem cria ofertas ou checkouts na Hotmart. Esta implantação **prepara a estrutura técnica**; a publicação de um idioma exige conteúdo e aprovação comercial específicos.
+O Worker damp-base-4abd está ligado ao repositório GitHub, branch main, com deploy automático. A configuração atual chama:
+
+npm run test:international && npm run build:international && node scripts/fetch-pdf.mjs && wrangler deploy
+
+Renda Extra de Fim de Ano permanece produto em ideia (PRO-0002) e não recebeu páginas de venda ou promessas comerciais.
