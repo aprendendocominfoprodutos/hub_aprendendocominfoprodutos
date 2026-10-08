@@ -1,7 +1,7 @@
 {
-  "versao": 1,
+  "versao": 2,
   "dominioCanonico": "https://www.aprendendocominfoprodutos.com.br",
-  "politica": "Organização dos hubs em português; idiomas apenas nas edições comerciais de infoprodutos e suas landing pages.",
+  "politica": "Os hubs continuam em português; páginas internacionais têm URL com idioma-país e termos no idioma local. Rotas com status planejada oferecem somente aviso de projeto futuro (noindex), não um produto à venda.",
   "produtos": [
     {
       "id": "PRO-0001",
@@ -31,73 +31,81 @@
           "htmlLocalizado": null,
           "produtoAdaptado": true,
           "checkoutVerificado": true,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Natal Prático & Econômico",
+          "rotaPublica": "/pt-br/produtos/natal-pratico/"
         },
         {
           "codigo": "en-US",
           "mercado": "Estados Unidos",
           "moeda": "USD",
           "status": "planejada",
-          "rota": "/produtos/natal-pratico/en-us/",
+          "rota": "/en-us/products/christmas-guide/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Christmas Planning Guide"
         },
         {
           "codigo": "es-MX",
           "mercado": "México",
           "moeda": "MXN",
           "status": "planejada",
-          "rota": "/produtos/natal-pratico/es-mx/",
+          "rota": "/es-mx/productos/guia-navidad/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Guía para planear la Navidad"
         },
         {
           "codigo": "es-ES",
           "mercado": "Espanha",
           "moeda": "EUR",
           "status": "planejada",
-          "rota": "/produtos/natal-pratico/es-es/",
+          "rota": "/es-es/productos/guia-navidad/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Guía para planificar la Navidad"
         },
         {
           "codigo": "fr-FR",
           "mercado": "França",
           "moeda": "EUR",
           "status": "planejada",
-          "rota": "/produtos/natal-pratico/fr-fr/",
+          "rota": "/fr-fr/produits/guide-noel/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Guide de planification de Noël"
         },
         {
           "codigo": "it-IT",
           "mercado": "Itália",
           "moeda": "EUR",
           "status": "planejada",
-          "rota": "/produtos/natal-pratico/it-it/",
+          "rota": "/it-it/prodotti/guida-natale/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Guida alla pianificazione del Natale"
         },
         {
           "codigo": "pt-PT",
           "mercado": "Portugal",
           "moeda": "EUR",
           "status": "planejada",
-          "rota": "/produtos/natal-pratico/pt-pt/",
+          "rota": "/pt-pt/produtos/natal-pratico/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Guia de Planeamento de Natal"
         }
       ]
     },
@@ -142,73 +150,81 @@
           "htmlLocalizado": null,
           "produtoAdaptado": true,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Mitologia Grega",
+          "rotaPublica": "/pt-br/produtos/mitologia-grega/"
         },
         {
           "codigo": "en-US",
           "mercado": "Estados Unidos",
           "moeda": "USD",
           "status": "planejada",
-          "rota": "/produtos/mitologia-grega/en-us/",
+          "rota": "/en-us/products/greek-mythology/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Greek Mythology Guide"
         },
         {
           "codigo": "es-MX",
           "mercado": "México",
           "moeda": "MXN",
           "status": "planejada",
-          "rota": "/produtos/mitologia-grega/es-mx/",
+          "rota": "/es-mx/productos/mitologia-griega/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Guía de Mitología Griega"
         },
         {
           "codigo": "es-ES",
           "mercado": "Espanha",
           "moeda": "EUR",
           "status": "planejada",
-          "rota": "/produtos/mitologia-grega/es-es/",
+          "rota": "/es-es/productos/mitologia-griega/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Guía de Mitología Griega"
         },
         {
           "codigo": "fr-FR",
           "mercado": "França",
           "moeda": "EUR",
           "status": "planejada",
-          "rota": "/produtos/mitologia-grega/fr-fr/",
+          "rota": "/fr-fr/produits/mythologie-grecque/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Guide de la mythologie grecque"
         },
         {
           "codigo": "it-IT",
           "mercado": "Itália",
           "moeda": "EUR",
           "status": "planejada",
-          "rota": "/produtos/mitologia-grega/it-it/",
+          "rota": "/it-it/prodotti/mitologia-greca/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Guida alla mitologia greca"
         },
         {
           "codigo": "pt-PT",
           "mercado": "Portugal",
           "moeda": "EUR",
           "status": "planejada",
-          "rota": "/produtos/mitologia-grega/pt-pt/",
+          "rota": "/pt-pt/produtos/mitologia-grega/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
-          "checkoutUrl": null
+          "checkoutUrl": null,
+          "nomeLocalizado": "Guia de Mitologia Grega"
         }
       ]
     }
