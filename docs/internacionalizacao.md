@@ -97,3 +97,29 @@ O Worker damp-base-4abd está ligado ao repositório GitHub, branch main, com de
 npm run test:international && npm run build:international && node scripts/fetch-pdf.mjs && wrangler deploy
 
 Renda Extra de Fim de Ano permanece produto em ideia (PRO-0002) e não recebeu páginas de venda ou promessas comerciais.
+
+## Seletor leve dentro do subnicho Renda Extra
+
+Renda Extra mantém apenas Datas Comemorativas (Sazonais) e Produtos Digitais. O seletor compacto aparece em Renda Extra, Natal e na landing brasileira Natal Prático. Todas as rotas abaixo usam o mesmo domínio principal.
+
+| Edição | Rota |
+
+|---|---|
+
+| Brasil (publicado) | /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/ |
+
+| Inglês EUA | /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/ing/ |
+
+| Espanhol México | /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/esp/ |
+
+| Espanhol Espanha | /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/esp-es/ |
+
+| Francês | /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/fr/ |
+
+| Italiano | /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/it/ |
+
+| Português Portugal | /mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/pt/ |
+
+O script scripts/build-simple-languages.mjs gera páginas de projeto futuro (noindex, sem preço e sem checkout), que podem ser substituídas por landings finalizadas sem trocar o endereço. Mantemos HTML, Pixel e checkout brasileiros intactos.
+
+Os subdomínios internacionais anteriores continuam configurados por compatibilidade, mas não são mostrados no novo seletor de idioma. Somente uma solicitação explícita de desativação removerá esses domínios.

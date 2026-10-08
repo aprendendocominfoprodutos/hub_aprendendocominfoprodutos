@@ -43,14 +43,14 @@ test("worker mantém o portal brasileiro e encaminha apenas a rota regional", as
   assert.equal(calls.length,4);
 });
 
-test("URLs comerciais têm canônico no subdomínio e Brasil no domínio original",()=>{
+test("URLs comerciais priorizam o endereço leve da Renda Extra no domínio principal",()=>{
   const brazil=cat.produtos[0].edicoes[0];
   const us=cat.produtos[0].edicoes[1];
   const mexico=cat.produtos[0].edicoes[2];
   assert.equal(commercialURL(cat,brazil),
     "https://www."+domain+"/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/");
-  assert.equal(commercialURL(cat,us),"https://en-us."+domain+"/products/christmas-guide/");
-  assert.equal(commercialURL(cat,mexico),"https://es-mx."+domain+"/productos/guia-navidad/");
+  assert.equal(commercialURL(cat,us),"https://www."+domain+"/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/ing/");
+  assert.equal(commercialURL(cat,mexico),"https://www."+domain+"/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/esp/");
 });
 
 test("vitrines regionais mostram futuros produtos mas não vendem versões inexistentes",async()=>{
