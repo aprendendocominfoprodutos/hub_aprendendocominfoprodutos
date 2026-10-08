@@ -69,6 +69,7 @@ async function saveGenerated(target, html, dryRun) {
 /** Endereço canônico de venda: edição local no subdomínio; Brasil na URL original. */
 export function commercialURL(catalog, edition) {
   if (edition.codigo === "pt-BR") return catalog.dominioCanonico + edition.rota;
+  if (edition.rotaSimples) return catalog.dominioCanonico + edition.rotaSimples;
   const label = edition.codigo.toLowerCase();
   const prefix = "/" + label + "/";
   ensure(edition.rota.startsWith(prefix), "rota incompatível com subdomínio: " + edition.rota);
