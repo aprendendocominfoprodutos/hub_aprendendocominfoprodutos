@@ -1,7 +1,7 @@
 {
   "versao": 2,
   "dominioCanonico": "https://www.aprendendocominfoprodutos.com.br",
-  "politica": "Os hubs continuam em português; páginas internacionais têm URL com idioma-país e termos no idioma local. Rotas com status planejada oferecem somente aviso de projeto futuro (noindex), não um produto à venda.",
+  "politica": "Os hubs e subnichos permanecem no site principal em português. Natal Prático tem seletor de idioma em Renda Extra com URLs curtas no mesmo domínio (/natal-pratico/ing/, /it/ etc.). Edições futuras exibem aviso noindex até o produto ficar pronto; URLs brasileiras/checkout originais preservados.",
   "produtos": [
     {
       "id": "PRO-0001",
@@ -45,7 +45,8 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Christmas Planning Guide"
+          "nomeLocalizado": "Christmas Planning Guide",
+          "rotaSimples": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/ing/"
         },
         {
           "codigo": "es-MX",
@@ -57,7 +58,8 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Guía para planear la Navidad"
+          "nomeLocalizado": "Guía para planear la Navidad",
+          "rotaSimples": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/esp/"
         },
         {
           "codigo": "es-ES",
@@ -69,7 +71,8 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Guía para planificar la Navidad"
+          "nomeLocalizado": "Guía para planificar la Navidad",
+          "rotaSimples": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/esp-es/"
         },
         {
           "codigo": "fr-FR",
@@ -81,7 +84,8 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Guide de planification de Noël"
+          "nomeLocalizado": "Guide de planification de Noël",
+          "rotaSimples": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/fr/"
         },
         {
           "codigo": "it-IT",
@@ -93,7 +97,8 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Guida alla pianificazione del Natale"
+          "nomeLocalizado": "Guida alla pianificazione del Natale",
+          "rotaSimples": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/it/"
         },
         {
           "codigo": "pt-PT",
@@ -105,7 +110,8 @@
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "Guia de Planeamento de Natal"
+          "nomeLocalizado": "Guia de Planeamento de Natal",
+          "rotaSimples": "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/pt/"
         }
       ]
     },
