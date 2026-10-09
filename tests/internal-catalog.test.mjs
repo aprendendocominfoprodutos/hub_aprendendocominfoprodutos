@@ -53,6 +53,19 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
   const pages=await Promise.all([base,weekly,final].map(path=>readFile(join(root,"public",path,"index.html"),"utf8")));
   assert.match(pages[0],new RegExp(weekly));
   assert.match(pages[1],new RegExp(final));
+  // A escolha das regiões ocorre no CARD da categoria semanal, e não após "Explorar".
+  assert.match(pages[1],/data-product-id="PRO-0004"/);
+  assert.match(pages[1],/href="\/src\/seletor-regioes\.css"/);
+  assert.match(pages[1],/<details class="region-menu">/);
+  assert.match(pages[1],/Selecione a região/);
+  assert.doesNotMatch(pages[1],/href="[^"]*menu-familiar\/"[^>]*>[^<]*Explorar/);
+  for(const area of ["brasil/","latam/","eua/","europa/"]){
+    assert.ok(pages[1].includes('href="'+final+area+'"'));
+  }
+  const regionCss=await readFile(join(root,"public/src/seletor-regioes.css"),"utf8");
+  assert.match(regionCss,/\.region-options\{position:absolute/);
+  assert.match(regionCss,/\.weekly-region-card:has\(\.region-menu\[open\]\)\{z-index:50\}/);
+
   assert.match(pages[2],/Menú Familiar/);
   assert.doesNotMatch(pages[2],/language-menu-options|Selecione o idioma|class="language-option"/);
   for(const region of ["brasil/","latam/","eua/","europa/"]){
@@ -205,4 +218,22 @@ test("links dos mercados novos permanecem sem checkout ou edições fictícias",
   assert.match(page,/planificación/);
   assert.doesNotMatch(page,/pay\.hotmart|hotmart__button-checkout|fbq\(/);
  }
+});
+
+test("seletor de mercados aparece no card Menú Familiar da categoria semanal",async()=>{
+ const root=resolve(".");
+ const path="public/fitness-saude/alimentacao/receitas/cardapios-semanais/index.html";
+ const html=await readFile(join(root,path),"utf8");
+ const open=html.indexOf('<article class="card weekly-region-card"');
+ const close=html.indexOf('</article>',open);
+ assert.ok(open>=0&&close>open);
+ const card=html.slice(open,close);
+ assert.match(card,/Escolha primeiro a região|Escolha primeiro a região|Escolha primeiro/);
+ assert.equal((card.match(/class="region-option"/g)||[]).length,4);
+ assert.match(card,/América Latina/);
+ assert.match(card,/Estados Unidos/);
+ assert.match(card,/Brasil/);
+ assert.match(card,/Europa/);
+ assert.match(card,/México está em revisão/);
+ assert.doesNotMatch(card,/>Explorar →</);
 });
