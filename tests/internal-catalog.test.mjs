@@ -150,8 +150,10 @@ test("carrossel de imagens do Menú Familiar tem 28 receitas, autoplay 2500ms e 
   const photos=[...html.matchAll(/src="\/assets\/menu-familiar\/recetas\/mx-(\d{2})\.avif"/g)].map(x=>Number(x[1]));
   assert.deepEqual(photos,Array.from({length:28},(_,i)=>i+1));
   assert.match(html,/id="mx-recipe-track"/);
-  assert.match(html,/window\.setInterval\(/);
-  assert.match(html,/\},2500\)/);
+  assert.match(html,/window\.setTimeout\(/);
+  assert.match(html,/Math\.max\(2500,suppressUntil-Date\.now\(\)\)/);
+  assert.match(html,/visible=onScreen;\s*scheduleAutoplay\(\)/);
+  assert.doesNotMatch(html,/window\.setInterval\(/);
   assert.match(html,/pointerdown/);
   assert.match(html,/touchstart/);
   assert.match(html,/mx-recipe-prev/);
@@ -166,4 +168,16 @@ test("carrossel de imagens do Menú Familiar tem 28 receitas, autoplay 2500ms e 
     assert.equal(bytes.subarray(4,12).toString("ascii"),"ftypavif");
     assert.ok(bytes.length>10000, "Imagem do PDF ausente: "+path);
   }
+});
+
+test("primeiro avanço da galeria sincronizado à visibilidade, sem pausa por hover",async()=>{
+ const root=resolve(".");
+ const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+ const gallery=html.slice(html.indexOf("const track=document.getElementById('mx-recipe-track');"));
+ assert.match(gallery,/function scheduleAutoplay\(\)/);
+ assert.match(gallery,/window\.setTimeout\(/);
+ assert.match(gallery,/const wait=Math\.max\(2500,suppressUntil-Date\.now\(\)\)/);
+ assert.match(gallery,/if\(onScreen===visible\)return;\s*visible=onScreen;\s*scheduleAutoplay\(\)/);
+ assert.match(gallery,/document\.addEventListener\('visibilitychange',scheduleAutoplay\)/);
+ assert.doesNotMatch(gallery,/mouseenter|mouseleave|window\.setInterval/);
 });

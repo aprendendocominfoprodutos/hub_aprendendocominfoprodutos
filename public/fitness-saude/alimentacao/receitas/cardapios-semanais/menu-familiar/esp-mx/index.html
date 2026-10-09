@@ -118,7 +118,7 @@ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>activate(i,false));tab.a
   const bar=document.getElementById('mx-gallery-progress');
   const progress=bar?.parentElement;
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
-  let visible=false,hover=false,dragging=false,focused=false,suppressUntil=0,current=0,scrollFrame=0;
+  let visible=false,dragging=false,focused=false,suppressUntil=0,current=0,scrollFrame=0,autoplayTimer=0;
   const visibleCount=()=>Math.max(1,Math.round(track.clientWidth/items[0].getBoundingClientRect().width));
   const lastIndex=()=>Math.max(0,items.length-visibleCount());
   const limit=i=>Math.max(0,Math.min(i,lastIndex()));
@@ -135,7 +135,7 @@ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>activate(i,false));tab.a
     weekButtons.forEach(button=>{const active=Number(button.dataset.galleryWeek)===wk;button.classList.toggle('is-current',active);button.setAttribute('aria-pressed',String(active));});
   }
   function to(i,manual=false){
-    if(manual)suppressUntil=Date.now()+6500;
+    if(manual){suppressUntil=Date.now()+6500;scheduleAutoplay();}
     current=limit(i);
     const left=items[current].offsetLeft-items[0].offsetLeft;
     track.scrollTo({left,behavior:reduced.matches?'auto':'smooth'});
@@ -147,14 +147,13 @@ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>activate(i,false));tab.a
   weekButtons.forEach(button=>button.addEventListener('click',()=>to((Number(button.dataset.galleryWeek)-1)*7,true)));
   track.addEventListener('scroll',()=>{cancelAnimationFrame(scrollFrame);scrollFrame=requestAnimationFrame(update);},{passive:true});
   track.addEventListener('keydown',event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();navigate(event.key==='ArrowRight'?1:-1,true);}});
-  track.addEventListener('mouseenter',()=>{hover=true;});
-  track.addEventListener('mouseleave',()=>{hover=false;});
-  track.addEventListener('focusin',()=>{focused=true;});
-  track.addEventListener('focusout',()=>{focused=false;});
+  // O mouse sobre a imagem não pausa a reprodução automática.
+  track.addEventListener('focusin',()=>{focused=true;scheduleAutoplay();});
+  track.addEventListener('focusout',()=>{focused=false;scheduleAutoplay();});
   let pointerX=0,pointerScroll=0;
   track.addEventListener('pointerdown',event=>{
     if(event.pointerType==='touch'||event.button!==0)return;
-    dragging=true;pointerX=event.clientX;pointerScroll=track.scrollLeft;
+    dragging=true;stopAutoplay();pointerX=event.clientX;pointerScroll=track.scrollLeft;
     track.classList.add('is-dragging');suppressUntil=Date.now()+6500;
     track.setPointerCapture(event.pointerId);
   });
@@ -170,19 +169,35 @@ tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>activate(i,false));tab.a
   }
   track.addEventListener('pointerup',endDrag);
   track.addEventListener('pointercancel',endDrag);
-  track.addEventListener('touchstart',()=>{suppressUntil=Date.now()+6500;},{passive:true});
+  track.addEventListener('touchstart',()=>{suppressUntil=Date.now()+6500;scheduleAutoplay();},{passive:true});
+  // Inicia o primeiro ciclo quando a galeria se torna visível (não no load da página).
+  function stopAutoplay(){
+    if(autoplayTimer){window.clearTimeout(autoplayTimer);autoplayTimer=0;}
+  }
+  function scheduleAutoplay(){
+    stopAutoplay();
+    if(!visible||document.hidden||reduced.matches||dragging||focused)return;
+    const wait=Math.max(2500,suppressUntil-Date.now());
+    autoplayTimer=window.setTimeout(()=>{
+      autoplayTimer=0;
+      if(!visible||document.hidden||reduced.matches||dragging||focused)return;
+      navigate(1,false);
+      scheduleAutoplay();
+    },wait);
+  }
   if('IntersectionObserver' in window){
-    const observer=new IntersectionObserver(entries=>{visible=entries.some(e=>e.isIntersecting);},{threshold:.18});
+    const observer=new IntersectionObserver(entries=>{
+      const onScreen=entries.some(e=>e.isIntersecting);
+      if(onScreen===visible)return;
+      visible=onScreen;
+      scheduleAutoplay();
+    },{threshold:.18});
     observer.observe(track);
-  }else{visible=true;}
+  }else{visible=true;scheduleAutoplay();}
+  document.addEventListener('visibilitychange',scheduleAutoplay);
+  if(reduced.addEventListener)reduced.addEventListener('change',scheduleAutoplay);
   window.addEventListener('resize',()=>to(current));
   update();
-  if(!reduced.matches){
-    window.setInterval(()=>{
-      if(!visible||document.hidden||hover||focused||dragging||Date.now()<suppressUntil)return;
-      navigate(1,false);
-    },2500);
-  }
 })();
 </script>
 </body></html>
