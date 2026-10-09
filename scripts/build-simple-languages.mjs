@@ -35,7 +35,7 @@ export async function buildSimpleLanguages({root=ROOT,dryRun=false}={}) {
       const preview=await readFile(target,"utf8");
       check(preview.includes('data-product-landing="menu-familiar-mx"') &&
         preview.includes('content="noindex,follow"') &&
-        !/pay\\.hotmart|hotmart__button-checkout|fbq\\(/i.test(preview),
+        !preview.includes('pay.hotmart') && !preview.includes('hotmart__button-checkout') && !preview.includes('fbq('),
         "landing informativa sem marcação de segurança: "+route);
       created.push({locale:edition.codigo,route,status:edition.status});
       continue;
