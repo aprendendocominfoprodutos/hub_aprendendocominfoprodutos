@@ -1,0 +1,39 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import {readFile} from "node:fs/promises";
+import {resolve,join} from "node:path";
+
+const ROOT=resolve(".");
+const home=await readFile(join(ROOT,"public/index.html"),"utf8");
+const stylesheet=await readFile(join(ROOT,"public/src/arquitetura.css"),"utf8");
+
+test("os três hubs são links únicos que ocupam seus cards",()=>{
+  const cards=[...home.matchAll(/<a class="eco-hubcard(?: eco-(?:green|blue))?" href="([^"]+)">([\s\S]*?)<\/a>/g)];
+  assert.equal(cards.length,3);
+  assert.deepEqual(cards.map(c=>c[1]),[
+    "/cultura-entretenimento/","/fitness-saude/","/mental-financeiro/"
+  ]);
+  for(const [,route,inside] of cards){
+    assert.match(inside,/class="eco-hubscene"/);
+    assert.match(inside,/class="eco-hubcontent"/);
+    assert.match(inside,/class="eco-openhub"/);
+    assert.doesNotMatch(inside,/<a\b|<button\b|onclick=/);
+    assert.doesNotMatch(inside,/eco-nuclei|eco-nucleus/);
+    assert.ok(route.startsWith("/") && route.endsWith("/"));
+  }
+  assert.doesNotMatch(home,/<article class="eco-hubcard/);
+  assert.doesNotMatch(home,/class="eco-nucleus"/);
+});
+test("a página continua oferecendo acesso aos hubs e à landing Natal Prático",()=>{
+  assert.match(home,/href="\/mental-financeiro\/financeiro\/renda-extra\/datas-comemorativas\/natal\/natal-pratico\/"/);
+  assert.match(home,/id="materiais"/);
+  assert.match(home,/src="\/assets\/home\/hub-mitologia\.webp"/);
+  assert.match(home,/src="\/assets\/home\/hub-fitness\.webp"/);
+  assert.match(home,/src="\/assets\/home\/hub-mental-financeiro\.webp"/);
+});
+test("o card inteiro mostra estado interativo acessível via mouse e teclado",()=>{
+  assert.match(stylesheet,/a\.eco-hubcard:hover/);
+  assert.match(stylesheet,/a\.eco-hubcard:focus-visible/);
+  assert.match(stylesheet,/a\.eco-hubcard\{color:inherit;text-decoration:none;cursor:pointer/);
+  assert.match(stylesheet,/prefers-reduced-motion:reduce/);
+});
