@@ -176,3 +176,80 @@ body.mx-landing .mx-feature-photo-media img{
   .mx-feature-metrics strong{font-size:24px}
   .mx-feature-metrics span{font-size:10px}
 }
+
+/* Vistas reais do PDF Menú Familiar: páginas 15 e 37, sem reconstrução HTML. */
+.mx-preview-stack-real{
+  position:relative;
+  min-height:555px;
+  height:555px;
+  overflow:visible;
+  isolation:isolate;
+}
+.mx-preview-stack-real .mx-paper-image{
+  position:absolute;
+  top:49%;
+  left:50%;
+  width:min(290px,58%);
+  aspect-ratio:504/720;
+  height:auto;
+  margin:0;
+  background:#fff;
+  border:1px solid rgba(219,211,194,.85);
+  box-shadow:10px 18px 26px rgba(21,38,26,.19);
+  transform-origin:center center;
+  transition:transform .25s ease;
+}
+.mx-preview-stack-real .mx-paper-image-back{
+  z-index:1;
+  transform:translate(-83%,-52%) rotate(-10deg);
+}
+.mx-preview-stack-real .mx-paper-image-front{
+  z-index:2;
+  transform:translate(-15%,-49%) rotate(6deg);
+}
+.mx-preview-stack-real .mx-paper-image img{
+  display:block;
+  position:relative;
+  width:100%;
+  height:auto;
+  aspect-ratio:504/720;
+  object-fit:contain;
+}
+.mx-preview-stack-real .mx-paper-image figcaption{
+  position:absolute;
+  bottom:-33px;
+  width:100%;
+  text-align:center;
+  color:#425b4b;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.05em;
+  white-space:nowrap;
+}
+.mx-preview-stack-real .mx-preview-true-note{
+  position:absolute;
+  bottom:0;
+  left:8%;
+  right:8%;
+  margin:0;
+  text-align:center;
+  font-size:10px;
+  line-height:1.5;
+  color:#697c70;
+}
+@media(max-width:750px){
+  .mx-preview-stack-real{min-height:475px;height:475px;width:100%}
+  .mx-preview-stack-real .mx-paper-image{width:min(250px,58%)}
+  .mx-preview-stack-real .mx-paper-image figcaption{font-size:8px}
+}
+@media(max-width:460px){
+  .mx-preview-stack-real{min-height:405px;height:405px}
+  .mx-preview-stack-real .mx-paper-image{width:min(205px,60%)}
+  .mx-preview-stack-real .mx-paper-image-back{transform:translate(-87%,-56%) rotate(-8deg)}
+  .mx-preview-stack-real .mx-paper-image-front{transform:translate(-12%,-52%) rotate(5deg)}
+  .mx-preview-stack-real .mx-paper-image figcaption{font-size:7px;bottom:-24px}
+  .mx-preview-stack-real .mx-preview-true-note{left:0;right:0;font-size:9px}
+}
+@media(prefers-reduced-motion:reduce){
+  .mx-preview-stack-real .mx-paper-image{transition:none}
+}

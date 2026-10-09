@@ -124,3 +124,20 @@ test("cartão de quatro semanas exibe imagem sem áreas vazias e informações l
   assert.match(css,/\.mx-feature-photo\{\s*display:flex;/);
   assert.match(css,/\.mx-feature-info-title strong\{/);
 });
+
+test("prévia do PDF na landing usa páginas originais 15 e 37, não páginas simuladas",async()=>{
+  const root=resolve(".");
+  const landing=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+  const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
+  assert.match(landing,/class="mx-preview-stack mx-preview-stack-real"/);
+  assert.match(landing,/menu-semana-1-p15\.avif/);
+  assert.match(landing,/compras-semana-1-p37\.avif/);
+  assert.match(landing,/páginas 15 y 37 del PDF/);
+  assert.doesNotMatch(landing,/mx-paper-dishes|mx-paper-line|Vista ilustrativa basada en el índice/);
+  assert.match(css,/\.mx-preview-stack-real \.mx-paper-image img/);
+  for(const path of ["menu-semana-1-p15.avif","compras-semana-1-p37.avif"]){
+    const bytes=await readFile(join(root,"public/assets/menu-familiar",path));
+    assert.equal(bytes.subarray(4,12).toString("ascii"),"ftypavif");
+    assert.ok(bytes.length>9000, "Imagem original pequena ou inexistente: "+path);
+  }
+});
