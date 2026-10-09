@@ -27,7 +27,7 @@ test("os três hubs são links únicos que ocupam seus cards",()=>{
 test("a página continua oferecendo acesso aos hubs e à landing Natal Prático",()=>{
   assert.match(home,/href="\/mental-financeiro\/financeiro\/renda-extra\/datas-comemorativas\/natal\/natal-pratico\/"/);
   assert.match(home,/id="materiais"/);
-  assert.match(home,/src="\/assets\/home\/hub-mitologia\.webp"/);
+  assert.match(home,/src="\/assets\/home\/hub-cultura\.avif"/);
   assert.match(home,/src="\/assets\/home\/hub-fitness\.webp"/);
   assert.match(home,/src="\/assets\/home\/hub-mental-financeiro\.webp"/);
 });
@@ -36,4 +36,14 @@ test("o card inteiro mostra estado interativo acessível via mouse e teclado",()
   assert.match(stylesheet,/a\.eco-hubcard:focus-visible/);
   assert.match(stylesheet,/a\.eco-hubcard\{color:inherit;text-decoration:none;cursor:pointer/);
   assert.match(stylesheet,/prefers-reduced-motion:reduce/);
+});
+
+test("nova arte de Cultura & Entretenimento é um AVIF real, leve e local",async()=>{
+  const path=join(ROOT,"public/assets/home/hub-cultura.avif");
+  const bytes=await readFile(path);
+  assert.ok(bytes.length>5000 && bytes.length<60000,
+    "a imagem deve estar presente e otimizada para o banner");
+  assert.equal(bytes.toString("ascii",4,12),"ftypavif");
+  assert.match(home,/alt="Panorama de cultura e geografia/);
+  assert.match(home,/width="560" height="287"/);
 });
