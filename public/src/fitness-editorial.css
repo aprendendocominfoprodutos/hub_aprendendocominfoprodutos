@@ -1,0 +1,24 @@
+/* Fitness & Saúde — cartões editoriais premium inspirados no layout Canva do usuário. */
+.eco-site .fit-editorial-section{padding-top:14px;padding-bottom:36px}
+.eco-site .fit-editorial-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:22px}
+.eco-site .fit-editorial-card{position:relative;display:flex;flex-direction:column;min-width:0;overflow:hidden;border-radius:19px;background:#09192d;border:1px solid rgba(213,175,95,.38);color:#f8e8c4;text-decoration:none;box-shadow:0 22px 55px rgba(0,0,0,.24);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}
+.eco-site .fit-editorial-card:hover{transform:translateY(-5px);border-color:#dec17b;box-shadow:0 28px 65px rgba(0,0,0,.38)}
+.eco-site .fit-editorial-card:focus-visible{outline:3px solid #f4d88a;outline-offset:4px}
+.eco-site .fit-editorial-art{display:block;position:relative;flex:none;aspect-ratio:320 / 390;background-image:url('/assets/fitness-saude/cards-editoriais.avif');background-size:300% 100%;background-repeat:no-repeat;background-color:#101d2d;transition:filter .25s ease,transform .35s ease}
+.eco-site .fit-editorial-fitness .fit-editorial-art{background-position:0% 50%}
+.eco-site .fit-editorial-saude .fit-editorial-art{background-position:50% 50%}
+.eco-site .fit-editorial-alimentacao .fit-editorial-art{background-position:100% 50%}
+.eco-site .fit-editorial-card:hover .fit-editorial-art{filter:brightness(1.06)}
+.eco-site .fit-editorial-art::after{content:"";position:absolute;inset:55% 0 0;background:linear-gradient(to bottom,transparent,rgba(6,14,24,.48))}
+.eco-site .fit-editorial-status{position:absolute;z-index:2;top:15px;left:15px;display:inline-flex;align-items:center;gap:7px;background:#11b75c;color:#fff;font:800 12px/1.2 'DM Sans',system-ui,sans-serif;padding:7px 13px;border-radius:99px;box-shadow:0 5px 15px rgba(0,0,0,.3);white-space:nowrap}
+.eco-site .fit-editorial-status>span{display:inline-grid;place-items:center;width:17px;height:17px;background:rgba(255,255,255,.24);border-radius:4px;font-size:13px}
+.eco-site .fit-editorial-caption{padding:18px 18px 21px;min-height:96px;display:flex;flex-direction:column;gap:7px;background:#0b1931;box-shadow:inset 0 1px 0 rgba(214,175,87,.12)}
+.eco-site .fit-editorial-caption strong{font:700 23px/1.1 'Playfair Display',Georgia,serif;color:#f4ead7;letter-spacing:.015em}
+.eco-site .fit-editorial-caption small{font:400 12px/1.5 'DM Sans',system-ui,sans-serif;color:#aebfd4}
+.eco-site .fit-editorial-future{display:flex;align-items:baseline;flex-wrap:wrap;gap:9px 13px;margin-top:23px;padding:13px 16px;border:1px dashed rgba(194,159,88,.23);border-radius:11px;color:#b2bbc4;background:rgba(8,25,38,.64)}
+.eco-site .fit-editorial-future>span{font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#d4b270}
+.eco-site .fit-editorial-future strong{font-size:12px;font-weight:700;color:#dce0df}
+.eco-site .fit-editorial-future small{font-size:11px;color:#8fa4ae}
+@media(max-width:950px){.eco-site .fit-editorial-grid{gap:13px}.eco-site .fit-editorial-caption{padding:16px}.eco-site .fit-editorial-caption strong{font-size:21px}.eco-site .fit-editorial-status{top:10px;left:10px;font-size:10px}}
+@media(max-width:700px){.eco-site .fit-editorial-grid{grid-template-columns:1fr;gap:20px;max-width:450px;margin-inline:auto}.eco-site .fit-editorial-caption{min-height:0}.eco-site .fit-editorial-future{max-width:450px;margin:18px auto 0}}
+@media(prefers-reduced-motion:reduce){.eco-site .fit-editorial-card,.eco-site .fit-editorial-art{transition:none}.eco-site .fit-editorial-card:hover{transform:none}}
