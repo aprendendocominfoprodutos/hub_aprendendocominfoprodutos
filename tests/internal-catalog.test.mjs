@@ -107,3 +107,20 @@ test("hero do Menú Familiar usa a capa original em arquivo binário, não mocku
  assert.match(css,/\.mx-book-real img/);
  assert.match(css,/@media\(max-width:460px\)/);
 });
+
+test("cartão de quatro semanas exibe imagem sem áreas vazias e informações legíveis",async()=>{
+  const root=resolve(".");
+  const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+  const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
+  assert.match(html,/<div class="mx-feature-photo-media"><img/);
+  assert.match(html,/class="mx-feature-info-title"><strong>4 semanas<\/strong>/);
+  assert.match(html,/class="mx-feature-metrics"/);
+  assert.match(html,/<strong>28<\/strong><span>recetas<\/span>/);
+  assert.match(html,/<strong>4<\/strong><span>listas de compras<\/span>/);
+  assert.match(html,/<strong>4<\/strong><span>porciones de referencia<\/span>/);
+  assert.doesNotMatch(html,/class="mx-feature-tag"/);
+  assert.match(css,/body\.mx-landing \.mx-feature-photo-media img\{/);
+  assert.match(css,/object-fit:cover/);
+  assert.match(css,/\.mx-feature-photo\{\s*display:flex;/);
+  assert.match(css,/\.mx-feature-info-title strong\{/);
+});
