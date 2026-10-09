@@ -24,7 +24,7 @@ export async function buildSimpleLanguages({root=ROOT,dryRun=false}={}) {
     check(!edition.origemExistente,"não gerar outra versão brasileira");
     const orig=product.edicoes.find(e=>e.origemExistente)?.rota;
     const raizIdiomas=product.raizIdiomas || orig;
-    check(orig && raizIdiomas && route.startsWith(raizIdiomas) && route!==raizIdiomas && route!==orig,
+    check(raizIdiomas && route.startsWith(raizIdiomas) && route!==raizIdiomas && (!orig || route!==orig),
       "a rota deve ficar abaixo do agrupamento de idiomas do produto: "+route);
     check(!routes.has(route),"rota duplicada: "+route);
     routes.add(route);

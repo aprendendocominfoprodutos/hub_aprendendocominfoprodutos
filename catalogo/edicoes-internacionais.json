@@ -278,6 +278,146 @@
       "redirecionamentosLegados": [
         "/mitologia/grega/geral/"
       ]
+    },
+    {
+      "id": "PRO-0004",
+      "slug": "menu-familiar",
+      "nome": "Menú Familiar — Cardápios Semanais",
+      "tipo": "ebook",
+      "status": "preparacao",
+      "hubPrincipal": "Fitness & Saúde",
+      "classificacaoPrincipal": [
+        "Alimentação & Saúde",
+        "Receitas",
+        "Cardápios Semanais"
+      ],
+      "temasRelacionados": [
+        "Planejamento de refeições",
+        "Compras semanais",
+        "Culinária caseira"
+      ],
+      "vitrineFinal": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/",
+      "raizIdiomas": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/",
+      "operacao": "catalogo-interno",
+      "observacao": "PDF da edição México com 124 páginas, em revisão editorial em outubro de 2026. Conteúdo de culinária não validado em testes de cozinha; não possui checkout comercial.",
+      "edicoes": [
+        {
+          "codigo": "pt-BR",
+          "mercado": "Brasil",
+          "moeda": "BRL",
+          "status": "planejada",
+          "rota": "/pt-br/produtos/menu-familiar/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt-br/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null,
+          "nomeLocalizado": "Cardápio Familiar",
+          "copiaPlanejada": {
+            "status": "Projeto futuro",
+            "heading": "Em preparação",
+            "description": "A edição brasileira de Menú Familiar está planejada e ainda não está disponível.",
+            "country": "Brasil"
+          }
+        },
+        {
+          "codigo": "en-US",
+          "mercado": "Estados Unidos",
+          "moeda": "USD",
+          "status": "planejada",
+          "rota": "/en-us/products/weekly-family-menu/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/ing/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null,
+          "nomeLocalizado": "Family Weekly Meal Plan"
+        },
+        {
+          "codigo": "es-MX",
+          "mercado": "México",
+          "moeda": "MXN",
+          "status": "planejada",
+          "rota": "/es-mx/productos/menu-familiar/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null,
+          "nomeLocalizado": "Menú Familiar — Edición México",
+          "copiaPlanejada": {
+            "status": "Edición en revisión",
+            "heading": "Menú Familiar · México",
+            "description": "La edición México contiene cuatro semanas de comidas caseras, 28 recetas y cuatro listas de compras. El material está en revisión editorial; todavía no hay oferta de compra disponible.",
+            "country": "México"
+          }
+        },
+        {
+          "codigo": "es-ES",
+          "mercado": "Espanha",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/es-es/productos/menu-familiar/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-es/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null,
+          "nomeLocalizado": "Menú Familiar — Edición España"
+        },
+        {
+          "codigo": "fr-FR",
+          "mercado": "França",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/fr-fr/produits/menu-familial/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/fr/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null,
+          "nomeLocalizado": "Menu Familial"
+        },
+        {
+          "codigo": "it-IT",
+          "mercado": "Itália",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/it-it/prodotti/menu-familiare/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/it/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null,
+          "nomeLocalizado": "Menù Familiare"
+        },
+        {
+          "codigo": "pt-PT",
+          "mercado": "Portugal",
+          "moeda": "EUR",
+          "status": "planejada",
+          "rota": "/pt-pt/produtos/menu-familiar/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null,
+          "nomeLocalizado": "Menu Familiar"
+        },
+        {
+          "codigo": "ar-SA",
+          "mercado": "Arábia Saudita",
+          "moeda": "SAR",
+          "status": "planejada",
+          "rota": "/ar-sa/products/family-menu/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/ar/",
+          "htmlLocalizado": null,
+          "produtoAdaptado": false,
+          "checkoutVerificado": false,
+          "checkoutUrl": null,
+          "nomeLocalizado": "قائمة الطعام العائلية"
+        }
+      ]
     }
   ]
 }

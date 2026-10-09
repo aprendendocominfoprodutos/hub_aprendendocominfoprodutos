@@ -19,6 +19,10 @@ A classificação interna continua **em português**. Os idiomas/países são de
   2. **Financeiro**
   3. **Carreira & Produtividade**: núcleo reservado.
 
+### Cardápios Semanais — Menú Familiar
+
+Em Fitness & Saúde → Alimentação → Receitas → Cardápios Semanais → Menú Familiar, a vitrine final `/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/` dispõe de seletor de oito idiomas. A edição México (PDF editorial de 124 páginas; 28 receitas, quatro listas de compras) está em revisão editorial. As demais edições ainda são planejadas. Links curtos exibem páginas informativas, sem checkout, geradas no deploy. Este produto não deve ser classificado como venda publicada até que haja landing e checkout revisados. A taxonomia interna permanece em português, exceto pelo nome próprio do e-book.
+
 ### Produto existente
 
 **Natal Prático**: `/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/`.

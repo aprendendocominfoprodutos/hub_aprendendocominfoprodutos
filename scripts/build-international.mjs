@@ -116,8 +116,9 @@ function aliasPage(product, edition, catalog) {
 
 /** Página informativa real em domínio próprio, sem anunciar venda nem competir no SEO. */
 export function futurePage(product, edition, catalog) {
-  const copy = DICTIONARY[edition.codigo];
-  ensure(copy, "idioma de placeholder indisponível: " + edition.codigo);
+  const baseCopy = DICTIONARY[edition.codigo];
+  ensure(baseCopy, "idioma de placeholder indisponível: " + edition.codigo);
+  const copy = {...baseCopy,...(edition.copiaPlanejada || {})};
   const title = edition.nomeLocalizado || product.nome;
   const fullTitle = title + " | " + copy.status;
   return '<!doctype html><html lang="' + escapeHtml(edition.codigo) + '"' + (edition.codigo === "ar-SA" ? ' dir="rtl"' : "") + '><head>' +
@@ -179,7 +180,7 @@ export async function validateCatalog(catalog, root = ROOT) {
     ids.add(product.id);
     ensure(SLUG_RE.test(product.slug) && !slugs.has(product.slug), "slug inválido ou duplicado: " + product.slug);
     slugs.add(product.slug);
-    ensure(["existente","ideia"].includes(product.status), "status de produto inválido");
+    ensure(["existente","ideia","preparacao"].includes(product.status), "status de produto inválido");
     ensure(typeof product.nome === "string" && product.nome.trim(), "produto sem nome");
     ensure(Array.isArray(product.classificacaoPrincipal) && product.classificacaoPrincipal.length,
       "classificação principal ausente: " + product.id);

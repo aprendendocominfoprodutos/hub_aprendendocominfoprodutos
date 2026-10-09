@@ -44,3 +44,29 @@ test("menu de idiomas flutua sem aumentar a altura dos cards finais",async()=>{
   assert.match(css,/\.natal-card\{[^}]*overflow:visible/);
   assert.doesNotMatch(optionsRule,/position:static|position:relative/);
 });
+
+test("Menú Familiar tem categorias distintas, seletor final e destinos de oito edições planejadas",async()=>{
+  const root=resolve(".");
+  const base="/fitness-saude/alimentacao/receitas/";
+  const weekly=base+"cardapios-semanais/";
+  const final=weekly+"menu-familiar/";
+  const pages=await Promise.all([base,weekly,final].map(path=>readFile(join(root,"public",path,"index.html"),"utf8")));
+  assert.match(pages[0],new RegExp(weekly));
+  assert.match(pages[1],new RegExp(final));
+  assert.match(pages[2],/data-product-id="PRO-0004"/);
+  assert.match(pages[2],/class="language-menu-options"/);
+  const menuLinks=[...pages[2].matchAll(/<a class="language-option" href="([^"]+)"/g)].map(x=>x[1]);
+  assert.equal(menuLinks.length,8);
+  assert.equal(new Set(menuLinks).size,8);
+  assert.ok(menuLinks.every(h=>h.startsWith(final)));
+  for(const locale of ["PT-BR","EN-US","ES-MX","ES-ES","FR","IT","PT-PT","AR"]){
+    assert.match(pages[2],new RegExp(">"+locale+"</span>"));
+  }
+  assert.doesNotMatch(pages[2],/pay\.hotmart|hotmart__button-checkout|class="lp-language"/);
+  const catalog=JSON.parse(await readFile(join(root,"catalogo/edicoes-internacionais.json"),"utf8"));
+  const product=catalog.produtos.find(p=>p.id==="PRO-0004");
+  assert.equal(product.status,"preparacao");
+  assert.equal(product.vitrineFinal,final);
+  assert.ok(product.edicoes.every(e=>e.status==="planejada"&&!e.checkoutVerificado));
+  assert.deepEqual(menuLinks,product.edicoes.map(e=>e.rotaSimples));
+});

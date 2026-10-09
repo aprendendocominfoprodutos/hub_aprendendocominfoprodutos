@@ -11,7 +11,7 @@ const oldBrazilUrl = "/mental-financeiro/financeiro/renda-extra/datas-comemorati
 
 test("IDs estáveis, versão 2 e landing pages brasileiras preservadas", async () => {
   assert.equal(catalog.versao, 2);
-  assert.deepEqual(catalog.produtos.map(x=>x.id), ["PRO-0001","PRO-0002","PRO-0003"]);
+  assert.deepEqual(catalog.produtos.map(x=>x.id), ["PRO-0001","PRO-0002","PRO-0003","PRO-0004"]);
   assert.deepEqual(await validateCatalog(catalog,ROOT), []);
   assert.equal(catalog.produtos[0].edicoes[0].rota, oldBrazilUrl);
   assert.equal(catalog.produtos[0].edicoes[0].rotaPublica, "/pt-br/produtos/natal-pratico/");
@@ -51,11 +51,11 @@ test("planejadas geram aviso de projeto futuro, não checkout, sem indexação",
 
 test("dry-run: 14 páginas de projeto futuro e 2 atalhos brasileiros", async () => {
   const info=await prepareInternational({root:ROOT,dryRun:true});
-  assert.equal(info.products,3);
+  assert.equal(info.products,4);
   assert.equal(info.published,2);
-  assert.equal(info.planned,14);
+  assert.equal(info.planned,22);
   assert.deepEqual(info.generated,[]);
-  assert.equal(info.placeholders.length,14);
+  assert.equal(info.placeholders.length,22);
   assert.deepEqual(info.aliases,["/pt-br/produtos/natal-pratico/","/pt-br/produtos/mitologia-grega/"]);
   for(const p of catalog.produtos){
     for(const e of p.edicoes.filter(e=>e.status==="planejada")){
