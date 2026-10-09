@@ -596,6 +596,72 @@
             "status": "planejada",
             "checkoutVerificado": false,
             "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "França",
+            "codigo": "ar-FR",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/franca/ar-fr/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "europa",
+            "pais": "Alemanha",
+            "codigo": "ar-DE",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/alemanha/ar-de/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "europa",
+            "pais": "Bélgica",
+            "codigo": "ar-BE",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/belgica/ar-be/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "europa",
+            "pais": "Reino Unido",
+            "codigo": "ar-GB",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/reino-unido/ar-gb/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "europa",
+            "pais": "Países Baixos",
+            "codigo": "ar-NL",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/paises-baixos/ar-nl/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "europa",
+            "pais": "Suécia",
+            "codigo": "ar-SE",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/suecia/ar-se/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
           }
         ],
         "paisesEuropa": [
@@ -619,7 +685,8 @@
             "pais": "França",
             "slug": "franca",
             "idiomas": [
-              "fr-FR"
+              "fr-FR",
+              "ar-FR"
             ],
             "status": "planejada"
           },
@@ -635,7 +702,8 @@
             "pais": "Reino Unido",
             "slug": "reino-unido",
             "idiomas": [
-              "en-GB"
+              "en-GB",
+              "ar-GB"
             ],
             "status": "planejada"
           },
@@ -643,7 +711,8 @@
             "pais": "Alemanha",
             "slug": "alemanha",
             "idiomas": [
-              "de-DE"
+              "de-DE",
+              "ar-DE"
             ],
             "status": "planejada"
           },
@@ -651,7 +720,8 @@
             "pais": "Países Baixos",
             "slug": "paises-baixos",
             "idiomas": [
-              "nl-NL"
+              "nl-NL",
+              "ar-NL"
             ],
             "status": "planejada"
           },
@@ -675,7 +745,8 @@
             "pais": "Suécia",
             "slug": "suecia",
             "idiomas": [
-              "sv-SE"
+              "sv-SE",
+              "ar-SE"
             ],
             "status": "planejada"
           },
@@ -694,7 +765,8 @@
             "slug": "belgica",
             "idiomas": [
               "nl-BE",
-              "fr-BE"
+              "fr-BE",
+              "ar-BE"
             ],
             "status": "planejada"
           },

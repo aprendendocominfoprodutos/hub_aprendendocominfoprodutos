@@ -86,7 +86,7 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
   const brasil=await readFile(join(root,"public",final,"brasil/index.html"),"utf8");
   assert.match(brasil,/http-equiv="refresh"/);
   assert.doesNotMatch(brasil,/Selecionar →|Escolha/);
-  for(const country of ["espanha","portugal","franca","italia"]){
+  for(const country of ["espanha","portugal","italia"]){
     const html=await readFile(join(root,"public",final,"europa",country,"index.html"),"utf8");
     assert.match(html,/http-equiv="refresh"/);
     assert.doesNotMatch(html,/class="mf-card"|Selecionar idioma/);
@@ -280,7 +280,7 @@ test("seletor Europa reúne 16 países e respeita idiomas comerciais de cada pa�
  const base="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/";
  const europe=await readFile(join(root,"public",base,"index.html"),"utf8");
  assert.equal((europe.match(/class="mf-card"/g)||[]).length,16);
- const countries=[{"slug":"reino-unido","codes":["en-GB"]},{"slug":"alemanha","codes":["de-DE"]},{"slug":"paises-baixos","codes":["nl-NL"]},{"slug":"irlanda","codes":["en-IE"]},{"slug":"dinamarca","codes":["da-DK"]},{"slug":"suecia","codes":["sv-SE"]},{"slug":"suica","codes":["de-CH","fr-CH","it-CH"]},{"slug":"belgica","codes":["nl-BE","fr-BE"]},{"slug":"noruega","codes":["nb-NO"]},{"slug":"austria","codes":["de-AT"]},{"slug":"polonia","codes":["pl-PL"]},{"slug":"republica-tcheca","codes":["cs-CZ"]}];
+ const countries=[{"slug":"reino-unido","codes":["en-GB","ar-GB"]},{"slug":"alemanha","codes":["de-DE","ar-DE"]},{"slug":"paises-baixos","codes":["nl-NL","ar-NL"]},{"slug":"irlanda","codes":["en-IE"]},{"slug":"dinamarca","codes":["da-DK"]},{"slug":"suecia","codes":["sv-SE","ar-SE"]},{"slug":"suica","codes":["de-CH","fr-CH","it-CH"]},{"slug":"belgica","codes":["nl-BE","fr-BE","ar-BE"]},{"slug":"noruega","codes":["nb-NO"]},{"slug":"austria","codes":["de-AT"]},{"slug":"polonia","codes":["pl-PL"]},{"slug":"republica-tcheca","codes":["cs-CZ"]}];
  for(const country of countries){
   assert.ok(europe.includes('href="'+base+country.slug+'/"'),country.slug);
   const countryHtml=await readFile(join(root,"public",base,country.slug,"index.html"),"utf8");
@@ -301,5 +301,20 @@ test("seletor Europa reúne 16 países e respeita idiomas comerciais de cada pa�
  const catalog=JSON.parse(await readFile(join(root,"catalogo/edicoes-internacionais.json"),"utf8"));
  const prod=catalog.produtos.find(p=>p.id==="PRO-0004");
  assert.equal(prod.organizacaoMercados.paisesEuropa.length,16);
- assert.equal(prod.organizacaoMercados.edicoesRegionaisPlanejadas.filter(e=>e.regiao==="europa").length,15);
+ assert.equal(prod.organizacaoMercados.edicoesRegionaisPlanejadas.filter(e=>e.regiao==="europa").length,21);
+});
+
+test("Seis países europeus oferecem edição árabe com RTL sem checkout",async()=>{
+ const root=resolve("."),base="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/";
+ for(const [slug,code] of [["franca","ar-FR"],["alemanha","ar-DE"],["belgica","ar-BE"],["reino-unido","ar-GB"],["paises-baixos","ar-NL"],["suecia","ar-SE"]]){
+  const select=await readFile(join(root,"public",base,slug,"index.html"),"utf8");
+  assert.doesNotMatch(select,/http-equiv="refresh"/);
+  assert.ok(select.includes(base+slug+"/"+code.toLowerCase()+"/"));
+  const page=await readFile(join(root,"public",base,slug,code.toLowerCase(),"index.html"),"utf8");
+  assert.ok(page.includes('lang="'+code+'"'));
+  assert.match(page,/<html[^>]*dir="rtl"/);
+  assert.match(page,/noindex,follow/);
+  assert.match(page,/قيد الإعداد/);
+  assert.doesNotMatch(page,/pay\.hotmart|hotmart__button-checkout|fbq\(/);
+ }
 });
