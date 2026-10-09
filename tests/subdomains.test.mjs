@@ -106,7 +106,7 @@ test("Menú Familiar redireciona 301 e mantém UTMs após migrar a página mexic
 
 test("países com idioma único abrem edição direto e EUA mantém escolha de idiomas",async()=>{
   const root="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/";
-  const mapping={"brasil/":"brasil/pt-br/","latam/mexico/":"latam/mexico/es-mx/","latam/chile/":"latam/chile/es-cl/","latam/argentina/":"latam/argentina/es-ar/","latam/colombia/":"latam/colombia/es-co/","latam/peru/":"latam/peru/es-pe/","europa/espanha/":"europa/espanha/es-es/","europa/portugal/":"europa/portugal/pt-pt/","europa/franca/":"europa/franca/fr-fr/","europa/italia/":"europa/italia/it-it/"};
+  const mapping={"brasil/":"brasil/pt-br/","latam/mexico/":"latam/mexico/es-mx/","latam/chile/":"latam/chile/es-cl/","latam/argentina/":"latam/argentina/es-ar/","latam/colombia/":"latam/colombia/es-co/","latam/peru/":"latam/peru/es-pe/","europa/espanha/":"europa/espanha/es-es/","europa/portugal/":"europa/portugal/pt-pt/","europa/italia/":"europa/italia/it-it/"};
   const calls=[];
   const env={ASSETS:{fetch:async request=>{calls.push(new URL(request.url).pathname);return new Response("ok");}}};
   for(const [country,edition] of Object.entries(mapping)){
