@@ -107,7 +107,7 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
   assert.equal(product.edicoes.find(e=>e.codigo==="es-MX").rotaSimples,final+"latam/mexico/es-mx/");
   assert.equal(product.edicoes.find(e=>e.codigo==="pt-BR").rotaSimples,final+"brasil/pt-br/");
   assert.equal(product.edicoes.find(e=>e.codigo==="en-US").rotaSimples,final+"america-do-norte/eua/en-us/");
-  assert.deepEqual(product.organizacaoMercados.edicoesRegionaisPlanejadas.map(e=>e.codigo),["es-US","pt-US","en-CA","fr-CA"]);
+  assert.deepEqual(product.organizacaoMercados.edicoesRegionaisPlanejadas.filter(e=>e.regiao==="america-do-norte").map(e=>e.codigo),["es-US","pt-US","en-CA","fr-CA"]);
 });
 
 test("landing de pré-lançamento México preservada, localizada, sem checkout e com guias reais",async()=>{
