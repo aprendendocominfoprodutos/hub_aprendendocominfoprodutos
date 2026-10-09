@@ -149,3 +149,20 @@ test("América do Norte mantém EUA antigos redirecionados com UTMs e Canadá ac
  assert.equal(legacy.status,301);
  assert.equal(new URL(legacy.headers.get("location")).pathname,root+"america-do-norte/eua/en-us/");
 });
+
+test("Europa abre diretamente países com uma edição, preservando UTMs, e mantém seletor multilíngue",async()=>{
+ const base="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/";
+ const singles=[["/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/reino-unido/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/reino-unido/en-gb/"],["/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/alemanha/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/alemanha/de-de/"],["/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/paises-baixos/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/paises-baixos/nl-nl/"],["/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/irlanda/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/irlanda/en-ie/"],["/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/dinamarca/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/dinamarca/da-dk/"],["/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/suecia/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/suecia/sv-se/"],["/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/noruega/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/noruega/nb-no/"],["/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/austria/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/austria/de-at/"],["/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/polonia/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/polonia/pl-pl/"],["/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/republica-tcheca/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/republica-tcheca/cs-cz/"]];
+ const env={ASSETS:{fetch:async req=>new Response(new URL(req.url).pathname,{status:200})}};
+ for(const [country,edition] of singles){
+  const response=await regionalWorker.fetch(new Request("https://www."+domain+country+"?utm_source=ads"),env);
+  assert.equal(response.status,302,country);
+  const target=new URL(response.headers.get("location"));
+  assert.equal(target.pathname,edition);
+  assert.equal(target.searchParams.get("utm_source"),"ads");
+ }
+ for(const country of ["suica","belgica"]){
+  const response=await regionalWorker.fetch(new Request("https://www."+domain+base+country+"/"),env);
+  assert.equal(response.status,200);
+ }
+});

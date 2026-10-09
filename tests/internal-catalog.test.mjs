@@ -274,3 +274,32 @@ test("América do Norte aparece no seletor principal e oferece cinco edições e
  const mexico=await readFile(join(root,"public",prefix,"latam/mexico/es-mx/index.html"),"utf8");
  assert.match(mexico,/mx-recipe-track/);
 });
+
+test("seletor Europa reúne 16 países e respeita idiomas comerciais de cada país",async()=>{
+ const root=resolve(".");
+ const base="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/";
+ const europe=await readFile(join(root,"public",base,"index.html"),"utf8");
+ assert.equal((europe.match(/class="mf-card"/g)||[]).length,16);
+ const countries=[{"slug":"reino-unido","codes":["en-GB"]},{"slug":"alemanha","codes":["de-DE"]},{"slug":"paises-baixos","codes":["nl-NL"]},{"slug":"irlanda","codes":["en-IE"]},{"slug":"dinamarca","codes":["da-DK"]},{"slug":"suecia","codes":["sv-SE"]},{"slug":"suica","codes":["de-CH","fr-CH","it-CH"]},{"slug":"belgica","codes":["nl-BE","fr-BE"]},{"slug":"noruega","codes":["nb-NO"]},{"slug":"austria","codes":["de-AT"]},{"slug":"polonia","codes":["pl-PL"]},{"slug":"republica-tcheca","codes":["cs-CZ"]}];
+ for(const country of countries){
+  assert.ok(europe.includes('href="'+base+country.slug+'/"'),country.slug);
+  const countryHtml=await readFile(join(root,"public",base,country.slug,"index.html"),"utf8");
+  assert.match(countryHtml,/noindex,follow/);
+  if(country.codes.length===1){
+   assert.match(countryHtml,/http-equiv="refresh"/);
+   assert.ok(countryHtml.includes(country.codes[0].toLowerCase()));
+  }else{
+   assert.doesNotMatch(countryHtml,/http-equiv="refresh"/);
+   for(const code of country.codes)assert.ok(countryHtml.includes(base+country.slug+"/"+code.toLowerCase()+"/"));
+  }
+  for(const code of country.codes){
+   const leaf=await readFile(join(root,"public",base,country.slug,code.toLowerCase(),"index.html"),"utf8");
+   assert.match(leaf,/noindex,follow/);
+   assert.doesNotMatch(leaf,/pay\.hotmart|hotmart__button-checkout|fbq\(/);
+  }
+ }
+ const catalog=JSON.parse(await readFile(join(root,"catalogo/edicoes-internacionais.json"),"utf8"));
+ const prod=catalog.produtos.find(p=>p.id==="PRO-0004");
+ assert.equal(prod.organizacaoMercados.paisesEuropa.length,16);
+ assert.equal(prod.organizacaoMercados.edicoesRegionaisPlanejadas.filter(e=>e.regiao==="europa").length,15);
+});

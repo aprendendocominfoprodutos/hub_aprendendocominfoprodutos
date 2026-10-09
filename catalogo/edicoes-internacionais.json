@@ -461,6 +461,274 @@
             "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/america-do-norte/canada/fr-ca/",
             "status": "planejada",
             "checkoutVerificado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Reino Unido",
+            "codigo": "en-GB",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/reino-unido/en-gb/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Alemanha",
+            "codigo": "de-DE",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/alemanha/de-de/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Países Baixos",
+            "codigo": "nl-NL",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/paises-baixos/nl-nl/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Irlanda",
+            "codigo": "en-IE",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/irlanda/en-ie/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Dinamarca",
+            "codigo": "da-DK",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/dinamarca/da-dk/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Suécia",
+            "codigo": "sv-SE",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/suecia/sv-se/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Suíça",
+            "codigo": "de-CH",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/suica/de-ch/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Suíça",
+            "codigo": "fr-CH",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/suica/fr-ch/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Suíça",
+            "codigo": "it-CH",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/suica/it-ch/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Bélgica",
+            "codigo": "nl-BE",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/belgica/nl-be/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Bélgica",
+            "codigo": "fr-BE",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/belgica/fr-be/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Noruega",
+            "codigo": "nb-NO",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/noruega/nb-no/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Áustria",
+            "codigo": "de-AT",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/austria/de-at/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "Polônia",
+            "codigo": "pl-PL",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/polonia/pl-pl/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          },
+          {
+            "regiao": "europa",
+            "pais": "República Tcheca",
+            "codigo": "cs-CZ",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/republica-tcheca/cs-cz/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false
+          }
+        ],
+        "paisesEuropa": [
+          {
+            "pais": "Espanha",
+            "slug": "espanha",
+            "idiomas": [
+              "es-ES"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Portugal",
+            "slug": "portugal",
+            "idiomas": [
+              "pt-PT"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "França",
+            "slug": "franca",
+            "idiomas": [
+              "fr-FR"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Itália",
+            "slug": "italia",
+            "idiomas": [
+              "it-IT"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Reino Unido",
+            "slug": "reino-unido",
+            "idiomas": [
+              "en-GB"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Alemanha",
+            "slug": "alemanha",
+            "idiomas": [
+              "de-DE"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Países Baixos",
+            "slug": "paises-baixos",
+            "idiomas": [
+              "nl-NL"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Irlanda",
+            "slug": "irlanda",
+            "idiomas": [
+              "en-IE"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Dinamarca",
+            "slug": "dinamarca",
+            "idiomas": [
+              "da-DK"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Suécia",
+            "slug": "suecia",
+            "idiomas": [
+              "sv-SE"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Suíça",
+            "slug": "suica",
+            "idiomas": [
+              "de-CH",
+              "fr-CH",
+              "it-CH"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Bélgica",
+            "slug": "belgica",
+            "idiomas": [
+              "nl-BE",
+              "fr-BE"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Noruega",
+            "slug": "noruega",
+            "idiomas": [
+              "nb-NO"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Áustria",
+            "slug": "austria",
+            "idiomas": [
+              "de-AT"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Polônia",
+            "slug": "polonia",
+            "idiomas": [
+              "pl-PL"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "República Tcheca",
+            "slug": "republica-tcheca",
+            "idiomas": [
+              "cs-CZ"
+            ],
+            "status": "planejada"
           }
         ]
       }
