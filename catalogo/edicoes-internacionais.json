@@ -412,12 +412,18 @@
           "moeda": "SAR",
           "status": "planejada",
           "rota": "/ar-sa/products/family-menu/",
-          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/ar/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/arabia-saudita/ar-sa/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
           "checkoutUrl": null,
-          "nomeLocalizado": "قائمة الطعام العائلية"
+          "nomeLocalizado": "القائمة العائلية — السعودية",
+          "copiaPlanejada": {
+            "status": "إصدار مخطط له",
+            "heading": "قيد الإعداد",
+            "description": "نسخة قائمة الوجبات العائلية الخاصة بالمملكة العربية السعودية ما زالت في مرحلة التخطيط. لم يُجهّز الكتاب أو يُعتمد، ولا يتوفر شراء أو تسليم رقمي.",
+            "country": "المملكة العربية السعودية"
+          }
         }
       ],
       "organizacaoMercados": {
@@ -426,9 +432,10 @@
           "brasil",
           "latam",
           "america-do-norte",
-          "europa"
+          "europa",
+          "paises-arabes"
         ],
-        "notas": "Divisão comercial: México continua na seleção LATAM embora geograficamente pertença à América do Norte; Brasil tem entrada própria. EUA: EN-US, ES-US, PT-US; Canadá: EN-CA, FR-CA. Todas ainda planejadas, sem checkout. Edição árabe legada fora das quatro regiões.",
+        "notas": "Divisão comercial: México continua na seleção LATAM embora geograficamente pertença à América do Norte; Brasil tem entrada própria. EUA: EN-US, ES-US, PT-US; Canadá: EN-CA, FR-CA. Todas ainda planejadas, sem checkout. Edição saudita em árabe na região Países Árabes; a URL antiga preserva redirecionamento.",
         "edicoesRegionaisPlanejadas": [
           {
             "regiao": "america-do-norte",
@@ -662,6 +669,216 @@
             "produtoAdaptado": false,
             "idioma": "árabe moderno padrão",
             "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Arábia Saudita",
+            "codigo": "en-SA",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/arabia-saudita/en-sa/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "SAR"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Emirados Árabes Unidos",
+            "codigo": "ar-AE",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/emirados-arabes-unidos/ar-ae/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "AED",
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Emirados Árabes Unidos",
+            "codigo": "en-AE",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/emirados-arabes-unidos/en-ae/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "AED"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Catar",
+            "codigo": "ar-QA",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/catar/ar-qa/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "QAR",
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Catar",
+            "codigo": "en-QA",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/catar/en-qa/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "QAR"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Kuwait",
+            "codigo": "ar-KW",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/kuwait/ar-kw/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "KWD",
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Kuwait",
+            "codigo": "en-KW",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/kuwait/en-kw/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "KWD"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Bahrein",
+            "codigo": "ar-BH",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/bahrein/ar-bh/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "BHD",
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Bahrein",
+            "codigo": "en-BH",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/bahrein/en-bh/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "BHD"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Omã",
+            "codigo": "ar-OM",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/oma/ar-om/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "OMR",
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Omã",
+            "codigo": "en-OM",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/oma/en-om/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "OMR"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Egito",
+            "codigo": "ar-EG",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/egito/ar-eg/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "EGP",
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Marrocos",
+            "codigo": "ar-MA",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/marrocos/ar-ma/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "MAD",
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Marrocos",
+            "codigo": "fr-MA",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/marrocos/fr-ma/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "MAD"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Argélia",
+            "codigo": "ar-DZ",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/argelia/ar-dz/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "DZD",
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Argélia",
+            "codigo": "fr-DZ",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/argelia/fr-dz/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "DZD"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Tunísia",
+            "codigo": "ar-TN",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/tunisia/ar-tn/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "TND",
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Tunísia",
+            "codigo": "fr-TN",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/tunisia/fr-tn/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "TND"
+          },
+          {
+            "regiao": "paises-arabes",
+            "pais": "Jordânia",
+            "codigo": "ar-JO",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/paises-arabes/jordania/ar-jo/",
+            "status": "planejada",
+            "checkoutVerificado": false,
+            "produtoAdaptado": false,
+            "moeda": "JOD",
+            "idioma": "árabe moderno padrão",
+            "direcaoTexto": "rtl"
           }
         ],
         "paisesEuropa": [
@@ -799,6 +1016,127 @@
             "slug": "republica-tcheca",
             "idiomas": [
               "cs-CZ"
+            ],
+            "status": "planejada"
+          }
+        ],
+        "paisesArabes": [
+          {
+            "pais": "Arábia Saudita",
+            "slug": "arabia-saudita",
+            "subRegiao": "Golfo Árabe",
+            "moeda": "SAR",
+            "idiomas": [
+              "ar-SA",
+              "en-SA"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Emirados Árabes Unidos",
+            "slug": "emirados-arabes-unidos",
+            "subRegiao": "Golfo Árabe",
+            "moeda": "AED",
+            "idiomas": [
+              "ar-AE",
+              "en-AE"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Catar",
+            "slug": "catar",
+            "subRegiao": "Golfo Árabe",
+            "moeda": "QAR",
+            "idiomas": [
+              "ar-QA",
+              "en-QA"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Kuwait",
+            "slug": "kuwait",
+            "subRegiao": "Golfo Árabe",
+            "moeda": "KWD",
+            "idiomas": [
+              "ar-KW",
+              "en-KW"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Bahrein",
+            "slug": "bahrein",
+            "subRegiao": "Golfo Árabe",
+            "moeda": "BHD",
+            "idiomas": [
+              "ar-BH",
+              "en-BH"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Omã",
+            "slug": "oma",
+            "subRegiao": "Golfo Árabe",
+            "moeda": "OMR",
+            "idiomas": [
+              "ar-OM",
+              "en-OM"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Egito",
+            "slug": "egito",
+            "subRegiao": "Norte da África",
+            "moeda": "EGP",
+            "idiomas": [
+              "ar-EG"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Marrocos",
+            "slug": "marrocos",
+            "subRegiao": "Norte da África",
+            "moeda": "MAD",
+            "idiomas": [
+              "ar-MA",
+              "fr-MA"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Argélia",
+            "slug": "argelia",
+            "subRegiao": "Norte da África",
+            "moeda": "DZD",
+            "idiomas": [
+              "ar-DZ",
+              "fr-DZ"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Tunísia",
+            "slug": "tunisia",
+            "subRegiao": "Norte da África",
+            "moeda": "TND",
+            "idiomas": [
+              "ar-TN",
+              "fr-TN"
+            ],
+            "status": "planejada"
+          },
+          {
+            "pais": "Jordânia",
+            "slug": "jordania",
+            "subRegiao": "Levante",
+            "moeda": "JOD",
+            "idiomas": [
+              "ar-JO"
             ],
             "status": "planejada"
           }

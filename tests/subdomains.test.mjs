@@ -176,3 +176,24 @@ test("Seletor de árabe europeu não redireciona para idioma local",async()=>{
   assert.equal(await res.text(),base+slug+"/");
  }
 });
+
+test("Mercados Árabes: Egito e Jordânia abrem direto, outros escolhem idioma",async()=>{
+ const base="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/";
+ const env={ASSETS:{fetch:async req=>new Response(new URL(req.url).pathname)}};
+ for(const [slug,code] of [["egito","ar-eg"],["jordania","ar-jo"]]){
+  const r=await regionalWorker.fetch(new Request("https://www."+domain+base+"paises-arabes/"+slug+"/?utm_source=ads"),env);
+  assert.equal(r.status,302);
+  const target=new URL(r.headers.get("location"));
+  assert.equal(target.pathname,base+"paises-arabes/"+slug+"/"+code+"/");
+  assert.equal(target.searchParams.get("utm_source"),"ads");
+ }
+ for(const slug of ["arabia-saudita","emirados-arabes-unidos","catar","kuwait","bahrein","oma","marrocos","argelia","tunisia"]){
+  const r=await regionalWorker.fetch(new Request("https://www."+domain+base+"paises-arabes/"+slug+"/"),env);
+  assert.equal(r.status,200,slug);
+ }
+ const old=await regionalWorker.fetch(new Request("https://www."+domain+base+"ar/?utm_campaign=saudi"),env);
+ assert.equal(old.status,302);
+ const target=new URL(old.headers.get("location"));
+ assert.equal(target.pathname,base+"paises-arabes/arabia-saudita/ar-sa/");
+ assert.equal(target.searchParams.get("utm_campaign"),"saudi");
+});

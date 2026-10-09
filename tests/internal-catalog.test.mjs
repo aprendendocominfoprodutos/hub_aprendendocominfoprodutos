@@ -59,7 +59,7 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
   assert.match(pages[1],/<details class="region-menu">/);
   assert.match(pages[1],/Selecione a região/);
   assert.doesNotMatch(pages[1],/href="[^"]*menu-familiar\/"[^>]*>[^<]*Explorar/);
-  for(const area of ["brasil/","latam/","america-do-norte/","europa/"]){
+  for(const area of ["brasil/","latam/","america-do-norte/","europa/","paises-arabes/"]){
     assert.ok(pages[1].includes('href="'+final+area+'"'));
   }
   const regionCss=await readFile(join(root,"public/src/seletor-regioes.css"),"utf8");
@@ -68,7 +68,7 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
 
   assert.match(pages[2],/Menú Familiar/);
   assert.doesNotMatch(pages[2],/language-menu-options|Selecione o idioma|class="language-option"/);
-  for(const region of ["brasil/","latam/","america-do-norte/","europa/"]){
+  for(const region of ["brasil/","latam/","america-do-norte/","europa/","paises-arabes/"]){
     assert.ok(pages[2].includes('href="'+final+region+'"'));
     const regionHtml=await readFile(join(root,"public",final,region,"index.html"),"utf8");
     assert.match(regionHtml,/noindex,follow/);
@@ -102,7 +102,7 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
   const product=catalog.produtos.find(p=>p.id==="PRO-0004");
   assert.equal(product.status,"preparacao");
   assert.equal(product.vitrineFinal,final);
-  assert.deepEqual(product.organizacaoMercados.regioes,["brasil","latam","america-do-norte","europa"]);
+  assert.deepEqual(product.organizacaoMercados.regioes,["brasil","latam","america-do-norte","europa","paises-arabes"]);
   assert.ok(product.edicoes.every(e=>e.status==="planejada"&&!e.checkoutVerificado));
   assert.equal(product.edicoes.find(e=>e.codigo==="es-MX").rotaSimples,final+"latam/mexico/es-mx/");
   assert.equal(product.edicoes.find(e=>e.codigo==="pt-BR").rotaSimples,final+"brasil/pt-br/");
@@ -317,4 +317,33 @@ test("Seis países europeus oferecem edição árabe com RTL sem checkout",async
   assert.match(page,/قيد الإعداد/);
   assert.doesNotMatch(page,/pay\.hotmart|hotmart__button-checkout|fbq\(/);
  }
+});
+
+test("Região Países Árabes oferece 11 mercados e 20 edições planejadas sem checkout",async()=>{
+ const root=resolve("."),base="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/";
+ const ms=[{"slug":"arabia-saudita","codes":["ar-SA","en-SA"]},{"slug":"emirados-arabes-unidos","codes":["ar-AE","en-AE"]},{"slug":"catar","codes":["ar-QA","en-QA"]},{"slug":"kuwait","codes":["ar-KW","en-KW"]},{"slug":"bahrein","codes":["ar-BH","en-BH"]},{"slug":"oma","codes":["ar-OM","en-OM"]},{"slug":"egito","codes":["ar-EG"]},{"slug":"marrocos","codes":["ar-MA","fr-MA"]},{"slug":"argelia","codes":["ar-DZ","fr-DZ"]},{"slug":"tunisia","codes":["ar-TN","fr-TN"]},{"slug":"jordania","codes":["ar-JO"]}];
+ const region=await readFile(join(root,"public",base,"paises-arabes/index.html"),"utf8");
+ assert.equal((region.match(/class="mf-card"/g)||[]).length,11);
+ for(const m of ms){
+  const p=base+"paises-arabes/"+m.slug+"/";
+  assert.ok(region.includes(p));
+  const c=await readFile(join(root,"public",p,"index.html"),"utf8");
+  assert.match(c,/noindex,follow/);
+  if(m.codes.length===1)assert.match(c,/http-equiv="refresh"/);
+  else assert.doesNotMatch(c,/http-equiv="refresh"/);
+  for(const code of m.codes){
+   assert.ok(c.includes(p+code.toLowerCase()+"/"));
+   if(code==="ar-SA")continue;
+   const leaf=await readFile(join(root,"public",p,code.toLowerCase(),"index.html"),"utf8");
+   assert.ok(leaf.includes('lang="'+code+'"'));
+   assert.match(leaf,/noindex,follow/);
+   if(code.startsWith("ar-"))assert.match(leaf,/<html[^>]*dir="rtl"/);
+   assert.doesNotMatch(leaf,/pay\.hotmart|hotmart__button-checkout|fbq\(/);
+  }
+ }
+ const cat=JSON.parse(await readFile(join(root,"catalogo/edicoes-internacionais.json"),"utf8"));
+ const prod=cat.produtos.find(p=>p.id==="PRO-0004");
+ assert.equal(prod.organizacaoMercados.paisesArabes.length,11);
+ assert.equal(prod.organizacaoMercados.edicoesRegionaisPlanejadas.filter(e=>e.regiao==="paises-arabes").length,19);
+ assert.equal(prod.edicoes.find(e=>e.codigo==="ar-SA").rotaSimples,base+"paises-arabes/arabia-saudita/ar-sa/");
 });
