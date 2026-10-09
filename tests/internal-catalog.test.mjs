@@ -244,7 +244,8 @@ test("seletor de mercados aparece no card Menú Familiar da categoria semanal",a
  assert.ok(open>=0&&close>open);
  const card=html.slice(open,close);
  assert.match(card,/Escolha primeiro a região|Escolha primeiro a região|Escolha primeiro/);
- assert.equal((card.match(/class="region-option"/g)||[]).length,4);
+ assert.equal((card.match(/class="region-option"/g)||[]).length,5);
+ assert.match(card,/Países Árabes/);
  assert.match(card,/América Latina/);
  assert.match(card,/América do Norte/);
  assert.doesNotMatch(card,/<strong>Estados Unidos<\/strong>/);
