@@ -299,7 +299,7 @@
       "vitrineFinal": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/",
       "raizIdiomas": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/",
       "operacao": "catalogo-interno",
-      "observacao": "PDF da edição México com 124 páginas, em revisão editorial em outubro de 2026. Conteúdo de culinária não validado em testes de cozinha; não possui checkout comercial.",
+      "observacao": "E-book México de 124 páginas: 28 receitas de comida principal, 4 listas semanais. Formatos de organização. Edição editorial em revisão, com imagens de IA no PDF; sem testes de cozinha finalizados ou checkout.",
       "edicoes": [
         {
           "codigo": "pt-BR",
@@ -350,7 +350,9 @@
             "heading": "Menú Familiar · México",
             "description": "La edición México contiene cuatro semanas de comidas caseras, 28 recetas y cuatro listas de compras. El material está en revisión editorial; todavía no hay oferta de compra disponible.",
             "country": "México"
-          }
+          },
+          "landingInformativa": true,
+          "observacao": "Landing informativa pré-lançamento no caminho simples esp-mx. Produto em revisão editorial, sem preço, sem checkout ou pixel. Não sobrescrever arquivo manual no build."
         },
         {
           "codigo": "es-ES",

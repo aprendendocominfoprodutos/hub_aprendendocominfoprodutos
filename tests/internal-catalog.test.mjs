@@ -70,3 +70,26 @@ test("Menú Familiar tem categorias distintas, seletor final e destinos de oito 
   assert.ok(product.edicoes.every(e=>e.status==="planejada"&&!e.checkoutVerificado));
   assert.deepEqual(menuLinks,product.edicoes.map(e=>e.rotaSimples));
 });
+
+test("landing de pré-lançamento México preservada, localizada, sem checkout e com guias reais",async()=>{
+ const root=resolve(".");
+ const landing=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+ const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
+ const catalog=JSON.parse(await readFile(join(root,"catalogo/edicoes-internacionais.json"),"utf8"));
+ const ed=catalog.produtos.find(p=>p.id==="PRO-0004").edicoes.find(e=>e.codigo==="es-MX");
+ assert.equal(ed.landingInformativa,true);
+ assert.equal(ed.status,"planejada");
+ assert.match(landing,/lang="es-MX"/);
+ assert.match(landing,/data-product-landing="menu-familiar-mx"/);
+ assert.match(landing,/name="robots" content="noindex,follow"/);
+ assert.match(landing,/124 páginas/);
+ assert.match(landing,/28 comidas principales/);
+ assert.match(landing,/4 listas de compras/);
+ assert.match(landing,/Tinga de pollo con tostadas y lechuga/);
+ assert.match(landing,/Imágenes ilustrativas|imágenes del PDF|Imágenes del PDF/i);
+ assert.match(landing,/href="\/src\/menu-familiar-mx.css"/);
+ assert.match(landing,/role="tablist"/);
+ assert.match(landing,/role="tabpanel"/);
+ assert.match(css,/@media\(max-width:750px\)/);
+ assert.doesNotMatch(landing,/pay\.hotmart|hotmart__button-checkout|fbq\(|'Compra ahora'|'Comprar ahora'/i);
+});

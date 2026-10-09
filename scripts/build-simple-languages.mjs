@@ -29,6 +29,17 @@ export async function buildSimpleLanguages({root=ROOT,dryRun=false}={}) {
     check(!routes.has(route),"rota duplicada: "+route);
     routes.add(route);
     const target=join(root,"public",route,"index.html");
+    // Landing informativa editorial, manual, preservada no deploy até haver checkout aprovado.
+    if(edition.landingInformativa===true){
+      check(await exists(target),"landing informativa não encontrada: "+route);
+      const preview=await readFile(target,"utf8");
+      check(preview.includes('data-product-landing="menu-familiar-mx"') &&
+        preview.includes('content="noindex,follow"') &&
+        !/pay\\.hotmart|hotmart__button-checkout|fbq\\(/i.test(preview),
+        "landing informativa sem marcação de segurança: "+route);
+      created.push({locale:edition.codigo,route,status:edition.status});
+      continue;
+    }
     if(await exists(target)){
       const source=await readFile(target,"utf8");
       check(source.startsWith(MARKER),"não sobrescrever página manual: "+route);
