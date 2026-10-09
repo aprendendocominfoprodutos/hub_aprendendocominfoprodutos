@@ -141,3 +141,29 @@ test("prévia do PDF na landing usa páginas originais 15 e 37, não páginas si
     assert.ok(bytes.length>9000, "Imagem original pequena ou inexistente: "+path);
   }
 });
+
+
+test("carrossel de imagens do Menú Familiar tem 28 receitas, autoplay 2500ms e arraste",async()=>{
+  const root=resolve(".");
+  const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+  const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
+  const photos=[...html.matchAll(/src="\/assets\/menu-familiar\/recetas\/mx-(\d{2})\.avif"/g)].map(x=>Number(x[1]));
+  assert.deepEqual(photos,Array.from({length:28},(_,i)=>i+1));
+  assert.match(html,/id="mx-recipe-track"/);
+  assert.match(html,/window\.setInterval\(/);
+  assert.match(html,/\},2500\)/);
+  assert.match(html,/pointerdown/);
+  assert.match(html,/touchstart/);
+  assert.match(html,/mx-recipe-prev/);
+  assert.match(html,/mx-recipe-next/);
+  assert.match(html,/data-gallery-week="4"/);
+  assert.doesNotMatch(html,/class="mx-photo-band"/);
+  assert.match(css,/\.mx-recipe-slide\{[^\n]*flex:0 0 50%/);
+  assert.match(css,/scroll-snap-type:x mandatory/);
+  for(let i=1;i<=28;i++){
+    const path="public/assets/menu-familiar/recetas/mx-"+String(i).padStart(2,"0")+".avif";
+    const bytes=await readFile(join(root,path));
+    assert.equal(bytes.subarray(4,12).toString("ascii"),"ftypavif");
+    assert.ok(bytes.length>10000, "Imagem do PDF ausente: "+path);
+  }
+});

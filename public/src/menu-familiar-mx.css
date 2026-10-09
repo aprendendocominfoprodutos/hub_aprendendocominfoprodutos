@@ -253,3 +253,55 @@ body.mx-landing .mx-feature-photo-media img{
 @media(prefers-reduced-motion:reduce){
   .mx-preview-stack-real .mx-paper-image{transition:none}
 }
+
+
+/* Carrossel das 28 imagens originais do PDF, com arraste e autoplay. */
+.mx-recipe-gallery{background:#092b22;color:#f8f1e2;overflow:hidden;padding:58px 0 29px}
+.mx-recipe-gallery-head{max-width:1240px;margin:0 auto 27px;padding:0 27px;display:flex;align-items:end;justify-content:space-between;gap:30px}
+.mx-recipe-gallery-head h2{font-size:clamp(30px,3.6vw,46px);margin:11px 0 11px;color:#fffaf0}
+.mx-recipe-gallery-head h2 em{color:#dfb878}
+.mx-recipe-gallery-head p{font-size:14px;line-height:1.6;color:#b7cfc0;margin:0}
+.mx-recipe-gallery-arrows{display:flex;gap:11px;align-items:center;flex:none}
+.mx-recipe-arrow{border:1px solid #d6b67870;width:46px;height:46px;background:#174b39;color:#f0d5a5;border-radius:50%;font-size:27px!important;line-height:1!important;display:grid;place-items:center;transition:background .2s}
+.mx-recipe-arrow:hover{background:#d8b579;color:#092b22}
+.mx-recipe-track{display:flex;overflow-x:auto;scroll-behavior:smooth;scroll-snap-type:x mandatory;scrollbar-width:none;overscroll-behavior-x:contain;cursor:grab;touch-action:pan-x pan-y}
+.mx-recipe-track::-webkit-scrollbar{display:none}
+.mx-recipe-track.is-dragging{scroll-snap-type:none;scroll-behavior:auto;cursor:grabbing;user-select:none}
+.mx-recipe-slide{position:relative;flex:0 0 50%;width:50%;height:clamp(320px,32vw,460px);overflow:hidden;scroll-snap-align:start;background:#153e31}
+body.mx-landing .mx-recipe-slide img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;object-position:center;display:block;pointer-events:none}
+.mx-recipe-slide:after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(2,19,12,.92),rgba(4,19,15,.28) 43%,transparent 76%);pointer-events:none}
+.mx-recipe-slide:not(:last-child){border-right:2px solid #0d3128}
+.mx-recipe-slide-overlay{position:absolute;z-index:1;bottom:28px;left:clamp(20px,6vw,100px);right:30px;color:#fff}
+.mx-recipe-overline{font-size:10px;font-weight:800;letter-spacing:.16em;color:#f2c987}
+.mx-recipe-slide-overlay h3{font:600 clamp(22px,2.4vw,33px)/1.21 'Playfair Display',Georgia,serif;color:#fff;max-width:500px;margin:8px 0 14px;text-wrap:balance;text-shadow:0 2px 13px #001a13}
+.mx-recipe-slide-bottom{font-size:9px;letter-spacing:.13em;font-weight:700;color:#cbd6cf}
+.mx-recipe-gallery-footer{max-width:1240px;margin:0 auto;padding:23px 27px 0;display:flex;justify-content:space-between;align-items:center;gap:30px}
+.mx-recipe-weeks{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+.mx-recipe-weeks button{border:1px solid #9eaf8f4d;color:#b3cbbd;background:transparent;font-weight:800;font-size:10px;padding:10px 14px;border-radius:40px;letter-spacing:.08em;transition:background .2s,color .2s}
+.mx-recipe-weeks button.is-current,.mx-recipe-weeks button:hover{background:#d7b373;border-color:#d7b373;color:#153529}
+.mx-recipe-counter{display:flex;align-items:center;gap:17px;min-width:202px}
+.mx-recipe-counter strong{font-size:12px;letter-spacing:.1em;color:#e7d6b7;white-space:nowrap;font-variant-numeric:tabular-nums}
+.mx-recipe-progress{height:4px;width:110px;border-radius:4px;overflow:hidden;background:#52766460}
+.mx-recipe-progress>span{display:block;height:100%;background:#e5bb79;transition:width .25s}
+.mx-recipe-gallery-note{max-width:1240px;margin:17px auto 0;padding:0 27px;color:#a7b9aa;font-size:10px;line-height:1.7}
+@media(max-width:750px){
+ .mx-recipe-gallery{padding-top:45px}
+ .mx-recipe-gallery-head{align-items:start;gap:15px;padding:0 21px}
+ .mx-recipe-gallery-head h2{font-size:clamp(29px,7vw,42px)}
+ .mx-recipe-gallery-arrows{padding-top:8px}
+ .mx-recipe-arrow{width:40px;height:40px}
+ .mx-recipe-slide{flex-basis:100%;width:100%;height:clamp(310px,76vw,440px)}
+ .mx-recipe-slide-overlay{left:24px;right:20px;bottom:24px}
+ .mx-recipe-slide-overlay h3{font-size:clamp(24px,6vw,34px)}
+ .mx-recipe-gallery-footer{align-items:flex-start;flex-direction:column;gap:14px;padding:19px 21px 0}
+ .mx-recipe-gallery-note{padding:0 21px}
+}
+@media(max-width:460px){
+ .mx-recipe-gallery-head{flex-direction:column}
+ .mx-recipe-gallery-arrows{align-self:flex-end;margin-top:-9px}
+ .mx-recipe-weeks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));width:100%;gap:5px}
+ .mx-recipe-weeks button{font-size:8px;padding:10px 3px}
+ .mx-recipe-counter{width:100%;justify-content:space-between}
+ .mx-recipe-progress{width:155px}
+}
+@media(prefers-reduced-motion:reduce){.mx-recipe-track{scroll-behavior:auto}.mx-recipe-arrow,.mx-recipe-progress>span{transition:none}}
