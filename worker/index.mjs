@@ -61,6 +61,16 @@ export default {
         return Response.redirect(url.toString(),301);
       }
     }
+    // Países com um só idioma comercial: ignorar o seletor e abrir a edição diretamente.
+    // HTTP 302 preserva a possibilidade de introduzir vários idiomas nesse país no futuro.
+    if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname)) {
+      const singleLanguageCountries = {"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/brasil/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/brasil/pt-br/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/chile/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/chile/es-cl/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/argentina/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/argentina/es-ar/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/colombia/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/colombia/es-co/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/peru/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/peru/es-pe/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/espanha/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/espanha/es-es/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/portugal/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/portugal/pt-pt/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/franca/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/franca/fr-fr/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/italia/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/italia/it-it/"};
+      const countryPath = url.pathname.endsWith("/") ? url.pathname : url.pathname + "/";
+      if (Object.hasOwn(singleLanguageCountries, countryPath)) {
+        url.pathname = singleLanguageCountries[countryPath];
+        return Response.redirect(url.toString(), 302);
+      }
+    }
     // A landing brasileira de Mitologia mudou para /pt-br/; links antigos continuam funcionando.
     if (matched.route === "main" &&
         (url.pathname === "/mitologia/grega/geral/" || url.pathname === "/mitologia/grega/geral")) {

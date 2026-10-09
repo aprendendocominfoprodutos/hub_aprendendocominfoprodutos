@@ -77,10 +77,20 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
   for(const country of ["mexico","chile","argentina","colombia","peru"]){
     assert.ok(latam.includes('href="'+final+"latam/"+country+'/'));
     const countryHtml=await readFile(join(root,"public",final,"latam",country,"index.html"),"utf8");
-    assert.match(countryHtml,/Selecione|Edição|edición|idioma/);
+    assert.match(countryHtml,/http-equiv="refresh"/);
+    assert.doesNotMatch(countryHtml,/<details|class="mf-card"/);
   }
   const mexico=await readFile(join(root,"public",final,"latam/mexico/index.html"),"utf8");
   assert.match(mexico,/latam\/mexico\/es-mx\//);
+  assert.doesNotMatch(mexico,/Selecionar →|Escolha o idioma/);
+  const brasil=await readFile(join(root,"public",final,"brasil/index.html"),"utf8");
+  assert.match(brasil,/http-equiv="refresh"/);
+  assert.doesNotMatch(brasil,/Selecionar →|Escolha/);
+  for(const country of ["espanha","portugal","franca","italia"]){
+    const html=await readFile(join(root,"public",final,"europa",country,"index.html"),"utf8");
+    assert.match(html,/http-equiv="refresh"/);
+    assert.doesNotMatch(html,/class="mf-card"|Selecionar idioma/);
+  }
   const us=await readFile(join(root,"public",final,"eua/index.html"),"utf8");
   assert.match(us,/eua\/en-us\//);
   assert.match(us,/eua\/es-us\//);
