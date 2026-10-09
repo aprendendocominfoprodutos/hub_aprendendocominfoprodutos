@@ -19,3 +19,45 @@
 @media(max-width:750px){.mx-header{padding:14px 19px;gap:20px;min-height:66px}.mx-nav>a:not(.mx-nav-cta){display:none}.mx-nav .mx-nav-cta{font-size:11px;padding:9px 12px}.mx-logo{font-size:10px}.mx-topbar{font-size:9px}.mx-topbar-right{display:none}.mx-hero-inner{display:flex;flex-direction:column;align-items:stretch;min-height:unset;padding:65px 22px 65px}.mx-hero-image{background-position:65% center;opacity:.75}.mx-hero-copy h1{font-size:clamp(45px,10vw,65px)}.mx-hero-copy>p{font-size:15px}.mx-hero-visual{transform:none;margin-top:28px}.mx-book{width:235px}.mx-book-cover{padding:20px 20px 12px}.mx-book-cover h2{font-size:34px;margin:19px 0 9px}.mx-book-cover p{font-size:14px}.mx-book-cover-img{margin:1px -20px 0}.mx-book-foot{font-size:8px}.mx-strip{grid-template-columns:repeat(2,1fr);margin:0;border-radius:0}.mx-strip div:nth-child(2){border-right:0}.mx-strip div{border-bottom:1px solid #e8e5de}.mx-section{padding:70px 20px}.mx-section-heading{margin-bottom:32px}.mx-section-heading p{font-size:14px}.mx-feature,.mx-preview{display:flex;flex-direction:column;gap:40px;padding:70px 22px}.mx-feature-photo{width:100%;min-height:410px}.mx-feature-copy{width:100%}.mx-day-list{grid-template-columns:1fr}.mx-week-panel{padding:25px 19px}.mx-week-count{display:none}.mx-week-tab{flex-direction:column;gap:3px}.mx-week-tab strong{font-size:27px}.mx-week-tab span{font-size:8px}.mx-paper{height:400px}.mx-preview-stack{width:100%;min-height:460px}.mx-photo{height:250px}.mx-photo>div{left:20px;bottom:22px}.mx-photo>div strong{font-size:21px}.mx-process-steps{grid-template-columns:repeat(2,1fr)}.mx-availability{padding:80px 22px}}
 @media(max-width:460px){.mx-topbar{gap:5px;letter-spacing:.07em}.mx-header .mx-logo-mark{font-size:22px}.mx-header .mx-logo strong{font-size:9px}.mx-header .mx-logo small{font-size:7px}.mx-hero-buttons{gap:17px}.mx-button{width:100%}.mx-text-link{width:100%;text-align:center}.mx-pain-grid,.mx-inside-grid{grid-template-columns:1fr}.mx-week-intro h3{font-size:27px}.mx-week-panel{padding:20px 14px}.mx-day-list li{gap:10px}.mx-day-list li strong{font-size:12px}.mx-week-tab{padding:13px 3px}.mx-photo-band{grid-template-columns:1fr}.mx-photo{height:215px}.mx-process-steps{gap:16px}.mx-process-steps>div{padding:12px 0}.mx-faq-item{padding:0 14px}.mx-paper-back{transform:translate(-48px,1px) rotate(-10deg)}.mx-availability-status{padding:14px}.mx-hero-visual{display:none}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.mx-button{transition:none}.mx-book{transform:none}}
+
+/* Menú Familiar México: mockup fiel de la portada real extraída de la página 1 del PDF. */
+.mx-book-real {
+  position: relative;
+  width: min(320px, 100%);
+  transform: rotate(-4deg) rotateY(-9deg);
+  filter: drop-shadow(18px 28px 26px rgba(0,0,0,.58));
+  transform-style: preserve-3d;
+}
+.mx-book-real::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  left: -11px;
+  top: 5px;
+  width: 12px;
+  height: calc(100% - 9px);
+  background: repeating-linear-gradient(90deg, #b2b6a1 0 2px, #eee8db 2px 4px);
+  transform: skewY(24deg);
+  border-radius: 3px 0 0 3px;
+}
+.mx-book-real img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 320 / 457;
+  border: 1px solid rgba(244,229,202,.48);
+  border-radius: 3px;
+  box-shadow: 0 18px 38px rgba(0,0,0,.38);
+}
+@media(max-width:750px) {
+  .mx-book-real { width: min(265px, 78vw); }
+}
+@media(max-width:460px) {
+  .mx-hero-visual { display: grid; }
+  .mx-book-real { width: min(230px, 75vw); }
+}
+@media(prefers-reduced-motion:reduce) {
+  .mx-book-real { transform: none; }
+}

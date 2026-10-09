@@ -93,3 +93,17 @@ test("landing de pré-lançamento México preservada, localizada, sem checkout e
  assert.match(css,/@media\(max-width:750px\)/);
  assert.doesNotMatch(landing,/pay\.hotmart|hotmart__button-checkout|fbq\(|'Compra ahora'|'Comprar ahora'/i);
 });
+
+test("hero do Menú Familiar usa a capa original em arquivo binário, não mockup sintético",async()=>{
+ const root=resolve(".");
+ const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+ const cover=await readFile(join(root,"public/assets/menu-familiar/menu-familiar-mx-cover.avif"));
+ const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
+ assert.match(html,/src="\/assets\/menu-familiar\/menu-familiar-mx-cover\.avif"/);
+ assert.match(html,/Portada original del e-book/);
+ assert.doesNotMatch(html,/mx-book-cover|Representación visual de la portada/);
+ assert.ok(cover.length>5000,"A capa precisa ser um arquivo de imagem real");
+ assert.equal(cover.subarray(4,12).toString("ascii"),"ftypavif");
+ assert.match(css,/\.mx-book-real img/);
+ assert.match(css,/@media\(max-width:460px\)/);
+});
