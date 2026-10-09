@@ -29,7 +29,7 @@ test("a página continua oferecendo acesso aos hubs e à landing Natal Prático"
   assert.match(home,/id="materiais"/);
   assert.match(home,/src="\/assets\/home\/hub-cultura\.avif"/);
   assert.match(home,/src="\/assets\/home\/hub-fitness-atualizado\.avif"/);
-  assert.match(home,/src="\/assets\/home\/hub-mental-financeiro\.webp"/);
+  assert.match(home,/src="\/assets\/home\/hub-mental-mindset\.avif"/);
 });
 test("o card inteiro mostra estado interativo acessível via mouse e teclado",()=>{
   assert.match(stylesheet,/a\.eco-hubcard:hover/);
@@ -56,4 +56,14 @@ test("banner Fitness & Saúde enviado é imagem AVIF local e otimizada",async()=
   assert.match(home,/alt="Fitness e saúde em ambiente premium/);
   assert.match(home,/width="560" height="287"/);
   assert.match(home,/<a class="eco-hubcard eco-green" href="\/fitness-saude\/"/);
+});
+
+test("o novo banner de Mental & Financeiro é local, otimizado e mantém o card clicável",async()=>{
+  const file=join(ROOT,"public/assets/home/hub-mental-mindset.avif");
+  const bytes=await readFile(file);
+  assert.ok(bytes.length>5000 && bytes.length<30000);
+  assert.equal(bytes.toString("ascii",4,12),"ftypavif");
+  assert.match(home,/alt="Ambiente executivo com planejamento, metas/);
+  assert.match(home,/width="560" height="287"/);
+  assert.match(home,/<a class="eco-hubcard eco-blue" href="\/mental-financeiro\/"/);
 });
