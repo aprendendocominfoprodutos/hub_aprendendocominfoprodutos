@@ -2,7 +2,7 @@
   "name": "aprendendo-com-infoprodutos-site",
   "private": true,
   "scripts": {
-    "deploy": "npm run test:international && npm run test:subdomains && npm run test:simple-languages && npm run test:internal-catalog && npm run test:homepage-hubs && npm run verify:final-containers && npm run build:international && npm run build:subdomains && npm run build:simple-languages && node scripts/fetch-pdf.mjs && wrangler deploy",
+    "deploy": "npm run test:international && npm run test:subdomains && npm run test:simple-languages && npm run test:internal-catalog && npm run test:homepage-hubs && npm run test:fitness-editorial && npm run verify:final-containers && npm run build:international && npm run build:subdomains && npm run build:simple-languages && node scripts/fetch-pdf.mjs && wrangler deploy",
     "test:international": "node --test tests/international.test.mjs",
     "build:international": "node scripts/build-international.mjs",
     "test:subdomains": "node --test tests/subdomains.test.mjs",
@@ -11,7 +11,8 @@
     "build:simple-languages": "node scripts/build-simple-languages.mjs",
     "test:internal-catalog": "node --test tests/internal-catalog.test.mjs",
     "verify:final-containers": "node scripts/validate-final-containers.mjs",
-    "test:homepage-hubs": "node --test tests/homepage-hubs.test.mjs"
+    "test:homepage-hubs": "node --test tests/homepage-hubs.test.mjs",
+    "test:fitness-editorial": "node --test tests/fitness-editorial.test.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.45.0"
