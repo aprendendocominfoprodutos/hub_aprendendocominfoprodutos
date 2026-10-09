@@ -54,11 +54,21 @@ export default {
     const matched = localizedRequestPath(url.hostname, url.pathname);
     // Migração Menú Familiar: URLs anteriores redirecionam permanentemente, preservando a query string.
     if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname)) {
-      const oldRoutes = {"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt-br/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/brasil/pt-br/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/ing/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/eua/en-us/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-es/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/espanha/es-es/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/fr/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/franca/fr-fr/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/it/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/italia/it-it/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/portugal/pt-pt/"};
+      const oldRoutes = {"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt-br/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/brasil/pt-br/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/ing/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/america-do-norte/eua/en-us/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-es/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/espanha/es-es/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/fr/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/franca/fr-fr/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/it/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/italia/it-it/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/portugal/pt-pt/"};
       const key=url.pathname.endsWith("/")?url.pathname:url.pathname+"/";
       if (Object.hasOwn(oldRoutes,key)) {
         url.pathname=oldRoutes[key];
         return Response.redirect(url.toString(),301);
+      }
+    }
+    // Reorganização comercial: EUA saiu do seletor principal e entrou em América do Norte.
+    // HTTP 302 evita fixar um redirecionamento permanente em páginas de seleção de idioma.
+    if (matched.route === "main" && (url.hostname === "www.aprendendocominfoprodutos.com.br" || url.hostname === "aprendendocominfoprodutos.com.br")) {
+      const legacyNorthAmerica = {"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/eua/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/america-do-norte/eua/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/eua/en-us/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/america-do-norte/eua/en-us/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/eua/es-us/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/america-do-norte/eua/es-us/"};
+      const originalPath = url.pathname.endsWith("/") ? url.pathname : url.pathname + "/";
+      if (Object.hasOwn(legacyNorthAmerica, originalPath)) {
+        url.pathname = legacyNorthAmerica[originalPath];
+        return Response.redirect(url.toString(), 302);
       }
     }
     // Países com um só idioma comercial: ignorar o seletor e abrir a edição diretamente.

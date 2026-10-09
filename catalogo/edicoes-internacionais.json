@@ -326,7 +326,7 @@
           "moeda": "USD",
           "status": "planejada",
           "rota": "/en-us/products/weekly-family-menu/",
-          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/eua/en-us/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/america-do-norte/eua/en-us/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
@@ -425,10 +425,44 @@
         "regioes": [
           "brasil",
           "latam",
-          "eua",
+          "america-do-norte",
           "europa"
         ],
-        "notas": "Chile Argentina Colômbia Peru e espanhol dos EUA são páginas de planejamento sem venda; edição árabe legada permanece no catálogo fora destes quatro mercados."
+        "notas": "Divisão comercial: México continua na seleção LATAM embora geograficamente pertença à América do Norte; Brasil tem entrada própria. EUA: EN-US, ES-US, PT-US; Canadá: EN-CA, FR-CA. Todas ainda planejadas, sem checkout. Edição árabe legada fora das quatro regiões.",
+        "edicoesRegionaisPlanejadas": [
+          {
+            "regiao": "america-do-norte",
+            "pais": "Estados Unidos",
+            "codigo": "es-US",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/america-do-norte/eua/es-us/",
+            "status": "planejada",
+            "checkoutVerificado": false
+          },
+          {
+            "regiao": "america-do-norte",
+            "pais": "Estados Unidos",
+            "codigo": "pt-US",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/america-do-norte/eua/pt-us/",
+            "status": "planejada",
+            "checkoutVerificado": false
+          },
+          {
+            "regiao": "america-do-norte",
+            "pais": "Canadá",
+            "codigo": "en-CA",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/america-do-norte/canada/en-ca/",
+            "status": "planejada",
+            "checkoutVerificado": false
+          },
+          {
+            "regiao": "america-do-norte",
+            "pais": "Canadá",
+            "codigo": "fr-CA",
+            "rota": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/america-do-norte/canada/fr-ca/",
+            "status": "planejada",
+            "checkoutVerificado": false
+          }
+        ]
       }
     }
   ]

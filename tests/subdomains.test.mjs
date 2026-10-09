@@ -120,6 +120,32 @@ test("países com idioma único abrem edição direto e EUA mantém escolha de i
     assert.equal(noSlash.status,302,country+" sem barra final");
   }
   const us=await regionalWorker.fetch(new Request("https://www."+domain+root+"eua/"),env);
-  assert.equal(us.status,200,"EUA devem manter o seletor EN-US e ES-US");
-  assert.deepEqual(calls,[root+"eua/"]);
+  assert.equal(us.status,302,"EUA antiga deve redirecionar para a nova região");
+  assert.equal(new URL(us.headers.get("location")).pathname,root+"america-do-norte/eua/");
+  const updated=await regionalWorker.fetch(new Request("https://www."+domain+root+"america-do-norte/eua/"),env);
+  assert.equal(updated.status,200);
+  assert.deepEqual(calls,[root+"america-do-norte/eua/"]);
+});
+
+test("América do Norte mantém EUA antigos redirecionados com UTMs e Canadá acessível",async()=>{
+ const root="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/";
+ const env={ASSETS:{fetch:async()=>new Response("ok",{status:200})}};
+ for(const [oldPath,newPath] of [
+  ["eua/","america-do-norte/eua/"],
+  ["eua/en-us/","america-do-norte/eua/en-us/"],
+  ["eua/es-us/","america-do-norte/eua/es-us/"]
+ ]){
+  const res=await regionalWorker.fetch(new Request("https://www."+domain+root+oldPath+"?utm_source=meta"),env);
+  assert.equal(res.status,302);
+  const url=new URL(res.headers.get("location"));
+  assert.equal(url.pathname,root+newPath);
+  assert.equal(url.searchParams.get("utm_source"),"meta");
+ }
+ for(const path of ["america-do-norte/","america-do-norte/eua/","america-do-norte/canada/"]){
+  const res=await regionalWorker.fetch(new Request("https://www."+domain+root+path),env);
+  assert.equal(res.status,200);
+ }
+ const legacy=await regionalWorker.fetch(new Request("https://www."+domain+root+"ing/"),env);
+ assert.equal(legacy.status,301);
+ assert.equal(new URL(legacy.headers.get("location")).pathname,root+"america-do-norte/eua/en-us/");
 });

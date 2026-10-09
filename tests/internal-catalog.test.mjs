@@ -59,7 +59,7 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
   assert.match(pages[1],/<details class="region-menu">/);
   assert.match(pages[1],/Selecione a região/);
   assert.doesNotMatch(pages[1],/href="[^"]*menu-familiar\/"[^>]*>[^<]*Explorar/);
-  for(const area of ["brasil/","latam/","eua/","europa/"]){
+  for(const area of ["brasil/","latam/","america-do-norte/","europa/"]){
     assert.ok(pages[1].includes('href="'+final+area+'"'));
   }
   const regionCss=await readFile(join(root,"public/src/seletor-regioes.css"),"utf8");
@@ -68,7 +68,7 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
 
   assert.match(pages[2],/Menú Familiar/);
   assert.doesNotMatch(pages[2],/language-menu-options|Selecione o idioma|class="language-option"/);
-  for(const region of ["brasil/","latam/","eua/","europa/"]){
+  for(const region of ["brasil/","latam/","america-do-norte/","europa/"]){
     assert.ok(pages[2].includes('href="'+final+region+'"'));
     const regionHtml=await readFile(join(root,"public",final,region,"index.html"),"utf8");
     assert.match(regionHtml,/noindex,follow/);
@@ -91,18 +91,23 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
     assert.match(html,/http-equiv="refresh"/);
     assert.doesNotMatch(html,/class="mf-card"|Selecionar idioma/);
   }
-  const us=await readFile(join(root,"public",final,"eua/index.html"),"utf8");
-  assert.match(us,/eua\/en-us\//);
-  assert.match(us,/eua\/es-us\//);
+  const north=await readFile(join(root,"public",final,"america-do-norte/index.html"),"utf8");
+  assert.match(north,/america-do-norte\/eua\//);
+  assert.match(north,/america-do-norte\/canada\//);
+  const us=await readFile(join(root,"public",final,"america-do-norte/eua/index.html"),"utf8");
+  for(const code of ["en-us","es-us","pt-us"])assert.ok(us.includes(final+"america-do-norte/eua/"+code+"/"));
+  const canada=await readFile(join(root,"public",final,"america-do-norte/canada/index.html"),"utf8");
+  for(const code of ["en-ca","fr-ca"])assert.ok(canada.includes(final+"america-do-norte/canada/"+code+"/"));
   const catalog=JSON.parse(await readFile(join(root,"catalogo/edicoes-internacionais.json"),"utf8"));
   const product=catalog.produtos.find(p=>p.id==="PRO-0004");
   assert.equal(product.status,"preparacao");
   assert.equal(product.vitrineFinal,final);
-  assert.deepEqual(product.organizacaoMercados.regioes,["brasil","latam","eua","europa"]);
+  assert.deepEqual(product.organizacaoMercados.regioes,["brasil","latam","america-do-norte","europa"]);
   assert.ok(product.edicoes.every(e=>e.status==="planejada"&&!e.checkoutVerificado));
   assert.equal(product.edicoes.find(e=>e.codigo==="es-MX").rotaSimples,final+"latam/mexico/es-mx/");
   assert.equal(product.edicoes.find(e=>e.codigo==="pt-BR").rotaSimples,final+"brasil/pt-br/");
-  assert.equal(product.edicoes.find(e=>e.codigo==="en-US").rotaSimples,final+"eua/en-us/");
+  assert.equal(product.edicoes.find(e=>e.codigo==="en-US").rotaSimples,final+"america-do-norte/eua/en-us/");
+  assert.deepEqual(product.organizacaoMercados.edicoesRegionaisPlanejadas.map(e=>e.codigo),["es-US","pt-US","en-CA","fr-CA"]);
 });
 
 test("landing de pré-lançamento México preservada, localizada, sem checkout e com guias reais",async()=>{
@@ -246,4 +251,25 @@ test("seletor de mercados aparece no card Menú Familiar da categoria semanal",a
  assert.match(card,/Europa/);
  assert.match(card,/México está em revisão/);
  assert.doesNotMatch(card,/>Explorar →</);
+});
+
+test("América do Norte aparece no seletor principal e oferece cinco edições em dois países",async()=>{
+ const root=resolve(".");
+ const prefix="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/";
+ const category=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/index.html"),"utf8");
+ assert.match(category,/América do Norte/);
+ assert.ok(category.includes(prefix+"america-do-norte/"));
+ assert.doesNotMatch(category,/<strong>Estados Unidos<\/strong>/);
+ const main=await readFile(join(root,"public",prefix,"index.html"),"utf8");
+ assert.ok(main.includes(prefix+"america-do-norte/"));
+ const north=await readFile(join(root,"public",prefix,"america-do-norte/index.html"),"utf8");
+ assert.ok(north.includes(prefix+"america-do-norte/eua/"));
+ assert.ok(north.includes(prefix+"america-do-norte/canada/"));
+ for(const locale of ["eua/es-us","eua/pt-us","canada/en-ca","canada/fr-ca"]){
+  const page=await readFile(join(root,"public",prefix,"america-do-norte",locale,"index.html"),"utf8");
+  assert.match(page,/noindex,follow/);
+  assert.doesNotMatch(page,/pay\.hotmart|hotmart__button-checkout|fbq\(/);
+ }
+ const mexico=await readFile(join(root,"public",prefix,"latam/mexico/es-mx/index.html"),"utf8");
+ assert.match(mexico,/mx-recipe-track/);
 });
