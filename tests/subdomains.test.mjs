@@ -89,3 +89,17 @@ test("URL antiga de Mitologia redireciona 308 para /pt-br/ e preserva consultas"
   const natal=await regionalWorker.fetch(new Request("https://www."+domain+"/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/natal-pratico/"),fake);
   assert.equal(natal.status,200);
 });
+
+test("Menú Familiar redireciona 301 e mantém UTMs após migrar a página mexicana",async()=>{
+ const env={ASSETS:{fetch:async()=>new Response("never",{status:200})}};
+ const old="https://www."+domain+"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/?utm_source=meta&utm_campaign=mx";
+ const r=await regionalWorker.fetch(new Request(old),env);
+ assert.equal(r.status,301);
+ const newUrl=new URL(r.headers.get("location"));
+ assert.equal(newUrl.pathname,"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/");
+ assert.equal(newUrl.searchParams.get("utm_source"),"meta");
+ assert.equal(newUrl.searchParams.get("utm_campaign"),"mx");
+ const other=await regionalWorker.fetch(new Request("https://www."+domain+"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt-br"),env);
+ assert.equal(other.status,301);
+ assert.equal(new URL(other.headers.get("location")).pathname,"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/brasil/pt-br/");
+});

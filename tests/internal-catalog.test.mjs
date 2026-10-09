@@ -45,7 +45,7 @@ test("menu de idiomas flutua sem aumentar a altura dos cards finais",async()=>{
   assert.doesNotMatch(optionsRule,/position:static|position:relative/);
 });
 
-test("Menú Familiar tem categorias distintas, seletor final e destinos de oito edições planejadas",async()=>{
+test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercado",async()=>{
   const root=resolve(".");
   const base="/fitness-saude/alimentacao/receitas/";
   const weekly=base+"cardapios-semanais/";
@@ -53,27 +53,38 @@ test("Menú Familiar tem categorias distintas, seletor final e destinos de oito 
   const pages=await Promise.all([base,weekly,final].map(path=>readFile(join(root,"public",path,"index.html"),"utf8")));
   assert.match(pages[0],new RegExp(weekly));
   assert.match(pages[1],new RegExp(final));
-  assert.match(pages[2],/data-product-id="PRO-0004"/);
-  assert.match(pages[2],/class="language-menu-options"/);
-  const menuLinks=[...pages[2].matchAll(/<a class="language-option" href="([^"]+)"/g)].map(x=>x[1]);
-  assert.equal(menuLinks.length,8);
-  assert.equal(new Set(menuLinks).size,8);
-  assert.ok(menuLinks.every(h=>h.startsWith(final)));
-  for(const locale of ["PT-BR","EN-US","ES-MX","ES-ES","FR","IT","PT-PT","AR"]){
-    assert.match(pages[2],new RegExp(">"+locale+"</span>"));
+  assert.match(pages[2],/Menú Familiar/);
+  assert.doesNotMatch(pages[2],/language-menu-options|Selecione o idioma|class="language-option"/);
+  for(const region of ["brasil/","latam/","eua/","europa/"]){
+    assert.ok(pages[2].includes('href="'+final+region+'"'));
+    const regionHtml=await readFile(join(root,"public",final,region,"index.html"),"utf8");
+    assert.match(regionHtml,/noindex,follow/);
   }
-  assert.doesNotMatch(pages[2],/pay\.hotmart|hotmart__button-checkout|class="lp-language"/);
+  const latam=await readFile(join(root,"public",final,"latam/index.html"),"utf8");
+  for(const country of ["mexico","chile","argentina","colombia","peru"]){
+    assert.ok(latam.includes('href="'+final+"latam/"+country+'/'));
+    const countryHtml=await readFile(join(root,"public",final,"latam",country,"index.html"),"utf8");
+    assert.match(countryHtml,/Selecione|Edição|edición|idioma/);
+  }
+  const mexico=await readFile(join(root,"public",final,"latam/mexico/index.html"),"utf8");
+  assert.match(mexico,/latam\/mexico\/es-mx\//);
+  const us=await readFile(join(root,"public",final,"eua/index.html"),"utf8");
+  assert.match(us,/eua\/en-us\//);
+  assert.match(us,/eua\/es-us\//);
   const catalog=JSON.parse(await readFile(join(root,"catalogo/edicoes-internacionais.json"),"utf8"));
   const product=catalog.produtos.find(p=>p.id==="PRO-0004");
   assert.equal(product.status,"preparacao");
   assert.equal(product.vitrineFinal,final);
+  assert.deepEqual(product.organizacaoMercados.regioes,["brasil","latam","eua","europa"]);
   assert.ok(product.edicoes.every(e=>e.status==="planejada"&&!e.checkoutVerificado));
-  assert.deepEqual(menuLinks,product.edicoes.map(e=>e.rotaSimples));
+  assert.equal(product.edicoes.find(e=>e.codigo==="es-MX").rotaSimples,final+"latam/mexico/es-mx/");
+  assert.equal(product.edicoes.find(e=>e.codigo==="pt-BR").rotaSimples,final+"brasil/pt-br/");
+  assert.equal(product.edicoes.find(e=>e.codigo==="en-US").rotaSimples,final+"eua/en-us/");
 });
 
 test("landing de pré-lançamento México preservada, localizada, sem checkout e com guias reais",async()=>{
  const root=resolve(".");
- const landing=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+ const landing=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
  const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
  const catalog=JSON.parse(await readFile(join(root,"catalogo/edicoes-internacionais.json"),"utf8"));
  const ed=catalog.produtos.find(p=>p.id==="PRO-0004").edicoes.find(e=>e.codigo==="es-MX");
@@ -96,7 +107,7 @@ test("landing de pré-lançamento México preservada, localizada, sem checkout e
 
 test("hero do Menú Familiar usa a capa original em arquivo binário, não mockup sintético",async()=>{
  const root=resolve(".");
- const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+ const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
  const cover=await readFile(join(root,"public/assets/menu-familiar/menu-familiar-mx-cover.avif"));
  const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
  assert.match(html,/src="\/assets\/menu-familiar\/menu-familiar-mx-cover\.avif"/);
@@ -110,7 +121,7 @@ test("hero do Menú Familiar usa a capa original em arquivo binário, não mocku
 
 test("cartão de quatro semanas exibe imagem sem áreas vazias e informações legíveis",async()=>{
   const root=resolve(".");
-  const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+  const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
   const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
   assert.match(html,/<div class="mx-feature-photo-media"><img/);
   assert.match(html,/class="mx-feature-info-title"><strong>4 semanas<\/strong>/);
@@ -127,7 +138,7 @@ test("cartão de quatro semanas exibe imagem sem áreas vazias e informações l
 
 test("prévia do PDF na landing usa páginas originais 15 e 37, não páginas simuladas",async()=>{
   const root=resolve(".");
-  const landing=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+  const landing=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
   const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
   assert.match(landing,/class="mx-preview-stack mx-preview-stack-real"/);
   assert.match(landing,/menu-semana-1-p15\.avif/);
@@ -145,7 +156,7 @@ test("prévia do PDF na landing usa páginas originais 15 e 37, não páginas si
 
 test("carrossel de imagens do Menú Familiar tem 28 receitas, autoplay 2500ms e arraste",async()=>{
   const root=resolve(".");
-  const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+  const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
   const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
   const photos=[...html.matchAll(/src="\/assets\/menu-familiar\/recetas\/mx-(\d{2})\.avif"/g)].map(x=>Number(x[1]));
   assert.deepEqual(photos,Array.from({length:28},(_,i)=>i+1));
@@ -172,7 +183,7 @@ test("carrossel de imagens do Menú Familiar tem 28 receitas, autoplay 2500ms e 
 
 test("primeiro avanço da galeria sincronizado à visibilidade, sem pausa por hover",async()=>{
  const root=resolve(".");
- const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/index.html"),"utf8");
+ const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
  const gallery=html.slice(html.indexOf("const track=document.getElementById('mx-recipe-track');"));
  assert.match(gallery,/function scheduleAutoplay\(\)/);
  assert.match(gallery,/window\.setTimeout\(/);
@@ -180,4 +191,18 @@ test("primeiro avanço da galeria sincronizado à visibilidade, sem pausa por ho
  assert.match(gallery,/if\(onScreen===visible\)return;\s*visible=onScreen;\s*scheduleAutoplay\(\)/);
  assert.match(gallery,/document\.addEventListener\('visibilitychange',scheduleAutoplay\)/);
  assert.doesNotMatch(gallery,/mouseenter|mouseleave|window\.setInterval/);
+});
+
+test("links dos mercados novos permanecem sem checkout ou edições fictícias",async()=>{
+ const root=resolve(".");
+ const prefix="public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/";
+ for(const path of [
+  "latam/chile/es-cl/","latam/argentina/es-ar/","latam/colombia/es-co/",
+  "latam/peru/es-pe/","eua/es-us/"
+ ]){
+  const page=await readFile(join(root,prefix,path,"index.html"),"utf8");
+  assert.match(page,/noindex,follow/);
+  assert.match(page,/planificación/);
+  assert.doesNotMatch(page,/pay\.hotmart|hotmart__button-checkout|fbq\(/);
+ }
 });

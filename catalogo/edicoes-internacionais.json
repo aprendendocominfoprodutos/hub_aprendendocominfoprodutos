@@ -307,7 +307,7 @@
           "moeda": "BRL",
           "status": "planejada",
           "rota": "/pt-br/produtos/menu-familiar/",
-          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt-br/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/brasil/pt-br/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
@@ -326,7 +326,7 @@
           "moeda": "USD",
           "status": "planejada",
           "rota": "/en-us/products/weekly-family-menu/",
-          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/ing/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/eua/en-us/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
@@ -339,7 +339,7 @@
           "moeda": "MXN",
           "status": "planejada",
           "rota": "/es-mx/productos/menu-familiar/",
-          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
@@ -352,7 +352,7 @@
             "country": "México"
           },
           "landingInformativa": true,
-          "observacao": "Landing informativa pré-lançamento no caminho simples esp-mx. Produto em revisão editorial, sem preço, sem checkout ou pixel. Não sobrescrever arquivo manual no build."
+          "observacao": "Landing informativa preservada em /latam/mexico/es-mx/; URL anterior com redirecionamento 301, sem checkout."
         },
         {
           "codigo": "es-ES",
@@ -360,7 +360,7 @@
           "moeda": "EUR",
           "status": "planejada",
           "rota": "/es-es/productos/menu-familiar/",
-          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-es/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/espanha/es-es/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
@@ -373,7 +373,7 @@
           "moeda": "EUR",
           "status": "planejada",
           "rota": "/fr-fr/produits/menu-familial/",
-          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/fr/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/franca/fr-fr/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
@@ -386,7 +386,7 @@
           "moeda": "EUR",
           "status": "planejada",
           "rota": "/it-it/prodotti/menu-familiare/",
-          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/it/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/italia/it-it/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
@@ -399,7 +399,7 @@
           "moeda": "EUR",
           "status": "planejada",
           "rota": "/pt-pt/produtos/menu-familiar/",
-          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt/",
+          "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/portugal/pt-pt/",
           "htmlLocalizado": null,
           "produtoAdaptado": false,
           "checkoutVerificado": false,
@@ -419,7 +419,17 @@
           "checkoutUrl": null,
           "nomeLocalizado": "قائمة الطعام العائلية"
         }
-      ]
+      ],
+      "organizacaoMercados": {
+        "tipo": "regiao-pais-idioma",
+        "regioes": [
+          "brasil",
+          "latam",
+          "eua",
+          "europa"
+        ],
+        "notas": "Chile Argentina Colômbia Peru e espanhol dos EUA são páginas de planejamento sem venda; edição árabe legada permanece no catálogo fora destes quatro mercados."
+      }
     }
   ]
 }

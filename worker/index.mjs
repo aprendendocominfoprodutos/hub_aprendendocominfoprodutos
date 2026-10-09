@@ -52,6 +52,15 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const matched = localizedRequestPath(url.hostname, url.pathname);
+    // Migração Menú Familiar: URLs anteriores redirecionam permanentemente, preservando a query string.
+    if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname)) {
+      const oldRoutes = {"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt-br/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/brasil/pt-br/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/ing/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/eua/en-us/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-es/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/espanha/es-es/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/fr/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/franca/fr-fr/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/it/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/italia/it-it/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/portugal/pt-pt/"};
+      const key=url.pathname.endsWith("/")?url.pathname:url.pathname+"/";
+      if (Object.hasOwn(oldRoutes,key)) {
+        url.pathname=oldRoutes[key];
+        return Response.redirect(url.toString(),301);
+      }
+    }
     // A landing brasileira de Mitologia mudou para /pt-br/; links antigos continuam funcionando.
     if (matched.route === "main" &&
         (url.pathname === "/mitologia/grega/geral/" || url.pathname === "/mitologia/grega/geral")) {
