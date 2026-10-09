@@ -226,11 +226,11 @@ test("links dos mercados novos permanecem sem checkout ou edições fictícias",
  const prefix="public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/";
  for(const path of [
   "latam/chile/es-cl/","latam/argentina/es-ar/","latam/colombia/es-co/",
-  "latam/peru/es-pe/","eua/es-us/"
+  "latam/peru/es-pe/","america-do-norte/eua/es-us/"
  ]){
   const page=await readFile(join(root,prefix,path,"index.html"),"utf8");
   assert.match(page,/noindex,follow/);
-  assert.match(page,/planificación/);
+  assert.match(page,/planificad|planificación|preparación/i);
   assert.doesNotMatch(page,/pay\.hotmart|hotmart__button-checkout|fbq\(/);
  }
 });
@@ -246,7 +246,8 @@ test("seletor de mercados aparece no card Menú Familiar da categoria semanal",a
  assert.match(card,/Escolha primeiro a região|Escolha primeiro a região|Escolha primeiro/);
  assert.equal((card.match(/class="region-option"/g)||[]).length,4);
  assert.match(card,/América Latina/);
- assert.match(card,/Estados Unidos/);
+ assert.match(card,/América do Norte/);
+ assert.doesNotMatch(card,/<strong>Estados Unidos<\/strong>/);
  assert.match(card,/Brasil/);
  assert.match(card,/Europa/);
  assert.match(card,/México está em revisão/);
