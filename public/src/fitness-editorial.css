@@ -20,5 +20,5 @@
 .eco-site .fit-editorial-future strong{font-size:12px;font-weight:700;color:#dce0df}
 .eco-site .fit-editorial-future small{font-size:11px;color:#8fa4ae}
 @media(max-width:950px){.eco-site .fit-editorial-grid{gap:13px}.eco-site .fit-editorial-caption{padding:16px}.eco-site .fit-editorial-caption strong{font-size:21px}.eco-site .fit-editorial-status{top:10px;left:10px;font-size:10px}}
-@media(max-width:700px){.eco-site .fit-editorial-grid{grid-template-columns:1fr;gap:20px;max-width:450px;margin-inline:auto}.eco-site .fit-editorial-art{aspect-ratio:320 / 335;background-size:300% 100%}.eco-site .fit-editorial-caption{min-height:0}.eco-site .fit-editorial-future{max-width:450px;margin:18px auto 0}}
+@media(max-width:700px){.eco-site .fit-editorial-grid{grid-template-columns:1fr;gap:20px;max-width:450px;margin-inline:auto}.eco-site .fit-editorial-caption{min-height:0}.eco-site .fit-editorial-future{max-width:450px;margin:18px auto 0}}
 @media(prefers-reduced-motion:reduce){.eco-site .fit-editorial-card,.eco-site .fit-editorial-art{transition:none}.eco-site .fit-editorial-card:hover{transform:none}}
