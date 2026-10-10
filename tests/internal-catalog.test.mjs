@@ -45,7 +45,7 @@ test("menu de idiomas flutua sem aumentar a altura dos cards finais",async()=>{
   assert.doesNotMatch(optionsRule,/position:static|position:relative/);
 });
 
-test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercado",async()=>{
+test("Menú Familiar abre vitrine de regiões e mantém páginas de países e idiomas",async()=>{
   const root=resolve(".");
   const base="/fitness-saude/alimentacao/receitas/";
   const weekly=base+"cardapios-semanais/";
@@ -53,18 +53,15 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
   const pages=await Promise.all([base,weekly,final].map(path=>readFile(join(root,"public",path,"index.html"),"utf8")));
   assert.match(pages[0],new RegExp(weekly));
   assert.match(pages[1],new RegExp(final));
-  // A escolha das regiões ocorre no CARD da categoria semanal, e não após "Explorar".
-  assert.match(pages[1],/data-product-id="PRO-0004"/);
-  assert.match(pages[1],/href="\/src\/seletor-regioes\.css"/);
-  assert.match(pages[1],/<details class="region-menu">/);
-  assert.match(pages[1],/Selecione a região/);
-  assert.doesNotMatch(pages[1],/href="[^"]*menu-familiar\/"[^>]*>[^<]*Explorar/);
-  for(const area of ["brasil/","latam/","america-do-norte/","europa/","paises-arabes/"]){
-    assert.ok(pages[1].includes('href="'+final+area+'"'));
-  }
-  const regionCss=await readFile(join(root,"public/src/seletor-regioes.css"),"utf8");
-  assert.match(regionCss,/\.region-options\{position:absolute/);
-  assert.match(regionCss,/\.weekly-region-card:has\(\.region-menu\[open\]\)\{z-index:50\}/);
+  // O CARD é um link único para a vitrine de regiões, sem dropdown.
+  assert.match(pages[1],/<a class="card weekly-menu-card"[^>]*data-product-id="PRO-0004"[^>]*href="/);
+  assert.ok(pages[1].includes('href="'+final+'"'));
+  assert.match(pages[1],/href="\/src\/cardapios-semanais\.css"/);
+  assert.match(pages[1],/Ver regiões e países/);
+  assert.doesNotMatch(pages[1],/<details\b|Selecione a região|class="region-options"/);
+  const cardCss=await readFile(join(root,"public/src/cardapios-semanais.css"),"utf8");
+  assert.match(cardCss,/\.weekly-menu-card:focus-visible/);
+  assert.match(cardCss,/\.weekly-menu-card:hover/);
 
   assert.match(pages[2],/Menú Familiar/);
   assert.doesNotMatch(pages[2],/language-menu-options|Selecione o idioma|class="language-option"/);
@@ -235,32 +232,23 @@ test("links dos mercados novos permanecem sem checkout ou edições fictícias",
  }
 });
 
-test("seletor de mercados aparece no card Menú Familiar da categoria semanal",async()=>{
+test("card Menú Familiar aponta para a vitrine das cinco regiões",async()=>{
  const root=resolve(".");
- const path="public/fitness-saude/alimentacao/receitas/cardapios-semanais/index.html";
- const html=await readFile(join(root,path),"utf8");
- const open=html.indexOf('<article class="card weekly-region-card"');
- const close=html.indexOf('</article>',open);
- assert.ok(open>=0&&close>open);
- const card=html.slice(open,close);
- assert.match(card,/Escolha primeiro a região|Escolha primeiro a região|Escolha primeiro/);
- assert.equal((card.match(/class="region-option"/g)||[]).length,5);
- assert.match(card,/Países Árabes/);
- assert.match(card,/América Latina/);
- assert.match(card,/América do Norte/);
- assert.doesNotMatch(card,/<strong>Estados Unidos<\/strong>/);
- assert.match(card,/Brasil/);
- assert.match(card,/Europa/);
- assert.match(card,/México em revisão/);
- assert.doesNotMatch(card,/>Explorar →</);
+ const prefix="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/";
+ const cat=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/index.html"),"utf8");
+ assert.ok(cat.includes('class="card weekly-menu-card"'));
+ assert.ok(cat.includes('href="'+prefix+'"'));
+ assert.doesNotMatch(cat,/class="region-option"/);
+ const page=await readFile(join(root,"public",prefix,"index.html"),"utf8");
+ for(const area of ["brasil","latam","paises-arabes","america-do-norte","europa"])
+  assert.ok(page.includes(prefix+area+"/"));
 });
 
 test("América do Norte aparece no seletor principal e oferece cinco edições em dois países",async()=>{
  const root=resolve(".");
  const prefix="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/";
  const category=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/index.html"),"utf8");
- assert.match(category,/América do Norte/);
- assert.ok(category.includes(prefix+"america-do-norte/"));
+ assert.ok(category.includes('href="'+prefix+'"'));
  assert.doesNotMatch(category,/<strong>Estados Unidos<\/strong>/);
  const main=await readFile(join(root,"public",prefix,"index.html"),"utf8");
  assert.ok(main.includes(prefix+"america-do-norte/"));
@@ -349,20 +337,12 @@ test("Região Países Árabes oferece 11 mercados e 20 edições planejadas sem 
  assert.equal(prod.edicoes.find(e=>e.codigo==="ar-SA").rotaSimples,base+"paises-arabes/arabia-saudita/ar-sa/");
 });
 
-test("Países Árabes fica visível entre as primeiras regiões em ambos os seletores",async()=>{
+test("Países Árabes é a terceira categoria da página regional",async()=>{
  const root=resolve("."),base="/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/";
- const cat=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/index.html"),"utf8");
- const section=cat.slice(cat.indexOf('<nav class="region-options"'),cat.indexOf("</nav>",cat.indexOf('<nav class="region-options"')));
- const opts=[...section.matchAll(/class="region-option" href="([^"]+)"/g)].map(a=>a[1]);
- assert.equal(opts.length,5);
- assert.equal(opts[2],base+"paises-arabes/");
- assert.match(cat,/Selecione a região · 5 opções/);
  const dir=await readFile(join(root,"public",base,"index.html"),"utf8");
- const cards=[...dir.matchAll(/class="mf-card" href="([^"]+)"/g)].map(a=>a[1]);
+ const cards=[...dir.matchAll(/class="mf-card" href="([^"]+)"/g)].map(x=>x[1]);
  assert.equal(cards.length,5);
  assert.equal(cards[2],base+"paises-arabes/");
- const css=await readFile(join(root,"public/src/seletor-regioes.css"),"utf8");
- assert.match(css,/max-height:min\(390px,80dvh\)/);
  const arab=await readFile(join(root,"public",base,"paises-arabes/index.html"),"utf8");
  assert.equal((arab.match(/class="mf-card"/g)||[]).length,11);
 });

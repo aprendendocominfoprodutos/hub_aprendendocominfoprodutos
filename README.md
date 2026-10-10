@@ -21,7 +21,7 @@ A classificação interna continua **em português**. Os idiomas/países são de
 
 ### Cardápios Semanais — Menú Familiar
 
-Em Fitness & Saúde → Alimentação → Receitas → Cardápios Semanais → Menú Familiar, a vitrine final `/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/` dispõe de seletor de oito idiomas. A edição México (PDF editorial de 124 páginas; 28 receitas, quatro listas de compras) está em revisão editorial. As demais edições ainda são planejadas. Links curtos exibem páginas informativas, sem checkout, geradas no deploy. Este produto não deve ser classificado como venda publicada até que haja landing e checkout revisados. A taxonomia interna permanece em português, exceto pelo nome próprio do e-book.
+Em Fitness & Saúde → Alimentação → Receitas → Cardápios Semanais, o card **Menú Familiar** é totalmente clicável e abre `/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/`, uma vitrine de cinco regiões (Brasil, América Latina, Países Árabes, América do Norte e Europa). A seleção de países e idiomas ocorre nas páginas regionais, sem seletor suspenso no card da categoria. A edição México (PDF editorial de 124 páginas; 28 receitas, quatro listas de compras) está em revisão editorial. As demais edições ainda são planejadas. Links curtos exibem páginas informativas, sem checkout, geradas no deploy. Este produto não deve ser classificado como venda publicada até que haja landing e checkout revisados. A taxonomia interna permanece em português, exceto pelo nome próprio do e-book.
 
 ### Produto existente
 

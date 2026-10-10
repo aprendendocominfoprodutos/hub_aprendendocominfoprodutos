@@ -1,0 +1,11 @@
+/* Card clicável do Menú Familiar na categoria Cardápios Semanais. */
+.weekly-menu-card{display:flex;flex-direction:column;min-height:244px;min-width:0;cursor:pointer;transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease}
+.weekly-menu-card:hover{transform:translateY(-3px);border-color:rgba(212,175,55,.78);background:linear-gradient(155deg,rgba(15,49,59,.95),rgba(7,26,37,.98));box-shadow:0 14px 32px rgba(0,0,0,.24)}
+.weekly-menu-card:focus-visible{outline:2px solid #f1d382;outline-offset:4px}
+.weekly-menu-card>p{line-height:1.7;margin-bottom:24px}
+.weekly-menu-action{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:auto;padding:13px 14px;border:1px solid rgba(212,175,55,.55);border-radius:8px;background:#092b2b;color:#efd18f;font:700 12px/1.4 'DM Sans',system-ui,sans-serif}
+.weekly-menu-card:hover .weekly-menu-action,.weekly-menu-card:focus-visible .weekly-menu-action{background:#123b34;border-color:#e1b978}
+.weekly-menu-arrow{font-size:22px;line-height:1;transition:transform .18s ease}
+.weekly-menu-card:hover .weekly-menu-arrow{transform:translateX(3px)}
+.weekly-menu-note{display:block;margin-top:10px;color:#adbfbd;font:500 10px/1.5 'DM Sans',system-ui,sans-serif}
+@media(prefers-reduced-motion:reduce){.weekly-menu-card,.weekly-menu-arrow{transition:none}.weekly-menu-card:hover{transform:none}.weekly-menu-card:hover .weekly-menu-arrow{transform:none}}
