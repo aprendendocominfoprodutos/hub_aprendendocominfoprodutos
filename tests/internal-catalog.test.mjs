@@ -45,7 +45,7 @@ test("menu de idiomas flutua sem aumentar a altura dos cards finais",async()=>{
   assert.doesNotMatch(optionsRule,/position:static|position:relative/);
 });
 
-test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercado",async()=>{
+test("Menú Familiar abre vitrine de regiões e mantém páginas de países e idiomas",async()=>{
   const root=resolve(".");
   const base="/fitness-saude/alimentacao/receitas/";
   const weekly=base+"cardapios-semanais/";
@@ -53,18 +53,15 @@ test("Menú Familiar tem seletor por região, país e idioma, com URLs de mercad
   const pages=await Promise.all([base,weekly,final].map(path=>readFile(join(root,"public",path,"index.html"),"utf8")));
   assert.match(pages[0],new RegExp(weekly));
   assert.match(pages[1],new RegExp(final));
-  // A escolha das regiões ocorre no CARD da categoria semanal, e não após "Explorar".
-  assert.match(pages[1],/data-product-id="PRO-0004"/);
-  assert.match(pages[1],/href="\/src\/seletor-regioes\.css"/);
-  assert.match(pages[1],/<details class="region-menu">/);
-  assert.match(pages[1],/Selecione a região/);
-  assert.doesNotMatch(pages[1],/href="[^"]*menu-familiar\/"[^>]*>[^<]*Explorar/);
-  for(const area of ["brasil/","latam/","america-do-norte/","europa/","paises-arabes/"]){
-    assert.ok(pages[1].includes('href="'+final+area+'"'));
-  }
-  const regionCss=await readFile(join(root,"public/src/seletor-regioes.css"),"utf8");
-  assert.match(regionCss,/\.region-options\{position:absolute/);
-  assert.match(regionCss,/\.weekly-region-card:has\(\.region-menu\[open\]\)\{z-index:50\}/);
+  // O CARD é um link único para a vitrine de regiões, sem dropdown.
+  assert.match(pages[1],/<a class="card weekly-menu-card"[^>]*data-product-id="PRO-0004"[^>]*href="/);
+  assert.ok(pages[1].includes('href="'+final+'"'));
+  assert.match(pages[1],/href="\/src\/cardapios-semanais\.css"/);
+  assert.match(pages[1],/Ver regiões e países/);
+  assert.doesNotMatch(pages[1],/<details\b|Selecione a região|class="region-options"/);
+  const cardCss=await readFile(join(root,"public/src/cardapios-semanais.css"),"utf8");
+  assert.match(cardCss,/\.weekly-menu-card:focus-visible/);
+  assert.match(cardCss,/\.weekly-menu-card:hover/);
 
   assert.match(pages[2],/Menú Familiar/);
   assert.doesNotMatch(pages[2],/language-menu-options|Selecione o idioma|class="language-option"/);
