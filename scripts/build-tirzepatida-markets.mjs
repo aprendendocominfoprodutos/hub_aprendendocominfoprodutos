@@ -4,7 +4,8 @@ import {fileURLToPath} from "node:url";
 
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),"..");
 export const MARKER="<!-- GERADO-MERCADOS-TIRZEPATIDA: editar catalogo/mercados-tirzepatida.json ou o gerador -->";
-const BASE="/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/";
+const LEGACY_BASE="/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/";
+const BASE=LEGACY_BASE+"emagrecimento/";
 const PATTERN=/^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const LANG=/^[a-z]{2}-[a-z]{2}$/;
 const need=(value,msg)=>{if(!value)throw Error("Mercados de tirzepatida: "+msg);};
@@ -99,12 +100,29 @@ export function editionPage(r,c,lang){
   '<a class="tl-return" href="'+base+'">Voltar aos idiomas</a></section>';
   return layout({title:"Receitas Leves "+lang.toUpperCase(),description:desc,lang:asLang(lang),dir:rtl?"rtl":"",localePage:true,body});
 }
+/** Conserva links anteriores sem manter duas árvores distintas no site. */
+export function legacyRedirect(oldRoute,newRoute){
+  need(oldRoute.startsWith(LEGACY_BASE)&&newRoute.startsWith(BASE),"redirecionamento fora da árvore");
+  const safe=escape(newRoute);
+  return '<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">'+
+    '<meta name="viewport" content="width=device-width,initial-scale=1">'+
+    '<meta name="robots" content="noindex,follow">'+
+    '<meta http-equiv="refresh" content="0;url='+safe+'">'+
+    '<link rel="canonical" href="'+safe+'">'+
+    '<title>Endereço atualizado | Receitas Leves</title></head>'+
+    '<body style="background:#10392c;color:#f5f3ec;font:16px/1.6 system-ui;padding:12vh 8%;text-align:center">'+
+    '<h1>O endereço desta categoria mudou</h1>'+
+    '<p>Agora as edições estão organizadas em Emagrecimento.</p>'+
+    '<a style="color:#b7dc9d" href="'+safe+'">Abrir o novo endereço →</a>'+
+    '<script>location.replace('+JSON.stringify(newRoute).replace(/</g,"\\u003c")+')</script></body></html>';
+}
+
 export async function buildTirzepatidaMarkets({root=ROOT,dryRun=false}={}){
   const data=JSON.parse(await readFile(join(root,"catalogo/mercados-tirzepatida.json"),"utf8"));
   const info=validateMarkets(data);
   const created=[],unique=new Set();
   async function put(route,html){
-    need(route.startsWith(BASE)&&route!==BASE&&route.endsWith("/")&&!route.includes("..")&&!route.includes("//"),"rota de saída insegura "+route);
+    need(((route.startsWith(BASE)&&route!==BASE)||(route.startsWith(LEGACY_BASE)&&route!==LEGACY_BASE))&&route.endsWith("/")&&!route.includes("..")&&!route.includes("//"),"rota de saída insegura "+route);
     need(!unique.has(route),"arquivo gerado em duplicidade "+route);unique.add(route);
     const target=pathToFile(root,route);
     if(await exists(target)){
@@ -122,10 +140,16 @@ export async function buildTirzepatidaMarkets({root=ROOT,dryRun=false}={}){
       for(const lang of c.idiomas)await put(base+lang+"/",editionPage(r,c,lang));
     }
   }
-  need(created.length===info.totalRoutes-1,"quantidade de arquivos gerados incorreta");
-  return {regions:info.regions,countries:info.countries,editions:info.totalEditions,pages:created.length,paths:created};
+  const newPaths=[...created];
+  need(newPaths.length===info.totalRoutes-1,"quantidade de páginas novas incorreta");
+  for(const path of newPaths){
+    const old=LEGACY_BASE+path.slice(BASE.length);
+    await put(old,legacyRedirect(old,path));
+  }
+  need(created.length===newPaths.length*2,"número de redirecionamentos antigos incorreto");
+  return {regions:info.regions,countries:info.countries,editions:info.totalEditions,pages:newPaths.length,redirects:created.length-newPaths.length,paths:newPaths,legacyPaths:created.slice(newPaths.length)};
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)){
-  buildTirzepatidaMarkets().then(r=>console.log("Mercados de Receitas Leves/Tirzepatida:",JSON.stringify({regions:r.regions,countries:r.countries,editions:r.editions,pages:r.pages})))
+  buildTirzepatidaMarkets().then(r=>console.log("Mercados de Receitas Leves/Tirzepatida:",JSON.stringify({regions:r.regions,countries:r.countries,editions:r.editions,pages:r.pages,redirects:r.redirects})))
   .catch(e=>{console.error(e);process.exitCode=1;});
 }
