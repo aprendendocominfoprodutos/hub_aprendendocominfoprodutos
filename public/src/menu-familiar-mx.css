@@ -6,7 +6,13 @@
 .mx-hero{background:#09261d;color:#fff;position:relative;overflow:hidden;min-height:720px}.mx-hero-image{position:absolute;inset:0;background-position:center;background-size:cover;opacity:.95}.mx-hero:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#06201565,transparent 35%);pointer-events:none}.mx-hero-inner{position:relative;z-index:2;max-width:1260px;min-height:720px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(260px,.85fr);align-items:center;gap:60px;padding:76px 28px 86px}.mx-eyebrow{display:inline-block;color:#b78648;font-size:11px;font-weight:800;letter-spacing:.18em;line-height:1.5}.mx-eyebrow-gold{color:#efd18c}.mx-hero-copy{max-width:620px}.mx-hero-copy h1{font-size:clamp(48px,5.5vw,82px);margin:17px 0 25px;font-weight:600;letter-spacing:-.043em}.mx-hero-copy h1 em{color:#efc98b}.mx-hero-copy>p{font-size:clamp(15px,1.33vw,18px);line-height:1.85;color:#e4e9df;max-width:580px;margin-bottom:24px}.mx-hero-checks{display:grid;gap:10px;margin-bottom:31px}.mx-hero-checks span{font-size:14px;font-weight:700}.mx-hero-checks b{color:#f5d496;margin-right:9px}.mx-hero-buttons{display:flex;gap:23px;align-items:center;flex-wrap:wrap}.mx-button{min-height:51px;display:inline-flex;justify-content:center;align-items:center;gap:15px;padding:13px 23px;border-radius:10px;font-size:13px!important;font-weight:800!important;letter-spacing:.01em;transition:transform .18s,background-color .18s,box-shadow .18s}.mx-button:hover{transform:translateY(-2px)}.mx-button-gold{color:#143125!important;background:linear-gradient(110deg,#e6c992,#d3a85f);box-shadow:0 15px 35px #07160b66}.mx-button-gold:hover{background:#efd7a4;box-shadow:0 18px 38px #07160b75}.mx-text-link{color:#f4e4c6;font-size:13px!important;font-weight:700!important;text-decoration:underline!important;text-underline-offset:6px}.mx-hero-notice{display:flex;align-items:center;gap:9px;color:#b5c8bd;font-size:11px;margin-top:29px}.mx-dot{width:8px;height:8px;background:#d7af70;border-radius:50%;flex:none}
 
 /* Edição México: fotografia de refeição familiar, com contraste acessível e bandeira discreta. */
-.mx-hero-image-family{background-color:#0b3026;background-size:cover;background-position:center 43%;filter:saturate(.90) contrast(1.05)}
+.mx-hero-image-family{
+ background-color:#0b3026;
+ background-image:linear-gradient(90deg,rgba(4,25,18,.98) 0%,rgba(4,25,18,.93) 30%,rgba(4,25,18,.67) 54%,rgba(4,25,18,.28) 75%,rgba(4,25,18,.34) 100%),url('https://images.pexels.com/photos/4262184/pexels-photo-4262184.jpeg?auto=compress&cs=tinysrgb&w=2000');
+ background-size:cover;
+ background-position:center 43%;
+ filter:saturate(.90) contrast(1.05);
+}
 .mx-hero-countryline{display:inline-flex;align-items:center;gap:11px;margin-bottom:3px}
 .mx-hero-country-flag{display:inline-flex;align-items:center;justify-content:center;font-size:26px;line-height:1;background:#f6f2e622;border:1px solid #f6e4bb66;border-radius:7px;width:39px;height:32px;box-shadow:0 6px 14px #0003}
 .mx-photo-credit{display:inline}
@@ -343,3 +349,34 @@ body.mx-landing .mx-recipe-slide img{position:absolute;inset:0;width:100%;height
  .mx-recipe-progress{width:155px}
 }
 @media(prefers-reduced-motion:reduce){.mx-recipe-track{scroll-behavior:auto}.mx-recipe-arrow,.mx-recipe-progress>span{transition:none}}
+
+
+/* Foto de família na abertura: enquadramento dedicado para celulares/tablets.
+   Não usar cover no hero inteiro, pois recorta excessivamente a foto panorâmica. */
+@media(max-width:750px){
+ .mx-hero{min-height:0}
+ .mx-hero-image-family{
+   position:relative;
+   inset:auto;
+   display:block;
+   width:100%;
+   height:clamp(220px,62vw,410px);
+   opacity:1;
+   background-image:linear-gradient(180deg,rgba(4,25,18,.04) 0%,rgba(4,25,18,.06) 57%,rgba(4,25,18,.44) 88%,#09261d 100%),url('https://images.pexels.com/photos/4262184/pexels-photo-4262184.jpeg?auto=compress&cs=tinysrgb&w=1000');
+   background-size:cover;
+   background-position:center 43%;
+   filter:saturate(.96) contrast(1.03);
+ }
+ .mx-hero-inner{
+   min-height:0;
+   padding-top:16px;
+ }
+ .mx-hero:after{background:none}
+}
+@media(max-width:460px){
+ .mx-hero-image-family{
+   height:clamp(218px,65vw,295px);
+   background-position:center 42%;
+ }
+ .mx-hero-inner{padding-top:12px}
+}

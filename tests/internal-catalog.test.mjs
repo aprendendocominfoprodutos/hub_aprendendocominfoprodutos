@@ -364,8 +364,9 @@ test("Hero México mostra família em refeição e bandeira sem prejudicar a leg
  const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
  const hero=html.slice(html.indexOf('<section class="mx-hero"'),html.indexOf('</section>',html.indexOf('<section class="mx-hero"'))+10);
  assert.match(hero,/mx-hero-image-family/);
- assert.match(hero,/photos\/4262184\/pexels-photo-4262184\.jpeg/);
- assert.match(hero,/linear-gradient\(90deg,rgba\(4,25,18,\.98\)/);
+ assert.match(css,/photos\/4262184\/pexels-photo-4262184\.jpeg/);
+ assert.match(css,/linear-gradient\(90deg,rgba\(4,25,18,\.98\)/);
+ assert.doesNotMatch(hero,/style="background-image:/);
  assert.match(hero,/Bandera de México/);
  assert.match(hero,/🇲🇽/);
  assert.match(hero,/mx-book-real/);
@@ -398,4 +399,24 @@ test("semanas do Menú Familiar alternam automaticamente a cada 3 segundos sem i
  assert.match(page,/Las semanas avanzan automáticamente cada 3 segundos/);
  assert.match(style,/\.mx-weeks-auto-hint\{/);
  assert.match(style,/@media\(prefers-reduced-motion:reduce\)\{\.mx-week-panel:not\(\[hidden\]\)\{animation:none\}\}/);
+});
+
+test("foto da família no celular tem faixa horizontal independente e enquadramento sem recorte do hero longo",async()=>{
+ const root=resolve(".");
+ const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
+ const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
+ const hero=html.slice(html.indexOf('<section class="mx-hero"'),html.indexOf('</section>',html.indexOf('<section class="mx-hero"'))+10);
+ assert.match(hero,/class="mx-hero-image mx-hero-image-family"/);
+ assert.match(hero,/Fotografía ilustrativa de una familia/);
+ assert.match(hero,/mx-book-real/);
+ assert.match(hero,/id="mx-title"/);
+ assert.match(hero,/Bandera de México/);
+ assert.match(css,/@media\(max-width:750px\)\{\s*\.mx-hero\{min-height:0\}/);
+ assert.match(css,/\.mx-hero-image-family\{\s*position:relative;\s*inset:auto;/);
+ assert.match(css,/height:clamp\(220px,62vw,410px\)/);
+ assert.match(css,/background-position:center 43%/);
+ assert.match(css,/images\.pexels\.com\/photos\/4262184\/pexels-photo-4262184\.jpeg\?auto=compress&cs=tinysrgb&w=1000/);
+ assert.match(css,/@media\(max-width:460px\)\{\s*\.mx-hero-image-family/);
+ assert.match(css,/height:clamp\(218px,65vw,295px\)/);
+ assert.match(css,/\.mx-hero-inner\{\s*min-height:0;\s*padding-top:16px/);
 });
