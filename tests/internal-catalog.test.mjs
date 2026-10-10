@@ -401,7 +401,7 @@ test("semanas do Menú Familiar alternam automaticamente a cada 3 segundos sem i
  assert.match(style,/@media\(prefers-reduced-motion:reduce\)\{\.mx-week-panel:not\(\[hidden\]\)\{animation:none\}\}/);
 });
 
-test("foto da família no celular tem faixa horizontal independente e enquadramento sem recorte do hero longo",async()=>{
+test("hero mobile integra foto familiar ao fundo com degradê sem banner separado",async()=>{
  const root=resolve(".");
  const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
  const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
@@ -411,12 +411,14 @@ test("foto da família no celular tem faixa horizontal independente e enquadrame
  assert.match(hero,/mx-book-real/);
  assert.match(hero,/id="mx-title"/);
  assert.match(hero,/Bandera de México/);
- assert.match(css,/@media\(max-width:750px\)\{\s*\.mx-hero\{min-height:0\}/);
- assert.match(css,/\.mx-hero-image-family\{\s*position:relative;\s*inset:auto;/);
- assert.match(css,/height:clamp\(220px,62vw,410px\)/);
- assert.match(css,/background-position:center 43%/);
- assert.match(css,/images\.pexels\.com\/photos\/4262184\/pexels-photo-4262184\.jpeg\?auto=compress&cs=tinysrgb&w=1000/);
- assert.match(css,/@media\(max-width:460px\)\{\s*\.mx-hero-image-family/);
- assert.match(css,/height:clamp\(218px,65vw,295px\)/);
- assert.match(css,/\.mx-hero-inner\{\s*min-height:0;\s*padding-top:16px/);
+ assert.match(css,/@media\(max-width:750px\)\{\s*\.mx-hero\{position:relative;min-height:0;background:#09261d\}/);
+ assert.match(css,/\.mx-hero-image-family\{\s*position:absolute;\s*inset:0;/);
+ assert.match(css,/height:100%;\s*opacity:1/);
+ assert.match(css,/background-size:100% 100%,100% auto/);
+ assert.match(css,/background-repeat:no-repeat/);
+ assert.match(css,/#09261d 335px,#09261d 100%/);
+ assert.match(css,/\.mx-hero-inner\{\s*position:relative;\s*z-index:2;\s*min-height:0;\s*padding-top:clamp\(205px,66vw,320px\)/);
+ assert.match(css,/@media\(max-width:460px\)/);
+ assert.match(css,/\.mx-book-real\{width:min\(215px,68vw\)\}/);
+ assert.doesNotMatch(css.slice(css.indexOf("/* Hero México mobile:")),/position:relative;\s*inset:auto/);
 });
