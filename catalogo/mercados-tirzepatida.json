@@ -1,0 +1,346 @@
+{
+  "versao": 1,
+  "produtoId": "PRO-0005",
+  "produto": "Receitas Leves para Quem Usa Tirzepatida",
+  "baseRota": "/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/",
+  "status": "em-preparacao",
+  "nota": "Geografia e variantes de idioma modeladas independentemente do Menú Familiar; páginas são reservas internas sem e-book nem checkout publicado. Não prescrever dietas nem alegar resultado de medicamento.",
+  "regioes": [
+    {
+      "slug": "brasil",
+      "nome": "Brasil",
+      "icone": "🇧🇷",
+      "paises": [
+        {
+          "slug": "brasil",
+          "nome": "Brasil",
+          "icone": "🇧🇷",
+          "idiomas": [
+            "pt-br"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "latam",
+      "nome": "América Latina",
+      "icone": "🌎",
+      "paises": [
+        {
+          "slug": "argentina",
+          "nome": "Argentina",
+          "icone": "🇦🇷",
+          "idiomas": [
+            "es-ar"
+          ]
+        },
+        {
+          "slug": "chile",
+          "nome": "Chile",
+          "icone": "🇨🇱",
+          "idiomas": [
+            "es-cl"
+          ]
+        },
+        {
+          "slug": "colombia",
+          "nome": "Colômbia",
+          "icone": "🇨🇴",
+          "idiomas": [
+            "es-co"
+          ]
+        },
+        {
+          "slug": "mexico",
+          "nome": "México",
+          "icone": "🇲🇽",
+          "idiomas": [
+            "es-mx"
+          ]
+        },
+        {
+          "slug": "peru",
+          "nome": "Peru",
+          "icone": "🇵🇪",
+          "idiomas": [
+            "es-pe"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "america-do-norte",
+      "nome": "América do Norte",
+      "icone": "🌎",
+      "paises": [
+        {
+          "slug": "canada",
+          "nome": "Canadá",
+          "icone": "🇨🇦",
+          "idiomas": [
+            "en-ca",
+            "fr-ca"
+          ]
+        },
+        {
+          "slug": "eua",
+          "nome": "Estados Unidos",
+          "icone": "🇺🇸",
+          "idiomas": [
+            "en-us",
+            "es-us",
+            "pt-us"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "europa",
+      "nome": "Europa",
+      "icone": "🌍",
+      "paises": [
+        {
+          "slug": "alemanha",
+          "nome": "Alemanha",
+          "icone": "🇩🇪",
+          "idiomas": [
+            "ar-de",
+            "de-de"
+          ]
+        },
+        {
+          "slug": "austria",
+          "nome": "Áustria",
+          "icone": "🇦🇹",
+          "idiomas": [
+            "de-at"
+          ]
+        },
+        {
+          "slug": "belgica",
+          "nome": "Bélgica",
+          "icone": "🇧🇪",
+          "idiomas": [
+            "ar-be",
+            "fr-be",
+            "nl-be"
+          ]
+        },
+        {
+          "slug": "dinamarca",
+          "nome": "Dinamarca",
+          "icone": "🇩🇰",
+          "idiomas": [
+            "da-dk"
+          ]
+        },
+        {
+          "slug": "espanha",
+          "nome": "Espanha",
+          "icone": "🇪🇸",
+          "idiomas": [
+            "es-es"
+          ]
+        },
+        {
+          "slug": "franca",
+          "nome": "França",
+          "icone": "🇫🇷",
+          "idiomas": [
+            "ar-fr",
+            "fr-fr"
+          ]
+        },
+        {
+          "slug": "irlanda",
+          "nome": "Irlanda",
+          "icone": "🇮🇪",
+          "idiomas": [
+            "en-ie"
+          ]
+        },
+        {
+          "slug": "italia",
+          "nome": "Itália",
+          "icone": "🇮🇹",
+          "idiomas": [
+            "it-it"
+          ]
+        },
+        {
+          "slug": "noruega",
+          "nome": "Noruega",
+          "icone": "🇳🇴",
+          "idiomas": [
+            "nb-no"
+          ]
+        },
+        {
+          "slug": "paises-baixos",
+          "nome": "Países Baixos",
+          "icone": "🇳🇱",
+          "idiomas": [
+            "ar-nl",
+            "nl-nl"
+          ]
+        },
+        {
+          "slug": "polonia",
+          "nome": "Polônia",
+          "icone": "🇵🇱",
+          "idiomas": [
+            "pl-pl"
+          ]
+        },
+        {
+          "slug": "portugal",
+          "nome": "Portugal",
+          "icone": "🇵🇹",
+          "idiomas": [
+            "pt-pt"
+          ]
+        },
+        {
+          "slug": "reino-unido",
+          "nome": "Reino Unido",
+          "icone": "🇬🇧",
+          "idiomas": [
+            "ar-gb",
+            "en-gb"
+          ]
+        },
+        {
+          "slug": "republica-tcheca",
+          "nome": "República Tcheca",
+          "icone": "🇨🇿",
+          "idiomas": [
+            "cs-cz"
+          ]
+        },
+        {
+          "slug": "suecia",
+          "nome": "Suécia",
+          "icone": "🇸🇪",
+          "idiomas": [
+            "ar-se",
+            "sv-se"
+          ]
+        },
+        {
+          "slug": "suica",
+          "nome": "Suíça",
+          "icone": "🇨🇭",
+          "idiomas": [
+            "de-ch",
+            "fr-ch",
+            "it-ch"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "paises-arabes",
+      "nome": "Países Árabes",
+      "icone": "🌙",
+      "paises": [
+        {
+          "slug": "arabia-saudita",
+          "nome": "Arábia Saudita",
+          "icone": "🇸🇦",
+          "idiomas": [
+            "ar-sa",
+            "en-sa"
+          ]
+        },
+        {
+          "slug": "argelia",
+          "nome": "Argélia",
+          "icone": "🇩🇿",
+          "idiomas": [
+            "ar-dz",
+            "fr-dz"
+          ]
+        },
+        {
+          "slug": "bahrein",
+          "nome": "Bahrein",
+          "icone": "🇧🇭",
+          "idiomas": [
+            "ar-bh",
+            "en-bh"
+          ]
+        },
+        {
+          "slug": "catar",
+          "nome": "Catar",
+          "icone": "🇶🇦",
+          "idiomas": [
+            "ar-qa",
+            "en-qa"
+          ]
+        },
+        {
+          "slug": "egito",
+          "nome": "Egito",
+          "icone": "🇪🇬",
+          "idiomas": [
+            "ar-eg"
+          ]
+        },
+        {
+          "slug": "emirados-arabes-unidos",
+          "nome": "Emirados Árabes Unidos",
+          "icone": "🇦🇪",
+          "idiomas": [
+            "ar-ae",
+            "en-ae"
+          ]
+        },
+        {
+          "slug": "jordania",
+          "nome": "Jordânia",
+          "icone": "🇯🇴",
+          "idiomas": [
+            "ar-jo"
+          ]
+        },
+        {
+          "slug": "kuwait",
+          "nome": "Kuwait",
+          "icone": "🇰🇼",
+          "idiomas": [
+            "ar-kw",
+            "en-kw"
+          ]
+        },
+        {
+          "slug": "marrocos",
+          "nome": "Marrocos",
+          "icone": "🇲🇦",
+          "idiomas": [
+            "ar-ma",
+            "fr-ma"
+          ]
+        },
+        {
+          "slug": "oma",
+          "nome": "Omã",
+          "icone": "🇴🇲",
+          "idiomas": [
+            "ar-om",
+            "en-om"
+          ]
+        },
+        {
+          "slug": "tunisia",
+          "nome": "Tunísia",
+          "icone": "🇹🇳",
+          "idiomas": [
+            "ar-tn",
+            "fr-tn"
+          ]
+        }
+      ]
+    }
+  ]
+}
