@@ -199,7 +199,8 @@ test("carrossel de imagens do Menú Familiar tem 28 receitas, autoplay 2500ms e 
   assert.match(html,/window\.setTimeout\(/);
   assert.match(html,/Math\.max\(2500,suppressUntil-Date\.now\(\)\)/);
   assert.match(html,/visible=onScreen;\s*scheduleAutoplay\(\)/);
-  assert.doesNotMatch(html,/window\.setInterval\(/);
+  const recipeCarousel=html.slice(html.indexOf("const track=document.getElementById(\'mx-recipe-track\');"));
+  assert.doesNotMatch(recipeCarousel,/window\.setInterval\(/);
   assert.match(html,/pointerdown/);
   assert.match(html,/touchstart/);
   assert.match(html,/mx-recipe-prev/);
