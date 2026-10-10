@@ -1142,6 +1142,40 @@
           }
         ]
       }
+    },
+    {
+      "id": "PRO-0005",
+      "slug": "receitas-leves-tirzepatida",
+      "nome": "Receitas Leves para Quem Usa Tirzepatida",
+      "tipo": "ebook",
+      "status": "preparacao",
+      "hubPrincipal": "Fitness & Saúde",
+      "classificacaoPrincipal": [
+        "Alimentação & Saúde",
+        "Receitas",
+        "Mounjaro / Tirzepatida"
+      ],
+      "temasRelacionados": [
+        "Receitas leves",
+        "Planejamento de refeições",
+        "Cardápios adaptados a culturas alimentares"
+      ],
+      "vitrineFinal": "/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/",
+      "raizIdiomas": "/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/",
+      "operacao": "catalogo-interno",
+      "organizacaoMercados": {
+        "tipo": "regiao-pais-idioma",
+        "fonte": "catalogo/mercados-tirzepatida.json",
+        "regioes": [
+          "brasil",
+          "latam",
+          "america-do-norte",
+          "europa",
+          "paises-arabes"
+        ]
+      },
+      "edicoes": [],
+      "observacao": "Estrutura de organização internacional criada para Receitas Leves. Todas as páginas geográficas são reservas sem produto vendido; até concluir revisão editorial, adequação cultural, orientações de segurança e checkout, não cadastrar edições como publicadas. Menú Familiar é outro produto e permanece em Cardápios Semanais."
     }
   ]
 }
