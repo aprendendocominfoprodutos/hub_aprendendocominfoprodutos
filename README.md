@@ -87,3 +87,8 @@ Os cards finais dos produtos cadastrados exibem opções com bandeiras gráficas
 ### Landing brasileira por idioma (exceto Natal Prático)
 
 A Mitologia Grega agora usa `/mitologia/grega/geral/pt-br/` como URL brasileira canônica, ao lado de `/mitologia/grega/geral/ing/` e dos demais idiomas. A antiga `/mitologia/grega/geral/` redireciona (308) à nova. O Natal Prático continua no endereço brasileiro atual, sem alteração. Mais detalhes em `docs/internacionalizacao.md`.
+
+
+## Receitas Leves / Tirzepatida
+
+O produto PRO-0005 tem estrutura internacional independente em `/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/`: cinco regiões, 35 países e 56 variantes de idioma em preparação, sem checkout. O Menú Familiar permanece em Cardápios Semanais. Consulte `docs/internacionalizacao.md`.
