@@ -127,6 +127,11 @@ export async function buildTirzepatidaMarkets({root=ROOT,dryRun=false}={}){
     const target=pathToFile(root,route);
     if(await exists(target)){
       const old=await readFile(target,"utf8");
+      // Preserva apenas a landing comercial brasileira, sem liberar sobrescrita em outras rotas.
+      if(route===BASE+"brasil/pt-br/"&&old.startsWith("<!-- LP-PUBLICADA-TIRZEPATIDA-BR-PTBR:")){
+        created.push(route);
+        return;
+      }
       need(old.startsWith(MARKER),"recusado sobrescrever arquivo manual "+route);
     }
     if(!dryRun){await mkdir(dirname(target),{recursive:true});await writeFile(target,MARKER+"\n"+html+"\n","utf8");}
