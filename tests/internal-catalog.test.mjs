@@ -161,23 +161,29 @@ test("cartão de quatro semanas exibe imagem sem áreas vazias e informações l
   assert.match(css,/\.mx-feature-info-title strong\{/);
 });
 
-test("prévia do PDF na landing usa páginas originais 15 e 37, não páginas simuladas",async()=>{
+test("prévia mexicana usa três páginas reais do PDF, com compras semana 1 na frente",async()=>{
   const root=resolve(".");
   const landing=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
   const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
-  assert.match(landing,/class="mx-preview-stack mx-preview-stack-real"/);
-  assert.match(landing,/menu-semana-1-p15\.avif/);
-  assert.match(landing,/compras-semana-1-p37\.avif/);
-  assert.match(landing,/páginas 15 y 37 del PDF/);
-  assert.doesNotMatch(landing,/mx-paper-dishes|mx-paper-line|Vista ilustrativa basada en el índice/);
-  assert.match(css,/\.mx-preview-stack-real \.mx-paper-image img/);
-  for(const path of ["menu-semana-1-p15.avif","compras-semana-1-p37.avif"]){
+  const begin=landing.indexOf('class="mx-preview-stack mx-preview-stack-real mx-preview-three-pages"');
+  const end=landing.indexOf('</div></section>',begin);
+  assert.ok(begin>=0&&end>begin);
+  const preview=landing.slice(begin,end);
+  assert.equal((preview.match(/class="mx-paper-image /g)||[]).length,3);
+  assert.match(preview,/receita-pollo-guisado-p16\.avif/);
+  assert.match(preview,/receita-picadillo-p22\.avif/);
+  assert.match(preview,/compras-semana-1-p37\.avif/);
+  assert.doesNotMatch(preview,/menu-semana-1-p15\.avif|mx-paper-dishes|mx-paper-line/);
+  assert.match(preview,/Páginas reales 16, 22 y 37 del PDF/);
+  assert.ok(preview.indexOf("mx-paper-image-recipe-left") < preview.indexOf("mx-paper-image-front"));
+  assert.ok(preview.indexOf("mx-paper-image-recipe-right") < preview.indexOf("mx-paper-image-front"));
+  assert.match(css,/\.mx-preview-stack-real \.mx-paper-image-front\{[\s\S]*?z-index:3/);
+  for(const [path,minimum] of [["receita-pollo-guisado-p16.avif",2400],["receita-picadillo-p22.avif",2200],["compras-semana-1-p37.avif",9000]]){
     const bytes=await readFile(join(root,"public/assets/menu-familiar",path));
     assert.equal(bytes.subarray(4,12).toString("ascii"),"ftypavif");
-    assert.ok(bytes.length>9000, "Imagem original pequena ou inexistente: "+path);
+    assert.ok(bytes.length>minimum,"Página real ausente ou inválida: "+path);
   }
 });
-
 
 test("carrossel de imagens do Menú Familiar tem 28 receitas, autoplay 2500ms e arraste",async()=>{
   const root=resolve(".");
