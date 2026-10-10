@@ -91,4 +91,4 @@ A Mitologia Grega agora usa `/mitologia/grega/geral/pt-br/` como URL brasileira 
 
 ## Receitas Leves / Tirzepatida
 
-O produto PRO-0005 tem estrutura internacional independente em `/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/`: cinco regiões, 35 países e 56 variantes de idioma em preparação, sem checkout. O Menú Familiar permanece em Cardápios Semanais. Consulte `docs/internacionalizacao.md`.
+O produto PRO-0005 tem um card **Emagrecimento** em `/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/`. Ao clicar, o endereço `/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/emagrecimento/` abre as cinco regiões, 35 países e 56 variantes de idioma em preparação, sem checkout. O Menú Familiar permanece em Cardápios Semanais. Consulte `docs/internacionalizacao.md`.
