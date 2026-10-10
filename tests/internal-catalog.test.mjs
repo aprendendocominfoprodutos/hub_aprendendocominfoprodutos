@@ -357,3 +357,22 @@ test("Países Árabes é a terceira categoria da página regional",async()=>{
  const arab=await readFile(join(root,"public",base,"paises-arabes/index.html"),"utf8");
  assert.equal((arab.match(/class="mf-card"/g)||[]).length,11);
 });
+
+test("Hero México mostra família em refeição e bandeira sem prejudicar a legibilidade da landing",async()=>{
+ const root=resolve(".");
+ const html=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
+ const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
+ const hero=html.slice(html.indexOf('<section class="mx-hero"'),html.indexOf('</section>',html.indexOf('<section class="mx-hero"'))+10);
+ assert.match(hero,/mx-hero-image-family/);
+ assert.match(hero,/photos\/4262184\/pexels-photo-4262184\.jpeg/);
+ assert.match(hero,/linear-gradient\(90deg,rgba\(4,25,18,\.98\)/);
+ assert.match(hero,/Bandera de México/);
+ assert.match(hero,/🇲🇽/);
+ assert.match(hero,/mx-book-real/);
+ assert.match(hero,/id="mx-title"/);
+ assert.match(hero,/#contenido-guia/);
+ assert.match(css,/\.mx-hero-image-family\{[^}]*background-size:cover/);
+ assert.match(css,/\.mx-hero-country-flag\{/);
+ assert.match(html,/August de Richelieu \/ Pexels/);
+ assert.doesNotMatch(hero,/photo-1551504734-5ee1c4a1479b/);
+});
