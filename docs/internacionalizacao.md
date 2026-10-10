@@ -188,3 +188,14 @@ A área antes vazia tem agora uma árvore própria de **cinco regiões, 35 país
 **Antes do lançamento:** cadastrar a edição efetivamente pronta no catálogo internacional, preparar a landing no endereço do respectivo país/idioma, excluir aquela rota do gerador de placeholder, revisar segurança/adequação alimentar e conteúdo do e-book, moeda, política de anúncios e checkout. Nunca marcar como publicada sem validações.
 
 **Cuidados editoriais:** Receitas Leves é material culinário para pessoas que usam tirzepatida, não orientação médica individualizada; não prometer perda de peso garantida ou alegar que receitas influenciam diretamente o resultado do medicamento.
+
+
+### Atualização: Emagrecimento antes da escolha de países
+
+Fluxo oficial do PRO-0005: **Fitness & Saúde → Alimentação → Receitas → Mounjaro/Tirzepatida → Emagrecimento → Região → País → Idioma**.
+
+- Na página `/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/` existe agora **um único card clicável, Emagrecimento**.
+- O card abre `/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/emagrecimento/`, onde aparecem as cinco regiões internacionais.
+- Os endereços de países/idiomas passaram a incluir `/emagrecimento/`, por exemplo `/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/emagrecimento/latam/mexico/es-mx/`.
+- As 95 URLs geradas no padrão anterior recebem redirecionamento informativo e automático para seus novos endereços. A raiz antiga permanece como página de categoria e **não** redireciona.
+- O Menú Familiar permanece sob Cardápios Semanais. Esta alteração não publica nenhuma landing page nem checkout.
