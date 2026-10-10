@@ -910,3 +910,17 @@
     margin-top:10px;
   }
 }
+
+/* Manual de cores v1.0: tokens oficiais e núcleos legados (não afeta landings comerciais). */
+:root{--eco-navy:#07131f;--eco-petroleum:#0d2636;--eco-gold:#e8c77e;--eco-ivory:#f6f0e6;--eco-culture:#121e34;--eco-bronze:#b88a57;--eco-fitness:#10392c;--eco-sage:#b7dc9d;--eco-orange:#ea9c54;--eco-offwhite:#f5f3ec;--eco-mental:#0b2127;--eco-electric:#b8f06e}
+body:not(.eco-site):has(.inner .crumb a[href="/fitness-saude/"]){--hub-bg:var(--eco-fitness);--hub-accent:var(--eco-sage);--hub-border:rgba(183,220,157,.35)}
+body:not(.eco-site):has(.inner .crumb a[href="/mental-financeiro/"]){--hub-bg:var(--eco-mental);--hub-accent:var(--eco-electric);--hub-border:rgba(184,240,110,.35)}
+body:not(.eco-site):is(:has(.inner .crumb a[href="/mitologia/"]),:has(.inner .crumb a[href="/cultura-entretenimento/"])){--hub-bg:var(--eco-culture);--hub-accent:var(--eco-gold);--hub-border:rgba(232,199,126,.35)}
+body:not(.eco-site):has(.inner .crumb a[href]) .inner .eyebrow{color:var(--hub-accent,var(--eco-gold))}
+body:not(.eco-site):has(.inner .crumb a[href]) .inner .card{background:linear-gradient(155deg,var(--hub-bg,#0d2636),var(--eco-navy));border-color:var(--hub-border,var(--line))}
+body:not(.eco-site):has(.inner .crumb a[href]) .inner .card .route,
+body:not(.eco-site):has(.inner .crumb a[href]) .inner .card b{color:var(--hub-accent,var(--eco-gold))}
+body:not(.eco-site):has(.inner .crumb a[href]) .inner .card h3{color:var(--eco-ivory)}
+body:not(.eco-site):has(.inner .crumb a[href]) .inner .card:hover{border-color:var(--hub-accent,var(--eco-gold))}
+body:not(.eco-site):has(.inner .crumb a[href]) .inner .card:focus-visible{outline:3px solid var(--hub-accent,var(--eco-gold));outline-offset:3px}
+body:not(.eco-site):has(.inner .crumb a[href]) .inner .crumb a:hover{color:var(--hub-accent,var(--eco-gold))}
