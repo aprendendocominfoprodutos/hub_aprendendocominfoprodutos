@@ -41,11 +41,12 @@
 <article class="mx-inside-card"><div class="mx-inside-num">03 / ORGANIZACIÓN</div><div class="mx-inside-symbol">◷</div><h3>Herramientas prácticas</h3><p>Medidas, porciones, sustituciones, seguridad en cocina y preparación semanal.</p></article>
 <article class="mx-inside-card"><div class="mx-inside-num">04 / REUTILIZABLES</div><div class="mx-inside-symbol">✎</div><h3>Formatos para tu hogar</h3><p>Menú semanal, compra ajustada, registro de gastos y ficha de prueba de cocina.</p></article>
 </div></section>
-<section class="mx-section mx-preview" id="vista-previa"><div class="mx-preview-copy"><span class="mx-eyebrow">UNA MIRADA AL INTERIOR</span><h2>Hecho para consultarlo <em>en tu rutina.</em></h2><p>En lugar de darte solamente ideas sueltas, reúne un menú por semana, la receta de cada día y su lista de compra correspondiente.</p><ul class="mx-tick-list"><li>Primeras páginas: guía de uso y organización</li><li>Semanas 1–4: siete recetas y compras por semana</li><li>Últimas páginas: sustituciones y formatos imprimibles</li></ul><a class="mx-button mx-button-gold" href="#disponibilidad">Consultar estado de la edición →</a></div><div class="mx-preview-stack mx-preview-stack-real mx-preview-three-pages" aria-label="Tres páginas originales del e-book: recetas con fotografía en las páginas 16 y 22, y tabla verde de compras de la semana 1 en la página 37">
-  <figure class="mx-paper-image mx-paper-image-recipe-left"><img src="/assets/menu-familiar/receita-pollo-guisado-p16.avif" alt="Página 16 original del e-book Menú Familiar México: receta de pollo guisado con arroz y calabacitas, con fotografía del plato" width="328" height="468" loading="lazy" decoding="async"><figcaption>RECETA · PÁG. 16</figcaption></figure>
-  <figure class="mx-paper-image mx-paper-image-recipe-right"><img src="/assets/menu-familiar/receita-picadillo-p22.avif" alt="Página 22 original del e-book: picadillo con arroz y ensalada, con fotografía del plato" width="328" height="468" loading="lazy" decoding="async"><figcaption>RECETA · PÁG. 22</figcaption></figure>
-  <figure class="mx-paper-image mx-paper-image-front"><img src="/assets/menu-familiar/compras-semana-1-p37.avif" alt="Página original 37 del e-book Menú Familiar: Compras, semana 1, tabla verde de ingredientes y cantidades" width="630" height="900" loading="lazy" decoding="async"><figcaption>COMPRAS · SEMANA 1 · PÁG. 37</figcaption></figure>
-  <p class="mx-preview-true-note">Páginas reales 16, 22 y 37 del PDF: dos recetas con fotos y la lista de compras de la semana 1. La lista continúa en la página 38.</p></div></section>
+<section class="mx-section mx-preview" id="vista-previa"><div class="mx-preview-copy"><span class="mx-eyebrow">UNA MIRADA AL INTERIOR</span><h2>Hecho para consultarlo <em>en tu rutina.</em></h2><p>En lugar de darte solamente ideas sueltas, reúne un menú por semana, la receta de cada día y su lista de compra correspondiente.</p><ul class="mx-tick-list"><li>Primeras páginas: guía de uso y organización</li><li>Semanas 1–4: siete recetas y compras por semana</li><li>Últimas páginas: sustituciones y formatos imprimibles</li></ul><a class="mx-button mx-button-gold" href="#disponibilidad">Consultar estado de la edición →</a></div><div class="mx-preview-stack mx-preview-stack-real mx-preview-four-pages" data-preview-interval-ms="2000" role="group" aria-roledescription="carrusel giratorio" aria-label="Cuatro páginas reales del e-book: recetas ilustradas en las páginas 16, 19 y 22, y compras de la semana 1 en la página 37. Las páginas cambian de posición cada dos segundos.">
+  <figure class="mx-paper-image" data-slot="left"><img src="/assets/menu-familiar/receita-pollo-guisado-p16.avif" alt="Página 16 del PDF original: Pollo guisado con arroz y calabacitas, con fotografía" width="328" height="468" loading="lazy" decoding="async"><figcaption>RECETA · PÁG. 16</figcaption></figure>
+  <figure class="mx-paper-image" data-slot="right"><img src="/assets/menu-familiar/receita-picadillo-p22.avif" alt="Página 22 del PDF original: Picadillo con arroz y ensalada, con fotografía" width="328" height="468" loading="lazy" decoding="async"><figcaption>RECETA · PÁG. 22</figcaption></figure>
+  <figure class="mx-paper-image" data-slot="center"><img src="/assets/menu-familiar/compras-semana-1-p37.avif" alt="Página 37 del PDF original: Compras de la semana 1, con su tabla verde" width="630" height="900" loading="lazy" decoding="async"><figcaption>COMPRAS · SEMANA 1 · PÁG. 37</figcaption></figure>
+  <figure class="mx-paper-image" data-slot="back"><img src="/assets/menu-familiar/receita-lentejas-p19.avif" alt="Página 19 del PDF original: Lentejas con verduras y tortillas, con fotografía" width="328" height="468" loading="lazy" decoding="async"><figcaption>RECETA · PÁG. 19</figcaption></figure>
+  <p class="mx-preview-true-note">Páginas originales 16, 19, 22 y 37 del PDF. Rotación automática cada 2 segundos. La lista de compras continúa en la página 38.</p></div></section>
 <section class="mx-recipe-gallery" id="recetas-fotos" aria-labelledby="mx-recipe-gallery-heading">
   <div class="mx-recipe-gallery-head">
     <div><span class="mx-eyebrow">UN VISTAZO A LAS RECETAS DEL PDF</span><h2 id="mx-recipe-gallery-heading">28 comidas de casa. <em>Cuatro semanas de ideas.</em></h2><p>Explora las imágenes incluidas en el e-book Menú Familiar, Edición México.</p></div>
@@ -106,6 +107,40 @@ const tabs=Array.from(document.querySelectorAll('.mx-week-tab'));
 const panels=Array.from(document.querySelectorAll('.mx-week-panel'));
 function activate(index,focus){tabs.forEach((tab,i)=>{const active=i===index;tab.classList.toggle('is-active',active);tab.setAttribute('aria-selected',String(active));tab.setAttribute('tabindex',active?'0':'-1');panels[i].hidden=!active;});if(focus)tabs[index].focus();}
 tabs.forEach((tab,i)=>{tab.addEventListener('click',()=>activate(i,false));tab.addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft','Home','End'].includes(e.key))return;e.preventDefault();let next=e.key==='Home'?0:e.key==='End'?tabs.length-1:e.key==='ArrowRight'?(i+1)%tabs.length:(i-1+tabs.length)%tabs.length;activate(next,true);});});
+})();
+</script>
+<script>
+(function(){
+  const stack=document.querySelector('.mx-preview-four-pages');
+  if(!stack)return;
+  const pages=Array.from(stack.querySelectorAll('.mx-paper-image'));
+  if(pages.length!==4)return;
+  // Ordem: trás → direita → centro → esquerda → trás.
+  const slots=['back','right','center','left'];
+  const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
+  let visible=false,timer=0;
+  function rotate(){
+    pages.forEach(page=>{
+      const index=slots.indexOf(page.dataset.slot);
+      if(index!==-1)page.dataset.slot=slots[(index+1)%slots.length];
+    });
+  }
+  function stop(){if(timer){window.clearInterval(timer);timer=0;}}
+  function sync(){
+    stop();
+    if(!visible||document.hidden||reduced.matches)return;
+    timer=window.setInterval(rotate,2000);
+  }
+  if('IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>{
+      const onScreen=entries.some(entry=>entry.isIntersecting);
+      if(onScreen!==visible){visible=onScreen;sync();}
+    },{threshold:.16});
+    observer.observe(stack);
+  }else{visible=true;sync();}
+  document.addEventListener('visibilitychange',sync);
+  if(reduced.addEventListener)reduced.addEventListener('change',sync);
+  else if(reduced.addListener)reduced.addListener(sync);
 })();
 </script>
 <script>

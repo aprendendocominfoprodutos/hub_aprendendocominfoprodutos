@@ -161,28 +161,32 @@ test("cartão de quatro semanas exibe imagem sem áreas vazias e informações l
   assert.match(css,/\.mx-feature-info-title strong\{/);
 });
 
-test("prévia mexicana usa três páginas reais do PDF, com compras semana 1 na frente",async()=>{
+test("prévia mexicana gira quatro páginas originais do PDF a cada dois segundos",async()=>{
   const root=resolve(".");
   const landing=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
   const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
-  const begin=landing.indexOf('class="mx-preview-stack mx-preview-stack-real mx-preview-three-pages"');
+  const begin=landing.indexOf('class="mx-preview-stack mx-preview-stack-real mx-preview-four-pages"');
   const end=landing.indexOf('</div></section>',begin);
   assert.ok(begin>=0&&end>begin);
   const preview=landing.slice(begin,end);
-  assert.equal((preview.match(/class="mx-paper-image /g)||[]).length,3);
-  assert.match(preview,/receita-pollo-guisado-p16\.avif/);
-  assert.match(preview,/receita-picadillo-p22\.avif/);
-  assert.match(preview,/compras-semana-1-p37\.avif/);
-  assert.doesNotMatch(preview,/menu-semana-1-p15\.avif|mx-paper-dishes|mx-paper-line/);
-  assert.match(preview,/Páginas reales 16, 22 y 37 del PDF/);
-  assert.ok(preview.indexOf("mx-paper-image-recipe-left") < preview.indexOf("mx-paper-image-front"));
-  assert.ok(preview.indexOf("mx-paper-image-recipe-right") < preview.indexOf("mx-paper-image-front"));
-  assert.match(css,/\.mx-preview-stack-real \.mx-paper-image-front\{[\s\S]*?z-index:3/);
-  for(const [path,minimum] of [["receita-pollo-guisado-p16.avif",2400],["receita-picadillo-p22.avif",2200],["compras-semana-1-p37.avif",9000]]){
-    const bytes=await readFile(join(root,"public/assets/menu-familiar",path));
+  assert.equal((preview.match(/class="mx-paper-image"/g)||[]).length,4);
+  assert.match(preview,/data-preview-interval-ms="2000"/);
+  assert.deepEqual([...preview.matchAll(/data-slot="([^"]+)"/g)].map(x=>x[1]),["left","right","center","back"]);
+  for(const [name,minimum] of [["receita-pollo-guisado-p16.avif",2400],["receita-lentejas-p19.avif",2500],["receita-picadillo-p22.avif",2200],["compras-semana-1-p37.avif",9000]]){
+    assert.ok(preview.includes(name),name);
+    const bytes=await readFile(join(root,"public/assets/menu-familiar",name));
     assert.equal(bytes.subarray(4,12).toString("ascii"),"ftypavif");
-    assert.ok(bytes.length>minimum,"Página real ausente ou inválida: "+path);
+    assert.ok(bytes.length>minimum,"Página real ausente ou inválida: "+name);
   }
+  assert.match(preview,/Páginas originales 16, 19, 22 y 37 del PDF/);
+  assert.doesNotMatch(preview,/menu-semana-1-p15\.avif|mx-paper-dishes/);
+  assert.match(landing,/const slots=\['back','right','center','left'\]/);
+  assert.match(landing,/slots\[\(index\+1\)%slots\.length\]/);
+  assert.match(landing,/window\.setInterval\(rotate,2000\)/);
+  assert.match(landing,/IntersectionObserver/);
+  assert.match(landing,/prefers-reduced-motion: reduce/);
+  for(const slot of ["back","right","center","left"])assert.ok(css.includes('.mx-paper-image[data-slot="'+slot+'"]'));
+  assert.match(css,/transition:transform \.72s/);
 });
 
 test("carrossel de imagens do Menú Familiar tem 28 receitas, autoplay 2500ms e arraste",async()=>{
