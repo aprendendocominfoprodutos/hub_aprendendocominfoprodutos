@@ -81,3 +81,27 @@ body.eco-site{background:radial-gradient(ellipse 50% 30% at 70% 0%,rgba(202,160,
 .eco-site a.eco-hubcard:focus-visible .eco-hubscene img{transform:scale(1.04)}
 .eco-site a.eco-hubcard .eco-openhub{margin-top:auto;padding-top:20px;display:block}
 @media(prefers-reduced-motion:reduce){.eco-site a.eco-hubcard{transition:none}.eco-site a.eco-hubcard:hover{transform:none}}
+
+/* Manual Oficial de Cores v1.0: identidade institucional e hubs. */
+body.eco-site{background:radial-gradient(ellipse 50% 30% at 70% 0%,rgba(232,199,126,.09),transparent),linear-gradient(180deg,#07131f,#0d2636 52%,#07131f);color:#f6f0e6}
+.eco-site .eco-header{background:rgba(7,19,31,.95);border-bottom-color:rgba(232,199,126,.25)}
+.eco-site .eco-header .nav a:hover,.eco-site .eco-header .nav a[aria-current=page],.eco-site .eco-footer a{color:#e8c77e}
+.eco-site .eco-kicker,.eco-site .eco-tiny{color:#e8c77e}
+.eco-site .eco-button{background:#e8c77e;color:#07131f}
+.eco-site .eco-hubcard{--hub-card-accent:#e8c77e;background:#121e34;border-color:rgba(232,199,126,.4)}
+.eco-site .eco-hubcard.eco-green{--hub-card-accent:#b7dc9d;background:#10392c;border-color:rgba(183,220,157,.44)}
+.eco-site .eco-hubcard.eco-blue{--hub-card-accent:#b8f06e;background:#0b2127;border-color:rgba(184,240,110,.4)}
+.eco-site .eco-hubcard .eco-index,.eco-site .eco-hubcard .eco-openhub{color:var(--hub-card-accent)}
+.eco-site .eco-hubcard h3{color:#f6f0e6}
+.eco-site a.eco-hubcard:hover,.eco-site a.eco-hubcard:focus-visible{border-color:var(--hub-card-accent)}
+.eco-site a.eco-hubcard:focus-visible{outline-color:var(--hub-card-accent)}
+body.eco-site.eco-theme-cultura,body.eco-site:has(.eco-breadcrumb a[href="/cultura-entretenimento/"]){--hub-deep:#121e34;--hub-accent:#e8c77e;--hub-border:rgba(232,199,126,.36)}
+body.eco-site.eco-theme-fitness,body.eco-site:has(.eco-breadcrumb a[href="/fitness-saude/"]){--hub-deep:#10392c;--hub-accent:#b7dc9d;--hub-border:rgba(183,220,157,.36)}
+body.eco-site.eco-theme-mental,body.eco-site:has(.eco-breadcrumb a[href="/mental-financeiro/"]){--hub-deep:#0b2127;--hub-accent:#b8f06e;--hub-border:rgba(184,240,110,.36)}
+body.eco-site:where(.eco-theme-cultura,.eco-theme-fitness,.eco-theme-mental,:has(.eco-breadcrumb a[href="/cultura-entretenimento/"]),:has(.eco-breadcrumb a[href="/fitness-saude/"]),:has(.eco-breadcrumb a[href="/mental-financeiro/"])){background:radial-gradient(ellipse 70% 38% at 80% 0%,color-mix(in srgb,var(--hub-accent) 10%,transparent),transparent),linear-gradient(165deg,var(--hub-deep),#07131f 80%)}
+body.eco-site:where(.eco-theme-cultura,.eco-theme-fitness,.eco-theme-mental,:has(.eco-breadcrumb a[href="/cultura-entretenimento/"]),:has(.eco-breadcrumb a[href="/fitness-saude/"]),:has(.eco-breadcrumb a[href="/mental-financeiro/"])) .eco-kicker,
+body.eco-site:where(.eco-theme-cultura,.eco-theme-fitness,.eco-theme-mental,:has(.eco-breadcrumb a[href="/cultura-entretenimento/"]),:has(.eco-breadcrumb a[href="/fitness-saude/"]),:has(.eco-breadcrumb a[href="/mental-financeiro/"])) .eco-tiny{color:var(--hub-accent)}
+body.eco-site:where(.eco-theme-cultura,.eco-theme-fitness,.eco-theme-mental,:has(.eco-breadcrumb a[href="/cultura-entretenimento/"]),:has(.eco-breadcrumb a[href="/fitness-saude/"]),:has(.eco-breadcrumb a[href="/mental-financeiro/"])) .eco-topic{background:linear-gradient(150deg,var(--hub-deep),#07131f);border-color:var(--hub-border)}
+body.eco-site:where(.eco-theme-cultura,.eco-theme-fitness,.eco-theme-mental,:has(.eco-breadcrumb a[href="/cultura-entretenimento/"]),:has(.eco-breadcrumb a[href="/fitness-saude/"]),:has(.eco-breadcrumb a[href="/mental-financeiro/"])) .eco-topic .eco-subnav a{border-color:var(--hub-border);color:var(--hub-accent)}
+body.eco-site:where(.eco-theme-cultura,.eco-theme-fitness,.eco-theme-mental,:has(.eco-breadcrumb a[href="/cultura-entretenimento/"]),:has(.eco-breadcrumb a[href="/fitness-saude/"]),:has(.eco-breadcrumb a[href="/mental-financeiro/"])) .eco-button{background:var(--hub-accent);color:var(--hub-deep)}
+body.eco-site:where(.eco-theme-cultura,.eco-theme-fitness,.eco-theme-mental,:has(.eco-breadcrumb a[href="/cultura-entretenimento/"]),:has(.eco-breadcrumb a[href="/fitness-saude/"]),:has(.eco-breadcrumb a[href="/mental-financeiro/"])) .eco-hubintro em{color:var(--hub-accent)!important}
