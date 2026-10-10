@@ -1153,15 +1153,16 @@
       "classificacaoPrincipal": [
         "Alimentação & Saúde",
         "Receitas",
-        "Mounjaro / Tirzepatida"
+        "Mounjaro / Tirzepatida",
+        "Emagrecimento"
       ],
       "temasRelacionados": [
         "Receitas leves",
         "Planejamento de refeições",
         "Cardápios adaptados a culturas alimentares"
       ],
-      "vitrineFinal": "/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/",
-      "raizIdiomas": "/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/",
+      "vitrineFinal": "/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/emagrecimento/",
+      "raizIdiomas": "/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/emagrecimento/",
       "operacao": "catalogo-interno",
       "organizacaoMercados": {
         "tipo": "regiao-pais-idioma",
@@ -1175,7 +1176,8 @@
         ]
       },
       "edicoes": [],
-      "observacao": "Estrutura de organização internacional criada para Receitas Leves. Todas as páginas geográficas são reservas sem produto vendido; até concluir revisão editorial, adequação cultural, orientações de segurança e checkout, não cadastrar edições como publicadas. Menú Familiar é outro produto e permanece em Cardápios Semanais."
+      "observacao": "Estrutura de organização internacional criada para Receitas Leves. Todas as páginas geográficas são reservas sem produto vendido; até concluir revisão editorial, adequação cultural, orientações de segurança e checkout, não cadastrar edições como publicadas. Menú Familiar é outro produto e permanece em Cardápios Semanais. A seleção de regiões foi movida para o card Emagrecimento em /mounjaro-tirzepatida/emagrecimento/; o caminho /mounjaro-tirzepatida/ exibe a categoria.",
+      "categoriaRaiz": "/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/"
     }
   ]
 }

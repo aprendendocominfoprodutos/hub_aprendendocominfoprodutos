@@ -31,3 +31,12 @@ body.tl-market{margin:0;background:radial-gradient(ellipse at 58% 0,#1b4535 0,#1
 [dir=rtl] .tl-future{text-align:right}[dir=rtl] .tl-future h1{letter-spacing:normal}
 @media(max-width:740px){.tl-header{padding:19px}.tl-header .tl-brand{font-size:12px}.tl-main{padding:22px 17px 60px}.tl-hero{padding:42px 0 30px}.tl-grid{grid-template-columns:1fr}.tl-card{min-height:190px;padding:22px}.tl-status{top:21px;right:18px}.tl-card .tl-flag{font-size:32px}.tl-future{margin-top:18px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.tl-card{transition:none}.tl-card:hover{transform:none}}
+
+
+/* O núcleo possui um card único antes da seleção por países. */
+.tl-grid-single{grid-template-columns:minmax(0,1fr);max-width:580px}
+.tl-topic-card{min-height:250px;background:linear-gradient(140deg,#194d37 0%,#10392c 55%,#0b2926 100%);border-color:#b7dc9d66}
+.tl-topic-card .tl-topic-icon{display:inline-flex;align-items:center;justify-content:center;width:57px;height:57px;border:1px solid #b7dc9d80;border-radius:16px;color:#e8c77e;font-size:34px;box-shadow:inset 0 0 25px #b7dc9d12}
+.tl-topic-card h2{font-size:clamp(29px,3.2vw,39px);color:#f5f3ec}
+.tl-topic-card .tl-action{font-size:13px}
+@media(max-width:740px){.tl-grid-single{max-width:100%}.tl-topic-card{min-height:220px}}
