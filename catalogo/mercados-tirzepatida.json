@@ -2,9 +2,9 @@
   "versao": 1,
   "produtoId": "PRO-0005",
   "produto": "Receitas Leves para Quem Usa Tirzepatida",
-  "baseRota": "/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/",
+  "baseRota": "/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/emagrecimento/",
   "status": "em-preparacao",
-  "nota": "Geografia e variantes de idioma modeladas independentemente do Menú Familiar; páginas são reservas internas sem e-book nem checkout publicado. Não prescrever dietas nem alegar resultado de medicamento.",
+  "nota": "Geografia e variantes de idioma modeladas independentemente do Menú Familiar; páginas são reservas internas sem e-book nem checkout publicado. Não prescrever dietas nem alegar resultado de medicamento. O subnicho Emagrecimento foi inserido antes da seleção de regiões; endereços anteriores da árvore redirecionam para os novos.",
   "regioes": [
     {
       "slug": "brasil",
@@ -342,5 +342,7 @@
         }
       ]
     }
-  ]
+  ],
+  "categoriaRaiz": "/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/",
+  "categoria": "Emagrecimento"
 }
