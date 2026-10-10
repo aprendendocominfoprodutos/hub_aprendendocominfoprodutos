@@ -377,15 +377,15 @@ test("Hero México mostra família em refeição e bandeira sem prejudicar a leg
  assert.doesNotMatch(hero,/photo-1551504734-5ee1c4a1479b/);
 });
 
-test("semanas do Menú Familiar alternam automaticamente a cada 8 segundos sem interromper a leitura manual",async()=>{
+test("semanas do Menú Familiar alternam automaticamente a cada 3 segundos sem interromper a leitura manual",async()=>{
  const root=resolve(".");
  const page=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
  const style=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
  const tablist=page.slice(page.indexOf('<div class="mx-week-tabs"'),page.indexOf('</div>',page.indexOf('<div class="mx-week-tabs"'))+6);
- assert.match(tablist,/data-auto-advance-ms="8000"/);
+ assert.match(tablist,/data-auto-advance-ms="3000"/);
  assert.equal((tablist.match(/class="mx-week-tab(?: is-active)?"/g)||[]).length,4);
  const weekModule=page.slice(page.indexOf("const tabs=Array.from(document.querySelectorAll('.mx-week-tab'))"),page.indexOf('</script>',page.indexOf("const tabs=Array.from(document.querySelectorAll('.mx-week-tab'))")));
- assert.match(weekModule,/const advanceMs=8000/);
+ assert.match(weekModule,/const advanceMs=3000/);
  assert.match(weekModule,/window\.setTimeout\(/);
  assert.match(weekModule,/activate\(\(current\+1\)%tabs\.length,false\)/);
  assert.match(weekModule,/manualPause=true/);
@@ -395,7 +395,7 @@ test("semanas do Menú Familiar alternam automaticamente a cada 8 segundos sem i
  assert.match(weekModule,/prefers-reduced-motion: reduce/);
  assert.match(weekModule,/aria-selected/);
  assert.match(weekModule,/ArrowRight/);
- assert.match(page,/Las semanas avanzan automáticamente cada 8 segundos/);
+ assert.match(page,/Las semanas avanzan automáticamente cada 3 segundos/);
  assert.match(style,/\.mx-weeks-auto-hint\{/);
  assert.match(style,/@media\(prefers-reduced-motion:reduce\)\{\.mx-week-panel:not\(\[hidden\]\)\{animation:none\}\}/);
 });
