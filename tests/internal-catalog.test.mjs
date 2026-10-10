@@ -383,7 +383,7 @@ test("semanas do Menú Familiar alternam automaticamente a cada 8 segundos sem i
  const style=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
  const tablist=page.slice(page.indexOf('<div class="mx-week-tabs"'),page.indexOf('</div>',page.indexOf('<div class="mx-week-tabs"'))+6);
  assert.match(tablist,/data-auto-advance-ms="8000"/);
- assert.equal((tablist.match(/class="mx-week-tab/g)||[]).length,4);
+ assert.equal((tablist.match(/class="mx-week-tab(?: is-active)?"/g)||[]).length,4);
  const weekModule=page.slice(page.indexOf("const tabs=Array.from(document.querySelectorAll('.mx-week-tab'))"),page.indexOf('</script>',page.indexOf("const tabs=Array.from(document.querySelectorAll('.mx-week-tab'))")));
  assert.match(weekModule,/const advanceMs=8000/);
  assert.match(weekModule,/window\.setTimeout\(/);
