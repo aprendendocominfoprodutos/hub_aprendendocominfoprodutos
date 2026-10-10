@@ -171,3 +171,20 @@ Nos cards finais do Natal Prático e de Mitologia Grega, o menu mantém as bande
 Para os demais infoprodutos com edição brasileira pronta, o formato é `/{caminho-do-produto}/pt-br/` no mesmo nível de `/ing/`, `/esp/`, `/it/`, etc. A primeira aplicação é **Mitologia Grega**: `/mitologia/grega/geral/pt-br/`.
 
 A página anterior `/mitologia/grega/geral/` responde com **HTTP 308** para a edição `/pt-br/` (incluindo parâmetros de campanha). Os arquivos originais de estilo e imagens continuam centralizados em `/mitologia/grega/geral/styles.css` e `/mitologia/grega/geral/assets/`; a nova landing aponta a eles por caminhos absolutos. O seletor PT-BR e o catálogo mestre usam o novo destino. As edições futuras continuam em seus próprios caminhos, sem mudanças.
+
+
+## Receitas Leves para Quem Usa Tirzepatida — produto PRO-0005 (pré-lançamento)
+
+**Rota de organização aprovada:** `/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/`.
+
+A área antes vazia tem agora uma árvore própria de **cinco regiões, 35 países e 56 variantes de idioma**, independente do e-book **Menú Familiar** (PRO-0004), que permanece em `/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/`.
+
+**Estrutura interna:** categoria principal `/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/`; Brasil `/brasil/pt-br/`; LATAM México `/latam/mexico/es-mx/`; EUA `/america-do-norte/eua/en-us/`; Portugal `/europa/portugal/pt-pt/`; Arábia Saudita `/paises-arabes/arabia-saudita/ar-sa/` (esses sufixos são relativos à categoria principal).
+
+**As 56 rotas finais são somente páginas informativas de projeto futuro**, sem oferta, materiais traduzidos ou checkout. A árvore serve para administrar edições por país/idioma. Ao lançar, clientes serão direcionados diretamente à landing localizada; não precisam navegar pelos hubs.
+
+**Gerador e fonte:** `catalogo/mercados-tirzepatida.json` cadastra países e idiomas; `scripts/build-tirzepatida-markets.mjs` gera as páginas de reserva; `npm run test:tirzepatida-markets` valida; `npm run build:tirzepatida-markets` produz os HTML. A página inicial da categoria é mantida manualmente em `public/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/index.html`. O gerador recusa sobrescrever landing escrita manualmente.
+
+**Antes do lançamento:** cadastrar a edição efetivamente pronta no catálogo internacional, preparar a landing no endereço do respectivo país/idioma, excluir aquela rota do gerador de placeholder, revisar segurança/adequação alimentar e conteúdo do e-book, moeda, política de anúncios e checkout. Nunca marcar como publicada sem validações.
+
+**Cuidados editoriais:** Receitas Leves é material culinário para pessoas que usam tirzepatida, não orientação médica individualizada; não prometer perda de peso garantida ou alegar que receitas influenciam diretamente o resultado do medicamento.
