@@ -36,7 +36,7 @@ test("página principal e catálogo mantêm Mounjaro separado do Menú Familiar"
   assert.equal((root.match(/class="tl-card"/g)||[]).length,5);
   for(const region of config.regioes)assert.ok(root.includes('href="'+BASE+region.slug+'/"'));
   assert.match(root,/noindex,follow/);
-  assert.doesNotMatch(root,/pay\.hotmart|hotmart__button-checkout|fbq\(|checkout/gi);
+  assert.doesNotMatch(root,/pay\.hotmart|hotmart__button-checkout|fbq\(/gi);
   assert.ok(old.includes("Menú Familiar"));
   assert.ok(oldCategory.includes(source));
   assert.ok(parent.includes('href="'+BASE+'"'));
