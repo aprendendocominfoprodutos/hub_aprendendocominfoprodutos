@@ -127,8 +127,8 @@ export async function buildTirzepatidaMarkets({root=ROOT,dryRun=false}={}){
     const target=pathToFile(root,route);
     if(await exists(target)){
       const old=await readFile(target,"utf8");
-      // Preserva apenas a landing comercial brasileira, sem liberar sobrescrita em outras rotas.
-      if(route===BASE+"brasil/pt-br/"&&old.startsWith("<!-- LP-PUBLICADA-TIRZEPATIDA-BR-PTBR:")){
+      // Preserva as landings comerciais manuais aprovadas para Brasil e Mexico, sem liberar sobrescritas gerais.
+      if((route===BASE+"brasil/pt-br/"&&old.startsWith("<!-- LP-PUBLICADA-TIRZEPATIDA-BR-PTBR:"))||(route===BASE+"latam/mexico/es-mx/"&&old.startsWith("<!-- LP-PUBLICADA-TIRZEPATIDA-MX-ESMX:"))){
         created.push(route);
         return;
       }
