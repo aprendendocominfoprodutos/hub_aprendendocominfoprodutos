@@ -114,7 +114,79 @@
 </main>
 <footer class="footer"><div class="shell footer-grid"><div class="footer-brand"><span class="brand-emblem">✳</span><div><strong>Aprendendo Com Infoprodutos</strong><span>Fitness & Saúde · Alimentação & Saúde</span></div></div><div><a href="https://www.aprendendocominfoprodutos.com.br/">Ecossistema</a><a href="https://www.aprendendocominfoprodutos.com.br/fitness-saude/">Fitness & Saúde</a><a href="#topo">Voltar ao topo ↑</a></div></div><p class="shell legal">© 2026 Aprendendo Com Infoprodutos. Material culinário educativo, independente de fabricantes de medicamentos, que não substitui orientações médicas ou nutricionais. Fotografias das páginas: imagens ilustrativas produzidas digitalmente, conforme informado no próprio e-book. Tempos estimados; receitas não possuem validação clínica nem teste culinário presencial documentado.</p></footer>
 <script>
-(()=>{const viewport=document.getElementById('viewport');if(!viewport)return;const cards=[...viewport.querySelectorAll('.preview-card')];const dots=document.getElementById('dots');let active=0;const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;const markers=cards.map((_,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ver página '+(i+1));b.addEventListener('click',()=>move(i));dots.append(b);return b;});function visible(){let nearest=0,dist=1e9;cards.forEach((el,i)=>{const d=Math.abs(el.offsetLeft+el.offsetWidth/2-(viewport.scrollLeft+viewport.offsetWidth/2));if(d<dist){nearest=i;dist=d}});active=nearest;markers.forEach((d,i)=>d.classList.toggle('active',i===active))}function move(i){active=(i+cards.length)%cards.length;const c=cards[active];viewport.scrollTo({left:c.offsetLeft-(viewport.offsetWidth-c.offsetWidth)/2,behavior:reduce?'auto':'smooth'});markers.forEach((d,j)=>d.classList.toggle('active',j===active))}document.getElementById('prev').addEventListener('click',()=>move(active-1));document.getElementById('next').addEventListener('click',()=>move(active+1));let debounce;viewport.addEventListener('scroll',()=>{clearTimeout(debounce);debounce=setTimeout(visible,80)},{passive:true});window.addEventListener('resize',visible);visible();})();
-
+(()=>{
+  const viewport=document.getElementById('viewport');
+  if(!viewport)return;
+  const carousel=viewport.closest('.carousel-wrap');
+  const cards=[...viewport.querySelectorAll('.preview-card')];
+  const dots=document.getElementById('dots');
+  if(cards.length<2 || !dots)return;
+  const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const INTERVAL_MS=2500;
+  let active=0,interval=null,resume=null,scrollDebounce=null;
+  let hovered=false,focused=false,interacting=false,inView=false;
+  const markers=cards.map((_,i)=>{
+    const button=document.createElement('button');
+    button.type='button';
+    button.setAttribute('aria-label','Ver página '+(i+1));
+    button.addEventListener('click',()=>{pauseForInteraction();move(i);});
+    dots.append(button);
+    return button;
+  });
+  function paint(index){
+    active=(index+cards.length)%cards.length;
+    markers.forEach((dot,i)=>dot.classList.toggle('active',i===active));
+  }
+  function visible(){
+    let nearest=0,dist=Infinity;
+    cards.forEach((card,i)=>{
+      const center=card.offsetLeft+card.offsetWidth/2;
+      const d=Math.abs(center-(viewport.scrollLeft+viewport.offsetWidth/2));
+      if(d<dist){nearest=i;dist=d;}
+    });
+    paint(nearest);
+  }
+  function move(index){
+    const next=(index+cards.length)%cards.length;
+    const card=cards[next];
+    paint(next);
+    viewport.scrollTo({left:card.offsetLeft-(viewport.offsetWidth-card.offsetWidth)/2,behavior:reduce?'auto':'smooth'});
+  }
+  function stop(){if(interval!==null){clearInterval(interval);interval=null;}}
+  function play(){
+    stop();
+    if(reduce || document.hidden || hovered || focused || interacting || !inView)return;
+    interval=setInterval(()=>move(active+1),INTERVAL_MS);
+  }
+  function pauseForInteraction(){
+    interacting=true;stop();
+    if(resume!==null)clearTimeout(resume);
+    resume=setTimeout(()=>{interacting=false;play();},7000);
+  }
+  document.getElementById('prev')?.addEventListener('click',()=>{pauseForInteraction();move(active-1);});
+  document.getElementById('next')?.addEventListener('click',()=>{pauseForInteraction();move(active+1);});
+  viewport.addEventListener('pointerdown',pauseForInteraction,{passive:true});
+  viewport.addEventListener('wheel',pauseForInteraction,{passive:true});
+  viewport.addEventListener('scroll',()=>{
+    if(scrollDebounce!==null)clearTimeout(scrollDebounce);
+    scrollDebounce=setTimeout(visible,80);
+  },{passive:true});
+  carousel?.addEventListener('mouseenter',()=>{hovered=true;stop();});
+  carousel?.addEventListener('mouseleave',()=>{hovered=false;play();});
+  carousel?.addEventListener('focusin',()=>{focused=true;stop();});
+  carousel?.addEventListener('focusout',event=>{
+    if(!carousel.contains(event.relatedTarget)){focused=false;play();}
+  });
+  document.addEventListener('visibilitychange',play);
+  if('IntersectionObserver' in window){
+    const observer=new IntersectionObserver(entries=>{
+      inView=entries.some(entry=>entry.isIntersecting);
+      play();
+    },{threshold:0.1});
+    observer.observe(carousel||viewport);
+  }else{inView=true;}
+  window.addEventListener('resize',visible,{passive:true});
+  visible();play();
+})();
 </script>
 </body></html>
