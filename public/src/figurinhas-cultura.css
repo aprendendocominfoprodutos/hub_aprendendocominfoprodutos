@@ -1,0 +1,22 @@
+/* Contêiner Figurinhas: identidade Cultura & Entretenimento (azul noturno, dourado, bronze). */
+@media(min-width:1101px){body.eco-theme-cultura .eco-cardgrid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(min-width:701px) and (max-width:1100px){body.eco-theme-cultura .eco-cardgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+body.eco-theme-cultura a.eco-sticker-topic{color:#f6f0e6;text-decoration:none;cursor:pointer;position:relative;overflow:hidden;min-width:0;border:1px solid rgba(232,199,126,.58);background:radial-gradient(circle at 88% 7%,rgba(184,138,87,.22),transparent 52%),linear-gradient(145deg,#182842,#101c32 70%,#121e34);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+body.eco-theme-cultura a.eco-sticker-topic:hover{transform:translateY(-4px);box-shadow:0 21px 45px rgba(0,0,0,.29);border-color:#e8c77e}
+body.eco-theme-cultura a.eco-sticker-topic:focus-visible{outline:3px solid #e8c77e;outline-offset:4px}
+body.eco-theme-cultura a.eco-sticker-topic h2{color:#f6f0e6}
+body.eco-theme-cultura .eco-sticker-art{display:flex;align-items:center;margin:20px 0 4px;min-height:76px;padding:4px 5px 4px 0}
+body.eco-theme-cultura .eco-sticker-art span{display:grid;place-items:center;width:58px;height:58px;border:1px solid rgba(232,199,126,.42);border-radius:15px;background:linear-gradient(145deg,#30425c,#18253b);font-size:29px;box-shadow:0 12px 20px #0004;transform:rotate(-8deg)}
+body.eco-theme-cultura .eco-sticker-art span+span{margin-left:-12px;transform:rotate(9deg)}
+body.eco-theme-cultura .eco-sticker-art span:last-child{transform:rotate(-5deg)}
+body.eco-theme-cultura .eco-sticker-action{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:auto;padding-top:13px;border-top:1px solid rgba(232,199,126,.25);font-size:12px;font-weight:800;color:#e8c77e}
+body.eco-theme-cultura .eco-sticker-detail{display:grid;grid-template-columns:minmax(215px,.75fr) minmax(0,1.25fr);gap:32px;align-items:center;min-height:330px;margin-top:10px;margin-bottom:65px;border:1px solid rgba(232,199,126,.34);border-radius:22px;padding:clamp(24px,4vw,47px);background:linear-gradient(125deg,#1b2d48,#101d33 65%,#151e2f)}
+body.eco-theme-cultura .eco-sticker-detail-art{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;width:min(100%,290px);margin:auto}
+body.eco-theme-cultura .eco-sticker-detail-art span{display:grid;place-items:center;min-height:105px;border:1px solid rgba(232,199,126,.4);border-radius:22px;background:linear-gradient(135deg,#253853,#15243d);box-shadow:0 14px 33px #0005;font-size:47px}
+body.eco-theme-cultura .eco-sticker-detail-art span:nth-child(even){transform:rotate(6deg)}
+body.eco-theme-cultura .eco-sticker-detail-art span:nth-child(odd){transform:rotate(-5deg)}
+body.eco-theme-cultura .eco-sticker-detail-copy h2{font-size:clamp(25px,3.4vw,39px);line-height:1.15;margin:10px 0 18px}
+body.eco-theme-cultura .eco-sticker-detail-copy p{font-size:14px;line-height:1.8;color:#bdc8c6}
+body.eco-theme-cultura .eco-sticker-detail-copy .eco-sticker-disclaimer{border-left:3px solid #b88a57;padding:12px 15px;background:rgba(184,138,87,.09);font-size:12px;margin:18px 0 23px}
+@media(max-width:700px){body.eco-theme-cultura .eco-cardgrid{grid-template-columns:1fr}body.eco-theme-cultura .eco-sticker-detail{grid-template-columns:1fr;gap:22px}body.eco-theme-cultura .eco-sticker-detail-art{max-width:205px}body.eco-theme-cultura .eco-sticker-detail-art span{min-height:78px;font-size:34px}}
+@media(prefers-reduced-motion:reduce){body.eco-theme-cultura a.eco-sticker-topic{transition:none}body.eco-theme-cultura a.eco-sticker-topic:hover{transform:none}}
