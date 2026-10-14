@@ -17,7 +17,9 @@ test("hub Cultura mantém três contêineres anteriores e adiciona Figurinhas um
   assert.ok(root.includes('href="'+BASE+'figurinhas/"'));
   assert.match(root,/class="eco-topic eco-sticker-topic"/);
   assert.match(root,/aria-label="Explorar Figurinhas/);
-  assert.doesNotMatch(root,/class="eco-topic[^"]*" href="[^"]*figurinhas[^"]*"[^>]*>[\s\S]*?<a\b[\s\S]*?<\/a>/);
+  const markup=root.match(/<a class="eco-topic eco-sticker-topic"[^>]*>([\s\S]*?)<\/a>/);
+  assert.ok(markup,"card Figurinhas totalmente clicável");
+  assert.doesNotMatch(markup[1],/<a\b|<button\b|onclick=/);
 });
 
 test("novo contêiner é totalmente clicável e possui estilo visual responsivo",()=>{
