@@ -2,7 +2,7 @@
   "name": "aprendendo-com-infoprodutos-site",
   "private": true,
   "scripts": {
-    "deploy": "npm run test:international && npm run test:subdomains && npm run test:simple-languages && npm run test:internal-catalog && npm run test:homepage-hubs && npm run test:fitness-editorial && npm run test:tirzepatida-markets && npm run verify:final-containers && npm run build:international && npm run build:subdomains && npm run build:simple-languages && npm run build:tirzepatida-markets && node scripts/fetch-pdf.mjs && wrangler deploy",
+    "deploy": "npm run test:international && npm run test:subdomains && npm run test:simple-languages && npm run test:internal-catalog && npm run test:homepage-hubs && npm run test:cultura-figurinhas && npm run test:fitness-editorial && npm run test:tirzepatida-markets && npm run verify:final-containers && npm run build:international && npm run build:subdomains && npm run build:simple-languages && npm run build:tirzepatida-markets && node scripts/fetch-pdf.mjs && wrangler deploy",
     "test:international": "node --test tests/international.test.mjs",
     "build:international": "node scripts/build-international.mjs",
     "test:subdomains": "node --test tests/subdomains.test.mjs",
@@ -14,7 +14,8 @@
     "test:homepage-hubs": "node --test tests/homepage-hubs.test.mjs",
     "test:fitness-editorial": "node --test tests/fitness-editorial.test.mjs",
     "test:tirzepatida-markets": "node --test tests/tirzepatida-markets.test.mjs",
-    "build:tirzepatida-markets": "node scripts/build-tirzepatida-markets.mjs"
+    "build:tirzepatida-markets": "node scripts/build-tirzepatida-markets.mjs",
+    "test:cultura-figurinhas": "node --test tests/cultura-figurinhas.test.mjs"
   },
   "devDependencies": {
     "wrangler": "^4.45.0"
