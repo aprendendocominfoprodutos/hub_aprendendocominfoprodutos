@@ -1,16 +1,1780 @@
-<!doctype html>
-<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b2127"><meta name="robots" content="noindex,follow">
-<meta name="description" content="Área reservada para o futuro mini app Rotina Produtiva Pro, dentro de Procrastinação.">
-<title>Rotina Produtiva Pro | Aprendendo com Infoprodutos</title>
-<link rel="stylesheet" href="/src/portal.css"><link rel="stylesheet" href="/src/mental-mini-app.css">
-</head><body class="mental-pro-page"><div class="shell">
-<header class="top"><a class="brand" href="/" aria-label="Aprendendo com Infoprodutos — início"><span class="mark" aria-hidden="true">✳</span><span><small>APRENDENDO COM INFOPRODUTOS</small><strong>Mental & Financeiro</strong></span></a>
-<nav class="nav" aria-label="Navegação principal"><a href="/">Início</a><a href="/mental-financeiro/">Mental & Financeiro</a><a href="/mental-financeiro/mental/">Mental</a></nav></header>
-<main class="inner">
-<nav class="crumb" aria-label="Você está aqui"><a href="/">Início</a><span aria-hidden="true">›</span><a href="/mental-financeiro/">Mental &amp; Financeiro</a><span aria-hidden="true">›</span><a href="/mental-financeiro/mental/">Mental</a><span aria-hidden="true">›</span><a href="/mental-financeiro/mental/procrastinacao/">Procrastinação</a><span aria-hidden="true">›</span><a href="/mental-financeiro/mental/procrastinacao/mini-app/">Mini App</a><span aria-hidden="true">›</span><strong aria-current="page">Rotina Produtiva Pro</strong></nav>
-<div class="eyebrow">Produto futuro · Mini App</div><h1>Rotina Produtiva Pro</h1>
-<p class="mental-pro-intro">Área reservada para a apresentação do mini app de planejamento de rotina e produtividade.</p>
-<section class="mental-pro-future" aria-label="Status do Rotina Produtiva Pro"><span class="mental-pro-tag">EM PREPARAÇÃO</span><h2>Seu espaço para organizar a rotina</h2><p>Esta página será utilizada para apresentar o Rotina Produtiva Pro, suas funcionalidades, prévia do aplicativo e, quando aprovado, o acesso à oferta.</p><p>O mini app ainda não está disponível para compra ou utilização por este endereço.</p><a class="mental-pro-return" href="/mental-financeiro/mental/procrastinacao/mini-app/">← Voltar aos mini apps</a></section>
-</main><footer><strong>Aprendendo com Infoprodutos</strong><span>Conhecimento • Estratégia • Resultados</span></footer>
-</div></body></html>
+<!DOCTYPE html>
+<html lang="pt"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotina Produtiva Pro</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Facebook Pixel (injetado só se o membro configurou o Pixel ID) -->
+    <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1419582967021848');fbq('track','PageView');</script><noscript></noscript><style id="afp-a8-vazios">
+/* Esconde item de benefício que ficou sem texto (campo em branco no editor). */
+.benefit-card:has(> h3:empty),
+.problem-card:has(> h3:empty),
+.step-card:has(> h3:empty){display:none!important}
+</style>
+</head><body><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1419582967021848&amp;ev=PageView&amp;noscript=1">
+    
+
+    <!-- UTM Tracking -->
+    <script>(function(){var p=new URLSearchParams(location.search);['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){var v=p.get(k);if(v)sessionStorage.setItem(k,v)})})()</script>
+
+    <style>
+        p:empty{display:none;}
+        /* === DARK MOMENTUM — CSS VARIABLES & RESET === */
+        :root {
+            --primary: #b8f06e;
+            --primary-dark: #9ad250;
+            --primary-light: #e0ff96;
+            --secondary: #e8c77e;
+            --bg-dark: #05060f;
+            --bg-medium: #0c0e1e;
+            --bg-light: #141833;
+            --text-main: #e9eaf2;
+            --text-muted: #9aa0b8;
+            --text-bright: #ffffff;
+            --card-bg: rgba(255,255,255,0.045);
+            --card-border: rgba(255,255,255,0.09);
+            --glass-bg: rgba(255,255,255,0.055);
+            --glass-border: rgba(255,255,255,0.12);
+            --radius: 20px;
+            --radius-sm: 16px;
+            --radius-xs: 10px;
+            --shadow: 0 12px 40px rgba(0,0,0,0.45);
+            --shadow-glow: 0 0 30px rgba(100,100,255,0.15);
+            --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            background-image: linear-gradient(180deg, #070918 0%, var(--bg-dark) 40%);
+            color: var(--text-main);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Ambient glow background — radial da cor primária no topo + secundária embaixo */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background:
+                radial-gradient(ellipse 95% 55% at 50% -8%, rgba(100,100,255,0.16) 0%, transparent 62%),
+                radial-gradient(ellipse 65% 45% at 88% 108%, rgba(150,80,255,0.10) 0%, transparent 55%),
+                radial-gradient(ellipse 45% 35% at 5% 55%, rgba(80,140,255,0.06) 0%, transparent 50%);
+            background:
+                radial-gradient(ellipse 95% 55% at 50% -8%, color-mix(in srgb, var(--primary) 18%, transparent) 0%, transparent 62%),
+                radial-gradient(ellipse 65% 45% at 88% 108%, color-mix(in srgb, var(--secondary) 12%, transparent) 0%, transparent 55%),
+                radial-gradient(ellipse 45% 35% at 5% 55%, color-mix(in srgb, var(--primary-light) 7%, transparent) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--text-bright);
+            line-height: 1.18;
+            letter-spacing: -0.02em;
+        }
+
+        ::selection { background: var(--primary); color:#fff; }
+
+        /* === PROGRESS BAR (fina, sem números) === */
+        .progress-bar-wrap {
+            position: fixed; top:0; left:0; width:100%; height:5px;
+            background: rgba(255,255,255,0.06); z-index:1000;
+        }
+        .progress-bar-fill {
+            height:100%; width:0%;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            border-radius: 0 3px 3px 0;
+            box-shadow: 0 0 14px rgba(100,100,255,0.5);
+            box-shadow: 0 0 14px color-mix(in srgb, var(--primary) 60%, transparent);
+        }
+
+        /* === CONTAINER & SCREENS === */
+        .container {
+            max-width: 560px;
+            margin: 0 auto;
+            padding: 24px 18px 32px;
+            min-height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        .screen {
+            display: none;
+            animation: fadeSlideIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .screen.active { display: block; }
+
+        @keyframes fadeSlideIn {
+            from { opacity:0; transform:translateY(22px) scale(0.995); }
+            to { opacity:1; transform:translateY(0) scale(1); }
+        }
+        @keyframes float {
+            0%, 100% { transform:translateY(0); }
+            50% { transform:translateY(-10px); }
+        }
+        @keyframes pulse {
+            0%, 100% { transform:scale(1); box-shadow:0 0 0 0 rgba(100,100,255,0.3); }
+            50% { transform:scale(1.05); box-shadow:0 0 30px 10px rgba(100,100,255,0.1); }
+        }
+        @keyframes blink {
+            0%, 100% { opacity:1; }
+            50% { opacity:0.3; }
+        }
+        @keyframes shimmer {
+            0% { background-position:-200% 0; }
+            100% { background-position:200% 0; }
+        }
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(100,100,255,0.2); }
+            50% { box-shadow: 0 0 20px rgba(100,100,255,0.4); }
+        }
+        @keyframes slideUp {
+            from { opacity:0; transform:translateY(16px); }
+            to { opacity:1; transform:translateY(0); }
+        }
+        @keyframes scaleIn {
+            from { opacity:0; transform:scale(0.9); }
+            to { opacity:1; transform:scale(1); }
+        }
+        @keyframes typingCursor {
+            0%, 100% { border-color: var(--primary); }
+            50% { border-color: transparent; }
+        }
+        @keyframes checkPop {
+            0% { transform:scale(0); opacity:0; }
+            70% { transform:scale(1.25); opacity:1; }
+            100% { transform:scale(1); opacity:1; }
+        }
+        @keyframes ctaGlow {
+            0%, 100% { box-shadow: 0 6px 26px rgba(0,0,0,0.45), 0 0 18px rgba(100,100,255,0.30); }
+            50% { box-shadow: 0 6px 26px rgba(0,0,0,0.45), 0 0 34px rgba(100,100,255,0.55); }
+        }
+
+        /* === S1 HERO === */
+        .hero { text-align:center; padding:52px 0 40px; }
+        .hero-badge {
+            display:inline-flex; align-items:center; gap:7px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color:#fff; font-size:0.72rem; font-weight:700;
+            padding:7px 18px; border-radius:50px;
+            text-transform:uppercase; letter-spacing:1.5px;
+            margin-bottom:22px;
+            box-shadow: 0 0 18px rgba(100,100,255,0.35);
+            box-shadow: 0 0 18px color-mix(in srgb, var(--primary) 45%, transparent);
+            animation: glow 2.4s ease-in-out infinite;
+        }
+        /* HERO IMAGE — aceita arte VERTICAL (~572x916) e capa QUADRADA:
+           dimensões automáticas + limites máximos, nunca corta nem distorce. */
+        .hero-image {
+            width: auto; height: auto;
+            max-width: min(76vw, 300px);
+            max-height: 50vh;
+            object-fit: contain;
+            border-radius: 18px;
+            margin: 0 auto 26px; display: block;
+            box-shadow: 0 22px 60px rgba(0,0,0,0.6), 0 0 40px rgba(100,100,255,0.14);
+            box-shadow: 0 22px 60px rgba(0,0,0,0.6), 0 0 40px color-mix(in srgb, var(--primary) 22%, transparent);
+            animation: float 3.4s ease-in-out infinite;
+        }
+        @media (max-width: 380px) {
+            .hero-image { max-width: 80vw; }
+        }
+        .hero h1 {
+            font-size: clamp(1.7rem, 6.4vw, 2.1rem);
+            margin-bottom:14px;
+            background: linear-gradient(120deg, var(--text-bright) 45%, var(--primary-light));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .hero p { font-size:0.97rem; color:var(--text-muted); margin-bottom:30px; max-width:440px; margin-left:auto; margin-right:auto; }
+
+        .hero-warn {
+            background: linear-gradient(135deg, rgba(255,59,48,0.10), rgba(255,59,48,0.03));
+            border: 1px solid rgba(255,59,48,0.22);
+            border-radius: var(--radius-sm);
+            padding: 16px 20px;
+            margin-bottom: 28px;
+            text-align: left;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .hero-warn-title {
+            font-size: 0.8rem; font-weight: 700; color: #ff7b72;
+            margin-bottom: 6px; display:flex; align-items:center; gap:7px;
+        }
+        .hero-warn-text { font-size: 0.84rem; color: var(--text-muted); line-height:1.55; }
+
+        /* === BUTTONS (CTA glow, >=56px) === */
+        .btn {
+            display:inline-flex; align-items:center; justify-content:center; gap:10px;
+            width:100%; min-height:56px; padding:17px 30px;
+            font-family:'Space Grotesk', sans-serif; font-size:1.06rem; font-weight:700;
+            letter-spacing: 0.01em;
+            color:#fff;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border:none; border-radius:var(--radius-sm); cursor:pointer;
+            transition: var(--transition); text-decoration:none;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+            position:relative; overflow:hidden;
+            -webkit-tap-highlight-color: transparent;
+        }
+        .btn::before {
+            content:''; position:absolute; top:0; left:-100%; width:100%; height:100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+            transition: left 0.5s ease;
+        }
+        .btn:hover::before { left:100%; }
+        .btn:hover {
+            transform:translateY(-2px);
+            box-shadow:0 10px 34px rgba(0,0,0,0.5), 0 0 24px rgba(100,100,255,0.4), inset 0 1px 0 rgba(255,255,255,0.25);
+            box-shadow:0 10px 34px rgba(0,0,0,0.5), 0 0 24px color-mix(in srgb, var(--primary) 50%, transparent), inset 0 1px 0 rgba(255,255,255,0.25);
+        }
+        .btn:active { transform:translateY(1px) scale(0.99); }
+        .btn:disabled { opacity:0.4; cursor:not-allowed; transform:none !important; animation:none !important; }
+        .btn i { transition: transform 0.25s ease; }
+        .btn:hover i.fa-arrow-right { transform: translateX(4px); }
+        .btn-secondary {
+            background:var(--card-bg); border:1px solid var(--card-border);
+            box-shadow:none; min-width:56px; width:auto; flex-shrink:0;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .btn-secondary:hover { background:rgba(255,255,255,0.1); box-shadow:none; }
+        .btn-small { padding:14px 24px; font-size:0.95rem; min-height:48px; }
+        .btn-pulse { animation: ctaGlow 2s ease-in-out infinite; }
+
+        /* === QUIZ SCREENS === */
+        .quiz-header { text-align:center; margin:40px 0 26px; }
+        /* eyebrow pill (sem contador de etapas) */
+        .quiz-step {
+            display:inline-flex; align-items:center; gap:8px;
+            font-size:0.72rem; color:var(--primary-light); font-weight:700;
+            text-transform:uppercase; letter-spacing:2px; margin-bottom:14px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            padding: 7px 16px; border-radius: 50px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .quiz-header h2 { font-size:1.5rem; margin-bottom:10px; }
+        .quiz-header h2 .accent {
+            background: linear-gradient(120deg, var(--primary-light), var(--secondary));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .quiz-header p { color:var(--text-muted); font-size:0.9rem; }
+
+        /* Radio options — glassmorphism */
+        .quiz-options { display:flex; flex-direction:column; gap:11px; margin-bottom:28px; }
+        .quiz-option {
+            display:flex; align-items:center; gap:14px;
+            padding:16px 18px; min-height:64px;
+            background: var(--glass-bg);
+            border:1.5px solid var(--card-border);
+            border-radius:var(--radius-sm); cursor:pointer;
+            transition: var(--transition); user-select:none;
+            backdrop-filter: blur(14px) saturate(140%);
+            -webkit-backdrop-filter: blur(14px) saturate(140%);
+            -webkit-tap-highlight-color: transparent;
+        }
+        .quiz-option:hover {
+            border-color:rgba(255,255,255,0.2);
+            background:rgba(255,255,255,0.08);
+            transform: translateY(-1px);
+        }
+        .quiz-option.selected {
+            border-color:var(--primary);
+            background: rgba(100,100,255,0.10);
+            background: color-mix(in srgb, var(--primary) 12%, rgba(255,255,255,0.04));
+            box-shadow: 0 0 0 1px var(--primary), 0 0 22px rgba(100,100,255,0.3), 0 6px 22px rgba(0,0,0,0.25);
+            box-shadow: 0 0 0 1px var(--primary), 0 0 22px color-mix(in srgb, var(--primary) 35%, transparent), 0 6px 22px rgba(0,0,0,0.25);
+            transform: scale(1.015);
+        }
+        .quiz-option-icon {
+            width:44px; height:44px; display:flex; align-items:center; justify-content:center;
+            background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.06);
+            border-radius:12px; font-size:1.1rem; color:var(--primary-light);
+            flex-shrink:0; transition:var(--transition);
+        }
+        .quiz-option.selected .quiz-option-icon {
+            background:linear-gradient(135deg, var(--primary), var(--secondary)); color:#fff;
+            border-color: transparent;
+            box-shadow: 0 4px 14px rgba(100,100,255,0.4);
+            box-shadow: 0 4px 14px color-mix(in srgb, var(--primary) 45%, transparent);
+        }
+        .quiz-option-content { flex:1; min-width:0; }
+        .quiz-option-text { font-size:0.94rem; font-weight:600; color:var(--text-main); }
+        .quiz-option.selected .quiz-option-text { color:var(--text-bright); }
+        .quiz-option-desc { font-size:0.78rem; color:var(--text-muted); margin-top:2px; }
+        /* Descricao vazia nao pode abrir espaco: em 13 dos 102 apps a chave
+           tpl_s3_opt5_desc nao existe, e sem isto sobraria um vao na opcao. */
+        .quiz-option-desc:empty { display:none; }
+        .quiz-option-check {
+            margin-left:auto; width:24px; height:24px;
+            border:2px solid var(--card-border); border-radius:50%;
+            display:flex; align-items:center; justify-content:center;
+            flex-shrink:0; transition:var(--transition);
+        }
+        .quiz-option.selected .quiz-option-check {
+            background:linear-gradient(135deg, var(--primary), var(--secondary));
+            border-color:var(--primary); color:#fff; font-size:0.68rem;
+        }
+        .quiz-option.selected .quiz-option-check i { animation: checkPop 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards; }
+
+        /* Multi-select (checkbox style) */
+        .quiz-multi .quiz-option-check { border-radius:7px; }
+        .quiz-multi .quiz-option.selected .quiz-option-check { border-radius:7px; }
+
+        /* Navigation */
+        .quiz-nav { display:flex; gap:10px; }
+        .quiz-nav .btn { flex:1; }
+
+        /* === TYPING EFFECT === */
+        .typing-box {
+            background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-sm);
+            padding: 22px 20px 20px;
+            margin: 22px 0;
+            position: relative;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            animation: scaleIn 0.35s ease forwards;
+        }
+        .typing-box::before {
+            content: '\f075';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute; top: -12px; left: 20px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            width: 26px; height: 26px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.62rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+        }
+        .typing-text {
+            font-size: 0.9rem;
+            color: var(--text-main);
+            line-height: 1.7;
+            font-style: italic;
+            min-height: 40px;
+        }
+        .typing-cursor {
+            display: inline-block;
+            width: 2px; height: 1em;
+            background: var(--primary);
+            margin-left: 2px;
+            animation: typingCursor 0.8s infinite;
+            vertical-align: text-bottom;
+        }
+
+        /* === S5 NAME INPUT === */
+        .name-input-wrap { margin: 26px 0; }
+        .name-label { font-size:0.82rem; color:var(--text-muted); margin-bottom:8px; display:block; font-weight:600; }
+        .name-input {
+            width:100%; padding:17px 20px; min-height:56px;
+            background: var(--glass-bg);
+            border:1.5px solid var(--card-border);
+            border-radius:var(--radius-sm);
+            color:var(--text-bright); font-size:1rem;
+            font-family:'Inter', sans-serif;
+            outline:none; transition:var(--transition);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .name-input:focus {
+            border-color:var(--primary);
+            box-shadow:0 0 0 3px rgba(100,100,255,0.18), 0 0 20px rgba(100,100,255,0.15);
+            box-shadow:0 0 0 3px color-mix(in srgb, var(--primary) 22%, transparent), 0 0 20px color-mix(in srgb, var(--primary) 18%, transparent);
+        }
+        .name-input::placeholder { color:var(--text-muted); opacity:0.7; }
+        .name-privacy {
+            display:flex; align-items:flex-start; gap:8px;
+            margin-top:12px; font-size:0.78rem; color:var(--text-muted);
+        }
+        .name-privacy i { color:var(--primary-light); margin-top:2px; flex-shrink:0; }
+
+        /* === S10 REVELATION === */
+        .revelation-section { text-align:center; padding:34px 0; }
+        .revelation-img-wrap {
+            position:relative; display:inline-block; margin-bottom:24px;
+        }
+        .revelation-img-label {
+            position:absolute; top:-12px; left:50%; transform:translateX(-50%);
+            background:linear-gradient(135deg, var(--primary), var(--secondary));
+            color:#fff; font-size:0.65rem; font-weight:700;
+            padding:5px 14px; border-radius:20px;
+            text-transform:uppercase; letter-spacing:1px; white-space:nowrap;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+            z-index: 2;
+        }
+        .revelation-image {
+            width:auto; height:auto; max-width:200px; max-height:220px;
+            object-fit:contain;
+            border-radius: 14px;
+            filter:drop-shadow(0 14px 34px rgba(0,0,0,0.5));
+        }
+        .success-box {
+            background: linear-gradient(135deg, rgba(34,197,94,0.10), rgba(34,197,94,0.02));
+            border:1px solid rgba(34,197,94,0.22);
+            border-radius:var(--radius-sm);
+            padding:20px; margin:20px 0; text-align:left;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .success-box h3 { font-size:0.96rem; color:#4ade80; margin-bottom:8px; display:flex; align-items:center; gap:8px; }
+        .success-box p { font-size:0.86rem; color:var(--text-muted); line-height:1.6; }
+
+        /* === S11 TESTIMONIALS INLINE === */
+        .testimonial-inline {
+            background:var(--glass-bg); border:1px solid var(--glass-border);
+            border-radius:var(--radius-sm); padding:20px; margin-bottom:12px;
+            backdrop-filter:blur(14px);
+            -webkit-backdrop-filter:blur(14px);
+            position:relative;
+        }
+        .testimonial-inline::before {
+            content:'\201C';
+            position:absolute; top:6px; right:16px;
+            font-family:'Space Grotesk', sans-serif;
+            font-size:3rem; line-height:1; font-weight:700;
+            color:var(--primary); opacity:0.25;
+        }
+        .testimonial-stars { color:#fbbf24; font-size:0.78rem; margin-bottom:8px; letter-spacing:2px; }
+        .testimonial-inline p { font-size:0.87rem; color:var(--text-main); font-style:italic; line-height:1.6; }
+        .testimonial-author { display:flex; align-items:center; gap:10px; margin-top:14px; }
+        .testimonial-avatar {
+            width:38px; height:38px; border-radius:50%;
+            background:linear-gradient(135deg, var(--primary), var(--secondary));
+            display:flex; align-items:center; justify-content:center;
+            font-size:0.8rem; color:#fff; font-weight:700;
+            box-shadow: 0 4px 12px rgba(100,100,255,0.35);
+            box-shadow: 0 4px 12px color-mix(in srgb, var(--primary) 40%, transparent);
+        }
+        .testimonial-name { font-size:0.8rem; font-weight:600; color:var(--text-bright); }
+
+        /* === S12 SLIDER === */
+        .slider-wrap { margin:30px 0; text-align:center; }
+        .slider-value {
+            font-size:3.4rem; font-family:'Space Grotesk',sans-serif; font-weight:800;
+            background: linear-gradient(120deg, var(--text-bright), var(--primary-light));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+            margin-bottom:2px;
+        }
+        .slider-unit { font-size:1rem; color:var(--primary-light); font-weight:600; }
+        .slider-range {
+            -webkit-appearance:none; appearance:none;
+            width:100%; height:8px; border-radius:4px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+            outline:none; margin:22px 0 8px;
+            box-shadow: 0 0 14px rgba(100,100,255,0.25);
+            box-shadow: 0 0 14px color-mix(in srgb, var(--primary) 30%, transparent);
+        }
+        .slider-range::-webkit-slider-thumb {
+            -webkit-appearance:none; width:30px; height:30px; border-radius:50%;
+            background:var(--text-bright); cursor:pointer;
+            box-shadow:0 2px 10px rgba(0,0,0,0.4), 0 0 0 3px var(--primary);
+        }
+        .slider-range::-moz-range-thumb {
+            width:30px; height:30px; border-radius:50%; border:none;
+            background:var(--text-bright); cursor:pointer;
+            box-shadow:0 2px 10px rgba(0,0,0,0.4), 0 0 0 3px var(--primary);
+        }
+        .slider-hint { font-size:0.75rem; color:var(--text-muted); }
+        .slider-info {
+            background:var(--glass-bg); border:1px solid var(--glass-border);
+            border-radius:var(--radius-xs); padding:14px 16px; margin-top:18px;
+            font-size:0.83rem; color:var(--text-muted); line-height:1.55;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+
+        /* === S15/S16 LOADING === */
+        .loading-screen { text-align:center; padding:64px 0; }
+        .loading-icon {
+            width:84px; height:84px; margin:0 auto 28px; border-radius:50%;
+            background:linear-gradient(135deg, var(--primary), var(--secondary));
+            display:flex; align-items:center; justify-content:center;
+            font-size:2rem; color:#fff;
+            box-shadow: 0 0 34px rgba(100,100,255,0.4);
+            box-shadow: 0 0 34px color-mix(in srgb, var(--primary) 45%, transparent);
+            animation:pulse 1.5s ease-in-out infinite;
+        }
+        .loading-screen h2 { font-size:1.3rem; margin-bottom:6px; }
+        .loading-screen h2 .highlight {
+            background: linear-gradient(120deg, var(--primary-light), var(--secondary));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .loading-screen p { color:var(--text-muted); font-size:0.88rem; margin-bottom:28px; }
+        .loading-bar-wrap {
+            width:100%; height:8px; background:rgba(255,255,255,0.08);
+            border-radius:4px; overflow:hidden; margin-bottom:10px;
+        }
+        .loading-bar-fill {
+            height:100%; width:0%;
+            background:linear-gradient(90deg, var(--primary), var(--secondary));
+            border-radius:4px; transition:width 0.3s ease;
+            box-shadow: 0 0 10px rgba(100,100,255,0.5);
+            box-shadow: 0 0 10px color-mix(in srgb, var(--primary) 55%, transparent);
+        }
+        .loading-percent { font-size:0.9rem; color:var(--primary-light); font-weight:700; font-family:'Space Grotesk',sans-serif; }
+        .loading-steps { margin-top:28px; text-align:left; display:flex; flex-direction:column; gap:10px; }
+        .loading-step {
+            display:flex; align-items:center; gap:10px; font-size:0.82rem;
+            color:var(--text-muted); opacity:0.4; transition:opacity 0.5s ease;
+        }
+        .loading-step.active { opacity:1; color:var(--text-main); }
+        .loading-step.done { opacity:1; color:var(--primary-light); }
+        .loading-step i { width:18px; text-align:center; }
+        .loading-image { display: none; } /* deprecated — substituído por .loading-spinner */
+        /* SPINNER — anéis animados na cor primária */
+        .loading-spinner {
+            position: relative;
+            width: 96px; height: 96px;
+            margin: 18px auto 26px;
+            display: block;
+        }
+        .loading-spinner::before,
+        .loading-spinner::after {
+            content: '';
+            position: absolute; inset: 0;
+            border-radius: 50%;
+            border: 4px solid transparent;
+        }
+        .loading-spinner::before {
+            border-top-color: var(--primary);
+            border-right-color: var(--primary);
+            filter: drop-shadow(0 0 6px rgba(100,100,255,0.6));
+            animation: spin-fast 1s linear infinite;
+        }
+        .loading-spinner::after {
+            border-bottom-color: var(--secondary);
+            border-left-color: var(--secondary);
+            opacity: 0.7;
+            animation: spin-fast 1.6s linear infinite reverse;
+            inset: 10px;
+        }
+        @keyframes spin-fast { to { transform: rotate(360deg); } }
+        .loading-dots {
+            display: flex; justify-content: center; gap: 8px;
+            margin: 12px auto 24px;
+        }
+        .loading-dots span {
+            width: 8px; height: 8px; border-radius: 50%;
+            background: var(--primary-light);
+            animation: dot-pulse 1.4s ease-in-out infinite;
+        }
+        .loading-dots span:nth-child(2) { animation-delay: 0.2s; }
+        .loading-dots span:nth-child(3) { animation-delay: 0.4s; }
+        @keyframes dot-pulse {
+            0%, 80%, 100% { opacity: 0.3; transform: scale(0.85); }
+            40% { opacity: 1; transform: scale(1.1); }
+        }
+
+        /* === S17 RISK ALERT === */
+        .risk-section { padding:34px 0; }
+        .risk-header { text-align:center; margin-bottom:22px; }
+        .risk-header h2 { font-size:1.4rem; margin-bottom:6px; }
+        .risk-badge {
+            display:inline-flex; align-items:center; gap:7px;
+            background:rgba(255,59,48,0.12); color:#ff7b72;
+            border:1px solid rgba(255,59,48,0.25);
+            font-size:0.85rem; font-weight:700;
+            padding:9px 20px; border-radius:50px;
+            margin:12px 0; animation:blink 1.5s infinite;
+        }
+        .risk-text { font-size:0.9rem; color:var(--text-muted); text-align:center; margin-bottom:20px; }
+        .warn-box {
+            background:linear-gradient(135deg, rgba(255,59,48,0.08), rgba(255,59,48,0.02));
+            border:1px solid rgba(255,59,48,0.18);
+            border-radius:var(--radius-sm); padding:18px; margin-bottom:16px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .warn-box h4 { font-size:0.92rem; color:#ff7b72; margin-bottom:6px; display:flex; align-items:center; gap:7px; }
+        .warn-box p { font-size:0.83rem; color:var(--text-muted); line-height:1.55; }
+        .alert-list { display:flex; flex-direction:column; gap:8px; margin:16px 0; }
+        .alert-item {
+            display:flex; align-items:flex-start; gap:10px;
+            padding:13px 15px;
+            background:rgba(255,59,48,0.05); border:1px solid rgba(255,59,48,0.12);
+            border-radius:var(--radius-xs); font-size:0.83rem; color:var(--text-muted); line-height:1.5;
+        }
+        .alert-item i { color:#ff7b72; margin-top:2px; flex-shrink:0; }
+        .good-news-box {
+            background:linear-gradient(135deg, rgba(34,197,94,0.10), rgba(34,197,94,0.02));
+            border:1px solid rgba(34,197,94,0.22);
+            border-radius:var(--radius-sm); padding:18px; margin:20px 0;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .good-news-box h4 { font-size:0.92rem; color:#4ade80; margin-bottom:6px; display:flex; align-items:center; gap:7px; }
+        .good-news-box p { font-size:0.86rem; color:var(--text-muted); line-height:1.6; }
+
+        /* === S18 METRICS === */
+        .metrics-section { padding:24px 0; }
+        .metric-card {
+            background:var(--glass-bg); border:1px solid var(--glass-border);
+            border-radius:var(--radius-sm); padding:16px; margin-bottom:10px;
+            backdrop-filter:blur(12px);
+            -webkit-backdrop-filter:blur(12px);
+        }
+        .metric-label { font-size:0.82rem; font-weight:700; color:var(--text-bright); margin-bottom:10px; }
+        .metric-compare { display:flex; align-items:center; gap:10px; }
+        .metric-before, .metric-after {
+            flex:1; padding:9px 10px; border-radius:var(--radius-xs);
+            font-size:0.76rem; text-align:center; font-weight:600;
+        }
+        .metric-before { background:rgba(255,59,48,0.10); color:#ff8a80; border:1px solid rgba(255,59,48,0.14); }
+        .metric-after { background:rgba(34,197,94,0.10); color:#69f0ae; border:1px solid rgba(34,197,94,0.16); }
+        .metric-arrow { color:var(--primary-light); font-size:0.85rem; }
+        .plan-box {
+            background:linear-gradient(150deg, var(--bg-medium), var(--bg-light));
+            border:1px solid var(--glass-border);
+            border-radius:var(--radius); padding:26px 22px; margin:22px 0;
+            position:relative; overflow:hidden;
+        }
+        .plan-box::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:3px;
+            background:linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        .plan-box h3 { font-size:1.08rem; margin-bottom:8px; text-align:center; }
+        .plan-box p { font-size:0.86rem; color:var(--text-muted); margin-bottom:16px; text-align:center; line-height:1.6; }
+        .plan-features { list-style:none; margin-bottom:20px; }
+        .plan-features li {
+            display:flex; align-items:center; gap:10px;
+            padding:9px 0; font-size:0.86rem; color:var(--text-main);
+            border-bottom:1px solid rgba(255,255,255,0.04);
+        }
+        .plan-features li:last-child { border-bottom:none; }
+        .plan-features li i { color:var(--primary-light); flex-shrink:0; }
+
+        /* === S19 BONUS === */
+        .bonus-grid { display:flex; flex-direction:column; gap:12px; margin:22px 0; }
+        .bonus-card {
+            background:var(--glass-bg); border:1px dashed rgba(100,100,255,0.5);
+            border:1px dashed color-mix(in srgb, var(--primary) 55%, transparent);
+            border-radius:var(--radius-sm); padding:18px; position:relative;
+            overflow:hidden;
+            backdrop-filter:blur(12px);
+            -webkit-backdrop-filter:blur(12px);
+        }
+        .bonus-card::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:2px;
+            background:linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        .bonus-num {
+            display:inline-block;
+            background:linear-gradient(135deg, var(--primary), var(--secondary));
+            color:#fff;
+            font-size:0.65rem; font-weight:700; padding:3px 9px;
+            border-radius:5px; margin-bottom:8px; letter-spacing:0.5px;
+        }
+        .bonus-card h4 { font-size:0.94rem; margin-bottom:4px; }
+        .bonus-card p { font-size:0.8rem; color:var(--text-muted); line-height:1.5; }
+
+        /* === S20 OFFER SHOWCASE === */
+        .offer-section { text-align:center; padding:24px 0; }
+        .offer-badge {
+            display:inline-flex; align-items:center; gap:7px;
+            background:linear-gradient(135deg, var(--primary), var(--secondary));
+            color:#fff; font-size:0.72rem; font-weight:700;
+            padding:7px 16px; border-radius:50px;
+            text-transform:uppercase; letter-spacing:1px; margin-bottom:16px;
+            box-shadow: 0 0 18px rgba(100,100,255,0.35);
+            box-shadow: 0 0 18px color-mix(in srgb, var(--primary) 42%, transparent);
+        }
+        .offer-section h2 { font-size:1.55rem; margin-bottom:8px; }
+        .offer-section h2 .accent {
+            background: linear-gradient(120deg, var(--primary-light), var(--secondary));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .offer-section > p { color:var(--text-muted); font-size:0.9rem; margin-bottom:24px; }
+
+        .feature-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-bottom:24px; }
+        .feature-card {
+            background:var(--glass-bg); border:1px solid var(--glass-border);
+            border-radius:var(--radius-sm); padding:18px 14px; text-align:center;
+            backdrop-filter:blur(12px);
+            -webkit-backdrop-filter:blur(12px);
+            transition: var(--transition);
+        }
+        .feature-card:hover { transform:translateY(-2px); border-color:rgba(255,255,255,0.2); }
+        .feature-card i {
+            font-size:1.5rem; margin-bottom:10px;
+            background: linear-gradient(135deg, var(--primary-light), var(--secondary));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .feature-card h4 { font-size:0.84rem; margin-bottom:4px; }
+        .feature-card p { font-size:0.72rem; color:var(--text-muted); }
+
+        .offer-card {
+            background:linear-gradient(150deg, var(--bg-medium), var(--bg-light));
+            border:1px solid rgba(100,100,255,0.28);
+            border:1px solid color-mix(in srgb, var(--primary) 32%, rgba(255,255,255,0.08));
+            border-radius:var(--radius); padding:30px 20px; margin-bottom:24px;
+            position:relative; overflow:hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px rgba(100,100,255,0.12);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 40px color-mix(in srgb, var(--primary) 15%, transparent);
+        }
+        .offer-card::before {
+            content:''; position:absolute; top:0; left:0; right:0; height:3px;
+            background:linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        .offer-card-image {
+            width:auto; height:auto; max-width:180px; max-height:200px;
+            object-fit:contain;
+            border-radius:12px;
+            margin:0 auto 16px; display:block;
+            filter:drop-shadow(0 10px 26px rgba(0,0,0,0.45));
+        }
+        .offer-list { list-style:none; text-align:left; margin:16px 0; }
+        .offer-list li {
+            display:flex; align-items:flex-start; gap:10px;
+            padding:9px 0; font-size:0.86rem; color:var(--text-main);
+            border-bottom:1px solid rgba(255,255,255,0.05);
+        }
+        .offer-list li:last-child { border-bottom:none; }
+        .offer-list li i { color:var(--primary-light); margin-top:3px; flex-shrink:0; }
+        .offer-list li .offer-item-desc { font-size:0.75rem; color:var(--text-muted); }
+        .offer-highlight {
+            background:linear-gradient(135deg, rgba(255,215,0,0.10), rgba(255,215,0,0.02));
+            border:1px solid rgba(255,215,0,0.22);
+            border-radius:var(--radius-xs); padding:14px; margin:16px 0;
+            font-size:0.86rem; text-align:center; font-weight:700; color:#ffd700;
+        }
+
+        /* Price block — âncora riscada + preço destaque */
+        .price-block { text-align:center; margin:22px 0; }
+        .price-from { font-size:0.82rem; color:var(--text-muted); }
+        .price-old { font-size:1.1rem; color:var(--text-muted); text-decoration:line-through; margin:4px 0; opacity:0.8; }
+        .price-for { font-size:0.82rem; color:var(--primary-light); font-weight:700; margin-top:8px; text-transform:uppercase; letter-spacing:1px; }
+        .price-new {
+            font-size:3rem; font-family:'Space Grotesk',sans-serif; font-weight:800;
+            background: linear-gradient(120deg, var(--text-bright) 40%, var(--primary-light));
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+            line-height:1.1;
+        }
+        .price-new .currency { font-size:1.3rem; vertical-align:super; }
+        .limited-badge {
+            display:inline-flex; align-items:center; gap:7px;
+            background:rgba(255,59,48,0.12); color:#ff7b72;
+            border:1px solid rgba(255,59,48,0.25);
+            font-size:0.78rem; font-weight:700;
+            padding:9px 16px; border-radius:50px; margin-bottom:16px;
+        }
+        .limited-badge i { animation:blink 1s infinite; }
+
+        /* Trust badges */
+        .trust-row { display:flex; justify-content:center; gap:18px; margin-top:18px; }
+        .trust-badge {
+            display:flex; flex-direction:column; align-items:center; gap:5px;
+            font-size:0.68rem; color:var(--text-muted); text-align:center;
+        }
+        .trust-badge i { font-size:1.25rem; color:var(--primary-light); }
+
+        /* === S21 FINAL CTA === */
+        .final-section { padding:24px 0; }
+        .final-section .hero-image {
+            width:auto; height:auto;
+            max-width:200px; max-height:300px;
+            animation:none;
+        }
+
+        /* Guarantee */
+        .guarantee-section {
+            display:flex; align-items:flex-start; gap:14px;
+            background:linear-gradient(135deg, rgba(34,197,94,0.08), rgba(255,255,255,0.03));
+            border:1px solid rgba(34,197,94,0.2);
+            border-radius:var(--radius-sm); padding:20px; margin:26px 0; text-align:left;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .guarantee-icon {
+            width:52px; height:52px;
+            background:linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius:50%; display:flex; align-items:center; justify-content:center;
+            font-size:1.3rem; color:#fff; flex-shrink:0;
+            box-shadow: 0 6px 18px rgba(100,100,255,0.35);
+            box-shadow: 0 6px 18px color-mix(in srgb, var(--primary) 40%, transparent);
+        }
+        .guarantee-text h4 { font-size:0.96rem; margin-bottom:4px; }
+        .guarantee-text p { font-size:0.83rem; color:var(--text-muted); }
+
+        /* FAQ */
+        .faq-section { margin:30px 0; }
+        .faq-section h3 { text-align:center; font-size:1.12rem; margin-bottom:16px; }
+        .faq-item {
+            background:var(--glass-bg); border:1px solid var(--glass-border);
+            border-radius:var(--radius-xs); margin-bottom:7px; overflow:hidden;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        .faq-question {
+            display:flex; align-items:center; justify-content:space-between;
+            padding:15px 18px; cursor:pointer;
+            font-size:0.88rem; font-weight:600; color:var(--text-bright);
+            transition:var(--transition);
+        }
+        .faq-question:hover { color:var(--primary-light); }
+        .faq-question i { font-size:0.7rem; transition:transform 0.3s ease; color:var(--primary-light); }
+        .faq-item.open .faq-question i { transform:rotate(180deg); }
+        .faq-answer { max-height:0; overflow:hidden; transition:max-height 0.3s ease; }
+        .faq-answer-inner { padding:0 18px 15px; font-size:0.83rem; color:var(--text-muted); line-height:1.6; }
+        .faq-item.open .faq-answer { max-height:200px; }
+
+        /* Testimonials section */
+        .testimonials-section { margin:30px 0; }
+        .testimonials-section h3 { text-align:center; font-size:1.12rem; margin-bottom:16px; }
+        .testimonial-card {
+            background:var(--glass-bg); border:1px solid var(--glass-border);
+            border-radius:var(--radius-sm); padding:18px; margin-bottom:10px;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            position:relative;
+            text-align:left;
+        }
+        .testimonial-card::before {
+            content:'\201C';
+            position:absolute; top:4px; right:16px;
+            font-family:'Space Grotesk', sans-serif;
+            font-size:2.6rem; line-height:1; font-weight:700;
+            color:var(--primary); opacity:0.22;
+        }
+        .testimonial-card p { font-size:0.86rem; color:var(--text-main); font-style:italic; line-height:1.6; }
+
+        /* Footer */
+        .footer {
+            text-align:center; padding:30px 0 10px; font-size:0.72rem;
+            color:var(--text-muted); border-top:1px solid var(--card-border); margin-top:34px;
+        }
+        .footer a { color:var(--text-muted); text-decoration:none; transition:color 0.2s ease; }
+        .footer a:hover { color:var(--primary-light); }
+
+        /* === EDITOR HIGHLIGHT (for hybrid editor) === */
+        .editor-highlight {
+            outline: 2px solid var(--primary) !important;
+            outline-offset: 2px;
+            animation: glow 1s ease-in-out 2;
+        }
+
+        /* === RESPONSIVE === */
+        @media (min-width:640px) {
+            .container { padding:36px 24px; }
+            .hero h1 { font-size:2.3rem; }
+            .hero-image { max-width:300px; }
+            .offer-section h2 { font-size:1.8rem; }
+            .quiz-header h2 { font-size:1.65rem; }
+        }
+    </style>
+
+
+
+    <!-- PROGRESS BAR -->
+    <div class="progress-bar-wrap">
+        <div class="progress-bar-fill" id="progressBar"></div>
+    </div>
+
+    <div class="container">
+
+        <!-- ====== S1 - HERO / LANDING ====== -->
+        
+
+        <!-- ====== S2 - SATISFACAO (4 radio) ====== -->
+        
+
+        <!-- ====== S3 - AREAS DE INTERESSE (5 multi-select) ====== -->
+        
+
+        <!-- ====== S4 - MAIOR DESEJO (4 radio) ====== -->
+        
+
+        <!-- ====== S5 - NOME DO USUARIO ====== -->
+        
+
+        <!-- ====== S6 - IMPACTO NA VIDA (4 radio + typing) ====== -->
+        
+
+        <!-- ====== S7 - TENTATIVAS ANTERIORES (3 radio + typing) ====== -->
+        
+
+        <!-- ====== S8 - MAIOR OBSTACULO (5 radio) ====== -->
+        
+
+        <!-- ====== S9 - OBJETIVOS (6 multi-select) ====== -->
+        
+
+        <!-- ====== S10 - REVELACAO / METODO ====== -->
+        
+
+        <!-- ====== S11 - DEPOIMENTOS ====== -->
+        
+
+        <!-- ====== S12 - IDADE (slider) ====== -->
+        
+
+        <!-- ====== S13 - TEMPO COM PROBLEMA (4 radio) ====== -->
+        
+
+        <!-- ====== S14 - DISPONIBILIDADE (4 radio) ====== -->
+        
+
+        <!-- ====== S15 - LOADING 1 (analise) ====== -->
+        
+
+        <!-- ====== S16 - LOADING 2 (personalizando) ====== -->
+        
+
+        <!-- ====== S17 - ALERTA / RISCO ====== -->
+        
+
+        <!-- ====== S18 - METRICAS / COMPARACAO ====== -->
+        
+
+        <!-- ====== S19 - BONUS (4 bonus + typing) ====== -->
+        
+
+        <!-- ====== S20 - OFERTA / SHOWCASE ====== -->
+        
+
+        <!-- ====== S21 - CTA FINAL ====== -->
+        
+
+        <!-- ====== CUSTOM SCREENS (22-26) — Hidden by default ====== -->
+        
+        
+        
+        
+        
+
+    <div class="screen active" id="screen-1" data-screen="1" data-editable-section="s1">
+            <div class="hero">
+                <div class="hero-badge"><i class="fa-solid fa-fire"></i> ROTINA PRODUTIVA PRO</div>
+                <h1>Construa Sua Rotina Produtiva Imbatível em 21 Dias e Domine Cada Hora do Dia</h1>
+                <img src="https://eva.igorstorm.com/capapv/rotinaprodutiva.png" alt="Rotina Produtiva Pro" class="hero-image">
+                <p>Sistema completo de rotina matinal, planejamento diário e gestão de energia baseado em hábitos atômicos. Com ele você aprende a acordar mais cedo, executar o top 3 do dia antes das 9h e fechar o expediente em paz.</p>
+                <div class="hero-warn">
+                    <div class="hero-warn-title"><i class="fa-solid fa-triangle-exclamation"></i> IMPORTANTE</div>
+                    <div class="hero-warn-text">Este quiz é confidencial. Suas respostas montam uma <strong>rotina específica pro seu cronotipo, profissão e fase de vida</strong>.</div>
+                </div>
+                <button class="btn btn-pulse" onclick="nextScreen()">
+                    <i class="fa-solid fa-play"></i>
+                    SUA JORNADA COMECA AGORA
+                </button>
+            </div>
+        </div><div class="screen" id="screen-2" data-screen="2" data-editable-section="s2">
+            <div class="quiz-header">
+                <h2>Qual sua maior <span class="accent">dor com sua rotina hoje?</span> </h2>
+                <p>Cada dor tem ferramenta específica — vamos focar.</p>
+            </div>
+            <div class="quiz-options" data-question="s2">
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-face-smile"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Acordo tarde e perco a manhã</div>
+                        <div class="quiz-option-desc">Levanto às 8-10h, dia já começa atrasado</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-face-meh"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Não planejo o dia</div>
+                        <div class="quiz-option-desc">Apago incêndio o expediente inteiro</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-face-frown"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Não consigo manter constância</div>
+                        <div class="quiz-option-desc">Começo bem segunda, largo na quarta</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-face-tired"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Tudo me distrai</div>
+                        <div class="quiz-option-desc">Pulo de tarefa em tarefa sem terminar nada</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+            </div>
+            <div class="quiz-nav">
+                <button class="btn btn-secondary" onclick="prevScreen()"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="btn" id="next-s2" disabled="">Continuar <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div><div class="screen" id="screen-3" data-screen="3" data-editable-section="s3">
+            <div class="quiz-header">
+                <h2>Que horas você <span class="accent">acorda atualmente?</span></h2>
+                <p>Seu horário atual define velocidade da transição.</p>
+            </div>
+            <div class="quiz-options quiz-multi" data-question="s3" data-multi="true">
+                <div class="quiz-option" onclick="selectMultiple(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <div class="quiz-option-content"><div class="quiz-option-text">Antes das 6h</div><div class="quiz-option-desc">Já madruga — só falta otimizar</div></div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectMultiple(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <div class="quiz-option-content"><div class="quiz-option-text">Entre 6h e 8h</div><div class="quiz-option-desc">Bom — vamos avançar 1-2h</div></div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectMultiple(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div class="quiz-option-content"><div class="quiz-option-text">Entre 8h e 10h</div><div class="quiz-option-desc">Acorda tarde — perde a manhã</div></div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectMultiple(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-calendar-check"></i></div>
+                    <div class="quiz-option-content"><div class="quiz-option-text">Depois das 10h</div><div class="quiz-option-desc">Crítico — vira o dia ao avesso</div></div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectMultiple(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-star"></i></div>
+                    <div class="quiz-option-content"><div class="quiz-option-text">Perfeccionismo</div><div class="quiz-option-desc"></div></div>
+                    <div class="quiz-option-check"></div>
+                </div>
+            </div>
+            <button class="btn" onclick="nextScreen()">Continuar <i class="fa-solid fa-arrow-right"></i></button>
+        </div><div class="screen" id="screen-4" data-screen="4" data-editable-section="s4">
+            <div class="quiz-header">
+                <h2>Qual sua <span class="accent">fase de vida atual?</span> </h2>
+                <p>Cada fase tem rotina ideal diferente.</p>
+            </div>
+            <div class="quiz-options" data-question="s4">
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-rocket"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Estudante (ensino médio/faculdade)</div>
+                        <div class="quiz-option-desc">Estudo + provas + trabalho talvez</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-spa"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">CLT em escritório</div>
+                        <div class="quiz-option-desc">Horário fixo + chefe + reuniões</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-brain"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Autônomo / empreendedor</div>
+                        <div class="quiz-option-desc">Liberdade de horário, falta disciplina</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Mãe / pai com filho pequeno</div>
+                        <div class="quiz-option-desc">Rotina depende do bebê — sem controle</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+            </div>
+            <div class="quiz-nav">
+                <button class="btn btn-secondary" onclick="prevScreen()"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="btn" id="next-s4" disabled="">Continuar <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div><div class="screen" id="screen-5" data-screen="5" data-editable-section="s5">
+            <div class="quiz-header">
+                <h2>Qual seu <span class="accent">primeiro nome?</span></h2>
+                <p>Quero personalizar sua rotina — sua vida é única.</p>
+            </div>
+            <div class="name-input-wrap">
+                <label class="name-label">Seu nome completo nao e necessario, apenas o primeiro:</label>
+                <input type="text" class="name-input" id="userName" placeholder="Digite seu primeiro nome aqui..." oninput="onNameInput(this)">
+                <div class="name-privacy">
+                    <i class="fa-solid fa-lock"></i>
+                    <span><strong>100% Privado e Seguro.</strong> Usamos seu nome apenas para personalizar sua experiencia. Nunca compartilharemos com terceiros.</span>
+                </div>
+            </div>
+            <button class="btn" id="next-s5" onclick="nextScreen()" disabled="">Continuar Minha Transformacao <i class="fa-solid fa-arrow-right"></i></button>
+        </div><div class="screen" id="screen-6" data-screen="6" data-editable-section="s6">
+            <div class="quiz-header">
+                <h2>Como você se sente <span class="accent">no final do dia?</span> </h2>
+                <p>Entender o impacto nos ajuda a criar o sistema certo para você.</p>
+            </div>
+            <div class="quiz-options" data-question="s6">
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Exausto(a) e improdutivo(a)</div>
+                        <div class="quiz-option-desc">Trabalhei o dia todo, não entreguei nada</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-face-sad-tear"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Ansioso(a)</div>
+                        <div class="quiz-option-desc">Listas crescem, peso só aumenta</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-heart-crack"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Frustrado(a)</div>
+                        <div class="quiz-option-desc">Sei que poderia render mais</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Determinado(a)</div>
+                        <div class="quiz-option-desc">Quero virar essa página</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+            </div>
+            <div class="typing-box" id="typing-s6" style="display:none">
+                <div class="typing-text" id="typing-text-s6">Eu entendo... terminar o dia esgotado dói.</div>
+            </div>
+            <button class="btn" id="next-s6" onclick="nextScreen()" style="display:none">Continuar <i class="fa-solid fa-arrow-right"></i></button>
+        </div><div class="screen" id="screen-7" data-screen="7" data-editable-section="s7">
+            <div class="quiz-header">
+                <h2>Já tentou <span class="accent">criar rotina antes?</span></h2>
+                <p>Sua experiência define o ponto de partida ideal.</p>
+            </div>
+            <div class="quiz-options" data-question="s7">
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-rotate"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Nunca tentei estrutura</div>
+                        <div class="quiz-option-desc">Vivo no improviso</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-arrows-rotate"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Tentei acordar cedo, larguei</div>
+                        <div class="quiz-option-desc">Aguentei 3-7 dias e voltei ao normal</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Usei agenda/bullet journal</div>
+                        <div class="quiz-option-desc">Comprei caderno bonito, parei em 2 semanas</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+            </div>
+            <div class="typing-box" id="typing-s7" style="display:none">
+                <div class="typing-text" id="typing-text-s7">Ótimo! Vou te mostrar o que faltou.</div>
+            </div>
+            <button class="btn" id="next-s7" onclick="nextScreen()" style="display:none">Continuar <i class="fa-solid fa-arrow-right"></i></button>
+        </div><div class="screen" id="screen-8" data-screen="8" data-editable-section="s8">
+            <div class="quiz-header">
+                <h2>Quanto tempo você <span class="accent">pode reservar</span> pra rotina matinal?</h2>
+                <p>Vamos calcular quanto você pode recuperar com o Rotina Produtiva.</p>
+            </div>
+            <div class="quiz-options" data-question="s8">
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-clock"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">15 min antes do trabalho</div>
+                        <div class="quiz-option-desc">Sistema mínimo eficaz</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-book"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">30 min antes do trabalho</div>
+                        <div class="quiz-option-desc">Bom — exercício leve + planejamento</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">1 hora antes</div>
+                        <div class="quiz-option-desc">O IDEAL — exercício + leitura + plano</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-battery-quarter"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">2 horas antes</div>
+                        <div class="quiz-option-desc">Miracle Morning completo</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectOption(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-wallet"></i></div>
+                    <div class="quiz-option-content">
+                        <div class="quiz-option-text">Não sei calcular</div>
+                        <div class="quiz-option-desc">Preciso entender meu tempo</div>
+                    </div>
+                    <div class="quiz-option-check"></div>
+                </div>
+            </div>
+            <div class="quiz-nav">
+                <button class="btn btn-secondary" onclick="prevScreen()"><i class="fa-solid fa-arrow-left"></i></button>
+                <button class="btn" id="next-s8" disabled="">Continuar <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div><div class="screen" id="screen-9" data-screen="9" data-editable-section="s9">
+            <div class="quiz-header">
+                <h2>Você está pronto(a) <span class="accent">pra ajustar o horário de dormir</span> mesmo cortando série e celular à noite?</h2>
+                <p>Acordar cedo começa em dormir cedo. Pra acordar às 5:30 com energia, dormir até 22:30 — o que exige cortar tela à noite. No início parece sacrifício; em 14 dias vira hábito.</p>
+            </div>
+            <div class="quiz-options quiz-multi" data-question="s9" data-multi="true">
+                <div class="quiz-option" onclick="selectMultiple(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <div class="quiz-option-content"><div class="quiz-option-text">Sim, 100% comprometido(a)</div><div class="quiz-option-desc">Quero virar a chave da rotina</div></div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectMultiple(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <div class="quiz-option-content"><div class="quiz-option-text">Vou tentar o meu melhor</div><div class="quiz-option-desc">Preciso de orientação clara</div></div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectMultiple(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-gem"></i></div>
+                    <div class="quiz-option-content"><div class="quiz-option-text">Tenho dúvidas</div><div class="quiz-option-desc">Mas estou disposto(a)</div></div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectMultiple(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="quiz-option-content"><div class="quiz-option-text">Avançar na Carreira</div><div class="quiz-option-desc"></div></div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectMultiple(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="quiz-option-content"><div class="quiz-option-text">Eliminar o Estresse</div><div class="quiz-option-desc"></div></div>
+                    <div class="quiz-option-check"></div>
+                </div>
+                <div class="quiz-option" onclick="selectMultiple(this)">
+                    <div class="quiz-option-icon"><i class="fa-solid fa-infinity"></i></div>
+                    <div class="quiz-option-content"><div class="quiz-option-text">Realizar Meus Projetos</div><div class="quiz-option-desc"></div></div>
+                    <div class="quiz-option-check"></div>
+                </div>
+            </div>
+            <button class="btn" onclick="nextScreen()">Ver Meu Sistema de Produtividade <i class="fa-solid fa-arrow-right"></i></button>
+        </div><div class="screen" id="screen-10" data-screen="10" data-editable-section="s10">
+            <div class="revelation-section">
+                <div class="revelation-img-wrap">
+                    <div class="revelation-img-label">SUA ROTINA PRODUTIVA ESTÁ PRONTA</div>
+                    <img src="https://apps.igorstorm.com/rotinaprodutiva/images/capa/1" alt="Rotina Produtiva Pro" class="revelation-image">
+                </div>
+                <div class="success-box">
+                    <h3><i class="fa-solid fa-check-circle"></i> ROTINA PERSONALIZADA</h3>
+                    <p>Com base nas suas respostas, identificamos seu cronotipo, fase de vida e gatilhos. Receba a rotina + 4 bônus exclusivos.</p>
+                </div>
+                <button class="btn btn-pulse" onclick="nextScreen()">VER MINHA ROTINA <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div><div class="screen" id="screen-15" data-screen="15" data-editable-section="s15">
+            <div class="loading-screen">
+                <div class="loading-icon"><i class="fa-solid fa-brain"></i></div>
+                <h2><span class="highlight">Analisando seu perfil de rotina...</span></h2>
+                <p>Montando seu plano personalizado</p>
+                <div class="loading-spinner" aria-label="Análise de rotina em andamento"></div>
+                <div class="loading-dots"><span></span><span></span><span></span></div>
+                <div class="loading-bar-wrap">
+                    <div class="loading-bar-fill" id="loadingBar1"></div>
+                </div>
+                <div class="loading-percent" id="loadingPercent1">0%</div>
+                <p style="font-size:0.8rem; margin-top:12px;">Cruzando horário, fase de vida e gatilhos pra montar a rotina ideal pra você...</p>
+            </div>
+        </div><div class="screen" id="screen-16" data-screen="16" data-editable-section="s16">
+            <div class="loading-screen">
+                <div class="loading-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <h2><span class="highlight">Montando sua rotina de 21 dias...</span></h2>
+                <p>em um só lugar</p>
+                <div class="loading-spinner" aria-label="Rotina sendo gerada"></div>
+                <div class="loading-dots"><span></span><span></span><span></span></div>
+                <div class="loading-bar-wrap">
+                    <div class="loading-bar-fill" id="loadingBar2"></div>
+                </div>
+                <div class="loading-percent" id="loadingPercent2">0%</div>
+                <div class="success-box" id="loading2Success" style="display:none; margin-top:20px;">
+                    <h3><i class="fa-solid fa-check-circle"></i> SUA ROTINA ESTÁ QUASE PRONTA!</h3>
+                    <p>Finalizando blocos e passo a passo. Em segundos você vê o plano.</p>
+                </div>
+            </div>
+        </div><div class="screen" id="screen-17" data-screen="17" data-editable-section="s17">
+            <div class="risk-section">
+                <div class="risk-header">
+                    <h2>Seu Dia Merece Ser Aproveitado <span id="userNameDisplay"></span>! Suas respostas revelam algo IMPORTANTE...</h2>
+                </div>
+                <p class="risk-text">Baseado em suas respostas, sua rotina está em</p>
+                <div style="text-align:center">
+                    <div class="risk-badge"><i class="fa-solid fa-triangle-exclamation"></i> ZONA DE ALERTA</div>
+                </div>
+                <div class="warn-box">
+                    <h4><i class="fa-solid fa-exclamation-circle"></i> ROTINA DESREGULADA SABOTA SUA VIDA EM SILÊNCIO</h4>
+                    <p>Sem rotina, cortisol fica desregulado, cérebro vive em modo reativo e cada dia é apagar incêndio. Você termina o ano sem nenhum projeto pessoal pronto — porque rotina ruim entrega tudo ao acaso.</p>
+                </div>
+                <div class="alert-list">
+                    <div class="alert-item"><i class="fa-solid fa-xmark"></i> <span><strong>Acordar no susto rouba suas melhores horas:</strong> o dia começa reagindo a urgências em vez de avançar no que importa</span></div>
+                    <div class="alert-item"><i class="fa-solid fa-xmark"></i> <span><strong>Sem planejamento do dia, 80% das tarefas viram urgência:</strong> Quem não planeja vive apagando incêndio — média de 47 interrupções/dia em CLT</span></div>
+                    <div class="alert-item"><i class="fa-solid fa-xmark"></i> <span><strong>Dormir tarde rouba 6 anos de vida:</strong> Dormir após 0h aumenta risco cardiovascular em 26% e ganho de peso em 35%</span></div>
+                    <div class="alert-item"><i class="fa-solid fa-xmark"></i> <span><strong>Sem rotina matinal, o dia já começa em dívida:</strong> sem um plano claro, as tarefas importantes ficam sempre pra depois</span></div>
+                </div>
+                <div class="good-news-box">
+                    <h4><i class="fa-solid fa-circle-check"></i> A BOA NOTÍCIA:</h4>
+                    <p>O método Rotina Produtiva foi feito pra resolver EXATAMENTE isso. Em 21 dias você aprende a acordar com propósito, planejar o dia e fechar o expediente em paz.</p>
+                </div>
+                <button class="btn btn-pulse" onclick="nextScreen()">GARANTIR ACESSO AGORA <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div><div class="screen" id="screen-19" data-screen="19" data-editable-section="s19">
+            <div class="quiz-header">
+                <div class="quiz-step"><i class="fa-solid fa-gift"></i> BÔNUS EXCLUSIVOS — TUDO INCLUSO</div>
+                <p>O método Rotina Produtiva foi feito pra resolver EXATAMENTE isso. Em 21 dias você aprende a acordar com propósito, planejar o dia e fechar o expediente em paz.</p>
+            </div>
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <div class="bonus-num">#1</div>
+                    <h4>Ebook Rotina Produtiva (R$ 97)</h4>
+                    <p>6 capítulos: ciência da produtividade, Pomodoro, hábitos atômicos.</p>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-num">#2</div>
+                    <h4>Podcast Alta Performance (R$ 67)</h4>
+                    <p>6 áudios com CEOs e pesquisadores.</p>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-num">#3</div>
+                    <h4>Método de 30 Dias em Áudio (R$ 97)</h4>
+                    <p>Um áudio guiado por dia: é só dar o play e seguir.</p>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-num">#4</div>
+                    <h4>Quiz e Artigos Interativos (R$ 67)</h4>
+                    <p>Teste o que aprendeu e leia no seu ritmo.</p>
+                </div>
+            </div>
+            <div class="typing-box" id="typing-s19" style="display:none">
+                <div class="typing-text" id="typing-text-s19">Esses 4 bonus exclusivos tem um valor incrivel e voce recebe TUDO de presente hoje! Isso e muito mais do que o valor do investimento!</div>
+            </div>
+            <button class="btn btn-pulse" id="next-s19" onclick="nextScreen()" style="display:none">QUERO MINHA ROTINA PRODUTIVA AGORA <i class="fa-solid fa-arrow-right"></i></button>
+        </div><div class="screen" id="screen-20" data-screen="20" data-editable-section="s20">
+            <div class="offer-section">
+                <div class="offer-badge"><i class="fa-solid fa-crown"></i> ACESSO COMPLETO À ROTINA</div>
+                <h2>BÔNUS EXCLUSIVOS — TUDO INCLUSO <span class="accent">construir rotina produtiva</span> em um só lugar</h2>
+                <p>Agora voce tem acesso a TODOS os recursos em um app premium e facil de usar, disponivel 24 horas por dia no seu celular!</p>
+
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fa-solid fa-book-open"></i>
+                        <h4>Ebook Rotina Produtiva (R$ 97)</h4>
+                        <p>6 capítulos: ciência da produtividade, Pomodoro, hábitos atômicos.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-file-lines"></i>
+                        <h4>Podcast Alta Performance (R$ 67)</h4>
+                        <p>6 áudios sobre foco, energia e alta performance.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-podcast"></i>
+                        <h4>Método de 30 Dias em Áudio (R$ 97)</h4>
+                        <p>Um áudio guiado por dia: é só dar o play e seguir.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fa-solid fa-video"></i>
+                        <h4>Acesso Vitalício</h4>
+                        <p>Volte sempre que precisar revisar</p>
+                    </div>
+                </div>
+
+                <div class="offer-card">
+                    <img src="https://apps.igorstorm.com/rotinaprodutiva/images/capa/1" alt="Rotina Produtiva Pro" class="offer-card-image">
+                    <h3 style="font-size:1.2rem; margin-bottom:16px;">Rotina Produtiva Pro</h3>
+                    <ul class="offer-list">
+                        <li><i class="fa-solid fa-mobile-screen-button"></i> <div>Rotina Produtiva Pro<br><span class="offer-item-desc">Acesso completo a todos os recursos em seu celular</span></div></li>
+                        <li><i class="fa-solid fa-check"></i> <div>Conteudo Principal Completo<br><span class="offer-item-desc">Guia definitivo com todos os segredos e tecnicas</span></div></li>
+                        <li><i class="fa-solid fa-check"></i> <div>Material de Estudo Exclusivo<br><span class="offer-item-desc">Conteudo premium atualizado semanalmente</span></div></li>
+                        <li><i class="fa-solid fa-check"></i> <div>Podcast com Especialistas<br><span class="offer-item-desc">Episodios com especialistas em cada area</span></div></li>
+                        <li><i class="fa-solid fa-check"></i> <div>Videoaulas Completas<br><span class="offer-item-desc">Tutoriais e demonstracoes praticas</span></div></li>
+                        <li><i class="fa-solid fa-check"></i> <div>Suporte VIP no App<br><span class="offer-item-desc">Tire duvidas diretamente no aplicativo</span></div></li>
+                        <li><i class="fa-solid fa-check"></i> <div>Acesso Vitalicio<br><span class="offer-item-desc">Atualizacoes gratuitas para sempre!</span></div></li>
+                    </ul>
+                    <div class="offer-highlight">
+                        VOCE RECEBE TODOS OS 4 BONUS EXCLUSIVOS NO APP!<br>
+                        <span style="font-size:0.75rem; font-weight:400; color:var(--text-muted);">(Valor Total dos Bonus incluso!)</span>
+                    </div>
+                    <div class="limited-badge"><i class="fa-solid fa-fire"></i> OFERTA POR TEMPO LIMITADO</div>
+                    
+                    <div class="price-block">
+                        <div class="price-from">De</div>
+                        <div class="price-old">R$ 197,00</div>
+                        <div class="price-for">Por apenas</div>
+                        <div class="price-new"><span class="currency">R$</span> 37,00</div>
+                    </div>
+                    <a href="https://pay.hotmart.com/G108053232T?off=gp9smrrn" class="btn btn-pulse" onclick="if(typeof fbq!=='undefined')fbq('track','InitiateCheckout')">
+                        <i class="fa-solid fa-lock"></i> SIM, QUERO ROTINA PRODUTIVA
+                    </a>
+                    <div class="trust-row">
+                        <div class="trust-badge"><i class="fa-solid fa-shield-halved"></i> Satisfacao<br>Garantida</div>
+                        <div class="trust-badge"><i class="fa-solid fa-lock"></i> Compra 100%<br>Segura</div>
+                        <div class="trust-badge"><i class="fa-solid fa-bolt"></i> Acesso<br>Imediato</div>
+                    </div>
+                    <div class="payment-badges" style="display:flex;justify-content:center;gap:8px;margin-top:12px;flex-wrap:wrap"><span style="display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.2);border-radius:6px;font-size:.65rem;color:#22c55e;font-weight:600"><i class="fa-solid fa-shield-halved"></i> SSL</span><span style="display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:rgba(59,130,246,.08);border:1px solid rgba(59,130,246,.2);border-radius:6px;font-size:.65rem;color:#3b82f6;font-weight:600"><i class="fa-brands fa-pix"></i> PIX</span><span style="display:inline-flex;align-items:center;gap:4px;padding:4px 10px;background:rgba(249,115,22,.08);border:1px solid rgba(249,115,22,.2);border-radius:6px;font-size:.65rem;color:#f97316;font-weight:600"><i class="fa-brands fa-cc-visa"></i> <i class="fa-brands fa-cc-mastercard"></i></span></div>
+                </div>
+                <button class="btn btn-secondary" onclick="nextScreen()" style="margin-top:8px;">
+                    <i class="fa-solid fa-arrow-down"></i> TUDO QUE VOCE RECEBE:
+                </button>
+            </div>
+        </div></div><!-- /.container -->
+
+    <!-- ====== CONVERSION ELEMENTS ====== -->
+
+    <!-- Scarcity Bar (topo da oferta) -->
+    
+
+    <!-- Floating CTA (aparece após quiz) -->
+    
+
+    <!-- Social Proof Toast -->
+    
+
+    <!-- Exit-Intent Popup -->
+    
+
+    <!-- ====== JAVASCRIPT ====== -->
+    <script>
+        /* State */
+        var currentScreen = 1;
+        var totalScreens = 21;
+        var answers = {};
+        var userName = '';
+
+        /* Build DOM-ordered screen list (adapts to hidden/reordered sections) */
+        function getScreenList() {
+            return Array.from(document.querySelectorAll('.screen'));
+        }
+        function getScreenNum(el) {
+            return parseInt(el.getAttribute('data-screen') || '0');
+        }
+
+        /* Screen navigation mapping: which screen follows which for auto-advance */
+        var autoAdvanceMap = {
+            's2': 3, 's4': 5, 's6': 7, 's7': 8, 's8': 9,
+            's13': 14, 's14': 15
+        };
+
+        /* Screens with typing effect */
+        var typingScreens = {
+            6: { textId:'typing-text-s6', boxId:'typing-s6', btnId:'next-s6' },
+            7: { textId:'typing-text-s7', boxId:'typing-s7', btnId:'next-s7' },
+            11: { textId:'typing-text-s11', boxId:'typing-s11', btnId:'next-s11' },
+            19: { textId:'typing-text-s19', boxId:'typing-s19', btnId:'next-s19' }
+        };
+
+        /* ---- nextScreen / prevScreen — DOM-order aware ---- */
+        function nextScreen() {
+            var screens = getScreenList();
+            var curIdx = -1;
+            for (var i = 0; i < screens.length; i++) {
+                if (getScreenNum(screens[i]) === currentScreen) { curIdx = i; break; }
+            }
+            if (curIdx >= 0 && curIdx < screens.length - 1) {
+                goToScreen(getScreenNum(screens[curIdx + 1]));
+            }
+        }
+        function prevScreen() {
+            var screens = getScreenList();
+            var curIdx = -1;
+            for (var i = 0; i < screens.length; i++) {
+                if (getScreenNum(screens[i]) === currentScreen) { curIdx = i; break; }
+            }
+            if (curIdx > 0) {
+                goToScreen(getScreenNum(screens[curIdx - 1]));
+            }
+        }
+
+        /* ---- Screen Navigation ---- */
+        function goToScreen(n) {
+            var screens = getScreenList();
+            var validNums = screens.map(getScreenNum);
+            if (validNums.indexOf(n) === -1) {
+                // Tela não existe (foi removida), ir para a próxima disponível
+                var closest = validNums.filter(function(v){ return v > currentScreen; });
+                if (closest.length === 0) return;
+                n = closest[0];
+            }
+
+            var cur = document.getElementById('screen-' + currentScreen);
+            if (cur) cur.classList.remove('active');
+
+            currentScreen = n;
+            var target = document.getElementById('screen-' + n);
+            if (target) {
+                target.classList.remove('active');
+                void target.offsetWidth;
+                target.classList.add('active');
+            }
+
+            totalScreens = screens.length;
+            updateProgress();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+
+            /* Loading screens */
+            if (n === 15) startLoading(1, 16);
+            if (n === 16) startLoading(2, 17);
+
+            /* Typing auto-start only for info screens (not radio+typing screens) */
+            if (n === 11) startTypingForScreen(11);
+            if (n === 19) startTypingForScreen(19);
+
+            /* S17 - show user name */
+            if (n === 17) {
+                var nameEl = document.getElementById('userNameDisplay');
+                if (nameEl) nameEl.textContent = userName || '';
+            }
+
+            /* FB Pixel tracking — full funnel */
+            if (typeof fbq !== 'undefined') {
+                fbq('trackCustom', 'ScreenView', { screen_number: n, app_name: document.title });
+                if (n === 2) fbq('trackCustom', 'QuizStart');
+                if (n === 15) fbq('trackCustom', 'QuizComplete');
+                if (n === 20) { fbq('track', 'ViewContent', { content_name: document.title }); fbq('trackCustom', 'OfferView'); }
+            }
+
+            /* GA4 tracking */
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'quiz_step', { step_number: n, app_name: document.title });
+            }
+
+            /* Notify conversion elements (floating CTA, scarcity bar) */
+            if (window._onScreenChange) {
+                window._onScreenChange.forEach(function(fn) { try { fn(n); } catch(e){} });
+            }
+
+            /* Editor: notify parent */
+            if (window.parent !== window) {
+                window.parent.postMessage({ type:'quizScreenChange', screen:n }, '*');
+            }
+        }
+
+        /* ---- Progress ---- */
+        function updateProgress() {
+            var screens = getScreenList();
+            var curIdx = 0;
+            for (var i = 0; i < screens.length; i++) {
+                if (getScreenNum(screens[i]) === currentScreen) { curIdx = i; break; }
+            }
+            var total = screens.length;
+            var pct = total > 1 ? (curIdx / (total - 1)) * 100 : 0;
+            var bar = document.getElementById('progressBar');
+            if (bar) bar.style.width = pct + '%';
+        }
+
+        /* ---- Radio Select (single) ---- */
+        function selectOption(el) {
+            var parent = el.parentElement;
+            var opts = parent.querySelectorAll('.quiz-option');
+            for (var i = 0; i < opts.length; i++) {
+                opts[i].classList.remove('selected');
+                var chk = opts[i].querySelector('.quiz-option-check');
+                if (chk) chk.innerHTML = '';
+            }
+            el.classList.add('selected');
+            var chk = el.querySelector('.quiz-option-check');
+            if (chk) chk.innerHTML = '<i class="fa-solid fa-check"></i>';
+
+            var qKey = parent.getAttribute('data-question');
+            var txt = el.querySelector('.quiz-option-text');
+            answers[qKey] = txt ? txt.textContent : '';
+
+            /* For screens with typing, show typing after selection */
+            if (typingScreens[currentScreen]) {
+                startTypingForScreen(currentScreen);
+                return; /* typing will show the button */
+            }
+
+            /* Auto-advance after delay for radio screens */
+            var nextScreenNum = autoAdvanceMap[qKey];
+            if (nextScreenNum) {
+                setTimeout(function() { goToScreen(nextScreenNum); }, 600);
+            } else {
+                /* Enable next button if exists */
+                var btn = document.getElementById('next-' + qKey);
+                if (btn) btn.disabled = false;
+            }
+        }
+
+        /* ---- Multi Select (checkbox) ---- */
+        function selectMultiple(el) {
+            el.classList.toggle('selected');
+            var chk = el.querySelector('.quiz-option-check');
+            if (chk) {
+                chk.innerHTML = el.classList.contains('selected') ? '<i class="fa-solid fa-check"></i>' : '';
+            }
+        }
+
+        /* ---- Name Input ---- */
+        function onNameInput(input) {
+            userName = input.value.trim();
+            var btn = document.getElementById('next-s5');
+            if (btn) btn.disabled = userName.length < 2;
+        }
+
+        /* ---- Age Slider ---- */
+        function updateAge(val) {
+            var el = document.getElementById('ageValue');
+            if (el) el.textContent = val;
+            answers.age = val;
+        }
+
+        /* ---- Typing Effect ---- */
+        function startTypingForScreen(screenNum) {
+            var cfg = typingScreens[screenNum];
+            if (!cfg) return;
+            var box = document.getElementById(cfg.boxId);
+            var textEl = document.getElementById(cfg.textId);
+            var btn = document.getElementById(cfg.btnId);
+            if (!box || !textEl) return;
+
+            var fullText = cfg.text;
+            if (fullText == null) {
+                if (cfg._cached == null) cfg._cached = textEl.textContent || '';
+                fullText = cfg._cached;
+            }
+
+            box.style.display = 'block';
+            textEl.innerHTML = '';
+            if (btn) btn.style.display = 'none';
+            var idx = 0;
+            var speed = 20;
+
+            function typeChar() {
+                if (idx < fullText.length) {
+                    /* Handle HTML tags - add them instantly */
+                    if (fullText[idx] === '<') {
+                        var closeIdx = fullText.indexOf('>', idx);
+                        if (closeIdx !== -1) {
+                            textEl.innerHTML += fullText.substring(idx, closeIdx + 1);
+                            idx = closeIdx + 1;
+                        } else {
+                            textEl.innerHTML += fullText[idx];
+                            idx++;
+                        }
+                    } else {
+                        textEl.innerHTML += fullText[idx];
+                        idx++;
+                    }
+                    setTimeout(typeChar, speed);
+                } else {
+                    /* Done typing - show button */
+                    if (btn) {
+                        btn.style.display = 'flex';
+                        btn.style.animation = 'slideUp 0.4s ease forwards';
+                    }
+                }
+            }
+            typeChar();
+        }
+
+        /* ---- Loading Animation ---- */
+        function startLoading(num, nextScreen) {
+            var bar = document.getElementById('loadingBar' + num);
+            var pct = document.getElementById('loadingPercent' + num);
+            if (!bar || !pct) return;
+
+            var progress = 0;
+            bar.style.width = '0%';
+            pct.textContent = '0%';
+
+            /* Show success box at 80% for loading 2 */
+            var successBox = num === 2 ? document.getElementById('loading2Success') : null;
+
+            var interval = setInterval(function() {
+                progress += Math.random() * 4 + 1;
+                if (progress > 100) progress = 100;
+
+                bar.style.width = Math.round(progress) + '%';
+                pct.textContent = Math.round(progress) + '%';
+
+                if (successBox && progress >= 80) {
+                    successBox.style.display = 'block';
+                    successBox.style.animation = 'scaleIn 0.4s ease forwards';
+                }
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    setTimeout(function() {
+                        goToScreen(nextScreen);
+                    }, 800);
+                }
+            }, 80);
+        }
+
+        /* ---- FAQ Toggle ---- */
+        function toggleFaq(el) {
+            var item = el.parentElement;
+            var isOpen = item.classList.contains('open');
+            var all = document.querySelectorAll('.faq-item');
+            for (var i = 0; i < all.length; i++) all[i].classList.remove('open');
+            if (!isOpen) item.classList.add('open');
+        }
+
+        /* ---- Editor PostMessage Listener ---- */
+        window.addEventListener('message', function(e) {
+            var d = e.data;
+            if (!d || !d.type) return;
+
+            if (d.type === 'scrollToSection') {
+                var section = document.querySelector('[data-editable-section="' + d.section + '"]');
+                if (section) {
+                    var screenNum = parseInt(section.getAttribute('data-screen'));
+                    if (screenNum) goToScreen(screenNum);
+                }
+            }
+
+            if (d.type === 'highlightElement') {
+                var el = document.querySelector(d.selector);
+                if (el) {
+                    el.classList.add('editor-highlight');
+                    setTimeout(function() { el.classList.remove('editor-highlight'); }, 2000);
+                }
+            }
+        });
+
+        /* ---- Editable section click (for editor) ---- */
+        document.addEventListener('click', function(e) {
+            if (window.parent === window) return; /* Not in iframe */
+            setTimeout(function() {
+                var active = document.querySelector('.screen.active');
+                if (active && active.hasAttribute('data-editable-section')) {
+                    window.parent.postMessage({
+                        type: 'sectionClicked',
+                        section: active.getAttribute('data-editable-section')
+                    }, '*');
+                }
+            }, 300);
+        });
+
+        /* ---- Init ---- */
+        updateProgress();
+    </script>
+
+    <script>
+    (function(){document.querySelectorAll('.quiz-option-text').forEach(function(t){if(!t.textContent.trim()){var o=t.closest('.quiz-option');if(o)o.style.display='none';}});})();
+    </script>
+
+</body></html>
