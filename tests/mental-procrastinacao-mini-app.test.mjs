@@ -36,16 +36,21 @@ test("Mini App contém um card inteiro para Rotina Produtiva Pro",async()=>{
   assert.match(page,/<h1>Mini App<\/h1>/);
   assert.ok(page.includes('href="'+product+'"'));
   assert.equal((page.match(/<h3>Rotina Produtiva Pro<\/h3>/g)||[]).length,1);
-  assert.match(page,/EM PREPARAÇÃO|EM PREPARAÇÃO|ÁREA EM PREPARAÇÃO/);
 });
 
-test("Rotina Produtiva Pro tem URL definitiva reservada, sem acesso ou checkout anunciado",async()=>{
+test("Rotina Produtiva Pro publica a landing com checkout e pixel próprios",async()=>{
   const page=await html(product);
-  assert.match(page,/<h1>Rotina Produtiva Pro<\/h1>/);
-  assert.match(page,/noindex,follow/);
-  assert.ok(page.includes('href="'+mini+'"'));
-  assert.match(page,/EM PREPARAÇÃO/);
-  assert.doesNotMatch(page,/pay\.hotmart|hotmart__button-checkout|<iframe|fbq\(|Comprar agora|R\$ ?36,90|R\$ ?19,90/i);
+  assert.match(page,/<title>Rotina Produtiva Pro<\/title>/);
+  assert.match(page,/noindex/);
+  assert.ok(page.includes("pay.hotmart.com/G108053232T"));
+  assert.ok(page.includes("1419582967021848"));
+  assert.doesNotMatch(page,/2934381596914907/);
+});
+
+test("endereço antigo Rotina-Produtiva-Pro redireciona para a URL definitiva",async()=>{
+  const alias=await html("/mental-financeiro/Rotina-Produtiva-Pro/");
+  assert.ok(alias.includes('<link rel="canonical" href="'+product+'">'));
+  assert.ok(alias.includes('content="0;url='+product+'"'));
 });
 
 test("grafia procastinacao redireciona para procrastinacao",async()=>{
