@@ -29,13 +29,14 @@ export async function buildSimpleLanguages({root=ROOT,dryRun=false}={}) {
     check(!routes.has(route),"rota duplicada: "+route);
     routes.add(route);
     const target=join(root,"public",route,"index.html");
-    // Landing informativa editorial, manual, preservada no deploy até haver checkout aprovado.
+    // Landing manual preservada até haver checkout aprovado; medir visitas não habilita vendas.
     if(edition.landingInformativa===true){
       check(await exists(target),"landing informativa não encontrada: "+route);
       const preview=await readFile(target,"utf8");
       check(preview.includes('data-product-landing="menu-familiar-mx"') &&
         preview.includes('content="noindex,follow"') &&
-        !preview.includes('pay.hotmart') && !preview.includes('hotmart__button-checkout') && !preview.includes('fbq('),
+        !preview.includes('pay.hotmart') && !preview.includes('hotmart__button-checkout') &&
+        !/fbq\(\s*['"]track['"]\s*,\s*['"](?:Purchase|InitiateCheckout)['"]/.test(preview),
         "landing informativa sem marcação de segurança: "+route);
       created.push({locale:edition.codigo,route,status:edition.status});
       continue;

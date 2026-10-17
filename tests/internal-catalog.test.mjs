@@ -127,7 +127,10 @@ test("landing de pré-lançamento México preservada, localizada, sem checkout e
  assert.match(landing,/role="tablist"/);
  assert.match(landing,/role="tabpanel"/);
  assert.match(css,/@media\(max-width:750px\)/);
- assert.doesNotMatch(landing,/pay\.hotmart|hotmart__button-checkout|fbq\(|'Compra ahora'|'Comprar ahora'/i);
+ assert.doesNotMatch(landing,/pay\.hotmart|hotmart__button-checkout|'Compra ahora'|'Comprar ahora'/i);
+ assert.equal((landing.match(/fbq\('init', '1609636170707091'\)/g)||[]).length,1);
+ assert.equal((landing.match(/fbq\('track', 'PageView'\)/g)||[]).length,1);
+ assert.doesNotMatch(landing,/fbq\('track', '(Purchase|InitiateCheckout)'/);
 });
 
 test("hero do Menú Familiar usa a capa original em arquivo binário, não mockup sintético",async()=>{
