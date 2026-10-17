@@ -7,10 +7,10 @@ import {applyInternalRobots} from "../worker/index.mjs";
 
 test("todo produto existente tem seletor no card final imediatamente anterior à landing",async()=>{
   const result=await validateFinalContainers();
-  assert.equal(result.validated,2);
-  assert.deepEqual(result.products.map(p=>p.id),["PRO-0001","PRO-0003"]);
-  assert.deepEqual(result.products.map(p=>p.languageOptions),[8,8]);
-  assert.deepEqual(result.products.map(p=>p.parent),[
+  assert.equal(result.validated,3);
+  assert.deepEqual(result.products.map(p=>p.id),["PRO-0001","PRO-0003","PRO-0004"]);
+  assert.deepEqual(result.products.slice(0,2).map(p=>p.languageOptions),[8,8]);
+  assert.deepEqual(result.products.slice(0,2).map(p=>p.parent),[
     "/mental-financeiro/financeiro/renda-extra/datas-comemorativas/natal/",
     "/mitologia/grega/"
   ]);
@@ -97,27 +97,28 @@ test("Menú Familiar abre vitrine de regiões e mantém páginas de países e id
   for(const code of ["en-ca","fr-ca"])assert.ok(canada.includes(final+"america-do-norte/canada/"+code+"/"));
   const catalog=JSON.parse(await readFile(join(root,"catalogo/edicoes-internacionais.json"),"utf8"));
   const product=catalog.produtos.find(p=>p.id==="PRO-0004");
-  assert.equal(product.status,"preparacao");
+  assert.equal(product.status,"existente");
   assert.equal(product.vitrineFinal,final);
   assert.deepEqual(product.organizacaoMercados.regioes,["brasil","latam","america-do-norte","europa","paises-arabes"]);
-  assert.ok(product.edicoes.every(e=>e.status==="planejada"&&!e.checkoutVerificado));
+  assert.ok(product.edicoes.filter(e=>e.codigo!=="es-MX").every(e=>e.status==="planejada"&&!e.checkoutVerificado));
+  assert.equal(product.edicoes.find(e=>e.codigo==="es-MX").checkoutVerificado,true);
   assert.equal(product.edicoes.find(e=>e.codigo==="es-MX").rotaSimples,final+"latam/mexico/es-mx/");
   assert.equal(product.edicoes.find(e=>e.codigo==="pt-BR").rotaSimples,final+"brasil/pt-br/");
   assert.equal(product.edicoes.find(e=>e.codigo==="en-US").rotaSimples,final+"america-do-norte/eua/en-us/");
   assert.deepEqual(product.organizacaoMercados.edicoesRegionaisPlanejadas.filter(e=>e.regiao==="america-do-norte").map(e=>e.codigo),["es-US","pt-US","en-CA","fr-CA"]);
 });
 
-test("landing de pré-lançamento México preservada, localizada, sem checkout e com guias reais",async()=>{
+test("landing México vende a edição correta com preço, garantia, checkout e pixel",async()=>{
  const root=resolve(".");
  const landing=await readFile(join(root,"public/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/index.html"),"utf8");
  const css=await readFile(join(root,"public/src/menu-familiar-mx.css"),"utf8");
  const catalog=JSON.parse(await readFile(join(root,"catalogo/edicoes-internacionais.json"),"utf8"));
  const ed=catalog.produtos.find(p=>p.id==="PRO-0004").edicoes.find(e=>e.codigo==="es-MX");
- assert.equal(ed.landingInformativa,true);
- assert.equal(ed.status,"planejada");
+ assert.equal(ed.landingInformativa,false);
+ assert.equal(ed.status,"publicada");
  assert.match(landing,/lang="es-MX"/);
  assert.match(landing,/data-product-landing="menu-familiar-mx"/);
- assert.match(landing,/name="robots" content="noindex,follow"/);
+ assert.match(landing,/name="robots" content="index,follow"/);
  assert.match(landing,/124 páginas/);
  assert.match(landing,/28 comidas principales/);
  assert.match(landing,/4 listas de compras/);
@@ -127,7 +128,11 @@ test("landing de pré-lançamento México preservada, localizada, sem checkout e
  assert.match(landing,/role="tablist"/);
  assert.match(landing,/role="tabpanel"/);
  assert.match(css,/@media\(max-width:750px\)/);
- assert.doesNotMatch(landing,/pay\.hotmart|hotmart__button-checkout|'Compra ahora'|'Comprar ahora'/i);
+ assert.equal((landing.match(/data-checkout href="https:\/\/pay\.hotmart\.com\/B108077978T"/g)||[]).length,2);
+ assert.match(landing,/US\$6\.99/);
+ assert.match(landing,/7 días de garantía/);
+ assert.match(landing,/impuestos aplicables/);
+ assert.doesNotMatch(landing,/Todavía no\.|Edición en preparación|Acceso comercial todavía no habilitado/);
  assert.equal((landing.match(/fbq\('init', '1609636170707091'\)/g)||[]).length,1);
  assert.equal((landing.match(/fbq\('track', 'PageView'\)/g)||[]).length,1);
  assert.doesNotMatch(landing,/fbq\('track', '(Purchase|InitiateCheckout)'/);
@@ -374,7 +379,7 @@ test("Hero México mostra família em refeição e bandeira sem prejudicar a leg
  assert.match(hero,/🇲🇽/);
  assert.match(hero,/mx-book-real/);
  assert.match(hero,/id="mx-title"/);
- assert.match(hero,/#contenido-guia/);
+ assert.match(hero,/data-checkout href="https:\/\/pay\.hotmart\.com\/B108077978T"/);
  assert.match(css,/\.mx-hero-image-family\{[^}]*background-size:cover/);
  assert.match(css,/\.mx-hero-country-flag\{/);
  assert.match(html,/August de Richelieu \/ Pexels/);

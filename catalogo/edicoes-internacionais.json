@@ -284,7 +284,7 @@
       "slug": "menu-familiar",
       "nome": "Menú Familiar — Cardápios Semanais",
       "tipo": "ebook",
-      "status": "preparacao",
+      "status": "existente",
       "hubPrincipal": "Fitness & Saúde",
       "classificacaoPrincipal": [
         "Alimentação & Saúde",
@@ -299,7 +299,7 @@
       "vitrineFinal": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/",
       "raizIdiomas": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/",
       "operacao": "catalogo-interno",
-      "observacao": "E-book México de 124 páginas: 28 receitas de comida principal, 4 listas semanais. Formatos de organização. Edição editorial em revisão, com imagens de IA no PDF; sem testes de cozinha finalizados ou checkout.",
+      "observacao": "E-book México de 124 páginas: 28 receitas de comida principal, 4 listas semanais e formatos de organização. Produto Hotmart 8752347 com vendas ativas, preço-base USD 6.99 e conversão automática. Imagens ilustrativas de IA no PDF.",
       "edicoes": [
         {
           "codigo": "pt-BR",
@@ -337,22 +337,16 @@
           "codigo": "es-MX",
           "mercado": "México",
           "moeda": "MXN",
-          "status": "planejada",
+          "status": "publicada",
           "rota": "/es-mx/productos/menu-familiar/",
           "rotaSimples": "/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/",
-          "htmlLocalizado": null,
-          "produtoAdaptado": false,
-          "checkoutVerificado": false,
-          "checkoutUrl": null,
+          "htmlLocalizado": "edicoes/menu-familiar/es-MX/index.html",
+          "produtoAdaptado": true,
+          "checkoutVerificado": true,
+          "checkoutUrl": "https://pay.hotmart.com/B108077978T",
           "nomeLocalizado": "Menú Familiar — Edición México",
-          "copiaPlanejada": {
-            "status": "Edición en revisión",
-            "heading": "Menú Familiar · México",
-            "description": "La edición México contiene cuatro semanas de comidas caseras, 28 recetas y cuatro listas de compras. El material está en revisión editorial; todavía no hay oferta de compra disponible.",
-            "country": "México"
-          },
-          "landingInformativa": true,
-          "observacao": "Landing informativa preservada em /latam/mexico/es-mx/; URL anterior com redirecionamento 301, sem checkout."
+          "landingInformativa": false,
+          "observacao": "Edição México em venda; checkout verificado em 2026-10-17, com moeda local e IVA discriminado. Pixel 1609636170707091 no site e integração Web/API na Hotmart."
         },
         {
           "codigo": "es-ES",

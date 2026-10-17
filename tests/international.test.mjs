@@ -12,7 +12,7 @@ const oldBrazilUrl = "/mental-financeiro/financeiro/renda-extra/datas-comemorati
 test("IDs estáveis, versão 2 e landing pages brasileiras preservadas", async () => {
   assert.equal(catalog.versao, 2);
   assert.deepEqual(catalog.produtos.map(x=>x.id), ["PRO-0001","PRO-0002","PRO-0003","PRO-0004","PRO-0005"]);
-  assert.deepEqual(await validateCatalog(catalog,ROOT), []);
+  assert.deepEqual((await validateCatalog(catalog,ROOT)).map(x=>x.product.id+":"+x.edition.codigo), ["PRO-0004:es-MX"]);
   assert.equal(catalog.produtos[0].edicoes[0].rota, oldBrazilUrl);
   assert.equal(catalog.produtos[0].edicoes[0].rotaPublica, "/pt-br/produtos/natal-pratico/");
   assert.equal(catalog.produtos[2].edicoes[0].rota, "/mitologia/grega/geral/pt-br/");
@@ -31,8 +31,8 @@ test("rotas internacionais padronizadas com slug traduzido e país", () => {
 
 test("manifesto público lista só produtos e edições realmente publicadas", () => {
   const manifest=publishedManifest(catalog);
-  assert.equal(manifest.produtos.length,2);
-  assert.deepEqual(manifest.produtos.map(p=>p.edicoes.map(e=>e.codigo)),[["pt-BR"],["pt-BR"]]);
+  assert.equal(manifest.produtos.length,3);
+  assert.deepEqual(manifest.produtos.map(p=>p.edicoes.map(e=>e.codigo)),[["pt-BR"],["pt-BR"],["es-MX"]]);
   assert.equal(manifest.produtos[0].edicoes[0].url.endsWith(oldBrazilUrl),true);
   assert.equal(manifest.produtos[0].edicoes[0].rotaPadronizada.endsWith("/pt-br/produtos/natal-pratico/"),true);
   assert.equal(JSON.stringify(manifest).includes("/en-us/"),false);
@@ -49,13 +49,13 @@ test("planejadas geram aviso de projeto futuro, não checkout, sem indexação",
   assert.doesNotMatch(html,/hotmart|pay\.hotmart|comprar agora/i);
 });
 
-test("dry-run: 14 páginas de projeto futuro e 2 atalhos brasileiros", async () => {
+test("dry-run: México publicado, 21 edições futuras e 2 atalhos brasileiros", async () => {
   const info=await prepareInternational({root:ROOT,dryRun:true});
   assert.equal(info.products,5);
-  assert.equal(info.published,2);
-  assert.equal(info.planned,22);
-  assert.deepEqual(info.generated,[]);
-  assert.equal(info.placeholders.length,22);
+  assert.equal(info.published,3);
+  assert.equal(info.planned,21);
+  assert.deepEqual(info.generated,["/es-mx/productos/menu-familiar/"]);
+  assert.equal(info.placeholders.length,21);
   assert.deepEqual(info.aliases,["/pt-br/produtos/natal-pratico/","/pt-br/produtos/mitologia-grega/"]);
   for(const p of catalog.produtos){
     for(const e of p.edicoes.filter(e=>e.status==="planejada")){

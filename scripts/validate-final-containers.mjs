@@ -12,6 +12,28 @@ export async function validateFinalContainers({root=ROOT}={}) {
   for(const p of products){
     verify(typeof p.vitrineFinal==="string"&&p.vitrineFinal.startsWith("/")&&p.vitrineFinal.endsWith("/"),
       "vitrine final precisa constar no cadastro: "+p.id);
+    if(p.organizacaoMercados){
+      const parent=await readFile(join(root,"public",p.vitrineFinal,"index.html"),"utf8");
+      const regions=p.organizacaoMercados.regioes;
+      verify(Array.isArray(regions)&&regions.length>0&&unique(regions),"regiões inválidas: "+p.id);
+      for(const region of regions){
+        const route=p.vitrineFinal+region+"/";
+        verify(parent.includes('href="'+route+'"'),"região sem acesso: "+route);
+        await readFile(join(root,"public",route,"index.html"),"utf8");
+      }
+      const published=p.edicoes.filter(e=>e.status==="publicada");
+      verify(published.length>0,"produto existente sem edição publicada: "+p.id);
+      for(const edition of published){
+        verify(edition.rotaSimples?.startsWith(p.vitrineFinal),"edição fora da vitrine: "+p.id);
+        const landing=await readFile(join(root,"public",edition.rotaSimples,"index.html"),"utf8");
+        verify(landing.includes('lang="'+edition.codigo+'"')&&landing.includes(edition.checkoutUrl),
+          "landing sem idioma ou checkout cadastrado: "+p.id);
+        verify(!landing.includes('class="language-menu"')&&!landing.includes('class="lp-language"'),
+          "landing possui seletor administrativo: "+p.id);
+      }
+      parents.push({id:p.id,parent:p.vitrineFinal,landing:published[0].rotaSimples,regionOptions:regions.length});
+      continue;
+    }
     const origin=p.edicoes.find(e=>e.origemExistente && e.status==="publicada");
     verify(origin,"falta uma edição brasileira existente: "+p.id);
     const parent=await readFile(join(root,"public",p.vitrineFinal,"index.html"),"utf8");

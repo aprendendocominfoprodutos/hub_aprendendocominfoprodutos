@@ -21,7 +21,7 @@ A classificação interna continua **em português**. Os idiomas/países são de
 
 ### Cardápios Semanais — Menú Familiar
 
-Em Fitness & Saúde → Alimentação → Receitas → Cardápios Semanais, o card **Menú Familiar** é totalmente clicável e abre `/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/`, uma vitrine de cinco regiões (Brasil, América Latina, Países Árabes, América do Norte e Europa). A seleção de países e idiomas ocorre nas páginas regionais, sem seletor suspenso no card da categoria. A edição México (PDF editorial de 124 páginas; 28 receitas, quatro listas de compras) está em revisão editorial. As demais edições ainda são planejadas. Links curtos exibem páginas informativas, sem checkout, geradas no deploy. Este produto não deve ser classificado como venda publicada até que haja landing e checkout revisados. A taxonomia interna permanece em português, exceto pelo nome próprio do e-book.
+Em Fitness & Saúde → Alimentação → Receitas → Cardápios Semanais, o card **Menú Familiar** é totalmente clicável e abre `/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/`, uma vitrine de cinco regiões (Brasil, América Latina, Países Árabes, América do Norte e Europa). A seleção de países e idiomas ocorre nas páginas regionais, sem seletor suspenso no card da categoria. A edição México (PDF de 124 páginas; 28 receitas, quatro listas de compras) tem vendas ativas na Hotmart (produto 8752347), preço-base US$6.99, conversão automática e garantia de 7 dias. A fonte comercial fica em `edicoes/menu-familiar/es-MX/index.html`; o deploy gera a landing na mesma URL `/latam/mexico/es-mx/`. Checkout: `https://pay.hotmart.com/B108077978T`. Pixel 1609636170707091 no site e envio Web/API configurado na Hotmart. As demais edições continuam planejadas e sem checkout. A taxonomia interna permanece em português, exceto pelo nome próprio do e-book.
 
 ### Produto existente
 
@@ -57,7 +57,7 @@ O site institucional e a taxonomia permanecem em português. Somente os infoprod
 - **Testes:** `npm run test:international`.
 - **Procedimento completo:** [docs/internacionalizacao.md](docs/internacionalizacao.md).
 
-Nenhuma tradução comercial ou novo checkout foi publicado; Natal Prático e Mitologia Grega mantêm suas landing pages originais. As rotas futuras possuem páginas informativas de "Projeto futuro" no domínio.
+Menú Familiar México tem sua edição comercial publicada. Natal Prático e Mitologia Grega mantêm suas landing pages brasileiras originais; suas versões internacionais e as demais edições futuras continuam com páginas informativas de "Projeto futuro".
 
 ## Subdomínios regionais (Cloudflare Workers)
 

@@ -16,7 +16,8 @@ test("seletor mantém o idioma dentro do mesmo caminho do Natal Prático",async(
   expected.map(s=>orig+s+"/"));
  const info=await buildSimpleLanguages({root,dryRun:true});
  assert.equal(info.count,22);
- assert.deepEqual(info.pages.map(p=>p.status),Array(22).fill("planejada"));
+ assert.equal(info.pages.filter(p=>p.status==="planejada").length,21);
+ assert.deepEqual(info.pages.filter(p=>p.status==="publicada").map(p=>p.locale),["es-MX"]);
  assert.equal(info.pages.filter(e=>e.route.startsWith("/mitologia/grega/geral/")).length,7);
 });
 test("seletor existe somente dentro do card Natal e mantém landing sem seletor",async()=>{
