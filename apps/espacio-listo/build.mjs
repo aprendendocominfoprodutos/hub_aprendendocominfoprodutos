@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import path from 'node:path';
+const root=new URL('.',import.meta.url);
+const file=name=>fs.readFileSync(new URL(name,root));
+const assets={};
+for(const [name,type] of [['index.html','text/html; charset=utf-8'],['app.js','text/javascript; charset=utf-8'],['style.css','text/css; charset=utf-8'],['sw.js','text/javascript; charset=utf-8']])assets['/'+name]={type,body:file('public/'+name).toString('utf8')};
+const icons=JSON.parse(file('icons.json').toString('utf8'));
+for(const size of [180,192,512])assets[`/icons/current-${size}.png`]={type:'image/png',binary:true,body:icons[size]};
+assets['/icons/icon-192.png']=assets['/icons/current-192.png'];
+const source=file('worker-template.mjs').toString('utf8').replace('__ASSETS__',JSON.stringify(assets));
+fs.writeFileSync(new URL('worker.generated.mjs',root),source);
+console.log(`Built ${Buffer.byteLength(source)} bytes`);
