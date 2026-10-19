@@ -77,17 +77,5 @@ const sticky=document.getElementById('sticky'),offer=document.getElementById('of
 let raf=0;function checkSticky(){cancelAnimationFrame(raf);raf=requestAnimationFrame(()=>{const y=scrollY,off=offer.getBoundingClientRect(),ft=foot.getBoundingClientRect();sticky.classList.toggle('visible',y>680&&off.top>innerHeight*.3&&ft.top>innerHeight)})}
 addEventListener('scroll',checkSticky,{passive:true});addEventListener('resize',checkSticky,{passive:true});checkSticky();
 
-// Fonte da campanha para a Hotmart, sem Meta Pixel ou CAPI nesta oferta.
-const campaignParams = new URLSearchParams(location.search);
-const creativeSource = campaignParams.get('utm_content') || '';
-if (/^ad0[123]_(amplo|interesses)$/.test(creativeSource)) {
-  document.querySelectorAll('a[data-checkout]').forEach(link => {
-    const checkoutUrl = new URL(link.href);
-    checkoutUrl.searchParams.set('src', `fb_rl_mx_${creativeSource}`);
-    checkoutUrl.searchParams.set('utm_source', 'facebook');
-    checkoutUrl.searchParams.set('utm_medium', 'paid_social');
-    checkoutUrl.searchParams.set('utm_campaign', 'rl_mx_piloto01');
-    checkoutUrl.searchParams.set('utm_content', creativeSource);
-    link.href = checkoutUrl.href;
-  });
-}
+// Os links de compra preservam exatamente a oferta Hotmart definida no HTML.
+// Não acrescentar parâmetros à URL, pois checkoutMode e bid precisam permanecer intactos.
