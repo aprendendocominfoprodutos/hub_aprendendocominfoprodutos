@@ -2887,3 +2887,109 @@
     height:32px!important;
   }
 }
+
+
+/* Triptych carousel v1 — 3 imagens automáticas a cada 2,5s */
+.natal-v4 .n4-triptych-carousel .n4-triptych-item{
+  transition:
+    transform .72s cubic-bezier(.22,.8,.26,1),
+    opacity .52s ease,
+    filter .52s ease,
+    box-shadow .52s ease!important;
+  will-change:transform,opacity;
+}
+
+/* Mockup principal */
+.natal-v4 .n4-product-mockup .n4-triptych-item{
+  top:44%!important;
+  left:50%!important;
+  width:43%!important;
+  right:auto!important;
+  bottom:auto!important;
+}
+.natal-v4 .n4-product-mockup .n4-triptych-item.is-triptych-active{
+  z-index:4!important;
+  opacity:1!important;
+  filter:none!important;
+  transform:translate(-50%,-50%) rotate(0deg) scale(1)!important;
+}
+.natal-v4 .n4-product-mockup .n4-triptych-item.is-triptych-prev{
+  z-index:2!important;
+  opacity:.82!important;
+  filter:saturate(.86) brightness(.98)!important;
+  transform:translate(-112%,-48%) rotate(-8deg) scale(.82)!important;
+}
+.natal-v4 .n4-product-mockup .n4-triptych-item.is-triptych-next{
+  z-index:2!important;
+  opacity:.82!important;
+  filter:saturate(.86) brightness(.98)!important;
+  transform:translate(12%,-48%) rotate(8deg) scale(.82)!important;
+}
+
+/* Pilha no bloco "plano de ceia" */
+.natal-v4 .n4-book-stack .n4-triptych-item{
+  top:43%!important;
+  left:50%!important;
+  width:44%!important;
+  right:auto!important;
+  bottom:auto!important;
+}
+.natal-v4 .n4-book-stack .n4-triptych-item.is-triptych-active{
+  z-index:4!important;
+  opacity:1!important;
+  transform:translate(-50%,-50%) rotate(0deg) scale(1)!important;
+}
+.natal-v4 .n4-book-stack .n4-triptych-item.is-triptych-prev{
+  z-index:2!important;
+  opacity:.8!important;
+  transform:translate(-112%,-47%) rotate(-8deg) scale(.80)!important;
+}
+.natal-v4 .n4-book-stack .n4-triptych-item.is-triptych-next{
+  z-index:2!important;
+  opacity:.8!important;
+  transform:translate(12%,-47%) rotate(8deg) scale(.80)!important;
+}
+
+/* Mockup final */
+.natal-v4 .n4-final-product .n4-triptych-item{
+  top:43%!important;
+  left:50%!important;
+  width:40%!important;
+  right:auto!important;
+  bottom:auto!important;
+}
+.natal-v4 .n4-final-product .n4-triptych-item.is-triptych-active{
+  z-index:4!important;
+  opacity:1!important;
+  transform:translate(-50%,-50%) rotate(0deg) scale(1)!important;
+}
+.natal-v4 .n4-final-product .n4-triptych-item.is-triptych-prev{
+  z-index:2!important;
+  opacity:.8!important;
+  transform:translate(-114%,-47%) rotate(-8deg) scale(.80)!important;
+}
+.natal-v4 .n4-final-product .n4-triptych-item.is-triptych-next{
+  z-index:2!important;
+  opacity:.8!important;
+  transform:translate(14%,-47%) rotate(8deg) scale(.80)!important;
+}
+
+@media(max-width:720px){
+  .natal-v4 .n4-product-mockup .n4-triptych-item,
+  .natal-v4 .n4-book-stack .n4-triptych-item{
+    width:50%!important;
+  }
+  .natal-v4 .n4-final-product .n4-triptych-item{
+    width:46%!important;
+  }
+  .natal-v4 .n4-product-mockup .n4-triptych-item.is-triptych-prev,
+  .natal-v4 .n4-book-stack .n4-triptych-item.is-triptych-prev,
+  .natal-v4 .n4-final-product .n4-triptych-item.is-triptych-prev{
+    transform:translate(-103%,-47%) rotate(-7deg) scale(.76)!important;
+  }
+  .natal-v4 .n4-product-mockup .n4-triptych-item.is-triptych-next,
+  .natal-v4 .n4-book-stack .n4-triptych-item.is-triptych-next,
+  .natal-v4 .n4-final-product .n4-triptych-item.is-triptych-next{
+    transform:translate(3%,-47%) rotate(7deg) scale(.76)!important;
+  }
+}
