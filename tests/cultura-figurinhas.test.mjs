@@ -32,7 +32,10 @@ test("novo contêiner é totalmente clicável e possui estilo visual responsivo"
 });
 
 test("rota Figurinhas existe, é exclusiva e não anuncia mini app ou venda publicados",()=>{
-  assert.match(child,/<h1>Figurinhas para/);
+  assert.match(child,/<h1>Seu próximo Story/);
+  assert.match(child,/Figurinhas que Cola/);
+  assert.match(child,/Compras em preparação/);
+  assert.match(child,/aria-disabled="true"/);
   assert.match(child,/Cultura & Entretenimento/);
   assert.match(child,/noindex,follow/);
   assert.match(child,/projeto em preparação|em preparação/i);
