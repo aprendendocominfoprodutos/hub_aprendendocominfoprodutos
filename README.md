@@ -96,6 +96,14 @@ O produto PRO-0005 tem um card **Emagrecimento** em `/fitness-saude/alimentacao/
 
 ### Educação & Atividades Infantis — Rotinas & Autonomia Infantil (INT-001)
 
-O núcleo `/cultura-entretenimento/educacao-infantil/` foi acrescentado ao hub Cultura preservando os existentes. O subnicho `/cultura-entretenimento/educacao-infantil/rotinas-autonomia/` apresenta o produto `روتيني الصغير`. As landings de revisão do piloto saudita estão em `/cultura-entretenimento/educacao-infantil/rotinas-autonomia/rotini-pequeno/ar-sa/` e `/cultura-entretenimento/educacao-infantil/rotinas-autonomia/rotini-pequeno/en-sa/`, com seletor AR / ING e carrosséis de 2,5 s. A página ING descreve o mesmo produto cujo conteúdo PDF está em árabe. 
+Hierarquia do site institucional, sempre em português:
 
-**Atenção:** páginas de revisão, não indexadas, com checkout desativado. Três bônus do produto principal são apresentados na landing; três order bumps NÃO aparecem na landing, apenas no checkout futuro. SAR 39 é hipótese comercial; USD é referência aproximada, sem cobrança validada. Não declarar produto publicado para venda nem ativar tráfego. Atualizar `tests/cultura-figurinhas.test.mjs` para cinco cartões do hub.
+1. `/cultura-entretenimento/educacao-infantil/` → contêiner totalmente clicável **Rotinas & Autonomia Infantil**.
+2. `/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/` → seleção das cinco regiões (Brasil, América Latina, América do Norte, Europa, Países Árabes), conforme padrão geográfico do Mounjaro/Tirzepatida.
+3. `.../rotinas-autonomia-infantil/paises-arabes/` → seleção de país, tendo **Arábia Saudita** como piloto em revisão e demais países em preparação, sem checkout.
+4. `.../rotinas-autonomia-infantil/paises-arabes/arabia-saudita/` → um único contêiner de produto **Minha Pequena Rotina**, que leva a `.../arabia-saudita/minha-pequena-rotina/`.
+5. Nesse **mesmo contêiner** há o seletor de idiomas AR / ING; as versões de landing usam respectivamente `.../minha-pequena-rotina/ar-sa/` e `.../minha-pequena-rotina/en-sa/`. Não criar dois contêineres de produto.
+
+As duas landings preservam a identidade do produto, carrosséis automáticos de **2,5 segundos**, preço **39 SAR** como hipótese comercial, equivalência aproximada em dólar, **3 bônus gratuitos**, ausência de **3 order bumps** nas landings e **checkout inativo**. A versão inglesa só traduz a página; os PDFs continuam em árabe. Todos os caminhos de revisão permanecem `noindex` e não correspondem a uma venda ativa.
+
+As URLs da primeira integração (`.../rotinas-autonomia/rotini-pequeno/` e variantes) recebem **308** para os novos endereços, preservando parâmetros UTM. A suíte `tests/educacao-rotinas.test.mjs` verifica a hierarquia e deve passar no deploy com as verificações existentes.

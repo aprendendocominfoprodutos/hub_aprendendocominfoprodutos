@@ -52,6 +52,20 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const matched = localizedRequestPath(url.hostname, url.pathname);
+    // Educação Infantil: compatibilidade de rotas antigas, preservando parâmetros UTM.
+    // Um único contêiner Minha Pequena Rotina recebe as duas páginas AR / ING.
+    if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname) &&
+        (url.pathname === "/cultura-entretenimento/educacao-infantil/rotinas-autonomia" || url.pathname.startsWith("/cultura-entretenimento/educacao-infantil/rotinas-autonomia/"))) {
+      let trailing = url.pathname.startsWith("/cultura-entretenimento/educacao-infantil/rotinas-autonomia/") ? url.pathname.slice("/cultura-entretenimento/educacao-infantil/rotinas-autonomia/".length) : "";
+      if (trailing === "rotini-pequeno" || trailing === "rotini-pequeno/") {
+        url.pathname = "/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/paises-arabes/arabia-saudita/minha-pequena-rotina/";
+      } else if (trailing.startsWith("rotini-pequeno/")) {
+        url.pathname = "/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/paises-arabes/arabia-saudita/minha-pequena-rotina/" + trailing.slice("rotini-pequeno/".length);
+      } else {
+        url.pathname = "/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/" + trailing;
+      }
+      return Response.redirect(url.toString(), 308);
+    }
     // Migração Menú Familiar: URLs anteriores redirecionam permanentemente, preservando a query string.
     if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname)) {
       const oldRoutes = {"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt-br/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/brasil/pt-br/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/ing/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/america-do-norte/eua/en-us/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-mx/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/latam/mexico/es-mx/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/esp-es/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/espanha/es-es/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/fr/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/franca/fr-fr/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/it/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/italia/it-it/","/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/pt/":"/fitness-saude/alimentacao/receitas/cardapios-semanais/menu-familiar/europa/portugal/pt-pt/"};
