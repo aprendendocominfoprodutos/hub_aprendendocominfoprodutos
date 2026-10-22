@@ -13,7 +13,7 @@ test("hub Cultura mantém três contêineres anteriores e adiciona Figurinhas um
   for(const name of ["Mitologia","Geografia & Bandeiras","História & Curiosidades"])
     assert.ok(root.includes("<h2>"+name+"</h2>"),name+" precisa permanecer");
   assert.equal((root.match(/<h2>Figurinhas<\/h2>/g)||[]).length,1);
-  assert.equal((root.match(/class="eco-topic/g)||[]).length,4);
+  assert.equal((root.match(/class="eco-topic/g)||[]).length,5);
   assert.ok(root.includes('href="'+BASE+'figurinhas/"'));
   assert.match(root,/class="eco-topic eco-sticker-topic"/);
   assert.match(root,/aria-label="Explorar Figurinhas/);
@@ -40,3 +40,6 @@ test("rota Figurinhas existe, é exclusiva e não anuncia mini app ou venda publ
   assert.doesNotMatch(child,/hotmart__button-checkout|pay\.hotmart|fbq\(|<form|<iframe/i);
   assert.doesNotMatch(root,/R\$ ?36,90|R\$ ?19,90|Comprar agora/i);
 });
+
+
+test("Cultura inclui Educação Infantil sem retirar os núcleos anteriores",()=>{assert.equal((root.match(/<h2>Educação &amp; Atividades Infantis<\/h2>/g)||[]).length,1);assert.ok(root.includes('href="/cultura-entretenimento/educacao-infantil/"'));assert.match(root,/eco-education-topic/);});

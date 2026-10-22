@@ -92,3 +92,10 @@ A Mitologia Grega agora usa `/mitologia/grega/geral/pt-br/` como URL brasileira 
 ## Receitas Leves / Tirzepatida
 
 O produto PRO-0005 tem um card **Emagrecimento** em `/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/`. Ao clicar, o endereço `/fitness-saude/alimentacao/receitas/mounjaro-tirzepatida/emagrecimento/` abre as cinco regiões, 35 países e 56 variantes de idioma em preparação, sem checkout. O Menú Familiar permanece em Cardápios Semanais. Consulte `docs/internacionalizacao.md`.
+
+
+### Educação & Atividades Infantis — Rotinas & Autonomia Infantil (INT-001)
+
+O núcleo `/cultura-entretenimento/educacao-infantil/` foi acrescentado ao hub Cultura preservando os existentes. O subnicho `/cultura-entretenimento/educacao-infantil/rotinas-autonomia/` apresenta o produto `روتيني الصغير`. As landings de revisão do piloto saudita estão em `/cultura-entretenimento/educacao-infantil/rotinas-autonomia/rotini-pequeno/ar-sa/` e `/cultura-entretenimento/educacao-infantil/rotinas-autonomia/rotini-pequeno/en-sa/`, com seletor AR / ING e carrosséis de 2,5 s. A página ING descreve o mesmo produto cujo conteúdo PDF está em árabe. 
+
+**Atenção:** páginas de revisão, não indexadas, com checkout desativado. Três bônus do produto principal são apresentados na landing; três order bumps NÃO aparecem na landing, apenas no checkout futuro. SAR 39 é hipótese comercial; USD é referência aproximada, sem cobrança validada. Não declarar produto publicado para venda nem ativar tráfego. Atualizar `tests/cultura-figurinhas.test.mjs` para cinco cartões do hub.
