@@ -289,7 +289,7 @@ html[dir=ltr] .hero h1{letter-spacing:-1px}
  function getChoice(){try{return localStorage.getItem(KEY)}catch{return null}}
  function saveChoice(v){try{localStorage.setItem(KEY,v)}catch{}}
  function enable(){
-  if(loaded)return;loaded=true;
+  if(loaded){if(window.fbq)window.fbq('consent','grant');return;}loaded=true;
   if(!window.fbq){const n=window.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};n.push=n;n.loaded=true;n.version='2.0';n.queue=[];
    const s=document.createElement('script');s.async=true;s.src='https://connect.facebook.net/en_US/fbevents.js';document.head.appendChild(s);
   }
@@ -307,7 +307,7 @@ html[dir=ltr] .hero h1{letter-spacing:-1px}
   document.body.appendChild(box);
  }
  const choice=getChoice();if(choice==='yes')enable();else if(choice!=='no')show();
- document.addEventListener('click',e=>{const a=e.target.closest('[data-checkout]');if(!a||a.disabled||a.getAttribute('aria-disabled')==='true'||!loaded)return;window.fbq('track','InitiateCheckout',{content_ids:['INT001-AR-SA-ROUTINE-01'],content_type:'product',value:10.40,currency:'USD'})});
+ document.addEventListener('click',e=>{const a=e.target.closest('[data-checkout]');if(!a||a.disabled||a.getAttribute('aria-disabled')==='true'||!loaded||getChoice()!=='yes')return;window.fbq('track','InitiateCheckout',{content_ids:['INT001-AR-SA-ROUTINE-01'],content_type:'product',value:10.40,currency:'USD'})});
  const footer=document.querySelector('footer')||document.querySelector('[role="contentinfo"]');if(footer){const b=document.createElement('button');b.type='button';b.textContent=AR?'إعدادات قياس الزيارات':'Measurement settings';b.style.cssText='margin:12px;background:transparent;color:inherit;border:1px solid currentColor;border-radius:8px;padding:6px 12px';b.addEventListener('click',show);footer.appendChild(b)}
 })();
 
