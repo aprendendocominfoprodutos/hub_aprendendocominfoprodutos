@@ -27,18 +27,23 @@ test("Países Árabes destaca somente o piloto saudita, mantendo outros países 
  assert.equal((html.match(/class="ei-card"/g)||[]).length,1);
  assert.ok(html.includes("Emirados Árabes Unidos"));
 });
-test("País escolhido abre um único contêiner de produto",async()=>{
+test("Contêiner Minha Pequena Rotina abre diretamente a landing em árabe",async()=>{
  const html=await read(SA);
  assert.equal((html.match(/class="ei-card"/g)||[]).length,1);
- assert.ok(html.includes('href="'+PRODUCT+'"'));
- assert.ok(!html.includes('href="'+PRODUCT+'ar-sa/"'));
+ assert.ok(html.includes('href="'+PRODUCT+'ar-sa/"'));
  assert.ok(!html.includes('href="'+PRODUCT+'en-sa/"'));
 });
-test("Minha Pequena Rotina permite AR e ING dentro do mesmo contêiner",async()=>{
+test("URL do produto redireciona ao árabe sem tela de escolha de idioma",async()=>{
  const html=await read(PRODUCT);
- assert.equal((html.match(/class="ei-card ei-product"/g)||[]).length,1);
- for(const loc of ["ar-sa","en-sa"])assert.ok(html.includes('href="'+PRODUCT+loc+'/"'));
- assert.ok(html.includes('class="ei-languages"'));
+ assert.match(html,/http-equiv="refresh"/);
+ assert.match(html,/location\.replace/);
+ assert.ok(html.includes(PRODUCT+'ar-sa/'));
+ assert.ok(!html.includes('class="ei-languages"'));
+});
+test("Worker preserva as UTMs no redirecionamento à landing árabe",async()=>{
+ const worker=await readFile("worker/index.mjs","utf8");
+ assert.ok(worker.includes('url.pathname = "'+PRODUCT+'ar-sa/"'));
+ assert.ok(worker.includes("Response.redirect(url.toString(), 302)"));
 });
 test("Landings compartilham a oferta e não contêm order bumps",async()=>{
  for(const loc of ["ar-sa","en-sa"]){

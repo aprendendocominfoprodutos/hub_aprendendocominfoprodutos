@@ -52,6 +52,12 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const matched = localizedRequestPath(url.hostname, url.pathname);
+    // Página padrão do produto: árabe; alternância AR / ING dentro da landing.
+    if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname) &&
+        (url.pathname === "/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/paises-arabes/arabia-saudita/minha-pequena-rotina/" || url.pathname === "/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/paises-arabes/arabia-saudita/minha-pequena-rotina")) {
+      url.pathname = "/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/paises-arabes/arabia-saudita/minha-pequena-rotina/ar-sa/";
+      return Response.redirect(url.toString(), 302);
+    }
     // Educação Infantil: compatibilidade de rotas antigas, preservando parâmetros UTM.
     // Um único contêiner Minha Pequena Rotina recebe as duas páginas AR / ING.
     if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname) &&

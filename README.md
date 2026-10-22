@@ -101,8 +101,8 @@ Hierarquia do site institucional, sempre em português:
 1. `/cultura-entretenimento/educacao-infantil/` → contêiner totalmente clicável **Rotinas & Autonomia Infantil**.
 2. `/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/` → seleção das cinco regiões (Brasil, América Latina, América do Norte, Europa, Países Árabes), conforme padrão geográfico do Mounjaro/Tirzepatida.
 3. `.../rotinas-autonomia-infantil/paises-arabes/` → seleção de país, tendo **Arábia Saudita** como piloto em revisão e demais países em preparação, sem checkout.
-4. `.../rotinas-autonomia-infantil/paises-arabes/arabia-saudita/` → um único contêiner de produto **Minha Pequena Rotina**, que leva a `.../arabia-saudita/minha-pequena-rotina/`.
-5. Nesse **mesmo contêiner** há o seletor de idiomas AR / ING; as versões de landing usam respectivamente `.../minha-pequena-rotina/ar-sa/` e `.../minha-pequena-rotina/en-sa/`. Não criar dois contêineres de produto.
+4. `.../rotinas-autonomia-infantil/paises-arabes/arabia-saudita/` → um único contêiner **Minha Pequena Rotina**, clicável e aberto diretamente em `.../minha-pequena-rotina/ar-sa/`.
+5. A alternância **AR / ING** permanece **dentro da landing page**. O endereço `.../minha-pequena-rotina/` redireciona para a versão árabe (302, com parâmetros UTM preservados). Não existe página separada de seleção de idioma.
 
 As duas landings preservam a identidade do produto, carrosséis automáticos de **2,5 segundos**, preço **39 SAR** como hipótese comercial, equivalência aproximada em dólar, **3 bônus gratuitos**, ausência de **3 order bumps** nas landings e **checkout inativo**. A versão inglesa só traduz a página; os PDFs continuam em árabe. Todos os caminhos de revisão permanecem `noindex` e não correspondem a uma venda ativa.
 
