@@ -53,7 +53,16 @@ test("Landings ligam ao checkout validado e não contêm order bumps",async()=>{
  assert.ok(html.includes(PRODUCT+"en-sa/"));
  assert.ok(html.includes("2500"));
  assert.ok(!html.includes(BASE+"rotinas-autonomia/rotini-pequeno/"));
- assert.doesNotMatch(html,/pay\.hotmart|hotmart__button-checkout|order bump/i);
+ assert.doesNotMatch(html,/order bump|8789393|8789454|8789493/i);
+ const anchors=[...html.matchAll(/<a\b[^>]*data-checkout[^>]*>/g)].map(m=>m[0]);
+ assert.equal(anchors.length,2,"duas chamadas comerciais por idioma");
+ for(const anchor of anchors){
+   assert.ok(anchor.includes('href="https://pay.hotmart.com/L108153484I?checkoutMode=10"'));
+   assert.doesNotMatch(anchor,/aria-disabled="true"/);
+ }
+ assert.match(html,/10\.40/,"preço-base real em USD");
+ assert.match(html,/USD/);
+ assert.match(html,loc==="ar-sa"?/dir="rtl"/:/dir="ltr"/);
  }
 });
 test("Os catálogos novos usam CSS próprio, não indexação e sem checkout",async()=>{
