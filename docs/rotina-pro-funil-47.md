@@ -74,7 +74,7 @@ O webhook **registra pedidos; não cria contas nem revoga acesso nos apps EVA**.
 - Landing conferida em contêineres 360, 390, 768 e 1280 px sem overflow horizontal. Quiz: validação de resposta, três resultados e contexto de tempo/horário verificados. Sem requisição Meta após recusa, por inspeção de scripts e testes.
 - Não houve compra de teste, teste de entrega autenticada nem lançamento de anúncio. Prazo de acesso e contato comercial de suporte precisam ser confirmados antes da venda.
 
-Pendências para liberar: confirmar aprovação dos quatro produtos; confirmar suporte e duração de acesso; publicar as páginas revisadas e habilitar controles quando os requisitos estiverem atendidos; ativar e testar o funil nativo; executar compra de teste autorizada e conferir recebimento principal, extras e recusas. Só então iniciar mídia com orçamento definido.
+Pendências para liberar: confirmar aprovação dos dois produtos Detox; confirmar suporte e duração de acesso; publicar as páginas revisadas e habilitar controles quando os requisitos estiverem atendidos; ativar e testar o funil nativo; executar compra de teste autorizada e conferir recebimento principal, extras e recusas. Só então iniciar mídia com orçamento definido.
 
 Na sessão anterior, o download não foi concluído. Nesta retomada, o pacote final foi baixado pela interface da conversa fornecida pelo titular; os dois manuais Detox foram enviados pela interface de upload da Hotmart e o principal já estava atualizado. O link do app Detox foi aberto e conferido.
 
@@ -92,3 +92,5 @@ Fontes oficiais consultadas em 23/10/2026:
 - Estrutura do funil nativo conferida: upsell usa oferta 5plz74m0 e URL /upsell/; downsell usa ug4zbxib e /downsell/; aceite do completo aponta para /obrigado/. Funil permanece inativo durante a preparação.
 - As validações de carrinho comprovam preços, presença e opcionalidade dos bumps; não comprovam pagamento, entrega por email ou redirecionamento pós-compra.
 - Configuração da landing corrigida para o link publicado com checkoutMode=10. Controles checkoutEnabled e postPurchaseEnabled continuam false.
+
+Atualização observada após o processamento: Rotinas Prontas e Projetos em Ação exibem `Vendas ativas` e `Processamento concluído`; os dois Detox exibem `Cadastro em processo`. O endpoint `/health` retornou `ready: true`, `mode: purchase-ledger`, versão 1. A abertura pública de `/upsell/` falhou com erro de resposta HTTP; o funil não deve ser ativado antes de publicar e conferir as páginas. Contato de suporte e duração de acesso foram solicitados ao titular e permanecem pendentes.
