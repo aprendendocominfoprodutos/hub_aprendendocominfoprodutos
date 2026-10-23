@@ -84,15 +84,22 @@ test("Landingpage apresenta o pacote e aponta para a oferta parcelada publicada"
  assert.match(script,/ViewContent/);
 });
 
-test("Quiz funcional fica sob o app preservando todo o Pixel e checkout",async()=>{
+test("Quiz tem cinco perguntas, três orientações e desempate explícito, sem captura de dados",async()=>{
  const page=await html(quiz);
- assert.ok(page.length>90000);
- assert.match(page,/<title>Rotina Produtiva Pro<\/title>/);
- assert.match(page,/QUIZ SCREENS/);
- assert.ok(page.includes("pay.hotmart.com/G108053232T"));
- assert.ok(page.includes("1419582967021848"));
- assert.doesNotMatch(page,/2934381596914907/);
- assert.match(page,/noindex/);
+ assert.match(page,/<title>Rotina Produtiva Pro/);
+ for(const text of ["reduzir e priorizar","tornar o começo concreto","proteger uma sessão","primeira resposta definiu"])assert.ok(page.includes(text));
+ assert.match(page,/answers\.slice\(0,3\)/);
+ assert.match(page,/Sem cadastro/);
+ assert.match(page,/R\$ 47/);
+ assert.match(page,/noindex,nofollow/);
+ assert.doesNotMatch(page,/fbq\(|fetch\(|XMLHttpRequest|localStorage|sessionStorage|pay\.hotmart\.com/);
+});
+
+test("Pós-compra publicado usa widget oficial e orienta acesso sem simular pagamento",async()=>{
+ const up=await html(app+"upsell/");const down=await html(app+"downsell/");const thanks=await html(app+"obrigado/");
+ assert.match(up,/<span>R\$<\/span> 37/);assert.match(down,/<span>R\$<\/span> 27/);
+ for(const p of [up,down]){assert.match(p,/hotmart-checkout-elements.js/);assert.match(p,/id="hotmart-sales-funnel"/);assert.doesNotMatch(p,/disabled|OFERTA EM PREPARAÇÃO|data-pending-widget/);}
+ assert.match(thanks,/não comprova pagamento e não libera acesso/);assert.doesNotMatch(thanks,/estão em preparação|\.pdf["']/);
 });
 
 test("quatro endereços anteriores redirecionam e não duplicam quiz ou LP",async()=>{
@@ -148,3 +155,4 @@ test("cards do app são responsivos e seguem paleta Mental & Financeiro",async()
  assert.match(css,/@media\(max-width:680px\)/);
  assert.match(css,/\.mental-pro-list\.mental-pro-options\{grid-template-columns:1fr\}/);
 });
+
