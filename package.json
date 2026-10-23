@@ -16,7 +16,7 @@
     "test:tirzepatida-markets": "node --test tests/tirzepatida-markets.test.mjs",
     "build:tirzepatida-markets": "node scripts/build-tirzepatida-markets.mjs",
     "test:cultura-figurinhas": "node --test tests/cultura-figurinhas.test.mjs",
-    "test:mental-mini-app": "node --test tests/mental-procrastinacao-mini-app.test.mjs tests/rotina-eva-tracking.test.mjs",
+    "test:mental-mini-app": "node --test tests/mental-procrastinacao-mini-app.test.mjs tests/rotina-eva-tracking.test.mjs tests/rotina-post-purchase.test.mjs",
     "test:educacao-rotinas": "node --test tests/educacao-rotinas.test.mjs"
   },
   "devDependencies": {
