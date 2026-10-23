@@ -54,7 +54,7 @@ export default {
     const matched = localizedRequestPath(url.hostname, url.pathname);
     // Compatibilidade do quiz Rotina Produtiva Pro: redireciona a rota antiga,
     // sem perder utm_source/utm_campaign e demais parâmetros de anúncios.
-    if (matched.route === "main" && /^(www\\.)?aprendendocominfoprodutos\\.com\\.br$/i.test(url.hostname) &&
+    if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname) &&
         (url.pathname === "/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro/" ||
          url.pathname === "/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro")) {
       url.pathname = "/mental-financeiro/mental/procrastinacao/mini-app/quiz/rotina-produtiva-pro/";
