@@ -67,16 +67,21 @@ test("Landingpage apresenta o pacote e aponta para a oferta parcelada publicada"
  assert.match(page,/Plano de Retomada/);
  assert.match(page,/12x de/);
  assert.match(page,/R\$ 4,86/);
+ assert.match(page,/--primary: #6366f1/);
+ assert.match(page,/class="hero-title/);
+ assert.doesNotMatch(page,/SEU_PIXEL_ID_AQUI|47,90|startCountdown|11\.200|vitalício/);
  assert.match(page,/R\$ 58,32/);
  assert.match(page,/opcionais e cobrados à parte/);
  assert.match(page,/noindex,follow/);
- const links=[...page.matchAll(/data-checkout href="([^"]+)"/g)].map(m=>m[1].replaceAll("&amp;","&"));
- assert.equal(links.length,2);
+ const links=[...page.matchAll(/<a href="([^"]+)" data-checkout/g)].map(m=>m[1].replaceAll("&amp;","&"));
+ assert.equal(links.length,4);
  for(const href of links)assert.equal(href,"https://pay.hotmart.com/G108053232T?off=c6o6qy7a&checkoutMode=10");
  assert.doesNotMatch(page,/LANDINGPAGE EM PREPARAÇÃO|gp9smrrn|6bol81js|vitalício|11\.200|fbq\(/i);
  const script=await readFile(join(ROOT,"public",landing,"assets/js/main.js"),"utf8");
  assert.match(script,/utm_source/);
- assert.doesNotMatch(script,/fbq|localStorage|sessionStorage|fetch\(/);
+ assert.match(script,/1419582967021848/);
+ assert.match(script,/InitiateCheckout/);
+ assert.match(script,/ViewContent/);
 });
 
 test("Quiz funcional fica sob o app preservando todo o Pixel e checkout",async()=>{
