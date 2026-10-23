@@ -1,6 +1,6 @@
 # Rotina Produtiva Pro — preparação de lançamento
 
-Estado em 23/10/2026: configuração parcial, sem liberação para campanha. O Pixel principal e o webhook estão ativos; o funil nativo está salvo e inativo. A nova landing, o quiz e as páginas de pós-compra estão na revisão PR 26, com compra bloqueada até a conferência da entrega. A versão publicada do quiz permanece com a oferta antiga; não direcionar anúncios para ela como se já cobrasse R$47.
+Estado em 23/10/2026: os quatro cadastros foram finalizados com aceite expresso do titular, enviados à análise da Hotmart; os dois bumps foram publicados e testados no checkout de R$47. Ainda sem liberação para campanha. O Pixel principal e o webhook estão ativos; o funil nativo está salvo e inativo. A nova landing, o quiz e as páginas de pós-compra estão na revisão PR 26, com compra bloqueada até a conferência da entrega. A versão publicada do quiz permanece com a oferta antiga; não direcionar anúncios para ela como se já cobrasse R$47.
 
 ## Ofertas e arquivos de entrega
 
@@ -14,18 +14,18 @@ Estado em 23/10/2026: configuração parcial, sem liberação para campanha. O P
 
 O principal inclui Mapa da Semana (1 página) e Plano de Retomada (3 páginas), reunidos ao acesso em um manual de 5 páginas. Os dois adicionais Detox contêm **o mesmo app completo**. A diferença é o guia: completo de 8 páginas ou essencial de 3 páginas; os manuais finais têm 9 e 4 páginas, respectivamente. Não anunciar app reduzido nem PDFs como única entrega do upsell/downsell.
 
-Os quatro PDFs originais dos adicionais foram enviados pelo usuário. A conversão dos dois Detox para Aplicativos para Celular foi salva e os PDFs existentes preservados. Ainda é necessário substituir os três manuais indicados, incluindo o principal. A plataforma aceita um manual PDF por produto do tipo app; os bônus foram reunidos nesse manual.
+Os quatro PDFs originais dos adicionais foram enviados pelo usuário. A conversão dos dois Detox para Aplicativos para Celular foi salva e os PDFs existentes preservados. Os três manuais finais já estão cadastrados. O principal foi encontrado atualizado; os manuais completo e essencial foram enviados nesta retomada e confirmados pela interface. A plataforma aceita um manual PDF por produto do tipo app; os bônus foram reunidos nesse manual.
 
 Os PDFs pagos não estão no repositório público. O pacote editorial e os três manuais finais foram entregues separadamente ao usuário.
 
 ## Hotmart
 
-- Principal: checkout confirmado `https://pay.hotmart.com/G108053232T?off=6bol81js`, R$47 à vista. Oferta antiga `gp9smrrn` (R$37) preservada enquanto o quiz publicado ainda a utiliza.
+- Principal: checkout confirmado `https://pay.hotmart.com/G108053232T?off=6bol81js&checkoutMode=10`, R$47 à vista. Oferta antiga `gp9smrrn` (R$37) preservada enquanto o quiz publicado ainda a utiliza.
 - Upsell: `https://pay.hotmart.com/N108159655C?off=5plz74m0`, R$37.
 - Downsell: `https://pay.hotmart.com/K108159658Y?off=ug4zbxib`, R$27.
 - Prazo de reembolso observado nos cadastros: 7 dias.
-- Quatro adicionais ainda em rascunho. Finalizar o cadastro implica aceitar o Termo de Tratamento de Dados Pessoais; requer confirmação do titular no momento da ação.
-- No Checkout Builder do principal, a busca por Rotinas Prontas não encontrou produto elegível. Os bumps ainda não estão aplicados. Não publicar checkout vazio como se contivesse os dois adicionais.
+- Quatro cadastros finalizados após confirmação explícita do titular nesta conversa. Hotmart confirmou envio à análise: cerca de 15 minutos, podendo levar até um dia. Não presumir aprovação a partir do envio.
+- Checkout Builder: página `Rotina Pro R47 | 2 adicionais opcionais` publicada exclusivamente na oferta `6bol81js`. Rotinas Prontas (`xfyrvj0n`) R$9,90 e Projetos em Ação (`e5de7r0u`) R$12,90. Confirmados no checkout público com `checkoutMode=10`, inicialmente desmarcados. Totais observados: R$47 sem extras, R$56,90 com Rotinas, R$59,90 com Projetos e R$69,80 com ambos; remoções retornam a R$47. Nenhuma compra processada.
 
 ### Funil nativo
 
@@ -74,9 +74,9 @@ O webhook **registra pedidos; não cria contas nem revoga acesso nos apps EVA**.
 - Landing conferida em contêineres 360, 390, 768 e 1280 px sem overflow horizontal. Quiz: validação de resposta, três resultados e contexto de tempo/horário verificados. Sem requisição Meta após recusa, por inspeção de scripts e testes.
 - Não houve compra de teste, teste de entrega autenticada nem lançamento de anúncio. Prazo de acesso e contato comercial de suporte precisam ser confirmados antes da venda.
 
-Pendências para liberar: substituir os três manuais; finalizar os quatro produtos com confirmação do titular; aplicar os dois bumps; publicar páginas e habilitar controles; ativar o funil nativo; titular executar compra de teste e conferir recebimento principal, extras e recusas. Só então iniciar mídia com orçamento definido.
+Pendências para liberar: confirmar aprovação dos quatro produtos; confirmar suporte e duração de acesso; publicar as páginas revisadas e habilitar controles quando os requisitos estiverem atendidos; ativar e testar o funil nativo; executar compra de teste autorizada e conferir recebimento principal, extras e recusas. Só então iniciar mídia com orçamento definido.
 
-A revisão automática bloqueou acesso ao ChatGPT pelo navegador para baixar novos arquivos no computador do usuário e enviá-los à Hotmart. Não houve tentativa de contornar o bloqueio; substituição dos manuais permanece para envio direto pelo titular.
+Na sessão anterior, o download não foi concluído. Nesta retomada, o pacote final foi baixado pela interface da conversa fornecida pelo titular; os dois manuais Detox foram enviados pela interface de upload da Hotmart e o principal já estava atualizado. O link do app Detox foi aberto e conferido.
 
 ## Janela inicial de cerca de sete dias
 
@@ -85,3 +85,10 @@ Começa após compra/entrega verificadas e tráfego autorizado. Preços R$47/R$3
 Fontes oficiais consultadas em 23/10/2026:
 - https://suportehotmart.zendesk.com/hc/pt-br/articles/220402348-O-que-%C3%A9-e-como-configurar-meu-Funil-de-Vendas
 - https://suportehotmart.zendesk.com/hc/pt-br/articles/360019967392-O-que-%C3%A9-e-como-configurar-o-Order-Bump
+
+## Retomada: evidências desta sessão
+
+- Aceite dos quatro termos autorizado explicitamente pelo titular; quatro confirmações de cadastro observadas.
+- Estrutura do funil nativo conferida: upsell usa oferta 5plz74m0 e URL /upsell/; downsell usa ug4zbxib e /downsell/; aceite do completo aponta para /obrigado/. Funil permanece inativo durante a preparação.
+- As validações de carrinho comprovam preços, presença e opcionalidade dos bumps; não comprovam pagamento, entrega por email ou redirecionamento pós-compra.
+- Configuração da landing corrigida para o link publicado com checkoutMode=10. Controles checkoutEnabled e postPurchaseEnabled continuam false.
