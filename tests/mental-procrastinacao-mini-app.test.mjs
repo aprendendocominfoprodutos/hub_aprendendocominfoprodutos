@@ -60,24 +60,36 @@ test("dentro do app aparecem exatamente dois contêineres Landingpage e Quiz",as
  assert.doesNotMatch(page,/pay\.hotmart\.com|hotmart__button-checkout/);
 });
 
-test("Landingpage fica sob o app como reserva independente sem checkout",async()=>{
+test("Landingpage apresenta a oferta de R$47 em revisão e mantém compra desativada",async()=>{
  const page=await html(landing);
- assert.match(page,/<h1>Landingpage<\/h1>/);
- assert.match(page,/LANDINGPAGE EM PREPARAÇÃO/);
- assert.ok(page.includes('href="'+quiz+'"'));
- assert.match(page,/noindex,follow/);
+ assert.match(page,/<title>Rotina Produtiva Pro/);
+ for(const copy of ["Menos tarefas soltas.","Mapa da Semana","Plano de Retomada","Pagamento único"])assert.ok(page.includes(copy));
+ assert.match(page,/R\$ 47/);
+ assert.match(page,/PRÉVIA EM CONFIGURAÇÃO/);
+ assert.match(page,/<button[^>]*disabled>Compra disponível após configuração/);
+ assert.match(page,/noindex,nofollow/);
  assert.doesNotMatch(page,/fbq\(|pay\.hotmart\.com|hotmart__button-checkout/i);
 });
 
-test("Quiz funcional fica sob o app preservando todo o Pixel e checkout",async()=>{
+test("Quiz tem cinco perguntas, três orientações e desempate explícito, sem captura de dados",async()=>{
  const page=await html(quiz);
- assert.ok(page.length>90000);
- assert.match(page,/<title>Rotina Produtiva Pro<\/title>/);
- assert.match(page,/QUIZ SCREENS/);
- assert.ok(page.includes("pay.hotmart.com/G108053232T"));
- assert.ok(page.includes("1419582967021848"));
- assert.doesNotMatch(page,/2934381596914907/);
- assert.match(page,/noindex/);
+ assert.match(page,/<title>Rotina Produtiva Pro/);
+ for(const text of ["reduzir e priorizar","tornar o começo concreto","proteger uma sessão","primeira resposta definiu"])assert.ok(page.includes(text));
+ assert.match(page,/answers\.slice\(0,3\)/);
+ assert.match(page,/Sem cadastro/);
+ assert.match(page,/R\$ 47/);
+ assert.match(page,/noindex,nofollow/);
+ assert.doesNotMatch(page,/fbq\(|fetch\(|XMLHttpRequest|localStorage|sessionStorage|pay\.hotmart\.com/);
+});
+
+test("Pós-compra mantém preços aprovados e não finge confirmação de pagamento",async()=>{
+ const up=await html(app+"upsell/");const down=await html(app+"downsell/");const thanks=await html(app+"obrigado/");
+ assert.match(up,/Completo/);assert.match(up,/<span>R\$<\/span> 37/);
+ assert.match(down,/Essencial/);assert.match(down,/<span>R\$<\/span> 27/);
+ assert.match(down,/Não inclui os módulos/);
+ for(const p of [up,down])assert.match(p,/<button[^>]*disabled>Oferta disponível após integração/);
+ assert.match(thanks,/não comprova pagamento e não libera acesso/);
+ assert.doesNotMatch(thanks,/\.pdf["']/);
 });
 
 test("quatro endereços anteriores redirecionam e não duplicam quiz ou LP",async()=>{
@@ -133,3 +145,4 @@ test("cards do app são responsivos e seguem paleta Mental & Financeiro",async()
  assert.match(css,/@media\(max-width:680px\)/);
  assert.match(css,/\.mental-pro-list\.mental-pro-options\{grid-template-columns:1fr\}/);
 });
+
