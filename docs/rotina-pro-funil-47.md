@@ -20,7 +20,7 @@ Os PDFs pagos não estão no repositório público. O pacote editorial e os trê
 
 ## Hotmart
 
-- Principal: checkout confirmado `https://pay.hotmart.com/G108053232T?off=6bol81js&checkoutMode=10`, R$47 à vista. Oferta antiga `gp9smrrn` (R$37) preservada enquanto o quiz publicado ainda a utiliza.
+- Principal: checkout parcelado confirmado `https://pay.hotmart.com/G108053232T?off=c6o6qy7a&checkoutMode=10`, destaque de 12x R$4,86 (total R$58,32 com acréscimo), ou R$47 à vista. Oferta à vista anterior `6bol81js` preservada. Oferta antiga `gp9smrrn` (R$37) preservada enquanto o quiz publicado ainda a utiliza.
 - Upsell: `https://pay.hotmart.com/N108159655C?off=5plz74m0`, R$37.
 - Downsell: `https://pay.hotmart.com/K108159658Y?off=ug4zbxib`, R$27.
 - Prazo de reembolso observado nos cadastros: 7 dias.
@@ -94,3 +94,9 @@ Fontes oficiais consultadas em 23/10/2026:
 - Configuração da landing corrigida para o link publicado com checkoutMode=10. Controles checkoutEnabled e postPurchaseEnabled continuam false.
 
 Atualização observada após o processamento: Rotinas Prontas e Projetos em Ação exibem `Vendas ativas` e `Processamento concluído`; os dois Detox exibem `Cadastro em processo`. O endpoint `/health` retornou `ready: true`, `mode: purchase-ledger`, versão 1. A abertura pública de `/upsell/` falhou com erro de resposta HTTP; o funil não deve ser ativado antes de publicar e conferir as páginas. Contato de suporte e duração de acesso foram solicitados ao titular e permanecem pendentes.
+
+## Parcelamento solicitado pelo titular
+
+Oferta nova `c6o6qy7a`, nome `Funil Rotina Pro | R47 parcelado | 2 bônus`, BRL R$47, parcelamento comum no cartão com taxas para o comprador, conforme modalidade já usada no preço base. A Hotmart não permite mudar a modalidade de uma oferta já criada. Opções de 1 a 12 parcelas; destaque público conferido em 12x R$4,86, total R$58,32, com aviso de acréscimo e alternativa de R$47 à vista. Recuperador automático desativado. O titular pediu destaque parcelado; não foi ativada recuperação recorrente.
+
+Mesma página 1901462 com os dois bumps publicada também na nova oferta; página para a oferta à vista anterior preservada. Funil nativo 284854 atualizado para a oferta parcelada, sem ativação. Configuração do site em revisão aponta para `off=c6o6qy7a&checkoutMode=10`. Quatro testes existentes de rastreamento/configuração/pós-compra passaram com essa alteração. Não houve pagamento.
