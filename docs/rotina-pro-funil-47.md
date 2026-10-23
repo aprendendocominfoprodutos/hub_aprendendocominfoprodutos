@@ -1,74 +1,87 @@
-# Rotina Produtiva Pro - configuração aprovada
+# Rotina Produtiva Pro — preparação de lançamento
 
-Estado: seis PDFs refeitos em edição editorial ilustrada, com 37 páginas verificadas e campos preenchíveis testados. Oferta adicional de R$47 salva na Hotmart (código 6bol81js), mantendo a oferta antiga como base. Quatro eBooks cadastrados como rascunhos: Rotinas Prontas (8791462, R$9,90), Projetos em Ação (8791470, R$12,90), Foco Digital Completo (8791473, R$37) e Foco Digital Essencial (8791476, R$27). Páginas em revisão; bumps, pós-compra e entrega ainda pendentes.
+Estado em 23/10/2026: configuração parcial, sem liberação para campanha. O Pixel principal e o webhook estão ativos; o funil nativo está salvo e inativo. A nova landing, o quiz e as páginas de pós-compra estão na revisão PR 26, com compra bloqueada até a conferência da entrega. A versão publicada do quiz permanece com a oferta antiga; não direcionar anúncios para ela como se já cobrasse R$47.
 
-A tentativa de anexar o Mapa da Semana ao produto do tipo aplicativo retornou “Falha no envio” e errors.400. O manual original permaneceu cadastrado. A tentativa de enviar o PDF de Rotinas Prontas encerrou a aba; após reabrir, a Hotmart continuava mostrando nenhum arquivo. Os novos PDFs ainda não estão entregues pela plataforma. A finalização dos quatro cadastros envolve aceitar o Termo de Tratamento de Dados Pessoais e permanece pendente.
+## Ofertas e arquivos de entrega
 
-## Oferta
+| Etapa | Produto Hotmart | Preço | Arquivo final no conteúdo do produto |
+|---|---|---:|---|
+| Principal | 8741427 — Rotina Produtiva Pro | R$47 | acesso-rotina-pro-com-bonus.pdf |
+| Bump 1 | 8791462 — Rotinas Prontas | R$9,90 | bump-01-rotinas-prontas.pdf |
+| Bump 2 | 8791470 — Projetos em Ação | R$12,90 | bump-02-projetos-em-acao.pdf |
+| Upsell | 8791473 — Detox Digital — App + Guia Completo | R$37 | acesso-detox-digital-completo.pdf |
+| Downsell | 8791476 — Detox Digital — App + Guia Essencial | R$27 | acesso-detox-digital-essencial.pdf |
 
-| Item | Preço BRL | Entrega |
-|---|---:|---|
-| Principal | 47,00 | App existente + Mapa da Semana + Plano de Retomada |
-| Bump 1 | 9,90 | Rotinas Prontas: 12 modelos adaptáveis, PDF de 14 páginas |
-| Bump 2 | 12,90 | Projetos em Ação: 6 modelos, PDF de 8 páginas |
-| Upsell | 37,00 | Foco Digital Completo: PDF de 8 páginas |
-| Downsell | 27,00 | Foco Digital Essencial: PDF de 3 páginas |
+O principal inclui Mapa da Semana (1 página) e Plano de Retomada (3 páginas), reunidos ao acesso em um manual de 5 páginas. Os dois adicionais Detox contêm **o mesmo app completo**. A diferença é o guia: completo de 8 páginas ou essencial de 3 páginas; os manuais finais têm 9 e 4 páginas, respectivamente. Não anunciar app reduzido nem PDFs como única entrega do upsell/downsell.
 
-Bônus 1: PDF preenchível de uma página. Bônus 2: PDF de três páginas com roteiro e ficha. Não publicar PDFs pagos em repositório ou URLs públicas sem controle de compra.
+Os quatro PDFs originais dos adicionais foram enviados pelo usuário. A conversão dos dois Detox para Aplicativos para Celular foi salva e os PDFs existentes preservados. Ainda é necessário substituir os três manuais indicados, incluindo o principal. A plataforma aceita um manual PDF por produto do tipo app; os bônus foram reunidos nesse manual.
 
-## Rotas
+Os PDFs pagos não estão no repositório público. O pacote editorial e os três manuais finais foram entregues separadamente ao usuário.
 
-- Landing: https://www.aprendendocominfoprodutos.com.br/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro/landingpage/
-- Quiz: https://www.aprendendocominfoprodutos.com.br/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro/quiz/
-- Pós-compra proposto: subpastas /upsell/, /downsell/ e /obrigado/ sob o mesmo produto. Ainda não publicadas.
+## Hotmart
 
-A landing atual contém apenas uma reserva. O quiz atual da EVA usa a oferta antiga. As páginas novas ficam em rascunho na branch `rotina-pro-funil-47-revisao`, sem modificar a versão ativa.
+- Principal: checkout confirmado `https://pay.hotmart.com/G108053232T?off=6bol81js`, R$47 à vista. Oferta antiga `gp9smrrn` (R$37) preservada enquanto o quiz publicado ainda a utiliza.
+- Upsell: `https://pay.hotmart.com/N108159655C?off=5plz74m0`, R$37.
+- Downsell: `https://pay.hotmart.com/K108159658Y?off=ug4zbxib`, R$27.
+- Prazo de reembolso observado nos cadastros: 7 dias.
+- Quatro adicionais ainda em rascunho. Finalizar o cadastro implica aceitar o Termo de Tratamento de Dados Pessoais; requer confirmação do titular no momento da ação.
+- No Checkout Builder do principal, a busca por Rotinas Prontas não encontrou produto elegível. Os bumps ainda não estão aplicados. Não publicar checkout vazio como se contivesse os dois adicionais.
 
-## Configuração na Hotmart
+### Funil nativo
 
-1. Abrir a conta produtora e conferir o produto Rotina Produtiva Pro e a titularidade. O checkout encontrado anteriormente é G108053232T, oferta gp9smrrn, observado com preço antigo de R$37. Não reutilizar como se já cobrasse R$47.
-2. Conferir preço, duração de acesso, garantia, suporte e entrega já cadastrados. Não alterar condições não aprovadas silenciosamente.
-3. A oferta `Funil Rotina Pro | R47 | 2 bônus` foi salva por R$47, à vista, código `6bol81js`. A oferta base antiga permanece R$37. Anexar os dois bônus à entrega autorizada. Confirmar acesso ao app e comportamento após aprovação, pendência e reembolso.
-4. Cadastrar os quatro produtos complementares com arquivos e preços exatos. Não prometer importação automática dos PDFs para o app.
-5. Na aparência da página de pagamento do principal, inserir os dois componentes Order Bump, com descrição e preço claros e sem pré-seleção. Conferir a apresentação de dois bumps no checkout real.
-6. Criar o Funil de Vendas da oferta principal. Usar o produto completo no upsell e o essencial no downsell. Cada produto precisa de entrega própria; o mesmo Detox Digital do mapa antigo não representa esta configuração.
-7. Conectar os widgets oficiais às páginas externas e os destinos de aceitação/recusa. Não simular cobrança com links que apenas mudam de página.
-8. Atualizar os CTAs das duas entradas para o checkout confirmado de R$47. Vincular acesso e arquivos no canal de entrega autenticado. Remover avisos de revisão apenas depois dos testes.
-9. Publicar as páginas e atualizar o mapa na EVA para espelhar o fluxo real. O mapa da EVA, sozinho, não integra cobrança e entrega.
-10. Testar: principal sem extras; cada bump; ambos; upsell aceito; upsell recusado e downsell aceito; ambos recusados; pagamento pendente/recusado; reembolso e duplicação de evento, se houver webhook.
+Funil **284854**, nome **Rotina Pro 47 | Detox 37 e 27**, salvo **inativo**, vinculado à oferta principal `6bol81js`. Cartão obrigatório e Pix selecionado.
 
-Documentação oficial consultada em 23/10/2026:
+Fluxo configurado: principal → Detox Completo R$37; aceite → obrigado; recusa → Detox Essencial R$27; aceite ou recusa do essencial → mesmo obrigado. Todos os conectores finais estão definidos. Widget copiado da conta Hotmart; código preparado nas páginas, ainda bloqueado pelo controle de lançamento.
+
+Editor: https://app.hotmart.com/tools/sales/funnel/edit/284854/steps
+
+O mapa EVA `Rotina Produtiva Pro | QUIZ` foi atualizado com os dois produtos Detox, links e preços R$37/R$27, textos app + guia e Pixel. Cronômetro, depoimentos e FAQ automáticos dos adicionais foram desativados; nenhum preço anterior fictício foi preenchido. O mapa não substitui o funil nativo de cobrança.
+
+## Páginas
+
+Base: `https://www.aprendendocominfoprodutos.com.br/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro/`
+
+- `landingpage/`: organização e controle, app + dois bônus, R$47, imagens cinematográficas otimizadas.
+- `quiz/`: cinco perguntas; três orientações e desempate pela primeira resposta. Sem cadastro; respostas só em memória, não enviadas ao Pixel.
+- `upsell/`, `downsell/`: app + guia, R$37/R$27, componente oficial Hotmart preparado.
+- `obrigado/`: orienta consultar o status e os itens adquiridos na Hotmart; não simula pagamento aprovado nem expõe PDFs.
+
+Em `assets/launch-config.js`, `checkoutEnabled` e `postPurchaseEnabled` permanecem `false`. Alterá-los apenas depois da entrega, dos cadastros, dos dois bumps e do teste transacional. O primeiro controla o checkout de R$47; o segundo carrega o widget nativo. A integração de pós-compra preserva o contexto da Hotmart, sem criar links que simulem aceite e cobrança.
+
+## Mensuração
+
+Pixel **1419582967021848** no produto principal: Web e API com token já configurado, venda pelo valor da transação em todos os métodos, visitas ao checkout habilitadas. Os quatro adicionais também foram configurados com o mesmo Pixel, envio Web e API com token validado, venda pelo valor da transação em todos os métodos e visitas ao checkout.
+
+Nas páginas novas, Pixel após permissão do visitante: PageView, ViewContent, QuizStart/QuizComplete e CheckoutClick. Sem Purchase/InitiateCheckout nas páginas públicas; Purchase fica com a Hotmart. Nome de campanha permitido em cinco UTMs; parâmetros arbitrários e dados de contato são removidos antes de carregar o Pixel. As respostas/perfis do quiz não são enviados. Preferência por sessão, alterável na interface. Validação automatizada cobre recusa, armazenamento indisponível, aceite, carregamento único e revogação.
+
+### Webhook ativo
+
+- Nome: Rotina Pro — registro de compras e reembolsos.
+- Endpoint: `https://rotina-pro-events.alisson-lopes30.workers.dev/webhooks/hotmart`.
+- Escopo: os cinco produtos acima, nove eventos, versão 2.0.0.
+- Cloudflare Worker e D1 dedicados; autenticação pelo Hottok em segredo, sem segredo no frontend/repositório.
+- Registro mínimo de eventos; não armazena nome, email, telefone, endereço ou payload completo. Transação armazenada como SHA-256; idempotência por ID do evento.
+- Nove testes nativos Hotmart processados com HTTP 200. Testes separados confirmaram 401 sem autenticação, aprovação, duplicação e reembolso com persistência. Eventos nativos com SKU fictício podem ser ignorados pelo filtro de produtos.
+- Código e testes em `integrations/rotina-pro/`. O deploy do Worker de eventos é independente do site principal; não trocar o Worker de assets por esse receptor.
+
+O webhook **registra pedidos; não cria contas nem revoga acesso nos apps EVA**. Os apps verificados usam links compartilhados. Não anunciar autenticação individual, liberação ou bloqueio automáticos que não existem.
+
+## Verificação e encerramento
+
+- 98 testes do repositório aprovados; 4 testes adicionais do Worker aprovados.
+- Validadores de contêineres e quatro geradores/builds do repositório executados.
+- Auditoria estática da landing sem erros; avisos de navegação absoluta correspondem às rotas do site existente.
+- Landing conferida em contêineres 360, 390, 768 e 1280 px sem overflow horizontal. Quiz: validação de resposta, três resultados e contexto de tempo/horário verificados. Sem requisição Meta após recusa, por inspeção de scripts e testes.
+- Não houve compra de teste, teste de entrega autenticada nem lançamento de anúncio. Prazo de acesso e contato comercial de suporte precisam ser confirmados antes da venda.
+
+Pendências para liberar: substituir os três manuais; finalizar os quatro produtos com confirmação do titular; aplicar os dois bumps; publicar páginas e habilitar controles; ativar o funil nativo; titular executar compra de teste e conferir recebimento principal, extras e recusas. Só então iniciar mídia com orçamento definido.
+
+A revisão automática bloqueou acesso ao ChatGPT pelo navegador para baixar novos arquivos no computador do usuário e enviá-los à Hotmart. Não houve tentativa de contornar o bloqueio; substituição dos manuais permanece para envio direto pelo titular.
+
+## Janela inicial de cerca de sete dias
+
+Começa após compra/entrega verificadas e tráfego autorizado. Preços R$47/R$37/R$27; sem redução automática nem agendamento de mídia. Comparar visitas e pedidos por landing/quiz, aceitação de cada adicional, receita retida, taxas, reembolsos e gasto real. Um clique não é venda; uma semana com poucas compras pode ser inconclusiva. Qualquer teste posterior de R$27/R$17 exige decisão com dados.
+
+Fontes oficiais consultadas em 23/10/2026:
 - https://suportehotmart.zendesk.com/hc/pt-br/articles/220402348-O-que-%C3%A9-e-como-configurar-meu-Funil-de-Vendas
 - https://suportehotmart.zendesk.com/hc/pt-br/articles/360019967392-O-que-%C3%A9-e-como-configurar-o-Order-Bump
-
-## Descrições para cadastro e checkout
-
-**Principal:** Rotina Produtiva Pro reúne método, conteúdos e desafios de produtividade. A oferta inclui o Mapa da Semana em PDF preenchível e o Plano de Retomada em PDF. Produto digital para organização pessoal, sem promessa de resultado ou prazo de transformação. Confirmar as condições de acesso, garantia e suporte no cadastro antes da venda.
-
-**Bump 1 - Rotinas Prontas:** Adicione 12 modelos adaptáveis para dias de trabalho, estudo, folga e imprevistos. Cada modelo contém sequência, exemplo e alternativa caso o dia mude. Entrega em PDF de 14 páginas, por R$9,90 adicionais. Não inclui importação automática para o app.
-
-**Bump 2 - Projetos em Ação:** Adicione seis mapas de projeto com etapas, próximas ações e critérios de conclusão. Inclui modelos para curso, portfólio, documentos, viagem, peça autoral e ambiente. Entrega em PDF de oito páginas, por R$12,90 adicionais.
-
-**Upsell - Foco Digital Completo:** Organize alertas, mensagens e uma sessão de trabalho com menos interrupções. Inclui protocolo de retorno, plano de sete dias e revisão semanal. PDF de oito páginas com campos de aplicação. Pagamento único adicional de R$37. Não é tratamento de dependência digital.
-
-**Downsell - Foco Digital Essencial:** Comece pela configuração do celular e por um checklist de uso. PDF de três páginas, sem os módulos de mensagens/redes, protocolo detalhado e plano de sete dias do pacote completo. Pagamento único adicional de R$27.
-
-## Teste de aproximadamente sete dias
-
-Contagem começa após compra e entrega verificadas e tráfego autorizado. Não há campanha, orçamento, agendamento de revisão nem redução automática ativados.
-
-Mesmos preços e complementos nos dois funis. A landing posiciona organização e controle. O quiz posiciona a identificação de um obstáculo e uma próxima ação. Isso compara duas jornadas comerciais, sem isolar causalmente apenas o formato.
-
-Registrar por jornada: visitas válidas, inícios de checkout, principais aprovados, aceitação de cada bump, exposições e aceites do upsell, exposições e aceites do downsell, taxas reais, reembolsos e gasto de mídia. Não colocar dados pessoais em UTMs.
-
-- Conversão: principais aprovados / visitas válidas.
-- Aceitação bump: pedidos com o bump / principais aprovados elegíveis.
-- Aceitação upsell: compras do completo / compradores que viram a oferta completa.
-- Aceitação downsell: compras do essencial / compradores que viram a oferta essencial após recusa do completo.
-- Ticket bruto: receita bruta aprovada de todos os itens / principais aprovados.
-- Margem por visitante: (receita retida - taxas - tributos - custos variáveis - mídia) / visitas válidas.
-
-Não pressupor taxas ou alíquotas. Economia inicial deve funcionar com adicionais zerados. Sem volume suficiente, uma semana deixa o teste inconclusivo. Falhas de página, checkout ou entrega devem ser corrigidas antes de atribuir o problema ao preço.
-
-Se houver baixa aceitação com volume útil, testar upsell R$27 e downsell R$17 em uma nova janela, mantendo as demais variáveis. A decisão de reduzir não é uma automação nem autorização para gastar em anúncios.
-

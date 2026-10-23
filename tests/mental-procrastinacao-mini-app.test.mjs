@@ -65,7 +65,7 @@ test("Landingpage apresenta a oferta de R$47 em revisão e mantém compra desati
  assert.match(page,/<title>Rotina Produtiva Pro/);
  for(const copy of ["Menos tarefas soltas.","Mapa da Semana","Plano de Retomada","Pagamento único"])assert.ok(page.includes(copy));
  assert.match(page,/R\$ 47/);
- assert.match(page,/PRÉVIA EM CONFIGURAÇÃO/);
+ assert.match(page,/OFERTA EM PREPARAÇÃO/);
  assert.match(page,/<button[^>]*disabled>Compra disponível após configuração/);
  assert.match(page,/noindex,nofollow/);
  assert.doesNotMatch(page,/fbq\(|pay\.hotmart\.com|hotmart__button-checkout/i);
@@ -86,7 +86,8 @@ test("Pós-compra mantém preços aprovados e não finge confirmação de pagame
  const up=await html(app+"upsell/");const down=await html(app+"downsell/");const thanks=await html(app+"obrigado/");
  assert.match(up,/Completo/);assert.match(up,/<span>R\$<\/span> 37/);
  assert.match(down,/Essencial/);assert.match(down,/<span>R\$<\/span> 27/);
- assert.match(down,/Não inclui os módulos/);
+ assert.match(down,/O guia essencial não inclui os módulos/);
+ for(const p of [up,down]){assert.match(p,/aplicativo Detox Digital|app completo/);assert.match(p,/guia PDF|Guia de oito páginas/);}
  for(const p of [up,down])assert.match(p,/<button[^>]*disabled>Oferta disponível após integração/);
  assert.match(thanks,/não comprova pagamento e não libera acesso/);
  assert.doesNotMatch(thanks,/\.pdf["']/);
