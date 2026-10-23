@@ -1,8 +1,8 @@
 # Rotina Produtiva Pro - configuração aprovada
 
-Estado: seis PDFs refeitos em edição editorial ilustrada, com 37 páginas verificadas e campos preenchíveis testados. Oferta adicional de R$47 salva na Hotmart (código 6bol81js), mantendo a oferta antiga como base. Páginas em revisão; bumps, pós-compra e entrega ainda pendentes.
+Estado: seis PDFs refeitos em edição editorial ilustrada, com 37 páginas verificadas e campos preenchíveis testados. Oferta adicional de R$47 salva na Hotmart (código 6bol81js), mantendo a oferta antiga como base. Quatro eBooks cadastrados como rascunhos: Rotinas Prontas (8791462, R$9,90), Projetos em Ação (8791470, R$12,90), Foco Digital Completo (8791473, R$37) e Foco Digital Essencial (8791476, R$27). Páginas em revisão; bumps, pós-compra e entrega ainda pendentes.
 
-A tentativa de anexar o Mapa da Semana ao produto do tipo aplicativo retornou “Falha no envio” e errors.400. O manual original permaneceu cadastrado; os novos PDFs ainda não estão entregues pela Hotmart.
+A tentativa de anexar o Mapa da Semana ao produto do tipo aplicativo retornou “Falha no envio” e errors.400. O manual original permaneceu cadastrado. A tentativa de enviar o PDF de Rotinas Prontas encerrou a aba; após reabrir, a Hotmart continuava mostrando nenhum arquivo. Os novos PDFs ainda não estão entregues pela plataforma. A finalização dos quatro cadastros envolve aceitar o Termo de Tratamento de Dados Pessoais e permanece pendente.
 
 ## Oferta
 
