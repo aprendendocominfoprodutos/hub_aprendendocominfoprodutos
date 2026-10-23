@@ -52,15 +52,22 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const matched = localizedRequestPath(url.hostname, url.pathname);
-    // Compatibilidade do quiz Rotina Produtiva Pro: redireciona a rota antiga,
-    // sem perder utm_source/utm_campaign e demais parâmetros de anúncios.
-    if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname) &&
-        (url.pathname === "/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro/" ||
-         url.pathname === "/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro")) {
-      url.pathname = "/mental-financeiro/mental/procrastinacao/mini-app/quiz/rotina-produtiva-pro/";
-      return Response.redirect(url.toString(), 308);
+    // Compatibilidade após inserir o contêiner do aplicativo entre Mini App e Quiz/Landingpage.
+    // Não redirecionar /mini-app/rotina-produtiva-pro/: agora é o índice clicável do APP.
+    // Preserva UTM/campanhas em endereços anteriores dos formatos.
+    if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname)) {
+      const legacyAppFormats = {
+      "/mental-financeiro/mental/procrastinacao/mini-app/quiz/":"/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro/quiz/",
+      "/mental-financeiro/mental/procrastinacao/mini-app/quiz/rotina-produtiva-pro/":"/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro/quiz/",
+      "/mental-financeiro/mental/procrastinacao/mini-app/landingpage/":"/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro/landingpage/",
+      "/mental-financeiro/mental/procrastinacao/mini-app/landingpage/rotina-produtiva-pro/":"/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro/landingpage/"
+      };
+      const old = url.pathname.endsWith("/") ? url.pathname : url.pathname + "/";
+      if (Object.hasOwn(legacyAppFormats, old)) {
+        url.pathname = legacyAppFormats[old];
+        return Response.redirect(url.toString(), 308);
+      }
     }
-
     // Página padrão do produto: árabe; alternância AR / ING dentro da landing.
     if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname) &&
         (url.pathname === "/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/paises-arabes/arabia-saudita/minha-pequena-rotina/" || url.pathname === "/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/paises-arabes/arabia-saudita/minha-pequena-rotina")) {
