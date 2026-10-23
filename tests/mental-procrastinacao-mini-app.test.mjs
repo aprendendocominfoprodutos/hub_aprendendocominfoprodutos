@@ -60,15 +60,23 @@ test("dentro do app aparecem exatamente dois contêineres Landingpage e Quiz",as
  assert.doesNotMatch(page,/pay\.hotmart\.com|hotmart__button-checkout/);
 });
 
-test("Landingpage apresenta a oferta de R$47 em revisão e mantém compra desativada",async()=>{
+test("Landingpage apresenta o pacote e aponta para a oferta parcelada publicada",async()=>{
  const page=await html(landing);
- assert.match(page,/<title>Rotina Produtiva Pro/);
- for(const copy of ["Menos tarefas soltas.","Mapa da Semana","Plano de Retomada","Pagamento único"])assert.ok(page.includes(copy));
- assert.match(page,/R\$ 47/);
- assert.match(page,/OFERTA EM PREPARAÇÃO/);
- assert.match(page,/<button[^>]*disabled>Compra disponível após configuração/);
- assert.match(page,/noindex,nofollow/);
- assert.doesNotMatch(page,/fbq\(|pay\.hotmart\.com|hotmart__button-checkout/i);
+ assert.equal((page.match(/<h1[ >]/g)||[]).length,1);
+ assert.match(page,/Mapa da Semana/);
+ assert.match(page,/Plano de Retomada/);
+ assert.match(page,/12x de/);
+ assert.match(page,/R\$ 4,86/);
+ assert.match(page,/R\$ 58,32/);
+ assert.match(page,/opcionais e cobrados à parte/);
+ assert.match(page,/noindex,follow/);
+ const links=[...page.matchAll(/data-checkout href="([^"]+)"/g)].map(m=>m[1].replaceAll("&amp;","&"));
+ assert.equal(links.length,2);
+ for(const href of links)assert.equal(href,"https://pay.hotmart.com/G108053232T?off=c6o6qy7a&checkoutMode=10");
+ assert.doesNotMatch(page,/LANDINGPAGE EM PREPARAÇÃO|gp9smrrn|6bol81js|vitalício|11\.200|fbq\(/i);
+ const script=await readFile(join(ROOT,"public",landing,"assets/js/main.js"),"utf8");
+ assert.match(script,/utm_source/);
+ assert.doesNotMatch(script,/fbq|localStorage|sessionStorage|fetch\(/);
 });
 
 test("Quiz tem cinco perguntas, três orientações e desempate explícito, sem captura de dados",async()=>{
