@@ -100,3 +100,9 @@ Atualização observada após o processamento: Rotinas Prontas e Projetos em Aç
 Oferta nova `c6o6qy7a`, nome `Funil Rotina Pro | R47 parcelado | 2 bônus`, BRL R$47, parcelamento comum no cartão com taxas para o comprador, conforme modalidade já usada no preço base. A Hotmart não permite mudar a modalidade de uma oferta já criada. Opções de 1 a 12 parcelas; destaque público conferido em 12x R$4,86, total R$58,32, com aviso de acréscimo e alternativa de R$47 à vista. Recuperador automático desativado. O titular pediu destaque parcelado; não foi ativada recuperação recorrente.
 
 Mesma página 1901462 com os dois bumps publicada também na nova oferta; página para a oferta à vista anterior preservada. Funil nativo 284854 atualizado para a oferta parcelada, sem ativação. Configuração do site em revisão aponta para `off=c6o6qy7a&checkoutMode=10`. Quatro testes existentes de rastreamento/configuração/pós-compra passaram com essa alteração. Não houve pagamento.
+
+## Bumps parcelados
+
+A pedido do titular, as ofertas dos dois bumps na página 1901462 foram trocadas por modalidades parceladas comuns, com taxas para o comprador e recuperador automático desativado. Rotinas Prontas: `jaune925`, R$9,90 à vista ou até 3x R$3,53 (R$10,59 no total). Projetos em Ação: `nag7eh3u`, R$12,90 à vista ou até 4x R$3,51 (R$14,04 no total). Ofertas antigas preservadas.
+
+O checkout público da oferta principal `c6o6qy7a` mostrou seletores de 3 e 4 parcelas, respectivamente, já selecionadas. Os cartões ainda informam os preços à vista. Com principal em 12x, o total sem bumps é R$58,32; com Rotinas em 3x, R$68,91; com ambos nas parcelas máximas, R$82,95. Adição/remoção verificadas sem dados de comprador ou pagamento. Remoção de ambos devolve total a R$58,32. A página publicada conserva os adicionais como opcionais.
