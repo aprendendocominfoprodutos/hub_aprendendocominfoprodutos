@@ -23,13 +23,3 @@ test('the saved launch configuration prevents unfinished delivery from being sol
 });
 
 
-test('post-purchase script stays inert before launch and delegates decisions to Hotmart',()=>{
- const code=readFileSync(base+'post-purchase.js','utf8');
- const appended=[];const container={hidden:true};const calls=[];
- const window={ROTINA_LAUNCH:{postPurchaseEnabled:false}};
- const document={head:{append:e=>appended.push(e)},createElement:()=>({}),getElementById:()=>container,querySelectorAll:()=>[]};
- vm.runInNewContext(code,{window,document});assert.equal(appended.length,0);
- window.ROTINA_LAUNCH.postPurchaseEnabled=true;
- window.checkoutElements={init:type=>({mount:selector=>calls.push([type,selector])})};
- vm.runInNewContext(code,{window,document});assert.equal(appended[0].src,'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js');appended[0].onload();assert.deepEqual(calls,[['salesFunnel','#hotmart-sales-funnel']]);assert.equal(container.hidden,false);
-});

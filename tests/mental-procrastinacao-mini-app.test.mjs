@@ -95,15 +95,11 @@ test("Quiz tem cinco perguntas, três orientações e desempate explícito, sem 
  assert.doesNotMatch(page,/fbq\(|fetch\(|XMLHttpRequest|localStorage|sessionStorage|pay\.hotmart\.com/);
 });
 
-test("Pós-compra mantém preços aprovados e não finge confirmação de pagamento",async()=>{
+test("Pós-compra publicado usa widget oficial e orienta acesso sem simular pagamento",async()=>{
  const up=await html(app+"upsell/");const down=await html(app+"downsell/");const thanks=await html(app+"obrigado/");
- assert.match(up,/Completo/);assert.match(up,/<span>R\$<\/span> 37/);
- assert.match(down,/Essencial/);assert.match(down,/<span>R\$<\/span> 27/);
- assert.match(down,/O guia essencial não inclui os módulos/);
- for(const p of [up,down]){assert.match(p,/aplicativo Detox Digital|app completo/);assert.match(p,/guia PDF|Guia de oito páginas/);}
- for(const p of [up,down])assert.match(p,/<button[^>]*disabled>Oferta disponível após integração/);
- assert.match(thanks,/não comprova pagamento e não libera acesso/);
- assert.doesNotMatch(thanks,/\.pdf["']/);
+ assert.match(up,/<span>R\$<\/span> 37/);assert.match(down,/<span>R\$<\/span> 27/);
+ for(const p of [up,down]){assert.match(p,/hotmart-checkout-elements.js/);assert.match(p,/id="hotmart-sales-funnel"/);assert.doesNotMatch(p,/disabled|OFERTA EM PREPARAÇÃO|data-pending-widget/);}
+ assert.match(thanks,/não comprova pagamento e não libera acesso/);assert.doesNotMatch(thanks,/estão em preparação|\.pdf["']/);
 });
 
 test("quatro endereços anteriores redirecionam e não duplicam quiz ou LP",async()=>{

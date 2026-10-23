@@ -1,16 +1,16 @@
+/* Official Hotmart widget owns offer context, charging and yes/no routing. */
 (() => {
-  if (!window.ROTINA_LAUNCH?.postPurchaseEnabled) return;
   const container = document.getElementById('hotmart-sales-funnel');
-  if (!container) return;
-  // Exact widget supplied by the Hotmart account. It owns acceptance,
-  // charging, refusal and routing; a normal link must not simulate these actions.
-  const script = document.createElement('script');
-  script.src = 'https://checkout.hotmart.com/lib/hotmart-checkout-elements.js';
-  script.onload = () => {
-    if (!window.checkoutElements) return;
-    container.hidden = false;
-    window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
-    document.querySelectorAll('[data-pending-widget],[data-launch-note]').forEach(e=>e.hidden=true);
+  const status = document.querySelector('[data-widget-status]');
+  if (!container || container.dataset.hotmartMounted === 'true') return;
+  const unavailable = () => {
+    if (status) status.textContent = 'Os controles de pós-compra não estão disponíveis nesta visita. Consulte seu pedido na Hotmart.';
   };
-  document.head.append(script);
+  if (!window.checkoutElements) { unavailable(); return; }
+  try {
+    const result = window.checkoutElements.init('salesFunnel').mount('#hotmart-sales-funnel');
+    container.dataset.hotmartMounted = 'true';
+    if (result && typeof result.catch === 'function') result.catch(unavailable);
+    if (status) status.textContent = 'Use os controles da Hotmart para aceitar ou recusar a oferta durante sua compra.';
+  } catch { unavailable(); }
 })();
