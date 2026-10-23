@@ -52,6 +52,15 @@ export default {
   async fetch(request, env) {
     const url = new URL(request.url);
     const matched = localizedRequestPath(url.hostname, url.pathname);
+    // Compatibilidade do quiz Rotina Produtiva Pro: redireciona a rota antiga,
+    // sem perder utm_source/utm_campaign e demais parâmetros de anúncios.
+    if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname) &&
+        (url.pathname === "/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro/" ||
+         url.pathname === "/mental-financeiro/mental/procrastinacao/mini-app/rotina-produtiva-pro")) {
+      url.pathname = "/mental-financeiro/mental/procrastinacao/mini-app/quiz/rotina-produtiva-pro/";
+      return Response.redirect(url.toString(), 308);
+    }
+
     // Página padrão do produto: árabe; alternância AR / ING dentro da landing.
     if (matched.route === "main" && /^(www\.)?aprendendocominfoprodutos\.com\.br$/i.test(url.hostname) &&
         (url.pathname === "/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/paises-arabes/arabia-saudita/minha-pequena-rotina/" || url.pathname === "/cultura-entretenimento/educacao-infantil/rotinas-autonomia-infantil/paises-arabes/arabia-saudita/minha-pequena-rotina")) {
