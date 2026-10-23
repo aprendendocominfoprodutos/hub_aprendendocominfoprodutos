@@ -45,7 +45,7 @@ test("Worker preserva as UTMs no redirecionamento à landing árabe",async()=>{
  assert.ok(worker.includes('url.pathname = "'+PRODUCT+'ar-sa/"'));
  assert.ok(worker.includes("Response.redirect(url.toString(), 302)"));
 });
-test("Landings compartilham a oferta e não contêm order bumps",async()=>{
+test("Landings ligam ao checkout validado e não contêm order bumps",async()=>{
  for(const loc of ["ar-sa","en-sa"]){
  const html=await read(PRODUCT+loc+"/");
  assert.ok(html.length>40000);
