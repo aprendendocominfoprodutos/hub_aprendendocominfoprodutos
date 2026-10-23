@@ -1,18 +1,20 @@
 # Rotina Produtiva Pro - configuração aprovada
 
-Estado: materiais produzidos; páginas em revisão; checkout e entrega ainda não configurados para esta oferta.
+Estado: seis PDFs refeitos em edição editorial ilustrada, com 37 páginas verificadas e campos preenchíveis testados. Oferta adicional de R$47 salva na Hotmart (código 6bol81js), mantendo a oferta antiga como base. Páginas em revisão; bumps, pós-compra e entrega ainda pendentes.
+
+A tentativa de anexar o Mapa da Semana ao produto do tipo aplicativo retornou “Falha no envio” e errors.400. O manual original permaneceu cadastrado; os novos PDFs ainda não estão entregues pela Hotmart.
 
 ## Oferta
 
 | Item | Preço BRL | Entrega |
 |---|---:|---|
 | Principal | 47,00 | App existente + Mapa da Semana + Plano de Retomada |
-| Bump 1 | 9,90 | Rotinas Prontas: 12 modelos adaptáveis, PDF de 13 páginas |
-| Bump 2 | 12,90 | Projetos em Ação: 6 modelos, PDF de 7 páginas |
-| Upsell | 37,00 | Foco Digital Completo: PDF de 7 páginas |
-| Downsell | 27,00 | Foco Digital Essencial: PDF de 2 páginas |
+| Bump 1 | 9,90 | Rotinas Prontas: 12 modelos adaptáveis, PDF de 14 páginas |
+| Bump 2 | 12,90 | Projetos em Ação: 6 modelos, PDF de 8 páginas |
+| Upsell | 37,00 | Foco Digital Completo: PDF de 8 páginas |
+| Downsell | 27,00 | Foco Digital Essencial: PDF de 3 páginas |
 
-Bônus 1: PDF preenchível de uma página. Bônus 2: PDF de duas páginas com roteiro e ficha. Não publicar PDFs pagos em repositório ou URLs públicas sem controle de compra.
+Bônus 1: PDF preenchível de uma página. Bônus 2: PDF de três páginas com roteiro e ficha. Não publicar PDFs pagos em repositório ou URLs públicas sem controle de compra.
 
 ## Rotas
 
@@ -26,7 +28,7 @@ A landing atual contém apenas uma reserva. O quiz atual da EVA usa a oferta ant
 
 1. Abrir a conta produtora e conferir o produto Rotina Produtiva Pro e a titularidade. O checkout encontrado anteriormente é G108053232T, oferta gp9smrrn, observado com preço antigo de R$37. Não reutilizar como se já cobrasse R$47.
 2. Conferir preço, duração de acesso, garantia, suporte e entrega já cadastrados. Não alterar condições não aprovadas silenciosamente.
-3. Criar ou configurar a oferta do principal por R$47 e anexar os dois bônus à entrega autorizada. Confirmar acesso ao app e comportamento após aprovação, pendência e reembolso.
+3. A oferta `Funil Rotina Pro | R47 | 2 bônus` foi salva por R$47, à vista, código `6bol81js`. A oferta base antiga permanece R$37. Anexar os dois bônus à entrega autorizada. Confirmar acesso ao app e comportamento após aprovação, pendência e reembolso.
 4. Cadastrar os quatro produtos complementares com arquivos e preços exatos. Não prometer importação automática dos PDFs para o app.
 5. Na aparência da página de pagamento do principal, inserir os dois componentes Order Bump, com descrição e preço claros e sem pré-seleção. Conferir a apresentação de dois bumps no checkout real.
 6. Criar o Funil de Vendas da oferta principal. Usar o produto completo no upsell e o essencial no downsell. Cada produto precisa de entrega própria; o mesmo Detox Digital do mapa antigo não representa esta configuração.
@@ -43,13 +45,13 @@ Documentação oficial consultada em 23/10/2026:
 
 **Principal:** Rotina Produtiva Pro reúne método, conteúdos e desafios de produtividade. A oferta inclui o Mapa da Semana em PDF preenchível e o Plano de Retomada em PDF. Produto digital para organização pessoal, sem promessa de resultado ou prazo de transformação. Confirmar as condições de acesso, garantia e suporte no cadastro antes da venda.
 
-**Bump 1 - Rotinas Prontas:** Adicione 12 modelos adaptáveis para dias de trabalho, estudo, folga e imprevistos. Cada modelo contém sequência, exemplo e alternativa caso o dia mude. Entrega em PDF de 13 páginas, por R$9,90 adicionais. Não inclui importação automática para o app.
+**Bump 1 - Rotinas Prontas:** Adicione 12 modelos adaptáveis para dias de trabalho, estudo, folga e imprevistos. Cada modelo contém sequência, exemplo e alternativa caso o dia mude. Entrega em PDF de 14 páginas, por R$9,90 adicionais. Não inclui importação automática para o app.
 
-**Bump 2 - Projetos em Ação:** Adicione seis mapas de projeto com etapas, próximas ações e critérios de conclusão. Inclui modelos para curso, portfólio, documentos, viagem, peça autoral e ambiente. Entrega em PDF de sete páginas, por R$12,90 adicionais.
+**Bump 2 - Projetos em Ação:** Adicione seis mapas de projeto com etapas, próximas ações e critérios de conclusão. Inclui modelos para curso, portfólio, documentos, viagem, peça autoral e ambiente. Entrega em PDF de oito páginas, por R$12,90 adicionais.
 
-**Upsell - Foco Digital Completo:** Organize alertas, mensagens e uma sessão de trabalho com menos interrupções. Inclui protocolo de retorno, plano de sete dias e revisão semanal. PDF de sete páginas com campos de aplicação. Pagamento único adicional de R$37. Não é tratamento de dependência digital.
+**Upsell - Foco Digital Completo:** Organize alertas, mensagens e uma sessão de trabalho com menos interrupções. Inclui protocolo de retorno, plano de sete dias e revisão semanal. PDF de oito páginas com campos de aplicação. Pagamento único adicional de R$37. Não é tratamento de dependência digital.
 
-**Downsell - Foco Digital Essencial:** Comece pela configuração do celular e por um checklist de uso. PDF de duas páginas, sem os módulos de mensagens/redes, protocolo detalhado e plano de sete dias do pacote completo. Pagamento único adicional de R$27.
+**Downsell - Foco Digital Essencial:** Comece pela configuração do celular e por um checklist de uso. PDF de três páginas, sem os módulos de mensagens/redes, protocolo detalhado e plano de sete dias do pacote completo. Pagamento único adicional de R$27.
 
 ## Teste de aproximadamente sete dias
 
