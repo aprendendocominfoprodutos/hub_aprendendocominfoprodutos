@@ -83,5 +83,6 @@
   }, true);
   if (choice === 'granted') choose('granted');
   else if (choice === 'denied') choose('denied');
-  else if (panel) panel.hidden = false;
+  // Show measurement preferences only when the visitor opens them explicitly.
+  else if (panel) panel.hidden = true;
 })();
