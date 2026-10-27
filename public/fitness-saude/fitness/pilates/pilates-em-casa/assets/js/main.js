@@ -3,6 +3,8 @@
   'use strict';
   const PIXEL_ID = '2522957624868295';
   const STORAGE_KEY = 'pilates-marketing-v1';
+  const productId = document.body?.dataset?.productId || '8817226';
+  const productValue = Number(document.body?.dataset?.productValue || 37);
   const campaignNames = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'src', 'sck'];
   const current = new URL(window.location.href);
   const campaign = new URLSearchParams();
@@ -32,9 +34,10 @@
   const eventId = prefix => prefix + '_' + Date.now().toString(36) + '_' + Math.random().toString(36).slice(2, 10);
   function track(name, prefix) {
     if (!allowed || typeof window.fbq !== 'function') return;
-    window.fbq('track', name, {content_ids: ['8817226'], content_type: 'product', currency: 'BRL', value: 37}, {eventID: eventId(prefix)});
+    window.fbq('track', name, {content_ids: [productId], content_type: 'product', currency: 'BRL', value: productValue}, {eventID: eventId(prefix)});
   }
   function checkContent() {
+    if (document.body?.dataset?.noViewContent === 'true') return;
     if (!allowed || contentSent) return;
     const doc = document.documentElement;
     const remaining = doc.scrollHeight - doc.clientHeight;
