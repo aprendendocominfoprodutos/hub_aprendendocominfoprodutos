@@ -1,597 +1,1181 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR"><head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
     <meta name="theme-color" content="#ec4899">
+
     <title>Pilates em Casa | Aprendendo Com Infoprodutos</title>
+
     <meta name="description" content="Conheça o Pilates em Casa: conteúdo digital para praticar no seu ritmo, com acesso pelo celular, tablet ou computador. Pagamento único de R$ 37,00.">
+
     <link rel="canonical" href="https://www.aprendendocominfoprodutos.com.br/fitness-saude/fitness/pilates/pilates-em-casa/">
 
+
+
     <!-- Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+
     <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
 
+
+
 <style>
+
 p:empty{display:none;}
+
 :root {
+
     --primary: #ec4899;
+
     --primary-dark: #ce2a7b;
+
     --primary-light: #ff70c1;
+
     --secondary: #a855f7;
 
+
+
     --ink: #10141C;
+
     --ink-2: #1A2030;
+
     --muted: #59637A;
+
     --muted-2: #8A93A6;
+
     --bg: #FFFFFF;
+
     --bg-soft: #F6F8FB;
+
     --bg-tint: color-mix(in srgb, var(--primary) 6%, #FFFFFF);
+
     --line: #E7EBF2;
+
     --line-strong: #D8DEE9;
+
     --danger: #E5484D;
+
     --gold: #F5A623;
+
     --green: #12A150;
 
+
+
     --grad-primary: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+
     --shadow-sm: 0 1px 3px rgba(16,20,28,.06), 0 4px 14px rgba(16,20,28,.05);
+
     --shadow-md: 0 6px 24px rgba(16,20,28,.09);
+
     --shadow-cta: 0 10px 26px color-mix(in srgb, var(--primary) 38%, transparent);
+
     --r: 16px;
+
     --r-lg: 22px;
+
     --r-xl: 28px;
 
+
+
     --font-display: 'Sora', 'Inter', -apple-system, sans-serif;
+
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
 }
+
+
 
 * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
 html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
 body {
+
     font-family: var(--font-body);
+
     background: var(--bg);
+
     color: var(--ink);
+
     line-height: 1.65;
+
     overflow-x: hidden;
+
     -webkit-font-smoothing: antialiased;
+
 }
+
 img { max-width: 100%; height: auto; display: block; }
+
 a { color: inherit; }
+
 .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
 
+
+
 @keyframes fadeUp { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+
 @keyframes pulse-cta {
+
     0%,100% { box-shadow: var(--shadow-cta); }
+
     50% { box-shadow: 0 12px 34px color-mix(in srgb, var(--primary) 55%, transparent); }
+
 }
+
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+
 .fade-in { opacity: 0; transform: translateY(22px); transition: opacity .7s, transform .7s; }
+
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+
+
 /* ============ BUTTONS ============ */
+
 .btn-primary {
+
     background: var(--grad-primary);
+
     color: #fff;
+
     padding: 17px 30px;
+
     border-radius: 14px;
+
     text-decoration: none;
+
     font-weight: 700;
+
     font-family: var(--font-display);
+
     font-size: 17px;
+
     line-height: 1.25;
+
     transition: transform .2s, box-shadow .2s, filter .2s;
+
     box-shadow: var(--shadow-cta);
+
     border: none;
+
     cursor: pointer;
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     text-align: center;
+
     animation: pulse-cta 2.6s infinite;
+
     width: 100%;
+
     max-width: 440px;
+
     min-height: 56px;
+
 }
+
 .btn-primary:active { transform: scale(.97); }
+
 @media (min-width: 768px) {
+
     .btn-primary { padding: 19px 46px; font-size: 18px; width: auto; }
+
     .btn-primary:hover { transform: translateY(-2px); filter: brightness(1.05); }
+
 }
+
 .btn-secondary {
+
     background: #fff;
+
     color: var(--ink);
+
     padding: 15px 28px;
+
     border-radius: 14px;
+
     text-decoration: none;
+
     font-weight: 600;
+
     font-family: var(--font-display);
+
     font-size: 15px;
+
     border: 2px solid var(--line-strong);
+
     cursor: pointer;
+
     transition: border-color .2s, background .2s;
+
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
+
     text-align: center;
+
     width: 100%;
+
     max-width: 440px;
+
     min-height: 54px;
+
 }
+
 .btn-secondary:hover { border-color: var(--primary); background: var(--bg-tint); }
+
 .cta-microcopy {
+
     color: var(--muted);
+
     font-size: 13px;
+
     margin-top: 12px;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     gap: 6px;
+
 }
+
+
 
 /* ============ SECTIONS ============ */
+
 .section { padding: 64px 0; position: relative; }
+
 .section-light { background: var(--bg-soft); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
 .section-title {
+
     font-family: var(--font-display);
+
     font-size: clamp(27px, 6vw, 44px);
+
     font-weight: 800;
+
     text-align: center;
+
     margin-bottom: 14px;
+
     line-height: 1.14;
+
     letter-spacing: -.6px;
+
 }
+
 .section-subtitle {
+
     font-size: clamp(15px, 2.5vw, 18px);
+
     color: var(--muted);
+
     text-align: center;
+
     max-width: 660px;
+
     margin: 0 auto 38px;
+
     line-height: 1.6;
+
 }
+
 .highlight {
+
     background: var(--grad-primary);
+
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
+
     background-clip: text;
+
 }
+
 @media (min-width: 768px) { .section { padding: 92px 0; } }
 
+
+
 /* ============ HERO ============ */
+
 .hero {
+
     position: relative;
+
     padding: 56px 0 60px;
+
     background:
+
       radial-gradient(ellipse 90% 60% at 50% -10%, color-mix(in srgb, var(--primary) 13%, transparent), transparent 70%),
+
       linear-gradient(180deg, var(--bg-tint) 0%, #FFFFFF 85%);
+
     overflow: hidden;
+
     text-align: center;
+
 }
+
 .hero-content { position: relative; z-index: 2; }
+
 .hero-badge {
+
     display: inline-flex; align-items: center; gap: 8px;
+
     padding: 8px 18px;
+
     background: color-mix(in srgb, var(--primary) 10%, #fff);
+
     border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+
     border-radius: 50px;
+
     color: var(--primary-dark);
+
     font-size: 12px;
+
     font-weight: 700;
+
     letter-spacing: .8px;
+
     margin-bottom: 18px;
+
     text-transform: uppercase;
+
     animation: fadeUp .6s ease both;
+
 }
+
 .hero-title {
+
     font-family: var(--font-display);
+
     font-size: clamp(30px, 8vw, 58px);
+
     font-weight: 800;
+
     line-height: 1.08;
+
     margin-bottom: 16px;
+
     letter-spacing: -1.2px;
+
     animation: fadeUp .7s .1s ease both;
+
 }
+
 .hero-subtitle {
+
     font-size: clamp(15px, 3vw, 19px);
+
     color: var(--muted);
+
     max-width: 640px;
+
     margin: 0 auto 8px;
+
     line-height: 1.6;
+
     animation: fadeUp .7s .2s ease both;
+
 }
+
 /* HERO IMAGE — supports vertical art (~572x916) AND square cover (EN/ES):
+
    never crops or distorts (contain + height/width limits). */
+
 .hero-image-wrap {
+
     position: relative;
+
     display: inline-block;
+
     margin: 28px auto 26px;
+
     animation: fadeUp .8s .3s ease both;
+
 }
+
 .hero-image-wrap::before {
+
     content: '';
+
     position: absolute;
+
     inset: 8% 4%;
+
     background: radial-gradient(ellipse at center, color-mix(in srgb, var(--primary) 32%, transparent), transparent 72%);
+
     filter: blur(30px);
+
     z-index: 0;
+
 }
+
 .hero-image {
+
     position: relative;
+
     z-index: 1;
+
     width: auto;
+
     height: auto;
+
     max-width: min(80vw, 340px);
+
     max-height: min(58vh, 520px);
+
     object-fit: contain;
+
     margin: 0 auto;
+
     border-radius: 18px;
+
     box-shadow: 0 18px 50px rgba(16,20,28,.18), 0 0 0 1px rgba(16,20,28,.05);
+
     animation: float 6s ease-in-out infinite;
+
 }
+
 .hero-cta-group {
+
     display: flex; flex-direction: column;
+
     gap: 12px; align-items: center;
+
     animation: fadeUp .7s .4s ease both;
+
 }
+
 @media (min-width: 768px) {
+
     .hero { padding: 84px 0 90px; }
+
     .hero-image { max-width: 380px; max-height: 540px; }
+
     .hero-cta-group { flex-direction: row; justify-content: center; align-items: stretch; }
+
 }
+
+
 
 /* ============ TRUST BAR ============ */
+
 .trust-bar { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
 .trust-item {
+
     background: #fff;
+
     border: 1px solid var(--line);
+
     border-radius: var(--r);
+
     padding: 18px 10px;
+
     text-align: center;
+
     box-shadow: var(--shadow-sm);
+
 }
+
 .trust-item .v {
+
     font-family: var(--font-display);
+
     font-size: 22px; font-weight: 800;
+
     background: var(--grad-primary);
+
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
+
     background-clip: text;
+
 }
+
 .trust-item .l { font-size: 11px; color: var(--muted); margin-top: 4px; letter-spacing: .4px; font-weight: 500; }
+
 @media (min-width: 768px) {
+
     .trust-bar { grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
     .trust-item .v { font-size: 30px; }
+
     .trust-item .l { font-size: 13px; }
+
 }
+
+
 
 /* ============ CARD GRIDS ============ */
+
 .problem-grid, .benefits-grid, .testimonials-grid {
+
     display: grid; grid-template-columns: 1fr;
+
     gap: 14px; margin-top: 8px;
+
 }
+
 .problem-card, .benefit-card, .testimonial-card, .step-card {
+
     background: #fff;
+
     border: 1px solid var(--line);
+
     border-radius: var(--r);
+
     padding: 24px 20px;
+
     box-shadow: var(--shadow-sm);
+
     transition: transform .25s, box-shadow .25s, border-color .25s;
+
 }
+
 .problem-card:hover, .benefit-card:hover, .testimonial-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
 
+
+
 /* Pain/urgency: left alert border */
+
 .problem-card { border-left: 4px solid var(--danger); }
+
 .problem-card .ic {
+
     width: 48px; height: 48px;
+
     border-radius: 12px;
+
     display: flex; align-items: center; justify-content: center;
+
     font-size: 22px;
+
     margin-bottom: 14px;
+
     background: color-mix(in srgb, var(--danger) 10%, #fff);
+
     color: var(--danger);
+
 }
+
 .benefit-card .ic {
+
     width: 50px; height: 50px;
+
     border-radius: 50%;
+
     display: flex; align-items: center; justify-content: center;
+
     font-size: 22px;
+
     margin-bottom: 14px;
+
     background: color-mix(in srgb, var(--primary) 12%, #fff);
+
     color: var(--primary-dark);
+
     border: 1px solid color-mix(in srgb, var(--primary) 22%, transparent);
+
 }
+
 .problem-card h3, .benefit-card h3 { font-family: var(--font-display); font-size: 17px; font-weight: 700; margin-bottom: 8px; letter-spacing: -.2px; }
+
 .problem-card p, .benefit-card p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+
 @media (min-width: 700px) {
+
     .problem-grid, .benefits-grid, .testimonials-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+
 }
+
 @media (min-width: 1024px) {
+
     .problem-grid, .benefits-grid, .testimonials-grid { grid-template-columns: repeat(3, 1fr); }
+
 }
+
+
 
 /* ============ STEPS ============ */
+
 .steps { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 8px; }
+
 .step-card { text-align: center; padding: 30px 22px; }
+
 .step-num {
+
     width: 54px; height: 54px;
+
     border-radius: 50%;
+
     background: var(--grad-primary);
+
     display: flex; align-items: center; justify-content: center;
+
     font-family: var(--font-display);
+
     font-size: 22px; font-weight: 800;
+
     color: #fff;
+
     margin: 0 auto 16px;
+
     box-shadow: var(--shadow-cta);
+
 }
+
 .step-card h3 { font-family: var(--font-display); font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+
 .step-card p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+
 @media (min-width: 768px) { .steps { grid-template-columns: repeat(3, 1fr); gap: 20px; } }
 
+
+
 /* ============ TESTIMONIALS ============ */
+
 .testimonial-stars { color: var(--gold); font-size: 16px; margin-bottom: 12px; letter-spacing: 2px; }
+
 .testimonial-text { color: var(--ink-2); font-size: 15px; line-height: 1.65; margin-bottom: 18px; }
+
 .testimonial-author { display: flex; align-items: center; gap: 12px; }
+
 .testimonial-avatar {
+
     width: 44px; height: 44px;
+
     border-radius: 50%;
+
     background: var(--grad-primary);
+
     display: flex; align-items: center; justify-content: center;
+
     font-weight: 800; color: #fff;
+
     font-family: var(--font-display);
+
     flex-shrink: 0;
+
 }
+
 .testimonial-name { font-weight: 700; font-size: 14px; }
+
 .testimonial-meta { font-size: 12px; color: var(--muted-2); }
 
+
+
 /* ============ OFFER ============ */
+
 .offer-wrap { padding: 10px 16px 40px; }
+
 .offer-section {
+
     background: #fff;
+
     border-radius: var(--r-xl);
+
     margin: 0 auto;
+
     padding: 38px 22px;
+
     position: relative;
+
     overflow: hidden;
+
     border: 2px solid var(--primary);
+
     box-shadow: 0 24px 60px rgba(16,20,28,.12);
+
     max-width: 720px;
+
 }
+
 .offer-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 6px; background: var(--grad-primary); }
+
 .offer-badge {
+
     background: var(--grad-primary);
+
     color: #fff;
+
     padding: 8px 22px;
+
     border-radius: 50px;
+
     font-family: var(--font-display);
+
     font-weight: 700;
+
     font-size: 12px;
+
     text-transform: uppercase;
+
     letter-spacing: 1px;
+
     display: inline-block;
+
     margin-bottom: 18px;
+
 }
+
 .offer-title {
+
     font-family: var(--font-display);
+
     font-size: clamp(24px, 5vw, 36px);
+
     font-weight: 800;
+
     line-height: 1.15;
+
     margin-bottom: 16px;
+
     letter-spacing: -.5px;
+
 }
+
 .price-block { text-align: center; padding: 22px 0 8px; }
+
 .price-old { color: var(--muted-2); text-decoration: line-through; font-size: 17px; margin-bottom: 4px; }
+
 .price-new {
+
     font-family: var(--font-display);
+
     font-size: clamp(56px, 15vw, 88px);
+
     font-weight: 800;
+
     color: var(--primary);
+
     background: var(--grad-primary);
+
     -webkit-background-clip: text;
+
     -webkit-text-fill-color: transparent;
+
     background-clip: text;
+
     line-height: 1;
+
     letter-spacing: -2px;
+
 }
+
 .price-currency { font-size: .42em; vertical-align: top; margin-right: 4px; letter-spacing: 0; -webkit-text-fill-color: var(--primary); }
+
 .price-installments { color: var(--muted); font-size: 14px; margin-top: 8px; }
+
 .features-list { list-style: none; padding: 0; margin: 22px 0; text-align: left; }
+
 .features-list li {
+
     padding: 11px 0 11px 36px;
+
     position: relative;
+
     color: var(--ink-2);
+
     border-bottom: 1px solid var(--line);
+
     font-size: 15px;
+
     font-weight: 500;
+
 }
+
 .features-list li:last-child { border-bottom: none; }
+
 .features-list li::before {
+
     content: '✓';
+
     position: absolute; left: 4px; top: 12px;
+
     width: 22px; height: 22px;
+
     border-radius: 50%;
+
     background: color-mix(in srgb, var(--green) 14%, #fff);
+
     color: var(--green);
+
     display: flex; align-items: center; justify-content: center;
+
     font-weight: 800;
+
     font-size: 13px;
+
 }
+
+
 
 .countdown { display: flex; gap: 10px; justify-content: center; margin: 20px 0 6px; flex-wrap: wrap; }
+
 .timer-box {
+
     background: var(--ink);
+
     border-radius: 14px;
+
     padding: 13px 14px;
+
     min-width: 72px;
+
     text-align: center;
+
 }
+
 .timer-number { font-family: var(--font-display); font-size: 28px; font-weight: 800; color: #fff; line-height: 1; font-variant-numeric: tabular-nums; }
+
 .timer-label { font-size: 10px; color: rgba(255,255,255,.6); text-transform: uppercase; margin-top: 5px; letter-spacing: 1px; }
+
 @media (min-width: 768px) {
+
     .offer-wrap { padding: 20px 20px 70px; }
+
     .offer-section { padding: 54px 56px; }
+
     .timer-number { font-size: 36px; }
+
     .timer-box { padding: 16px 20px; min-width: 88px; }
+
 }
+
+
 
 /* ============ GUARANTEE ============ */
+
 .guarantee-box {
+
     background: color-mix(in srgb, var(--green) 6%, #fff);
+
     border: 1.5px solid color-mix(in srgb, var(--green) 30%, transparent);
+
     border-radius: var(--r-lg);
+
     padding: 34px 24px;
+
     text-align: center;
+
     max-width: 680px;
+
     margin: 0 auto;
+
 }
+
 .guarantee-seal {
+
     width: 82px; height: 82px;
+
     border-radius: 50%;
+
     background: #fff;
+
     border: 2px solid color-mix(in srgb, var(--green) 40%, transparent);
+
     display: flex; align-items: center; justify-content: center;
+
     font-size: 38px;
+
     margin: 0 auto 18px;
+
     box-shadow: var(--shadow-md);
+
 }
+
 .guarantee-box h3 { font-family: var(--font-display); font-size: 21px; font-weight: 800; margin-bottom: 10px; letter-spacing: -.3px; }
+
 .guarantee-box p { color: var(--muted); font-size: 15px; line-height: 1.65; }
 
+
+
 /* ============ FAQ ============ */
+
 .faq-container { max-width: 720px; margin: 8px auto 0; }
+
 .faq-item {
+
     background: #fff;
+
     border: 1px solid var(--line);
+
     border-radius: var(--r);
+
     margin-bottom: 10px;
+
     overflow: hidden;
+
     transition: border-color .25s, box-shadow .25s;
+
     box-shadow: var(--shadow-sm);
+
 }
+
 .faq-item.active { border-color: var(--primary); box-shadow: var(--shadow-md); }
+
 .faq-question {
+
     padding: 17px 18px;
+
     cursor: pointer;
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     font-weight: 600;
+
     font-size: 15px;
+
     user-select: none;
+
     min-height: 56px;
+
     gap: 10px;
+
 }
+
 .faq-question:hover { background: var(--bg-soft); }
+
 .faq-icon {
+
     width: 28px; height: 28px;
+
     border-radius: 50%;
+
     background: color-mix(in srgb, var(--primary) 12%, #fff);
+
     color: var(--primary-dark);
+
     display: flex; align-items: center; justify-content: center;
+
     font-size: 18px;
+
     font-weight: 700;
+
     transition: transform .25s, background .25s, color .25s;
+
     flex-shrink: 0;
+
 }
+
 .faq-item.active .faq-icon { transform: rotate(45deg); background: var(--grad-primary); color: #fff; }
+
 .faq-answer { max-height: 0; overflow: hidden; transition: max-height .35s ease; }
+
 .faq-item.active .faq-answer { max-height: 500px; }
+
 .faq-answer-content { padding: 0 18px 18px; color: var(--muted); font-size: 14px; line-height: 1.65; }
 
+
+
 /* ============ CTA FINAL ============ */
+
 .cta-section {
+
     background:
+
       radial-gradient(ellipse 80% 70% at 50% 0%, color-mix(in srgb, var(--primary) 22%, transparent), transparent 65%),
+
       linear-gradient(160deg, var(--ink) 0%, var(--ink-2) 100%);
+
     padding: 66px 24px;
+
     text-align: center;
+
     position: relative;
+
     overflow: hidden;
+
     color: #fff;
+
 }
+
 .cta-content { position: relative; z-index: 2; max-width: 760px; margin: 0 auto; }
+
 .cta-title {
+
     font-family: var(--font-display);
+
     font-size: clamp(26px, 5.5vw, 42px);
+
     font-weight: 800;
+
     margin-bottom: 18px;
+
     line-height: 1.15;
+
     letter-spacing: -.6px;
+
 }
+
 .cta-subtitle {
+
     color: rgba(255,255,255,.78);
+
     font-size: clamp(15px, 2.5vw, 17px);
+
     margin-bottom: 28px;
+
     max-width: 660px;
+
     margin-left: auto;
+
     margin-right: auto;
+
     line-height: 1.7;
+
 }
+
 .cta-section .cta-microcopy { color: rgba(255,255,255,.6); }
+
 @media (min-width: 768px) { .cta-section { padding: 96px 24px; } }
 
+
+
 /* ============ FOOTER ============ */
+
 .footer {
+
     background: var(--ink);
+
     color: rgba(255,255,255,.7);
+
     padding: 40px 20px 30px;
+
     text-align: center;
-}
-.footer-text { font-size: 14px; max-width: 620px; margin: 0 auto 20px; line-height: 1.6; }
-.footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    justify-content: center;
-    margin: 24px 0;
-}
-.footer-link { color: rgba(255,255,255,.5); text-decoration: none; font-size: 13px; transition: color .2s; }
-.footer-link:hover { color: #fff; }
-.footer-bottom { color: rgba(255,255,255,.45); font-size: 12px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); max-width: 720px; margin: 0 auto; line-height: 1.5; }
-.footer-disclaimer { font-size: 11px; opacity: .7; margin-top: 12px; }
-@media (min-width: 700px) {
-    .footer-links { flex-direction: row; gap: 24px; }
+
 }
 
-/* ============ CTA STICKY MOBILE ============ */
-.floating-cta {
-    position: fixed;
-    bottom: 0; left: 0; right: 0;
-    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
-    background: rgba(255,255,255,.96);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-top: 1px solid var(--line);
-    z-index: 100;
-    box-shadow: 0 -8px 28px rgba(16,20,28,.14);
-    display: none;
+.footer-text { font-size: 14px; max-width: 620px; margin: 0 auto 20px; line-height: 1.6; }
+
+.footer-links {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    justify-content: center;
+
+    margin: 24px 0;
+
 }
+
+.footer-link { color: rgba(255,255,255,.5); text-decoration: none; font-size: 13px; transition: color .2s; }
+
+.footer-link:hover { color: #fff; }
+
+.footer-bottom { color: rgba(255,255,255,.45); font-size: 12px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); max-width: 720px; margin: 0 auto; line-height: 1.5; }
+
+.footer-disclaimer { font-size: 11px; opacity: .7; margin-top: 12px; }
+
+@media (min-width: 700px) {
+
+    .footer-links { flex-direction: row; gap: 24px; }
+
+}
+
+
+
+/* ============ CTA STICKY MOBILE ============ */
+
+.floating-cta {
+
+    position: fixed;
+
+    bottom: 0; left: 0; right: 0;
+
+    padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+
+    background: rgba(255,255,255,.96);
+
+    backdrop-filter: blur(16px);
+
+    -webkit-backdrop-filter: blur(16px);
+
+    border-top: 1px solid var(--line);
+
+    z-index: 100;
+
+    box-shadow: 0 -8px 28px rgba(16,20,28,.14);
+
+    display: none;
+
+}
+
 .floating-cta.show { display: block; }
+
 .floating-cta .btn-primary { width: 100%; max-width: none; padding: 15px; font-size: 15px; min-height: 54px; animation: none; }
+
 @media (min-width: 1024px) { .floating-cta { display: none !important; } }
+
 @media (max-width: 1023px) { body { padding-bottom: 84px; } }
+
 </style>
+
 <style id="afp-a8-vazios">
+
 /* Esconde item de benefício que ficou sem texto (campo em branco no editor). */
+
 .benefit-card:has(> h3:empty),
+
 .problem-card:has(> h3:empty),
+
 .step-card:has(> h3:empty){display:none!important}
+
 </style>
+
 <noscript>
+
 <style>
+
 .fade-in { opacity: 1; transform: none; }
+
 .faq-answer { max-height: none; }
+
 </style>
+
 </noscript>
+
 <style>
 body{background:#f7f4ee;color:#183c2d;font-family:Inter,system-ui,sans-serif}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #a94f30;outline-offset:5px}.pil-nav,.pil-main,.pil-footer{max-width:1080px;margin:auto;padding:24px}.pil-nav{display:flex;justify-content:space-between;gap:20px;font-size:13px}.pil-main section{padding:48px 0}.pil-hero{display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:40px}.pil-label{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:800;color:#92462e}.pil-main h1{font-size:clamp(38px,6vw,68px);line-height:1.08;letter-spacing:-.045em;margin:18px 0 24px}.pil-main h2{font-size:32px;line-height:1.2;margin-bottom:20px}.pil-main h3{font-size:20px;margin-bottom:12px}.pil-main p{line-height:1.75;max-width:650px}.pil-cover{width:100%;max-width:390px;border-radius:28px;box-shadow:0 20px 50px #183c2d22}.pil-button{display:inline-flex;min-height:50px;align-items:center;justify-content:center;padding:14px 24px;border-radius:12px;background:#183c2d;color:#fff;font-weight:750;margin:22px 0;text-decoration:none}.pil-small{font-size:13px;color:#3d594b}.pil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.pil-card{padding:26px;background:#fff;border:1px solid #d9e0d7;border-radius:20px}.pil-offer{background:#e8edde;border:1px solid #ccd8c9;border-radius:24px;padding:32px!important}.pil-price{font-size:52px;font-weight:800;letter-spacing:-.04em}.pil-note{padding:16px 20px;border-left:4px solid #a94f30;background:#fff6ef;margin-top:20px}.pil-main details{border-bottom:1px solid #cad5c8;padding:18px 0}.pil-main summary{cursor:pointer;min-height:44px;font-weight:700}.pil-footer{font-size:13px;border-top:1px solid #cad5c8;line-height:1.7}.pil-footer a{display:inline-block;margin-right:18px;padding:10px 0}.privacy-choice{position:fixed;bottom:16px;left:16px;right:16px;margin:auto;max-width:540px;padding:22px;background:#fff;border:1px solid #183c2d;border-radius:16px;z-index:1000;box-shadow:0 8px 28px #0002}.privacy-choice[hidden]{display:none}.privacy-actions{display:flex;gap:12px;margin-top:16px}.privacy-actions button,#privacy-settings{cursor:pointer;min-height:44px;padding:10px 20px;border:1px solid #183c2d;border-radius:8px;background:#fff;color:#183c2d}.privacy-actions button:first-child{background:#183c2d;color:#fff}#privacy-status{display:block}.pil-legal{max-width:760px}.pil-legal p{font-size:14px}@media(max-width:700px){.pil-main section{padding:32px 0}.pil-hero,.pil-grid{grid-template-columns:1fr}.pil-hero{gap:24px}.pil-cover{max-width:320px;margin:auto;display:block}.pil-main,.pil-footer,.pil-nav{padding:20px}.pil-nav{font-size:12px}.pil-offer{padding:24px!important}.pil-price{font-size:46px}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important}}
 </style></head>
+
 <body>
 <nav class="pil-nav" aria-label="Navegação"><a href="/">Aprendendo Com Infoprodutos</a><a href="/fitness-saude/fitness/pilates/">Pilates</a></nav>
 <main class="pil-main" id="conteudo">
 <section class="pil-hero"><div><span class="pil-label">Produto digital · Pilates em Casa</span><h1>Sua sala.<br>Seu momento<br>de movimento.</h1><p>Conheça o Pilates em Casa: um aplicativo com conteúdos de Pilates, exercícios, leitura e atividades para consultar no seu ritmo.</p><a class="pil-button" href="#oferta">Conhecer a oferta de R$ 37</a><p class="pil-small">Pagamento único · Garantia de 7 dias</p></div><img class="pil-cover" src="https://eva.igorstorm.com/capapv/pilates" alt="Capa do produto digital Pilates em Casa" width="600" height="600" fetchpriority="high"></section>
 <section aria-labelledby="conteudos"><span class="pil-label">Conheça a proposta</span><h2 id="conteudos">Um lugar para explorar o Pilates.</h2><div class="pil-grid"><article class="pil-card"><h3>Movimento</h3><p>Uma área de treinos e referências em vídeo para explorar a prática de Pilates.</p></article><article class="pil-card"><h3>Conteúdo para consultar</h3><p>Áreas de leitura, podcasts e quizzes educativos reunidas no aplicativo.</p></article><article class="pil-card"><h3>No seu ritmo</h3><p>Organize seu momento de consulta e prática respeitando sua condição física e a orientação profissional.</p></article></div><p class="pil-note">Conteúdo educativo. Não é consulta, diagnóstico, reabilitação ou tratamento. Em caso de dor, lesão, gestação, pós-parto ou condição de saúde, procure orientação de um profissional habilitado antes de praticar. Não há promessa de resultado clínico ou prazo de transformação.</p></section>
 <section><h2>Como funciona</h2><div class="pil-grid"><article class="pil-card"><h3>1. Consulte a oferta</h3><p>Confira o preço, a garantia e as condições antes de comprar.</p></article><article class="pil-card"><h3>2. Pague na Hotmart</h3><p>Os dados de pagamento são preenchidos no checkout da Hotmart.</p></article><article class="pil-card"><h3>3. Siga as instruções</h3><p>A liberação deve ocorrer após a confirmação do pagamento, conforme as instruções de acesso da compra.</p></article></div></section>
-<section id="oferta" class="pil-offer"><span class="pil-label">Pilates em Casa</span><h2>Uma compra. Seu conteúdo digital.</h2><div class="pil-price">R$ 37,00</div><p>Pagamento único, sem mensalidade nesta oferta.</p><p><strong>Garantia de 7 dias</strong> para solicitar reembolso pela Hotmart, conforme as condições apresentadas na compra.</p><a class="pil-button" data-checkout href="https://pay.hotmart.com/G108208183X?checkoutMode=10">Ver página de pagamento</a><p class="pil-small">O cadastro comercial está em finalização. Se a Hotmart informar “Produto indisponível”, a compra ainda não está liberada. Não efetue pagamento por canais alternativos.</p></section>
-<section><h2>Dúvidas frequentes</h2><details><summary>É um produto físico?</summary><p>Não. Esta oferta é de conteúdo digital. Tapete, roupas, acessórios e outros itens físicos não estão incluídos.</p></details><details><summary>O pagamento é recorrente?</summary><p>O preço-base desta oferta é R$ 37,00 em pagamento único. Confirme as condições na Hotmart.</p></details><details><summary>O produto substitui acompanhamento profissional?</summary><p>Não. O conteúdo é educativo e não faz diagnóstico ou prescrição individual. Exercícios devem respeitar sua condição e a orientação de um profissional habilitado.</p></details><details><summary>Como solicitar reembolso?</summary><p>A oferta tem garantia de 7 dias. Use as instruções da sua compra na Hotmart para solicitar o reembolso dentro do prazo.</p></details><details><summary>A compra está disponível agora?</summary><p>O cadastro está em finalização. A disponibilidade deve ser confirmada na página de pagamento.</p></details></section>
+<section id="oferta" class="pil-offer"><span class="pil-label">Pilates em Casa</span><h2>Uma compra. Seu conteúdo digital.</h2><div class="pil-price">R$ 37,00</div><p>Pagamento único, sem mensalidade nesta oferta.</p><p><strong>Garantia de 7 dias</strong> para solicitar reembolso pela Hotmart, conforme as condições apresentadas na compra.</p><a class="pil-button" data-checkout href="https://pay.hotmart.com/G108208183X?checkoutMode=10">Ver página de pagamento</a><p class="pil-small">Checkout disponível na Hotmart. Confira os dados da oferta e use o e-mail que deseja vincular ao acesso ao app.</p></section>
+<section><h2>Dúvidas frequentes</h2><details><summary>É um produto físico?</summary><p>Não. Esta oferta é de conteúdo digital. Tapete, roupas, acessórios e outros itens físicos não estão incluídos.</p></details><details><summary>O pagamento é recorrente?</summary><p>O preço-base desta oferta é R$ 37,00 em pagamento único. Confirme as condições na Hotmart.</p></details><details><summary>O produto substitui acompanhamento profissional?</summary><p>Não. O conteúdo é educativo e não faz diagnóstico ou prescrição individual. Exercícios devem respeitar sua condição e a orientação de um profissional habilitado.</p></details><details><summary>Como solicitar reembolso?</summary><p>A oferta tem garantia de 7 dias. Use as instruções da sua compra na Hotmart para solicitar o reembolso dentro do prazo.</p></details><details><summary>A compra está disponível agora?</summary><p>Sim. A Hotmart liberou a oferta de Pilates em Casa por R$ 37,00 em pagamento único. O acesso é vinculado ao e-mail da compra após a aprovação do pagamento. O manual de acesso é entregue pela Hotmart.</p></details></section>
 <section id="privacidade" class="pil-legal"><h2>Privacidade e medição</h2><p>O pagamento é processado pela Hotmart. Esta página não solicita dados de saúde, cartão ou documentos. Com sua permissão, o Meta Pixel mede visualizações e cliques na página de pagamento. Dados de formulário e respostas de saúde não são enviados por este código.</p><p>Sua escolha de medição fica salva somente nesta sessão do navegador. É possível recusar e continuar usando a página. Os parâmetros de campanha encaminhados ao checkout são limitados a identificadores de divulgação.</p><button type="button" id="privacy-settings">Alterar preferência de medição</button><span id="privacy-status" role="status"></span></section>
 <section id="condicoes" class="pil-legal"><h2>Condições desta oferta</h2><p>Produto digital Pilates em Casa, preço-base R$ 37,00, pagamento único e garantia de 7 dias. Recursos, disponibilidade e instruções de acesso devem corresponder à oferta aprovada na Hotmart. Esta página não promete cura, emagrecimento ou resultado individual. Ofertas complementares são opcionais e não integram automaticamente o valor do produto principal.</p><p>Para problemas com pagamento ou solicitação de reembolso, consulte a <a href="https://help.hotmart.com/pt-br/">Central de Ajuda da Hotmart</a>.</p></section>
 </main><footer class="pil-footer"><p>© 2026 Aprendendo Com Infoprodutos · Pilates em Casa</p><a href="#condicoes">Condições da oferta</a><a href="#privacidade">Privacidade</a><a href="https://help.hotmart.com/pt-br/">Ajuda com pagamento</a><p>Conteúdo educativo. Resultados variam e não são garantidos.</p></footer>
